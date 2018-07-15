@@ -406,6 +406,19 @@ Subprojects &amp;amp; Areas of Focus  Maintaining parts of the Kubernetes projec
     </item>
     
     <item>
+      <title>CLA</title>
+      <link>/cla/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cla/</guid>
+      <description>The Contributor License Agreement The Cloud Native Computing Foundation defines the legal status of the contributed code in a Contributor License Agreement (CLA).
+Only original source code from CLA signatories can be accepted into kubernetes.
+This policy does not apply to third_party and vendor.
+What am I agreeing to? There are two versions of the CLA:
+ One for individual contributors submitting contributions on their own behalf. One for corporations to sign for contributions submitted by their employees.</description>
+    </item>
+    
+    <item>
       <title>CONTRIBUTING</title>
       <link>/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -987,15 +1000,6 @@ Overview Kubernetes is a production-grade, open-source infrastructure for the de
     </item>
     
     <item>
-      <title>archive</title>
-      <link>/archive/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/archive/readme/</guid>
-      <description>Archive The archive contains SIG information for those no longer active.</description>
-    </item>
-    
-    <item>
       <title>auditing</title>
       <link>/contributors/design-proposals/api-machinery/auditing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1134,8 +1138,8 @@ Roles SIG Chairs  Run operations and processes governing the SIG Seed members es
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/sig-contributor-experience/charter/</guid>
-      <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our README
-Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s README</description>
+      <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our [README]()
+Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s [README]()</description>
     </item>
     
     <item>
@@ -1703,7 +1707,7 @@ Background Kubernetes currently officially supports both Go and Python client li
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/events/2017/12-contributor-summit/current-state-of-client-libraries/</guid>
-      <description>Story so far is described at https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/csi-client-structure-proposal.md - linked from https://github.com/kubernetes-client/community/blob/master/design-docs/clients-library-structure.md
+      <description>Story so far is described at /contributors/design-proposals/api-machinery/csi-client-structure-proposal.md - linked from https://github.com/kubernetes-client/community/blob/master/design-docs/clients-library-structure.md
 Would like libs to be more &amp;ldquo;fluent&amp;rdquo; - should join up with the native language features e.g. JavaDoc, per-platform
 OpenAPI (Swagger) has limitations which force ugly workarounds. - e.g. doesn&amp;rsquo;t cover returning different types in response to a call e.g. a result or an error. - OpenAPI 3 fixes a number of these limitations
 Key difficulty is which verbs apply to which objects - Go doesn&amp;rsquo;t natively have this concept.</description>
@@ -3063,7 +3067,7 @@ Goals  Allow pods to mount any local block or filesystem based volume. Allow pod
       <guid>/sig-contributor-experience/markdown-link-style-guide/</guid>
       <description>Markdown Link Style Guide Markdown provides for a number of different ways to link between documents. There are advantages and disadvantages of each method.
  If you are linking between documents in the same folder, the easiest way to do it is use a relative link.
-See this other document [here](document-2.md).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
+See this other document [here](document-2).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
     </item>
     
     <item>
@@ -3724,7 +3728,7 @@ Table of Contents  Background Goal Technical requirements  Alpha Beta Later  Imp
       
       <guid>/sig-contributor-experience/projects/</guid>
       <description>Projects and Goals note - this is a temporary file until we can figure out a better project management solution.
-This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our README.</description>
+This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our [README]().</description>
     </item>
     
     <item>

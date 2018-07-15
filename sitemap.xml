@@ -176,12 +176,11 @@
   </url>
   
   <url>
-    <loc>/archive/</loc>
-    <priority>0</priority>
+    <loc>/sig-cloud-provider/charter/</loc>
   </url>
   
   <url>
-    <loc>/sig-cloud-provider/charter/</loc>
+    <loc>/cla/</loc>
   </url>
   
   <url>
@@ -427,7 +426,7 @@
   </url>
   
   <url>
-    <loc>/archive/readme/</loc>
+    <loc>/archive/</loc>
   </url>
   
   <url>

@@ -16,8 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/sig-contributor-experience/charter/</guid>
-      <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our README
-Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s README</description>
+      <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our [README]()
+Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s [README]()</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ If any of these tasks can be automated, then do so, however most of these requir
       <guid>/sig-contributor-experience/markdown-link-style-guide/</guid>
       <description>Markdown Link Style Guide Markdown provides for a number of different ways to link between documents. There are advantages and disadvantages of each method.
  If you are linking between documents in the same folder, the easiest way to do it is use a relative link.
-See this other document [here](document-2.md).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
+See this other document [here](document-2).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@ See this other document [here](document-2.md).  If you are linking to a file in 
       
       <guid>/sig-contributor-experience/projects/</guid>
       <description>Projects and Goals note - this is a temporary file until we can figure out a better project management solution.
-This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our README.</description>
+This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our [README]().</description>
     </item>
     
   </channel>

@@ -260,7 +260,7 @@ How are people using k8s service accounts
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/events/2017/12-contributor-summit/current-state-of-client-libraries/</guid>
-      <description>Story so far is described at https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/csi-client-structure-proposal.md - linked from https://github.com/kubernetes-client/community/blob/master/design-docs/clients-library-structure.md
+      <description>Story so far is described at /contributors/design-proposals/api-machinery/csi-client-structure-proposal.md - linked from https://github.com/kubernetes-client/community/blob/master/design-docs/clients-library-structure.md
 Would like libs to be more &amp;ldquo;fluent&amp;rdquo; - should join up with the native language features e.g. JavaDoc, per-platform
 OpenAPI (Swagger) has limitations which force ugly workarounds. - e.g. doesn&amp;rsquo;t cover returning different types in response to a call e.g. a result or an error. - OpenAPI 3 fixes a number of these limitations
 Key difficulty is which verbs apply to which objects - Go doesn&amp;rsquo;t natively have this concept.</description>
