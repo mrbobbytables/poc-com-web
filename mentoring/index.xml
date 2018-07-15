@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mentoring on Kubernetes Community</title>
+    <link>/mentoring/</link>
+    <description>Recent content in mentoring on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/mentoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>google-summer-of-code</title>
+      <link>/mentoring/google-summer-of-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/google-summer-of-code/</guid>
+      <description>Google Summer of Code Kubernetes is happy to announce that we have applied to participate in the Google Summer of Code (GSoC) program under the Cloud Native Computing Foundation (CNCF), running from January 2018 to August 2018.
+Please see the main program page for general information about the program, such as its purpose, timeline, eligibility requirements, and how to apply.
+Schedule The following schedule is taken from the official timeline.</description>
+    </item>
+    
+    <item>
+      <title>group-mentee-guide</title>
+      <link>/mentoring/group-mentee-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/group-mentee-guide/</guid>
+      <description>Mentee Guide for Group Mentoring This doc is a work in progress
+Welcome and Summary Welcome prospective mentee! This is an experimental group mentoring program where individuals will work self-paced in a semi-structured learning environment over the course of three months. Want to get lgtm rights? Be a decision maker in an OWNERS file? This could be a great way to get the knowledge you need, some accountability to do it, and interact with active contributors who may on the same path as you and our experienced Kubernetes developers.</description>
+    </item>
+    
+    <item>
+      <title>group-mentoring</title>
+      <link>/mentoring/group-mentoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/group-mentoring/</guid>
+      <description>Group Mentoring for Contributor Ladder Growth This is a work in progress
+Summary This is an experimental group mentoring program where individuals will work self-paced in a semi-structured learning environment over the course of three months. Want to get /lgtm rights? Be a decision maker in an OWNERS file? This could be a great way to get the knowledge you need, some accountability to do it. Through this program you will get the opportunity to interact with active contributors who may be on the same path as you as well very experienced Kubernetes contributors (Pilots).</description>
+    </item>
+    
+    <item>
+      <title>meet-our-contributors</title>
+      <link>/mentoring/meet-our-contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/meet-our-contributors/</guid>
+      <description>Meet Our Contributors - Ask Us Anything! When Slack seems like it’s going too fast, and you just need a quick answer from a human&amp;hellip;
+Meet Our Contributors gives you a monthly one-hour opportunity to ask questions about our upstream community, watch interviews with our contributors, and participate in peer code reviews.
+When: Every first Wednesday of the month at the following times. Grab a copy of the calendar to yours from kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>mentor-guide</title>
+      <link>/mentoring/mentor-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/mentor-guide/</guid>
+      <description>Mentor Guidelines With over 37 special interest and working groups (SIGs/WGs), the Kubernetes ecosystem is vast and no one has all of the answers. Contributors rely on our docs, commenting on PRs/Issues, finding a mentor on their own, and any time they can interact with others to get up to speed. Whether it’s Slack, update meetings, or KubeCons, contributors want to discuss technical specifics, the landscape, or how to be a valuable member.</description>
+    </item>
+    
+    <item>
+      <title>mentoring-events</title>
+      <link>/mentoring/mentoring-events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/mentoring-events/</guid>
+      <description>Mentoring Activities at Events During events like KubeCon and other related events that arise, there will be the opportunity for mentoring activities. This doc will list those and their respective details. The KubeCon events are run by CNCF/LF and not Contributor Experience although we may advise and members could help out.
+CNCF is hosting another speed networking and mentoring session during KubeCon + CloudNativeCon Europe 2018.
+Speed Networking &amp;amp; Mentoring Event Details:</description>
+    </item>
+    
+    <item>
+      <title>the1-on-1hour</title>
+      <link>/mentoring/the1-on-1hour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/mentoring/the1-on-1hour/</guid>
+      <description>The 1:1 Hour One mentor. One mentee. One Hour.
+In this mentorship opportunity, you&amp;rsquo;ll be paired with someone in the ecosystem that can help drive your upstream Kubernetes experience forward with a quick burst of information. The mentee controls the content that will be served during that hour. This is open for new AND current contributors of all levels.
+Activities that you can select from include: * pair programming * live code review how-to (for those wishing to be a reviewer or be a better reviewer) * live docs review how-to * live code review of a proposed solution you are working on * codebase tour of a certain area * guidance on your contributor path (advice on becoming an approver, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github-management on Kubernetes Community</title>
+    <link>/github-management/</link>
+    <description>Recent content in github-management on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/github-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>kubernetes-repositories</title>
+      <link>/github-management/kubernetes-repositories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/kubernetes-repositories/</guid>
+      <description>Kubernetes Repository Guidelines This document attempts to outline a structure for creating and associating GitHub repositories with the Kubernetes project. It also describes how and when repositories are removed.
+The document presents a tiered system of repositories with increasingly strict requirements in an attempt to provide the right level of oversight and flexibility for a variety of different projects.
+Associated Repositories Associated repositories conform to the Kubernetes community standards for a repository, but otherwise have no restrictions.</description>
+    </item>
+    
+    <item>
+      <title>org-owners-guide</title>
+      <link>/github-management/org-owners-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/org-owners-guide/</guid>
+      <description>Kubernetes GitHub Organization Guide The Kubernetes project leverages multiple GitHub organizations to store and organize code. This guide contains the details on how to run those organizations for CNCF compliance and for the guidelines of the community.
+Organization Naming Kubernetes managed organizations should be in the form of kubernetes-[thing]. For example, kubernetes-client where the API clients are housed.
+Prior to creating an organization please contact the steering committee for direction and approval.</description>
+    </item>
+    
+    <item>
+      <title>permissions</title>
+      <link>/github-management/permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/permissions/</guid>
+      <description>GitHub Permissions GitHub provides a limited permissions model for organizations and repositories. It lacks granularity, and for the most part is &amp;ldquo;all or nothing&amp;rdquo;. This doesn&amp;rsquo;t scale well with the size and velocity of the Kubernetes project.
+We have created a number of automated systems/bots to allow us to work around these limitations. Authorized users can issue bot commands to execute actions against PRs and issues without having direct GitHub access to run these actions.</description>
+    </item>
+    
+    <item>
+      <title>setting-up-cla-check</title>
+      <link>/github-management/setting-up-cla-check/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/setting-up-cla-check/</guid>
+      <description>Setting up the CNCF CLA check If you are trying to sign the CLA so your PR&amp;rsquo;s can be merged, please read the CLA docs
+If you are a Kubernetes GitHub organization or repo owner, and would like to setup the Linux Foundation CNCF CLA check for your repositories, please read on.
+Setup the webhook  Go to the settings for your organization or webhook, and choose Webhooks from the menu, then &amp;ldquo;Add webhook&amp;rdquo;  Payload URL: https://identity.</description>
+    </item>
+    
+  </channel>
+</rss>

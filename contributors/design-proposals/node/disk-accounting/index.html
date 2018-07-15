@@ -1,0 +1,4504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kubernetes Community</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.44" />
+
+<title>disk-accounting :: Kubernetes Community</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/contributors/design-proposals/node/disk-accounting/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="/">Kubernetes Community</a>
+  
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/archive/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/archive/">Archives</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/archive/readme/" class="dd-item">
+        <div>
+          <a href="/archive/readme/">
+            archive
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>sig-configuration</label> 
+    <li data-nav-id="/archive/sig-configuration/" class="dd-item
+        ">
+      <div>
+      <a href="/archive/sig-configuration/">sig-configuration</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-on-premise</label> 
+    <li data-nav-id="/archive/sig-on-premise/" class="dd-item
+        ">
+      <div>
+      <a href="/archive/sig-on-premise/">sig-on-premise</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-rktnetes</label> 
+    <li data-nav-id="/archive/sig-rktnetes/" class="dd-item
+        ">
+      <div>
+      <a href="/archive/sig-rktnetes/">sig-rktnetes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/committee-steering/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/committee-steering/">Committee-steerings</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>governance</label> 
+    <li data-nav-id="/committee-steering/governance/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/committee-steering/governance/">governance</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/committee-steering/governance/faq/" class="dd-item">
+        <div>
+          <a href="/committee-steering/governance/faq/">
+            FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/committee-steering/governance/sig-charter-template/" class="dd-item">
+        <div>
+          <a href="/committee-steering/governance/sig-charter-template/">
+            sig-charter-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/committee-steering/governance/sig-governance/" class="dd-item">
+        <div>
+          <a href="/committee-steering/governance/sig-governance/">
+            sig-governance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/committee-steering/governance/sig-governance-requirements/" class="dd-item">
+        <div>
+          <a href="/committee-steering/governance/sig-governance-requirements/">
+            sig-governance-requirements
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/contributors/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/contributors/">Contributors</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>design-proposals</label> 
+    <li data-nav-id="/contributors/design-proposals/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/contributors/design-proposals/">design-proposals</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/contributors/design-proposals/cluster-lifecycle/">Cluster-lifecycles</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/">
+            bootstrap-discovery
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/cluster-deployment/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/cluster-deployment/">
+            cluster-deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>clustering</label> 
+    <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/clustering/" class="dd-item
+        ">
+      <div>
+      <a href="/contributors/design-proposals/cluster-lifecycle/clustering/">clustering</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/clustering/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/clustering/">
+            clustering
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/dramatically-simplify-cluster-creation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/dramatically-simplify-cluster-creation/">
+            dramatically-simplify-cluster-creation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/ha_master/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/ha_master/">
+            ha_master
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/high-availability/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/high-availability/">
+            high-availability
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/kubelet-tls-bootstrap/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/kubelet-tls-bootstrap/">
+            kubelet-tls-bootstrap
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/local-cluster-ux/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/local-cluster-ux/">
+            local-cluster-ux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/runtimeconfig/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/runtimeconfig/">
+            runtimeconfig
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/self-hosted-kubelet/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/self-hosted-kubelet/">
+            self-hosted-kubelet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cluster-lifecycle/self-hosted-kubernetes/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cluster-lifecycle/self-hosted-kubernetes/">
+            self-hosted-kubernetes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/design_proposal_template/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/design_proposal_template/">
+            Design_Proposal_TEMPLATE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/obsolete_templates/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/obsolete_templates/">
+            OBSOLETE_templates
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/accelerator-monitoring/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/accelerator-monitoring/">
+            accelerator-monitoring
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/access/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/access/">
+            access
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/add-new-patchstrategy-to-clear-fields-not-present-in-patch/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/add-new-patchstrategy-to-clear-fields-not-present-in-patch/">
+            add-new-patchStrategy-to-clear-fields-not-present-in-patch
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/admission-control-webhooks/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/admission-control-webhooks/">
+            admission-control-webhooks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/admission-webhook-bootstrapping/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/admission-webhook-bootstrapping/">
+            admission-webhook-bootstrapping
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/admission_control/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/admission_control/">
+            admission_control
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/admission_control_event_rate_limit/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/admission_control_event_rate_limit/">
+            admission_control_event_rate_limit
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/admission_control_extension/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/admission_control_extension/">
+            admission_control_extension
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/admission_control_limit_range/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/admission_control_limit_range/">
+            admission_control_limit_range
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/admission_control_resource_quota/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/admission_control_resource_quota/">
+            admission_control_resource_quota
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/aggregated-api-servers/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/aggregated-api-servers/">
+            aggregated-api-servers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/all-in-one-volume/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/all-in-one-volume/">
+            all-in-one-volume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/alternate-api-representations/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/alternate-api-representations/">
+            alternate-api-representations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/annotations-downward-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/annotations-downward-api/">
+            annotations-downward-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/api-chunking/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/api-chunking/">
+            api-chunking
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/cluster-registry/api-design/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/cluster-registry/api-design/">
+            api-design
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/api-group/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/api-group/">
+            api-group
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/apiserver-build-in-admission-plugins/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/apiserver-build-in-admission-plugins/">
+            apiserver-build-in-admission-plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/apiserver-count-fix/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/apiserver-count-fix/">
+            apiserver-count-fix
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/apiserver-watch/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/apiserver-watch/">
+            apiserver-watch
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/apparmor/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/apparmor/">
+            apparmor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/apply_refactor/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/apply_refactor/">
+            apply_refactor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/architecture/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/architecture/">
+            architecture
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/auditing/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/auditing/">
+            auditing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/aws/aws_under_the_hood/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/aws/aws_under_the_hood/">
+            aws_under_the_hood
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/bound-service-account-tokens/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/bound-service-account-tokens/">
+            bound-service-account-tokens
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/bulk_watch/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/bulk_watch/">
+            bulk_watch
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/client-package-structure/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/client-package-structure/">
+            client-package-structure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cloud-provider/cloud-provider-refactoring/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cloud-provider/cloud-provider-refactoring/">
+            cloud-provider-refactoring
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cloud-provider/cloudprovider-storage-metrics/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cloud-provider/cloudprovider-storage-metrics/">
+            cloudprovider-storage-metrics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/cluster-role-aggregation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/cluster-role-aggregation/">
+            cluster-role-aggregation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/command_execution_port_forwarding/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/command_execution_port_forwarding/">
+            command_execution_port_forwarding
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/configmap/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/configmap/">
+            configmap
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/container-init/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/container-init/">
+            container-init
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/container-runtime-interface-v1/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/container-runtime-interface-v1/">
+            container-runtime-interface-v1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/container-storage-interface/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/container-storage-interface/">
+            container-storage-interface
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/containerized-mounter/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/containerized-mounter/">
+            containerized-mounter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/containerized-mounter-pod/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/containerized-mounter-pod/">
+            containerized-mounter-pod
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/control-plane-resilience/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/control-plane-resilience/">
+            control-plane-resilience
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/controller-ref/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/controller-ref/">
+            controller-ref
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/controller_history/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/controller_history/">
+            controller_history
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/core-metrics-pipeline/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/core-metrics-pipeline/">
+            core-metrics-pipeline
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/coredns/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/coredns/">
+            coredns
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/cpu-manager/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/cpu-manager/">
+            cpu-manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/cri-dockershim-checkpoint/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/cri-dockershim-checkpoint/">
+            cri-dockershim-checkpoint
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/cri-windows/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/cri-windows/">
+            cri-windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/cronjob/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/cronjob/">
+            cronjob
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/csi-client-structure-proposal/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/csi-client-structure-proposal/">
+            csi-client-structure-proposal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/csi-new-client-library-procedure/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/csi-new-client-library-procedure/">
+            csi-new-client-library-procedure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/custom-metrics-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/custom-metrics-api/">
+            custom-metrics-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/customresources-subresources/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/customresources-subresources/">
+            customresources-subresources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/customresources-validation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/customresources-validation/">
+            customresources-validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/customresources-versioning/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/customresources-versioning/">
+            customresources-versioning
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/daemon/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/daemon/">
+            daemon
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/daemonset-update/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/daemonset-update/">
+            daemonset-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/declarative-application-management/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/declarative-application-management/">
+            declarative-application-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/default-storage-class/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/default-storage-class/">
+            default-storage-class
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/deploy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/deploy/">
+            deploy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/deployment/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/deployment/">
+            deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/device-plugin/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/device-plugin/">
+            device-plugin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/disk-accounting/" class="dd-item active">
+        <div>
+          <a href="/contributors/design-proposals/node/disk-accounting/">
+            disk-accounting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/downward_api_resources_limits_requests/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/downward_api_resources_limits_requests/">
+            downward_api_resources_limits_requests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/dynamic-admission-control-configuration/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/dynamic-admission-control-configuration/">
+            dynamic-admission-control-configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/dynamic-kubelet-configuration/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/dynamic-kubelet-configuration/">
+            dynamic-kubelet-configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/enhance-pluggable-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/enhance-pluggable-policy/">
+            enhance-pluggable-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/envvar-configmap/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/envvar-configmap/">
+            envvar-configmap
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/event_compression/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/event_compression/">
+            event_compression
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/events-redesign/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/events-redesign/">
+            events-redesign
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/expansion/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/expansion/">
+            expansion
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/extending-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/extending-api/">
+            extending-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/external-lb-source-ip-preservation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/external-lb-source-ip-preservation/">
+            external-lb-source-ip-preservation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-api-servers/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-api-servers/">
+            federated-api-servers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-hpa/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-hpa/">
+            federated-hpa
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-ingress/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-ingress/">
+            federated-ingress
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-placement-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-placement-policy/">
+            federated-placement-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-replicasets/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-replicasets/">
+            federated-replicasets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federated-services/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federated-services/">
+            federated-services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federation/">
+            federation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federation-clusterselector/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federation-clusterselector/">
+            federation-clusterselector
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federation-lite/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federation-lite/">
+            federation-lite
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/federation-phase-1/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/federation-phase-1/">
+            federation-phase-1
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/testing/flakiness-sla/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/testing/flakiness-sla/">
+            flakiness-sla
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/flannel-integration/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/flannel-integration/">
+            flannel-integration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/flex-volumes-drivers-psp/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/flex-volumes-drivers-psp/">
+            flex-volumes-drivers-psp
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/flexvolume-deployment/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/flexvolume-deployment/">
+            flexvolume-deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/garbage-collection/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/garbage-collection/">
+            garbage-collection
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/gcp/gce-l4-loadbalancer-healthcheck/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/gcp/gce-l4-loadbalancer-healthcheck/">
+            gce-l4-loadbalancer-healthcheck
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/get-describe-apiserver-extensions/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/get-describe-apiserver-extensions/">
+            get-describe-apiserver-extensions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/gpu-support/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/gpu-support/">
+            gpu-support
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/grow-flexvolume-size/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/grow-flexvolume-size/">
+            grow-flexvolume-size
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/grow-volume-size/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/grow-volume-size/">
+            grow-volume-size
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler/">
+            horizontal-pod-autoscaler
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/hpa-external-metrics/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/hpa-external-metrics/">
+            hpa-external-metrics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/hpa-status-conditions/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/hpa-status-conditions/">
+            hpa-status-conditions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/hpa-v2/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/hpa-v2/">
+            hpa-v2
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/hugepages/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/hugepages/">
+            hugepages
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/identifiers/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/identifiers/">
+            identifiers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/image-provenance/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/image-provenance/">
+            image-provenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/indexed-job/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/indexed-job/">
+            indexed-job
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/initial-resources/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/initial-resources/">
+            initial-resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/job/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/job/">
+            job
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/kms-plugin-grpc-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/kms-plugin-grpc-api/">
+            kms-plugin-grpc-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/kubectl-create-from-env-file/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/kubectl-create-from-env-file/">
+            kubectl-create-from-env-file
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/kubectl-exec-plugins/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/kubectl-exec-plugins/">
+            kubectl-exec-plugins
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/kubectl-extension/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/kubectl-extension/">
+            kubectl-extension
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/kubectl-login/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/kubectl-login/">
+            kubectl-login
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/kubectl_apply_getsetdiff_last_applied_config/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/kubectl_apply_getsetdiff_last_applied_config/">
+            kubectl_apply_getsetdiff_last_applied_config
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-auth/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-auth/">
+            kubelet-auth
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-authorizer/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-authorizer/">
+            kubelet-authorizer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-cri-logging/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-cri-logging/">
+            kubelet-cri-logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-eviction/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-eviction/">
+            kubelet-eviction
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-hypercontainer-runtime/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-hypercontainer-runtime/">
+            kubelet-hypercontainer-runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-rkt-runtime/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-rkt-runtime/">
+            kubelet-rkt-runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-rootfs-distribution/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-rootfs-distribution/">
+            kubelet-rootfs-distribution
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/kubelet-systemd/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/kubelet-systemd/">
+            kubelet-systemd
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scalability/kubemark/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scalability/kubemark/">
+            kubemark
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/local-storage-overview/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/local-storage-overview/">
+            local-storage-overview
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/local-storage-pv/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/local-storage-pv/">
+            local-storage-pv
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/metadata-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/metadata-policy/">
+            metadata-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/metrics-server/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/metrics-server/">
+            metrics-server
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/monitoring_architecture/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/monitoring_architecture/">
+            monitoring_architecture
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/mount-options/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/mount-options/">
+            mount-options
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/multi-fields-merge-key/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/multi-fields-merge-key/">
+            multi-fields-merge-key
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multi-platform/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multi-platform/">
+            multi-platform
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/multicluster-reserved-namespaces/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/multicluster-reserved-namespaces/">
+            multicluster-reserved-namespaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/multiple-schedulers/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/multiple-schedulers/">
+            multiple-schedulers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/namespaces/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/namespaces/">
+            namespaces
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/network-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/network-policy/">
+            network-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/networking/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/networking/">
+            networking
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/no-new-privs/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/no-new-privs/">
+            no-new-privs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/node-allocatable/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/node-allocatable/">
+            node-allocatable
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/node-usernamespace-remapping/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/node-usernamespace-remapping/">
+            node-usernamespace-remapping
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/nodeaffinity/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/nodeaffinity/">
+            nodeaffinity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/nodeport-ip-range/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/nodeport-ip-range/">
+            nodeport-ip-range
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/optional-configmap/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/optional-configmap/">
+            optional-configmap
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/performance-related-monitoring/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/performance-related-monitoring/">
+            performance-related-monitoring
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/persistent-storage/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/persistent-storage/">
+            persistent-storage
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/pod-lifecycle-event-generator/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/pod-lifecycle-event-generator/">
+            pod-lifecycle-event-generator
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/pod-pid-namespace/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/pod-pid-namespace/">
+            pod-pid-namespace
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/pod-preemption/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/pod-preemption/">
+            pod-preemption
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/service-catalog/pod-preset/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/service-catalog/pod-preset/">
+            pod-preset
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/pod-priority-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/pod-priority-api/">
+            pod-priority-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/pod-priority-resourcequota/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/pod-priority-resourcequota/">
+            pod-priority-resourcequota
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/pod-resolv-conf/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/pod-resolv-conf/">
+            pod-resolv-conf
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/pod-resource-management/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/pod-resource-management/">
+            pod-resource-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/pod-safety/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/pod-safety/">
+            pod-safety
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/pod-security-context/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/pod-security-context/">
+            pod-security-context
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/pod-security-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/pod-security-policy/">
+            pod-security-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/podaffinity/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/podaffinity/">
+            podaffinity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/postpone-pv-deletion/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/postpone-pv-deletion/">
+            postpone-pv-deletion
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/postpone-pvc-deletion-if-used-in-a-pod/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/postpone-pvc-deletion-if-used-in-a-pod/">
+            postpone-pvc-deletion-if-used-in-a-pod
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/predicates-ordering/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/predicates-ordering/">
+            predicates-ordering
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/preserve-order-in-strategic-merge-patch/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/preserve-order-in-strategic-merge-patch/">
+            preserve-order-in-strategic-merge-patch
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/principles/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/principles/">
+            principles
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/proc-mount-type/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/proc-mount-type/">
+            proc-mount-type
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/multicluster/cluster-registry/project-design-and-plan/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/multicluster/cluster-registry/project-design-and-plan/">
+            project-design-and-plan
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/propagation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/propagation/">
+            propagation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/protobuf/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/protobuf/">
+            protobuf
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/pv-to-rbd-mapping/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/pv-to-rbd-mapping/">
+            pv-to-rbd-mapping
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/raw-block-pv/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/raw-block-pv/">
+            raw-block-pv
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/release/release-notes/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/release/release-notes/">
+            release-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/release/release-test-signal/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/release/release-test-signal/">
+            release-test-signal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/rescheduler/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/rescheduler/">
+            rescheduler
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/rescheduling/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/rescheduling/">
+            rescheduling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/rescheduling-for-critical-pods/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/rescheduling-for-critical-pods/">
+            rescheduling-for-critical-pods
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/architecture/resource-management/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/architecture/resource-management/">
+            resource-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/resource-metrics-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/resource-metrics-api/">
+            resource-metrics-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/resource-qos/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/resource-qos/">
+            resource-qos
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/resource-management/resource-quota-scoping/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/resource-management/resource-quota-scoping/">
+            resource-quota-scoping
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/resources/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/resources/">
+            resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/rules-review-api/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/rules-review-api/">
+            rules-review-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/runas-groupid/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/runas-groupid/">
+            runas-groupid
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/runtime-client-server/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/runtime-client-server/">
+            runtime-client-server
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/runtime-pod-cache/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/runtime-pod-cache/">
+            runtime-pod-cache
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scalability/scalability-testing/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scalability/scalability-testing/">
+            scalability-testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/schedule-ds-pod-by-scheduler/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/schedule-ds-pod-by-scheduler/">
+            schedule-DS-pod-by-scheduler
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/scheduler-equivalence-class/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/scheduler-equivalence-class/">
+            scheduler-equivalence-class
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/scheduler_extender/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/scheduler_extender/">
+            scheduler_extender
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/seccomp/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/seccomp/">
+            seccomp
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/secret-configmap-downwardapi-file-mode/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/secret-configmap-downwardapi-file-mode/">
+            secret-configmap-downwardapi-file-mode
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/secrets/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/secrets/">
+            secrets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/security/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/security/">
+            security
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/security_context/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/security_context/">
+            security_context
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/selector-generation/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/selector-generation/">
+            selector-generation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/selinux/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/selinux/">
+            selinux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/selinux-enhancements/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/selinux-enhancements/">
+            selinux-enhancements
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/server-get/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/server-get/">
+            server-get
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/service-discovery/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/service-discovery/">
+            service-discovery
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/service-external-name/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/service-external-name/">
+            service-external-name
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/auth/service_accounts/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/auth/service_accounts/">
+            service_accounts
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/cli/simple-rolling-update/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/cli/simple-rolling-update/">
+            simple-rolling-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/stateful-apps/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/stateful-apps/">
+            stateful-apps
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/apps/statefulset-update/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/apps/statefulset-update/">
+            statefulset-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/">
+            support_traffic_shaping_for_kubelet_cni
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/svcacct-token-volume-source/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/svcacct-token-volume-source/">
+            svcacct-token-volume-source
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/synchronous-garbage-collection/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/synchronous-garbage-collection/">
+            synchronous-garbage-collection
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/sysctl/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/sysctl/">
+            sysctl
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/taint-node-by-condition/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/taint-node-by-condition/">
+            taint-node-by-condition
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/scheduling/taint-toleration-dedicated/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/scheduling/taint-toleration-dedicated/">
+            taint-toleration-dedicated
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/api-machinery/thirdpartyresources/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/api-machinery/thirdpartyresources/">
+            thirdpartyresources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/node/troubleshoot-running-pods/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/node/troubleshoot-running-pods/">
+            troubleshoot-running-pods
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/vault-based-kms-provider/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/vault-based-kms-provider/">
+            vault-based-kms-provider
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/release/versioning/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/release/versioning/">
+            versioning
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/autoscaling/vertical-pod-autoscaler/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/autoscaling/vertical-pod-autoscaler/">
+            vertical-pod-autoscaler
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-hostpath-qualifiers/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-hostpath-qualifiers/">
+            volume-hostpath-qualifiers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-metrics/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-metrics/">
+            volume-metrics
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-ownership-management/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-ownership-management/">
+            volume-ownership-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-provisioning/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-provisioning/">
+            volume-provisioning
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-selectors/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-selectors/">
+            volume-selectors
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-snapshotting/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-snapshotting/">
+            volume-snapshotting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volume-topology-scheduling/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volume-topology-scheduling/">
+            volume-topology-scheduling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/instrumentation/volume_stats_pvc_ref/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/instrumentation/volume_stats_pvc_ref/">
+            volume_stats_pvc_ref
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/design-proposals/storage/volumes/" class="dd-item">
+        <div>
+          <a href="/contributors/design-proposals/storage/volumes/">
+            volumes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>devel</label> 
+    <li data-nav-id="/contributors/devel/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/contributors/devel/">devel</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/contributors/devel/adding-an-apigroup/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/adding-an-apigroup/">
+            adding-an-APIGroup
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/api-conventions/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/api-conventions/">
+            api-conventions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/api_changes/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/api_changes/">
+            api_changes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/architectural-roadmap/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/architectural-roadmap/">
+            architectural-roadmap
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/automation/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/automation/">
+            automation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/bazel/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/bazel/">
+            bazel
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/cherry-picks/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/cherry-picks/">
+            cherry-picks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/client-libraries/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/client-libraries/">
+            client-libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/collab/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/collab/">
+            collab
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/component-config-conventions/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/component-config-conventions/">
+            component-config-conventions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/container-runtime-interface/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/container-runtime-interface/">
+            container-runtime-interface
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/controllers/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/controllers/">
+            controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/cri-container-stats/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/cri-container-stats/">
+            cri-container-stats
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/cri-testing-policy/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/cri-testing-policy/">
+            cri-testing-policy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/cri-validation/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/cri-validation/">
+            cri-validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/development/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/development/">
+            development
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/e2e-node-tests/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/e2e-node-tests/">
+            e2e-node-tests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/e2e-tests/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/e2e-tests/">
+            e2e-tests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/event-style-guide/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/event-style-guide/">
+            event-style-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/flaky-tests/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/flaky-tests/">
+            flaky-tests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/flexvolume/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/flexvolume/">
+            flexvolume
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/generating-clientset/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/generating-clientset/">
+            generating-clientset
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/getting-builds/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/getting-builds/">
+            getting-builds
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/godep/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/godep/">
+            godep
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/gubernator/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/gubernator/">
+            gubernator
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/help-wanted/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/help-wanted/">
+            help-wanted
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/how-to-doc/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/how-to-doc/">
+            how-to-doc
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/instrumentation/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/instrumentation/">
+            instrumentation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/issues/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/issues/">
+            issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/kubectl-conventions/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/kubectl-conventions/">
+            kubectl-conventions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/kubelet-cri-networking/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/kubelet-cri-networking/">
+            kubelet-cri-networking
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/kubemark-guide/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/kubemark-guide/">
+            kubemark-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/logging/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/logging/">
+            logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/mesos-style/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/mesos-style/">
+            mesos-style
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/node-performance-testing/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/node-performance-testing/">
+            node-performance-testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/on-call-federation-build-cop/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/on-call-federation-build-cop/">
+            on-call-federation-build-cop
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/profiling/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/profiling/">
+            profiling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/running-locally/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/running-locally/">
+            running-locally
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/scheduler/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/scheduler/">
+            scheduler
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/scheduler_algorithm/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/scheduler_algorithm/">
+            scheduler_algorithm
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/staging/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/staging/">
+            staging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/strategic-merge-patch/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/strategic-merge-patch/">
+            strategic-merge-patch
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/testing/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/testing/">
+            testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/update-release-docs/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/update-release-docs/">
+            update-release-docs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/updating-docs-for-feature-changes/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/updating-docs-for-feature-changes/">
+            updating-docs-for-feature-changes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/vagrant/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/vagrant/">
+            vagrant
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/welcome-to-kubernetes-new-developer-guide/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/welcome-to-kubernetes-new-developer-guide/">
+            welcome-to-kubernetes-new-developer-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/writing-a-getting-started-guide/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/writing-a-getting-started-guide/">
+            writing-a-getting-started-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/devel/writing-good-e2e-tests/" class="dd-item">
+        <div>
+          <a href="/contributors/devel/writing-good-e2e-tests/">
+            writing-good-e2e-tests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>guide</label> 
+    <li data-nav-id="/contributors/guide/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/contributors/guide/">guide</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/contributors/guide/coding-conventions/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/coding-conventions/">
+            coding-conventions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/community-expectations/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/community-expectations/">
+            community-expectations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/contributor-cheatsheet/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/contributor-cheatsheet/">
+            contributor-cheatsheet
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/github-workflow/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/github-workflow/">
+            github-workflow
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/issue-triage/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/issue-triage/">
+            issue-triage
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/owners/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/owners/">
+            owners
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/pull-requests/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/pull-requests/">
+            pull-requests
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/release-notes/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/release-notes/">
+            release-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/contributors/guide/scalability-good-practices/" class="dd-item">
+        <div>
+          <a href="/contributors/guide/scalability-good-practices/">
+            scalability-good-practices
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/events/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/events/">Events</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/">
+            0300-0345_CODEORGANIZATION
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/">
+            0905-0930_STATE_OF_THE_KUBE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/">
+            0940-1000_PROJECT_GOALS_ROADMAP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/">
+            1015-1115_UPDATES_GOVERNANCE_AND_CNCF
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/">
+            1145_1245_ARCHITECTURAL_ROADMAP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/">
+            1345-1430_SIGGOVERNANCE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/">
+            1500-1545_COMMUNITY_LADDER
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/">
+            1600-1740_PRESENTATIONS_FROM_BREAKOUTS_AND_CALL_TO_ACTIONS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/events/2018/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/events/2018/">2018s</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>05-contributor-summit</label> 
+    <li data-nav-id="/events/2018/05-contributor-summit/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/events/2018/05-contributor-summit/">05-contributor-summit</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/events/2018/05-contributor-summit/clientgo-notes/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/clientgo-notes/">
+            clientgo-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/crds-notes/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/crds-notes/">
+            crds-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/devtools-notes/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/devtools-notes/">
+            devtools-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/networking-notes/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/networking-notes/">
+            networking-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/new-contributor-notes/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/new-contributor-notes/">
+            new-contributor-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/new-contributor-workshop/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/new-contributor-workshop/">
+            new-contributor-workshop
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2018/05-contributor-summit/steering-update/" class="dd-item">
+        <div>
+          <a href="/events/2018/05-contributor-summit/steering-update/">
+            steering-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/contribsummitinformation/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/contribsummitinformation/">
+            ContribSummitInformation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/kubdevsummitvoting/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/kubdevsummitvoting/">
+            KubDevSummitVoting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/kubernetes_1st_bday/" class="dd-item">
+        <div>
+          <a href="/events/2016/kubernetes_1st_bday/">
+            Kubernetes_1st_Bday
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/kubernetes_dev_summit/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/kubernetes_dev_summit/">
+            Kubernetes_Dev_Summit
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/announcement/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/announcement/">
+            announcement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/application_service_definition_notes/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/application_service_definition_notes/">
+            application_service_definition_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/breaking-up-the-monolith/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/breaking-up-the-monolith/">
+            breaking-up-the-monolith
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/">
+            cloud-native-design-refactoring-across-k8s
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/cloud-provider/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/cloud-provider/">
+            cloud-provider
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/cluster_federation_notes/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/cluster_federation_notes/">
+            cluster_federation_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/cluster_lifecycle_notes/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/cluster_lifecycle_notes/">
+            cluster_lifecycle_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/community-meeting/" class="dd-item">
+        <div>
+          <a href="/events/community-meeting/">
+            community-meeting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/container-identity/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/container-identity/">
+            container-identity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/current-state-of-client-libraries/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/current-state-of-client-libraries/">
+            current-state-of-client-libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/dashboard-ux-breakout/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/dashboard-ux-breakout/">
+            dashboard-ux-breakout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>elections</label> 
+    <li data-nav-id="/events/elections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/events/elections/">elections</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>2017</label> 
+    <li data-nav-id="/events/elections/2017/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/events/elections/2017/">2017</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/events/elections/2017/results/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/results/">
+            RESULTS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/aaroncrickenberger_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/aaroncrickenberger_bio/">
+            aaroncrickenberger_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/aaronschlesinger_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/aaronschlesinger_bio/">
+            aaronschlesinger_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/adnanabdulhussein_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/adnanabdulhussein_bio/">
+            adnanabdulhussein_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/alexpollitt_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/alexpollitt_bio/">
+            alexpollitt_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/calebamiles_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/calebamiles_bio/">
+            calebamiles_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/derekcarr_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/derekcarr_bio/">
+            derekcarr_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/dougdavis_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/dougdavis_bio/">
+            dougdavis_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/errordeveloper_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/errordeveloper_bio/">
+            errordeveloper_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/idvoretskyi_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/idvoretskyi_bio/">
+            idvoretskyi_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/jaicesingerdumars_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/jaicesingerdumars_bio/">
+            jaicesingerdumars_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/kris-nova_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/kris-nova_bio/">
+            kris-nova_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/mattfarina_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/mattfarina_bio/">
+            mattfarina_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/michaelrubin_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/michaelrubin_bio/">
+            michaelrubin_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/michellenoorali_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/michellenoorali_bio/">
+            michellenoorali_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/pwittrock_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/pwittrock_bio/">
+            pwittrock_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/quintonhoole_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/quintonhoole_bio/">
+            quintonhoole_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/rhirschfeld_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/rhirschfeld_bio/">
+            rhirschfeld_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/sebastiengoasguen_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/sebastiengoasguen_bio/">
+            sebastiengoasguen_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/timothysc_bio/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/timothysc_bio/">
+            timothysc_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/elections/2017/vote_for_justinsb/" class="dd-item">
+        <div>
+          <a href="/events/elections/2017/vote_for_justinsb/">
+            vote_for_justinsb
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/">
+            enabling-kubernetes-ecosystem
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/extending-kubernetes/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/extending-kubernetes/">
+            extending-kubernetes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/feature-roadmap-2018/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/feature-roadmap-2018/">
+            feature-roadmap-2018
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/feature-workflow/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/feature-workflow/">
+            feature-workflow
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/fixit201606/" class="dd-item">
+        <div>
+          <a href="/events/2016/fixit201606/">
+            fixit201606
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/">
+            kubernetes-client-libraries-open-space
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/office-hours/" class="dd-item">
+        <div>
+          <a href="/events/office-hours/">
+            office-hours
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/">
+            onboarding-new-developers-through-better-docs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/role-of-sig-lead/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/role-of-sig-lead/">
+            role-of-sig-lead
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/scaling-new-contributors/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/scaling-new-contributors/">
+            scaling-new-contributors
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/">
+            scaling-up-and-scaling-down-and-addon-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/05-leadership-summit/session-notes/readme/" class="dd-item">
+        <div>
+          <a href="/events/2017/05-leadership-summit/session-notes/readme/">
+            session-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/should-k8s-use-feature-branches/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/should-k8s-use-feature-branches/">
+            should-k8s-use-feature-branches
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2016/developer-summit-2016/statefulset_notes/" class="dd-item">
+        <div>
+          <a href="/events/2016/developer-summit-2016/statefulset_notes/">
+            statefulset_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/steering-committee-update/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/steering-committee-update/">
+            steering-committee-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/" class="dd-item">
+        <div>
+          <a href="/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/">
+            whats-up-with-sig-cluster-lifecycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>communication</label> 
+    <li data-nav-id="/communication/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/communication/">communication</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/communication/k8syoutubecollaboration/" class="dd-item">
+        <div>
+          <a href="/communication/k8syoutubecollaboration/">
+            K8sYoutubeCollaboration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/communication/moderation/" class="dd-item">
+        <div>
+          <a href="/communication/moderation/">
+            moderation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/communication/slack-guidelines/" class="dd-item">
+        <div>
+          <a href="/communication/slack-guidelines/">
+            slack-guidelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/communication/zoom-guidelines/" class="dd-item">
+        <div>
+          <a href="/communication/zoom-guidelines/">
+            zoom-guidelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>generator</label> 
+    <li data-nav-id="/generator/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/generator/">generator</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/generator/testdata/custom_content/" class="dd-item">
+        <div>
+          <a href="/generator/testdata/custom_content/">
+            custom_content
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/generator/testdata/example/" class="dd-item">
+        <div>
+          <a href="/generator/testdata/example/">
+            example
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/generator/testdata/no_custom_content/" class="dd-item">
+        <div>
+          <a href="/generator/testdata/no_custom_content/">
+            no_custom_content
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>github-management</label> 
+    <li data-nav-id="/github-management/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/github-management/">github-management</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/github-management/kubernetes-repositories/" class="dd-item">
+        <div>
+          <a href="/github-management/kubernetes-repositories/">
+            kubernetes-repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/github-management/org-owners-guide/" class="dd-item">
+        <div>
+          <a href="/github-management/org-owners-guide/">
+            org-owners-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/github-management/permissions/" class="dd-item">
+        <div>
+          <a href="/github-management/permissions/">
+            permissions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/github-management/setting-up-cla-check/" class="dd-item">
+        <div>
+          <a href="/github-management/setting-up-cla-check/">
+            setting-up-cla-check
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>icons</label> 
+    <li data-nav-id="/icons/" class="dd-item
+        ">
+      <div>
+      <a href="/icons/">icons</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>keps</label> 
+    <li data-nav-id="/keps/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/keps/">keps</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/keps/0000-kep-template/" class="dd-item">
+        <div>
+          <a href="/keps/0000-kep-template/">
+            0000-kep-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/0001-kubernetes-enhancement-proposal-process/" class="dd-item">
+        <div>
+          <a href="/keps/0001-kubernetes-enhancement-proposal-process/">
+            0001-kubernetes-enhancement-proposal-process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cloud-provider/0002-cloud-controller-manager/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cloud-provider/0002-cloud-controller-manager/">
+            0002-cloud-controller-manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/">
+            0003-testgrid-conformance-e2e
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cloud-provider/providers/0004-cloud-provider-template/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cloud-provider/providers/0004-cloud-provider-template/">
+            0004-cloud-provider-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-contributor-experience/0005-contributor-site/" class="dd-item">
+        <div>
+          <a href="/keps/sig-contributor-experience/0005-contributor-site/">
+            0005-contributor-site
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/0006-apply/" class="dd-item">
+        <div>
+          <a href="/keps/0006-apply/">
+            0006-apply
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-contributor-experience/0007-20180403-community-forum/" class="dd-item">
+        <div>
+          <a href="/keps/sig-contributor-experience/0007-20180403-community-forum/">
+            0007-20180403-community-forum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/" class="dd-item">
+        <div>
+          <a href="/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/">
+            0008-20180430-promote-sysctl-annotations-to-fields
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cli/0008-kustomize/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cli/0008-kustomize/">
+            0008-kustomize
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-node/0009-node-heartbeat/" class="dd-item">
+        <div>
+          <a href="/keps/sig-node/0009-node-heartbeat/">
+            0009-node-heartbeat
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>sig-apps</label> 
+    <li data-nav-id="/keps/sig-apps/" class="dd-item
+        ">
+      <div>
+      <a href="/keps/sig-apps/">sig-apps</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-aws</label> 
+    <li data-nav-id="/keps/sig-aws/" class="dd-item
+        ">
+      <div>
+      <a href="/keps/sig-aws/">sig-aws</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-cluster-lifecycle</label> 
+    <li data-nav-id="/keps/sig-cluster-lifecycle/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/keps/sig-cluster-lifecycle/">sig-cluster-lifecycle</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/keps/sig-cluster-lifecycle/0003-cluster-api/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cluster-lifecycle/0003-cluster-api/">
+            0003-cluster-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/">
+            0004-bootstrap-checkpointing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/">
+            0008-20180504-kubeadm-config-beta
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/" class="dd-item">
+        <div>
+          <a href="/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/">
+            0015-kubeadm-join-master
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-network</label> 
+    <li data-nav-id="/keps/sig-network/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/keps/sig-network/">sig-network</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/keps/sig-network/0007-pod-ready&#43;&#43;/" class="dd-item">
+        <div>
+          <a href="/keps/sig-network/0007-pod-ready&#43;&#43;/">
+            0007-pod-ready&#43;&#43;
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-network/0010-20180314-coredns-ga-proposal/" class="dd-item">
+        <div>
+          <a href="/keps/sig-network/0010-20180314-coredns-ga-proposal/">
+            0010-20180314-coredns-GA-proposal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-network/0011-ipvs-proxier/" class="dd-item">
+        <div>
+          <a href="/keps/sig-network/0011-ipvs-proxier/">
+            0011-ipvs-proxier
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/keps/sig-network/0012-20180518-coredns-default-proposal/" class="dd-item">
+        <div>
+          <a href="/keps/sig-network/0012-20180518-coredns-default-proposal/">
+            0012-20180518-coredns-default-proposal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><label>mentoring</label> 
+    <li data-nav-id="/mentoring/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/mentoring/">mentoring</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/mentoring/google-summer-of-code/" class="dd-item">
+        <div>
+          <a href="/mentoring/google-summer-of-code/">
+            google-summer-of-code
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/group-mentee-guide/" class="dd-item">
+        <div>
+          <a href="/mentoring/group-mentee-guide/">
+            group-mentee-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/group-mentoring/" class="dd-item">
+        <div>
+          <a href="/mentoring/group-mentoring/">
+            group-mentoring
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/meet-our-contributors/" class="dd-item">
+        <div>
+          <a href="/mentoring/meet-our-contributors/">
+            meet-our-contributors
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/mentor-guide/" class="dd-item">
+        <div>
+          <a href="/mentoring/mentor-guide/">
+            mentor-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/mentoring-events/" class="dd-item">
+        <div>
+          <a href="/mentoring/mentoring-events/">
+            mentoring-events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/mentoring/the1-on-1hour/" class="dd-item">
+        <div>
+          <a href="/mentoring/the1-on-1hour/">
+            the1-on-1hour
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-api-machinery</label> 
+    <li data-nav-id="/sig-api-machinery/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-api-machinery/">sig-api-machinery</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-api-machinery/api-extensions-position-statement/" class="dd-item">
+        <div>
+          <a href="/sig-api-machinery/api-extensions-position-statement/">
+            api-extensions-position-statement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-apps</label> 
+    <li data-nav-id="/sig-apps/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-apps/">sig-apps</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-apps/contributing/" class="dd-item">
+        <div>
+          <a href="/sig-apps/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/agenda/" class="dd-item">
+        <div>
+          <a href="/sig-apps/agenda/">
+            agenda
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>minutes</label> 
+    <li data-nav-id="/sig-apps/minutes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-apps/minutes/">minutes</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-apps/minutes/2016-05-18/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-05-18/">
+            2016-05-18
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-05-25/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-05-25/">
+            2016-05-25
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-06-08/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-06-08/">
+            2016-06-08
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-06-15/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-06-15/">
+            2016-06-15
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-06-22/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-06-22/">
+            2016-06-22
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-06-29/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-06-29/">
+            2016-06-29
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-07-06/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-07-06/">
+            2016-07-06
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-07-13/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-07-13/">
+            2016-07-13
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-07-20/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-07-20/">
+            2016-07-20
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-07-27/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-07-27/">
+            2016-07-27
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-apps/minutes/2016-08-03/" class="dd-item">
+        <div>
+          <a href="/sig-apps/minutes/2016-08-03/">
+            2016-08-03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><label>sig-architecture</label> 
+    <li data-nav-id="/sig-architecture/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-architecture/">sig-architecture</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-architecture/backlog/" class="dd-item">
+        <div>
+          <a href="/sig-architecture/backlog/">
+            backlog
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-architecture/charter/" class="dd-item">
+        <div>
+          <a href="/sig-architecture/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-auth</label> 
+    <li data-nav-id="/sig-auth/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-auth/">sig-auth</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-autoscaling</label> 
+    <li data-nav-id="/sig-autoscaling/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-autoscaling/">sig-autoscaling</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-aws</label> 
+    <li data-nav-id="/sig-aws/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-aws/">sig-aws</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-aws/2017_goals/" class="dd-item">
+        <div>
+          <a href="/sig-aws/2017_goals/">
+            2017_goals
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-aws/contributing/" class="dd-item">
+        <div>
+          <a href="/sig-aws/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-aws/kubernetes-on-aws/" class="dd-item">
+        <div>
+          <a href="/sig-aws/kubernetes-on-aws/">
+            kubernetes-on-aws
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-azure</label> 
+    <li data-nav-id="/sig-azure/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-azure/">sig-azure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-azure/charter/" class="dd-item">
+        <div>
+          <a href="/sig-azure/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-big-data</label> 
+    <li data-nav-id="/sig-big-data/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-big-data/">sig-big-data</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-big-data/resources/" class="dd-item">
+        <div>
+          <a href="/sig-big-data/resources/">
+            resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-cli</label> 
+    <li data-nav-id="/sig-cli/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-cli/">sig-cli</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-cli/contributing/" class="dd-item">
+        <div>
+          <a href="/sig-cli/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>migrated-from-wiki</label> 
+    <li data-nav-id="/sig-cli/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-cli/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/" class="dd-item">
+        <div>
+          <a href="/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/">
+            contributor-guide-building-your-kubernetes-tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-cli/migrated-from-wiki/roadmap-kubectl/" class="dd-item">
+        <div>
+          <a href="/sig-cli/migrated-from-wiki/roadmap-kubectl/">
+            roadmap-kubectl
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sig-cli/outreachy/" class="dd-item">
+        <div>
+          <a href="/sig-cli/outreachy/">
+            outreachy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-cloud-provider</label> 
+    <li data-nav-id="/sig-cloud-provider/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-cloud-provider/">sig-cloud-provider</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-cloud-provider/charter/" class="dd-item">
+        <div>
+          <a href="/sig-cloud-provider/charter/">
+            CHARTER
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-cluster-lifecycle</label> 
+    <li data-nav-id="/sig-cluster-lifecycle/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-cluster-lifecycle/">sig-cluster-lifecycle</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-cluster-lifecycle/postmortems/kubeadm-1.6/" class="dd-item">
+        <div>
+          <a href="/sig-cluster-lifecycle/postmortems/kubeadm-1.6/">
+            kubeadm-1.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>migrated-from-wiki</label> 
+    <li data-nav-id="/sig-cluster-lifecycle/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-cluster-lifecycle/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/" class="dd-item">
+        <div>
+          <a href="/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/">
+            roadmap-cluster-deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><label>sig-cluster-ops</label> 
+    <li data-nav-id="/sig-cluster-ops/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-cluster-ops/">sig-cluster-ops</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-contributor-experience</label> 
+    <li data-nav-id="/sig-contributor-experience/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-contributor-experience/">sig-contributor-experience</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-contributor-experience/charter/" class="dd-item">
+        <div>
+          <a href="/sig-contributor-experience/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-contributor-experience/community-maintenance/" class="dd-item">
+        <div>
+          <a href="/sig-contributor-experience/community-maintenance/">
+            community-maintenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-contributor-experience/markdown-link-style-guide/" class="dd-item">
+        <div>
+          <a href="/sig-contributor-experience/markdown-link-style-guide/">
+            markdown-link-style-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li><label>migrated-from-wiki</label> 
+    <li data-nav-id="/sig-contributor-experience/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-contributor-experience/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-contributor-experience/migrated-from-wiki/effective-reviewable/" class="dd-item">
+        <div>
+          <a href="/sig-contributor-experience/migrated-from-wiki/effective-reviewable/">
+            effective-reviewable
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sig-contributor-experience/projects/" class="dd-item">
+        <div>
+          <a href="/sig-contributor-experience/projects/">
+            projects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-docs</label> 
+    <li data-nav-id="/sig-docs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-docs/">sig-docs</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>migrated-from-wiki</label> 
+    <li data-nav-id="/sig-docs/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-docs/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-docs/migrated-from-wiki/roadmap-docs/" class="dd-item">
+        <div>
+          <a href="/sig-docs/migrated-from-wiki/roadmap-docs/">
+            roadmap-docs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li><label>sig-gcp</label> 
+    <li data-nav-id="/sig-gcp/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-gcp/">sig-gcp</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-ibmcloud</label> 
+    <li data-nav-id="/sig-ibmcloud/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-ibmcloud/">sig-ibmcloud</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-instrumentation</label> 
+    <li data-nav-id="/sig-instrumentation/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-instrumentation/">sig-instrumentation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-multicluster</label> 
+    <li data-nav-id="/sig-multicluster/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-multicluster/">sig-multicluster</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-multicluster/contributing/" class="dd-item">
+        <div>
+          <a href="/sig-multicluster/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-multicluster/oncall/" class="dd-item">
+        <div>
+          <a href="/sig-multicluster/oncall/">
+            ONCALL
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-network</label> 
+    <li data-nav-id="/sig-network/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-network/">sig-network</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-node</label> 
+    <li data-nav-id="/sig-node/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-node/">sig-node</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-openstack</label> 
+    <li data-nav-id="/sig-openstack/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-openstack/">sig-openstack</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-pm</label> 
+    <li data-nav-id="/sig-pm/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-pm/">sig-pm</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-release</label> 
+    <li data-nav-id="/sig-release/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-release/">sig-release</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-scalability</label> 
+    <li data-nav-id="/sig-scalability/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-scalability/">sig-scalability</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-scalability/slos/api_call_latency/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/api_call_latency/">
+            api_call_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/slos/api_extensions_latency/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/api_extensions_latency/">
+            api_extensions_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/processes/formal-scalability-processes/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/processes/formal-scalability-processes/">
+            formal-scalability-processes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/goals/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/goals/">
+            goals
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/blogs/k8s-services-scalability-issues/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/blogs/k8s-services-scalability-issues/">
+            k8s-services-scalability-issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/slos/pod_startup_latency/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/pod_startup_latency/">
+            pod_startup_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/configs-and-limits/provider-configs/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/configs-and-limits/provider-configs/">
+            provider-configs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/governance/scalability-regressions-case-studies/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/governance/scalability-regressions-case-studies/">
+            scalability-regressions-case-studies
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/slos/slos/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/slos/">
+            slos
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/slos/system_throughput/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/system_throughput/">
+            system_throughput
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/configs-and-limits/thresholds/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/configs-and-limits/thresholds/">
+            thresholds
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-scalability/slos/watch_latency/" class="dd-item">
+        <div>
+          <a href="/sig-scalability/slos/watch_latency/">
+            watch_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-scheduling</label> 
+    <li data-nav-id="/sig-scheduling/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-scheduling/">sig-scheduling</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-service-catalog</label> 
+    <li data-nav-id="/sig-service-catalog/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-service-catalog/">sig-service-catalog</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-storage</label> 
+    <li data-nav-id="/sig-storage/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-storage/">sig-storage</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul><label>1.3-retrospective</label> 
+    <li data-nav-id="/sig-storage/1.3-retrospective/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-storage/1.3-retrospective/">1.3-retrospective</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/sig-storage/contributing/" class="dd-item">
+        <div>
+          <a href="/sig-storage/contributing/">
+            contributing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sig-storage/volume-plugin-faq/" class="dd-item">
+        <div>
+          <a href="/sig-storage/volume-plugin-faq/">
+            volume-plugin-faq
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>sig-testing</label> 
+    <li data-nav-id="/sig-testing/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-testing/">sig-testing</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-ui</label> 
+    <li data-nav-id="/sig-ui/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-ui/">sig-ui</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-vmware</label> 
+    <li data-nav-id="/sig-vmware/" class="dd-item
+        ">
+      <div>
+      <a href="/sig-vmware/">sig-vmware</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>sig-windows</label> 
+    <li data-nav-id="/sig-windows/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sig-windows/">sig-windows</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sig-windows/api-tracking/" class="dd-item">
+        <div>
+          <a href="/sig-windows/api-tracking/">
+            api-tracking
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li><label>wg-app-def</label> 
+    <li data-nav-id="/wg-app-def/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-app-def/">wg-app-def</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-apply</label> 
+    <li data-nav-id="/wg-apply/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-apply/">wg-apply</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-cluster-api</label> 
+    <li data-nav-id="/wg-cluster-api/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-cluster-api/">wg-cluster-api</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-container-identity</label> 
+    <li data-nav-id="/wg-container-identity/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-container-identity/">wg-container-identity</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-iot-edge</label> 
+    <li data-nav-id="/wg-iot-edge/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-iot-edge/">wg-iot-edge</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-kubeadm-adoption</label> 
+    <li data-nav-id="/wg-kubeadm-adoption/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-kubeadm-adoption/">wg-kubeadm-adoption</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-machine-learning</label> 
+    <li data-nav-id="/wg-machine-learning/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-machine-learning/">wg-machine-learning</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-multitenancy</label> 
+    <li data-nav-id="/wg-multitenancy/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-multitenancy/">wg-multitenancy</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-policy</label> 
+    <li data-nav-id="/wg-policy/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-policy/">wg-policy</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li><label>wg-resource-management</label> 
+    <li data-nav-id="/wg-resource-management/" class="dd-item
+        ">
+      <div>
+      <a href="/wg-resource-management/">wg-resource-management</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+
+
+
+ <a href='/'>content</a> > <a href='/contributors/'>Contributors</a> > <a href='/contributors/design-proposals/'>design-proposals</a> > disk-accounting
+
+ 
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#why-is-disk-accounting-necessary">Why is disk accounting necessary?</a></li>
+<li><a href="#goals">Goals</a></li>
+<li><a href="#non-goals">Non Goals</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#image-layers">Image layers</a></li>
+<li><a href="#writable-layer">Writable Layer</a></li>
+<li><a href="#container-logs">Container logs</a></li>
+<li><a href="#local-volumes">Local Volumes</a></li>
+</ul></li>
+<li><a href="#docker-storage-model">Docker storage model</a>
+<ul>
+<li>
+<ul>
+<li><a href="#aufs">Aufs</a></li>
+<li><a href="#devicemapper">Devicemapper</a></li>
+<li><a href="#overlayfs">Overlayfs</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#improve-disk-accounting">Improve disk accounting</a>
+<ul>
+<li><a href="#container-images">Container Images</a>
+<ul>
+<li><a href="#docker-history">Docker History</a></li>
+<li><a href="#enhance-docker">Enhance docker</a></li>
+<li><a href="#overlayfs-and-aufs">Overlayfs and Aufs</a>
+<ul>
+<li><a href="#du"><code>du</code></a></li>
+<li><a href="#linux-gid-based-disk-quota">Linux gid based Disk Quota</a></li>
+</ul></li>
+<li><a href="#devicemapper-1">Devicemapper</a></li>
+</ul></li>
+<li><a href="#container-writable-layer">Container Writable Layer</a>
+<ul>
+<li>
+<ul>
+<li><a href="#overlayfs-aufs">Overlayfs / Aufs</a></li>
+<li><a href="#devicemapper-2">Devicemapper</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#container-logs-1">Container logs</a></li>
+<li><a href="#volumes">Volumes</a></li>
+</ul></li>
+<li><a href="#yet-to-be-explored">Yet to be explored</a></li>
+<li><a href="#implementation-plan-and-milestones">Implementation Plan and Milestones</a>
+<ul>
+<li><a href="#milestone-1-get-accounting-to-just-work">Milestone 1 - Get accounting to just work!</a></li>
+<li><a href="#milestone-2-node-reliability">Milestone 2 - node reliability</a></li>
+<li><a href="#milestone-3-performance-improvements">Milestone 3 - Performance improvements</a></li>
+<li><a href="#milestone-4-users-manage-local-disks">Milestone 4 - Users manage local disks</a></li>
+</ul></li>
+<li><a href="#appendix">Appendix</a>
+<ul>
+<li><a href="#implementation-notes">Implementation Notes</a>
+<ul>
+<li><a href="#aufs-testing-notes">AUFS testing notes:</a></li>
+</ul></li>
+<li><a href="#overlayfs-1">Overlayfs</a>
+<ul>
+<li><a href="#device-mapper">Device mapper</a></li>
+</ul></li>
+<li><a href="#testing-notes">Testing notes:</a></li>
+<li><a href="#log-file-accounting">Log file accounting</a>
+<ul>
+<li><a href="#testing-titbits">Testing titbits</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>disk-accounting</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<p><strong>Author</strong>: Vishnu Kannan</p>
+
+<p><strong>Last</strong> <strong>Updated</strong>: 11/16/2015</p>
+
+<p><strong>Status</strong>: Pending Review</p>
+
+<p>This proposal is an attempt to come up with a means for accounting disk usage in Kubernetes clusters that are running docker as the container runtime. Some of the principles here might apply for other runtimes too.</p>
+
+<h3 id="why-is-disk-accounting-necessary">Why is disk accounting necessary?</h3>
+
+<p>As of kubernetes v1.1 clusters become unusable over time due to the local disk becoming full. The kubelets on the node attempt to perform garbage collection of old containers and images, but that doesn&rsquo;t prevent running pods from using up all the available disk space.</p>
+
+<p>Kubernetes users have no insight into how the disk is being consumed.</p>
+
+<p>Large images and rapid logging can lead to temporary downtime on the nodes. The node has to free up disk space by deleting images and containers. During this cleanup, existing pods can fail and new pods cannot be started. The node will also transition into an <code>OutOfDisk</code> condition, preventing more pods from being scheduled to the node.</p>
+
+<p>Automated eviction of pods that are hogging the local disk is not possible since proper accounting isn’t available.</p>
+
+<p>Since local disk is a non-compressible resource, users need means to restrict usage of local disk by pods and containers. Proper disk accounting is a prerequisite. As of today, a misconfigured low QoS class pod can end up bringing down the entire cluster by taking up all the available disk space (misconfigured logging for example)</p>
+
+<h3 id="goals">Goals</h3>
+
+<ol>
+<li><p>Account for disk usage on the nodes.</p></li>
+
+<li><p>Compatibility with the most common docker storage backends - devicemapper, aufs and overlayfs</p></li>
+
+<li><p>Provide a roadmap for enabling disk as a schedulable resource in the future.</p></li>
+
+<li><p>Provide a plugin interface for extending support to non-default filesystems and storage drivers.</p></li>
+</ol>
+
+<h3 id="non-goals">Non Goals</h3>
+
+<ol>
+<li><p>Compatibility with all storage backends. The matrix is pretty large already and the priority is to get disk accounting to on most widely deployed platforms.</p></li>
+
+<li><p>Support for filesystems other than ext4 and xfs.</p></li>
+</ol>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Disk accounting in Kubernetes cluster running with docker is complex because of the plethora of ways in which disk gets utilized by a container.</p>
+
+<p>Disk can be consumed for:</p>
+
+<ol>
+<li><p>Container images</p></li>
+
+<li><p>Container&rsquo;s writable layer</p></li>
+
+<li><p>Container&rsquo;s logs - when written to stdout/stderr and default logging backend in docker is used.</p></li>
+
+<li><p>Local volumes - hostPath, emptyDir, gitRepo, etc.</p></li>
+</ol>
+
+<p>As of Kubernetes v1.1, kubelet exposes disk usage for the entire node and the container&rsquo;s writable layer for aufs docker storage driver.
+This information is made available to end users via the heapster monitoring pipeline.</p>
+
+<h4 id="image-layers">Image layers</h4>
+
+<p>Image layers are shared between containers (COW) and so accounting for images is complicated.</p>
+
+<p>Image layers will have to be accounted as system overhead.</p>
+
+<p>As of today, it is not possible to check if there is enough disk space available on the node before an image is pulled.</p>
+
+<h4 id="writable-layer">Writable Layer</h4>
+
+<p>Docker creates a writable layer for every container on the host. Depending on the storage driver, the location and the underlying filesystem of this layer will change.</p>
+
+<p>Any files that the container creates or updates (assuming there are no volumes) will be considered as writable layer usage.</p>
+
+<p>The underlying filesystem is whatever the docker storage directory resides on. It is ext4 by default on most distributions, and xfs on RHEL.</p>
+
+<h4 id="container-logs">Container logs</h4>
+
+<p>Docker engine provides a pluggable logging interface. Kubernetes is currently using the default logging mode which is <code>local file</code>. In this mode, the docker daemon stores bytes written by containers to their stdout or stderr, to local disk. These log files are contained in a special directory that is managed by the docker daemon. These logs are exposed via <code>docker logs</code> interface which is then exposed via kubelet and apiserver APIs. Currently, there is a hard-requirement for persisting these log files on the disk.</p>
+
+<h4 id="local-volumes">Local Volumes</h4>
+
+<p>Volumes are slightly different from other local disk use cases. They are pod scoped. Their lifetime is tied to that of a pod. Due to this property accounting of volumes will also be at the pod level.</p>
+
+<p>As of now, the volume types that can use local disk directly are ‘HostPath’, ‘EmptyDir’, and ‘GitRepo’. Secretes and Downwards API volumes wrap these primitive volumes.
+Everything else is a network based volume.</p>
+
+<p>‘HostPath’ volumes map in existing directories in the host filesystem into a pod. Kubernetes manages only the mapping. It does not manage the source on the host filesystem.</p>
+
+<p>In addition to this, the changes introduced by a pod on the source of a hostPath volume is not cleaned by kubernetes once the pod exits. Due to these limitations, we will have to account hostPath volumes to system overhead. We should explicitly discourage use of HostPath in read-write mode.</p>
+
+<p><code>EmptyDir</code>, <code>GitRepo</code> and other local storage volumes map to a directory on the host root filesystem, that is managed by Kubernetes (kubelet). Their contents are erased as soon as the pod exits. Tracking and potentially restricting usage for volumes is possible.</p>
+
+<h3 id="docker-storage-model">Docker storage model</h3>
+
+<p>Before we start exploring solutions, let&rsquo;s get familiar with how docker handles storage for images, writable layer and logs.</p>
+
+<p>On all storage drivers, logs are stored under <code>&lt;docker root dir&gt;/containers/&lt;container-id&gt;/</code></p>
+
+<p>The default location of the docker root directory is <code>/var/lib/docker</code>.</p>
+
+<p>Volumes are handled by kubernetes.
+<em>Caveat: Volumes specified as part of Docker images are not handled by Kubernetes currently.</em></p>
+
+<p>Container images and writable layers are managed by docker and their location will change depending on the storage driver. Each image layer and writable layer is referred to by an ID. The image layers are read-only. Once saved, existing writable layers can be frozen. Saving feature is not of importance to kubernetes since it works only on immutable images.</p>
+
+<p><em>Note: Image layer IDs can be obtained by running <code>docker history -q --no-trunc &lt;imagename&gt;</code></em></p>
+
+<h5 id="aufs">Aufs</h5>
+
+<p>Image layers and writable layers are stored under <code>/var/lib/docker/aufs/diff/&lt;id&gt;</code>.</p>
+
+<p>The writable layers ID is equivalent to that of the container ID.</p>
+
+<h5 id="devicemapper">Devicemapper</h5>
+
+<p>Each container and each image gets own block device. Since this driver works at the block level, it is not possible to access the layers directly without mounting them. Each container gets its own block device while running.</p>
+
+<h5 id="overlayfs">Overlayfs</h5>
+
+<p>Image layers and writable layers are stored under <code>/var/lib/docker/overlay/&lt;id&gt;</code>.</p>
+
+<p>Identical files are hard-linked between images.</p>
+
+<p>The image layers contain all their data under a <code>root</code> subdirectory.</p>
+
+<p>Everything under  <code>/var/lib/docker/overlay/&lt;id&gt;</code> are files required for running the container, including its writable layer.</p>
+
+<h3 id="improve-disk-accounting">Improve disk accounting</h3>
+
+<p>Disk accounting is dependent on the storage driver in docker. A common solution that works across all storage drivers isn&rsquo;t available.</p>
+
+<p>I&rsquo;m listing a few possible solutions for disk accounting below along with their limitations.</p>
+
+<p>We need a plugin model for disk accounting. Some storage drivers in docker will require special plugins.</p>
+
+<h4 id="container-images">Container Images</h4>
+
+<p>As of today, the partition that is holding docker images is flagged by cadvisor, and it uses filesystem stats to identify the overall disk usage of that partition.</p>
+
+<p>Isolated usage of just image layers is available today using <code>docker history &lt;image name&gt;</code>.
+But isolated usage isn&rsquo;t of much use because image layers are shared between containers and so it is not possible to charge a single pod for image disk usage.</p>
+
+<p>Continuing to use the entire partition availability for garbage collection purposes in kubelet, should not affect reliability.
+We might garbage collect more often.
+As long as we do not expose features that require persisting old containers, computing image layer usage wouldn&rsquo;t be necessary.</p>
+
+<p>Main goals for images are
+1. Capturing total image disk usage
+2. Check if a new image will fit on disk.</p>
+
+<p>In case we choose to compute the size of image layers alone, the following are some of the ways to achieve that.</p>
+
+<p><em>Note that some of the strategies mentioned below are applicable in general to other kinds of storage like volumes, etc.</em></p>
+
+<h5 id="docker-history">Docker History</h5>
+
+<p>It is possible to run <code>docker history</code> and then create a graph of all images and corresponding image layers.
+This graph will let us figure out the disk usage of all the images.</p>
+
+<p><strong>Pros</strong>
+* Compatible across storage drivers.</p>
+
+<p><strong>Cons</strong>
+* Requires maintaining an internal representation of images.</p>
+
+<h5 id="enhance-docker">Enhance docker</h5>
+
+<p>Docker handles the upload and download of image layers. It can embed enough information about each layer. If docker is enhanced to expose this information, we can statically identify space about to be occupied by read-only image layers, even before the image layers are downloaded.</p>
+
+<p>A new <a href="https://github.com/docker/docker/pull/16450">docker feature</a> (docker pull &ndash;dry-run) is pending review, which outputs the disk space that will be consumed by new images. Once this feature lands, we can perform feasibility checks and reject pods that will consume more disk space that what is current availability on the node.</p>
+
+<p>Another option is to expose disk usage of all images together as a first-class feature.</p>
+
+<p><strong>Pros</strong></p>
+
+<ul>
+<li><p>Works across all storage drivers since docker abstracts the storage drivers.</p></li>
+
+<li><p>Less code to maintain in kubelet.</p></li>
+</ul>
+
+<p><strong>Cons</strong></p>
+
+<ul>
+<li><p>Not available today.</p></li>
+
+<li><p>Requires serialized image pulls.</p></li>
+
+<li><p>Metadata files are not tracked.</p></li>
+</ul>
+
+<h5 id="overlayfs-and-aufs">Overlayfs and Aufs</h5>
+
+<h6 id="du"><code>du</code></h6>
+
+<p>We can list all the image layer specific directories, excluding container directories, and run <code>du</code> on each of those directories.</p>
+
+<p><strong>Pros</strong>:</p>
+
+<ul>
+<li><p>This is the least-intrusive approach.</p></li>
+
+<li><p>It will work off the box without requiring any additional configuration.</p></li>
+</ul>
+
+<p><strong>Cons</strong>:</p>
+
+<ul>
+<li><p><code>du</code> can consume a lot of cpu and memory. There have been several issues reported against the kubelet in the past that were related to <code>du</code>.</p></li>
+
+<li><p>It is time consuming. Cannot be run frequently. Requires special handling to constrain resource usage - setting lower nice value or running in a sub-container.</p></li>
+
+<li><p>Can block container deletion by keeping file descriptors open.</p></li>
+</ul>
+
+<h6 id="linux-gid-based-disk-quota">Linux gid based Disk Quota</h6>
+
+<p><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/ch-disk-quotas.html">Disk quota</a> feature provided by the linux kernel can be used to track the usage of image layers. Ideally, we need <code>project</code> support for disk quota, which lets us track usage of directory hierarchies using <code>project ids</code>. Unfortunately, that feature is only available for zfs filesystems. Since most of our distributions use <code>ext4</code> by default, we will have to use either <code>uid</code> or <code>gid</code> based quota tracking.</p>
+
+<p>Both <code>uids</code> and <code>gids</code> are meant for security. Overloading that concept for disk tracking is painful and ugly. But, that is what we have today.</p>
+
+<p>Kubelet needs to define a gid for tracking image layers and make that gid or group the owner of <code>/var/lib/docker/[aufs | overlayfs]</code> recursively. Once this is done, the quota sub-system in the kernel will report the blocks being consumed by the storage driver on the underlying partition.</p>
+
+<p>Since this number also includes the container&rsquo;s writable layer, we will have to somehow subtract that usage from the overall usage of the storage driver directory. Luckily, we can use the same mechanism for tracking container’s writable layer. Once we apply a different <code>gid</code> to the container&rsquo;s writable layer, which is located under <code>/var/lib/docker/&lt;storage_driver&gt;/diff/&lt;container_id&gt;</code>, the quota subsystem will not include the container&rsquo;s writable layer usage.</p>
+
+<p>Xfs on the other hand support project quota which lets us track disk usage of arbitrary directories using a project. Support for this feature in ext4 is being reviewed. So on xfs, we can use quota without having to clobber the writable layer&rsquo;s uid and gid.</p>
+
+<p><strong>Pros</strong>:</p>
+
+<ul>
+<li>Low overhead tracking provided by the kernel.</li>
+</ul>
+
+<p><strong>Cons</strong></p>
+
+<ul>
+<li><p>Requires updates to default ownership on docker&rsquo;s internal storage driver directories. We will have to deal with storage driver implementation details in any approach that is not docker native.</p></li>
+
+<li><p>Requires additional node configuration - quota subsystem needs to be setup on the node. This can either be automated or made a requirement for the node.</p></li>
+
+<li><p>Kubelet needs to perform gid management. A range of gids have to allocated to the kubelet for the purposes of quota management. This range must not be used for any other purposes out of band. Not required if project quota is available.</p></li>
+
+<li><p>Breaks <code>docker save</code> semantics. Since kubernetes assumes immutable images, this is not a blocker. To support quota in docker, we will need user-namespaces along with custom gid mapping for each container. This feature does not exist today. This is not an issue with project quota.</p></li>
+</ul>
+
+<p><em>Note: Refer to the <a href="#appendix">Appendix</a> section more real examples on using quota with docker.</em></p>
+
+<p><strong>Project Quota</strong></p>
+
+<p>Project Quota support for ext4 is currently being reviewed upstream. If that feature lands in upstream sometime soon, project IDs will be used to disk tracking instead of uids and gids.</p>
+
+<h5 id="devicemapper-1">Devicemapper</h5>
+
+<p>Devicemapper storage driver will setup two volumes, metadata and data, that will be used to store image layers and container writable layer. The volumes can be real devices or loopback. A Pool device is created which uses the underlying volume for real storage.</p>
+
+<p>A new thinly-provisioned volume, based on the pool, will be created for running container&rsquo;s.</p>
+
+<p>The kernel tracks the usage of the pool device at the block device layer. The usage here includes image layers and container&rsquo;s writable layers.</p>
+
+<p>Since the kubelet has to track the writable layer usage anyways, we can subtract the aggregated root filesystem usage from the overall pool device usage to get the image layer&rsquo;s disk usage.</p>
+
+<p>Linux quota and <code>du</code> will not work with device mapper.</p>
+
+<p>A docker dry run option (mentioned above) is another possibility.</p>
+
+<h4 id="container-writable-layer">Container Writable Layer</h4>
+
+<h6 id="overlayfs-aufs">Overlayfs / Aufs</h6>
+
+<p>Docker creates a separate directory for the container&rsquo;s writable layer which is then overlayed on top of read-only image layers.</p>
+
+<p>Both the previously mentioned options of <code>du</code> and <code>Linux Quota</code> will work for this case as well.</p>
+
+<p>Kubelet can use <code>du</code> to track usage and enforce <code>limits</code> once disk becomes a schedulable resource. As mentioned earlier <code>du</code> is resource intensive.</p>
+
+<p>To use Disk quota, kubelet will have to allocate a separate gid per container. Kubelet can reuse the same gid for multiple instances of the same container (restart scenario). As and when kubelet garbage collects dead containers, the usage of the container will drop.</p>
+
+<p>If local disk becomes a schedulable resource, <code>linux quota</code> can be used to impose <code>request</code> and <code>limits</code> on the container writable layer.
+<code>limits</code> can be enforced using hard limits. Enforcing <code>request</code> will be tricky. One option is to enforce <code>requests</code> only when the disk availability drops below a threshold (10%). Kubelet can at this point evict pods that are exceeding their requested space. Other options include using <code>soft limits</code> with grace periods, but this option is complex.</p>
+
+<h6 id="devicemapper-2">Devicemapper</h6>
+
+<p>FIXME: How to calculate writable layer usage with devicemapper?</p>
+
+<p>To enforce <code>limits</code> the volume created for the container&rsquo;s writable layer filesystem can be dynamically <a href="https://jpetazzo.github.io/2014/01/29/docker-device-mapper-resize/">resized</a>, to not use more than <code>limit</code>. <code>request</code> will have to be enforced by the kubelet.</p>
+
+<h4 id="container-logs-1">Container logs</h4>
+
+<p>Container logs are not storage driver specific. We can use either <code>du</code> or <code>quota</code> to track log usage per container. Log files are stored under <code>/var/lib/docker/containers/&lt;container-id&gt;</code>.</p>
+
+<p>In the case of quota, we can create a separate gid for tracking log usage. This will let users track log usage and writable layer&rsquo;s usage individually.</p>
+
+<p>For the purposes of enforcing limits though, kubelet will use the sum of logs and writable layer.</p>
+
+<p>In the future, we can consider adding log rotation support for these log files either in kubelet or via docker.</p>
+
+<h4 id="volumes">Volumes</h4>
+
+<p>The local disk based volumes map to a directory on the disk. We can use <code>du</code> or <code>quota</code> to track the usage of volumes.</p>
+
+<p>There exists a concept called <code>FsGroup</code> today in kubernetes, which lets users specify a gid for all volumes in a pod. If that is set, we can use the <code>FsGroup</code> gid for quota purposes. This requires <code>limits</code> for volumes to be a pod level resource though.</p>
+
+<h3 id="yet-to-be-explored">Yet to be explored</h3>
+
+<ul>
+<li><p>Support for filesystems other than ext4 and xfs like <code>zfs</code></p></li>
+
+<li><p>Support for Btrfs</p></li>
+</ul>
+
+<p>It should be clear at this point that we need a plugin based model for disk accounting. Support for other filesystems both CoW and regular can be added as and when required. As we progress towards making accounting work on the above mentioned storage drivers, we can come up with an abstraction for storage plugins in general.</p>
+
+<h3 id="implementation-plan-and-milestones">Implementation Plan and Milestones</h3>
+
+<h4 id="milestone-1-get-accounting-to-just-work">Milestone 1 - Get accounting to just work!</h4>
+
+<p>This milestone targets exposing the following categories of disk usage from the kubelet - infrastructure (images, sys daemons, etc), containers (log + writable layer) and volumes.</p>
+
+<ul>
+<li><p><code>du</code> works today. Use <code>du</code> for all the categories and ensure that it works on both on aufs and overlayfs.</p></li>
+
+<li><p>Add device mapper support.</p></li>
+
+<li><p>Define a storage driver based pluggable disk accounting interface in cadvisor.</p></li>
+
+<li><p>Reuse that interface for accounting volumes in kubelet.</p></li>
+
+<li><p>Define a disk manager module in kubelet that will serve as a source of disk usage information for the rest of the kubelet.</p></li>
+
+<li><p>Ensure that the kubelet metrics APIs (/apis/metrics/v1beta1) exposes the disk usage information. Add an integration test.</p></li>
+</ul>
+
+<h4 id="milestone-2-node-reliability">Milestone 2 - node reliability</h4>
+
+<p>Improve user experience by doing whatever is necessary to keep the node running.</p>
+
+<p>NOTE: <a href="https://github.com/kubernetes/kubernetes/issues/17186"><code>Out of Resource Killing</code></a> design is a prerequisite.</p>
+
+<ul>
+<li><p>Disk manager will evict pods and containers based on QoS class whenever the disk availability is below a critical level.</p></li>
+
+<li><p>Explore combining existing container and image garbage collection logic into disk manager.</p></li>
+</ul>
+
+<p>Ideally, this phase should be completed before v1.2.</p>
+
+<h4 id="milestone-3-performance-improvements">Milestone 3 - Performance improvements</h4>
+
+<p>In this milestone, we will add support for quota and make it opt-in. There should be no user visible changes in this phase.</p>
+
+<ul>
+<li><p>Add gid allocation manager to kubelet</p></li>
+
+<li><p>Reconcile gids allocated after restart.</p></li>
+
+<li><p>Configure linux quota automatically on startup. Do not set any limits in this phase.</p></li>
+
+<li><p>Allocate gids for pod volumes, container&rsquo;s writable layer and logs, and also for image layers.</p></li>
+
+<li><p>Update the docker runtime plugin in kubelet to perform the necessary <code>chown's</code> and <code>chmod's</code> between container creation and startup.</p></li>
+
+<li><p>Pass the allocated gids as supplementary gids to containers.</p></li>
+
+<li><p>Update disk manager in kubelet to use quota when configured.</p></li>
+</ul>
+
+<h4 id="milestone-4-users-manage-local-disks">Milestone 4 - Users manage local disks</h4>
+
+<p>In this milestone, we will make local disk a schedulable resource.</p>
+
+<ul>
+<li><p>Finalize volume accounting - is it at the pod level or per-volume.</p></li>
+
+<li><p>Finalize multi-disk management policy. Will additional disks be handled as whole units?</p></li>
+
+<li><p>Set aside some space for image layers and rest of the infra overhead - node allocable resources includes local disk.</p></li>
+
+<li><p><code>du</code> plugin triggers container or pod eviction whenever usage exceeds limit.</p></li>
+
+<li><p>Quota plugin sets hard limits equal to user specified <code>limits</code>.</p></li>
+
+<li><p>Devicemapper plugin resizes writable layer to not exceed the container&rsquo;s disk <code>limit</code>.</p></li>
+
+<li><p>Disk manager evicts pods based on <code>usage</code> - <code>request</code> delta instead of just QoS class.</p></li>
+
+<li><p>Sufficient integration testing to this feature.</p></li>
+</ul>
+
+<h3 id="appendix">Appendix</h3>
+
+<h4 id="implementation-notes">Implementation Notes</h4>
+
+<p>The following is a rough outline of the testing I performed to corroborate by prior design ideas.</p>
+
+<p>Test setup information</p>
+
+<ul>
+<li><p>Testing was performed on GCE virtual machines</p></li>
+
+<li><p>All the test VMs were using ext4.</p></li>
+
+<li><p>Distribution tested against is mentioned as part of each graph driver.</p></li>
+</ul>
+
+<h5 id="aufs-testing-notes">AUFS testing notes:</h5>
+
+<p>Tested on Debian jessie</p>
+
+<ol>
+<li><p>Setup Linux Quota following this <a href="https://www.google.com/url?q=https://www.howtoforge.com/tutorial/linux-quota-ubuntu-debian/&amp;sa=D&amp;ust=1446146816105000&amp;usg=AFQjCNHThn4nwfj1YLoVmv5fJ6kqAQ9FlQ">tutorial</a>.</p></li>
+
+<li><p>Create a new group ‘x’ on the host and enable quota for that group</p>
+
+<ol>
+<li><p><code>groupadd -g 9000 x</code></p></li>
+
+<li><p><code>setquota -g 9000 -a 0 100 0 100</code> // 100 blocks (4096 bytes each*)</p></li>
+
+<li><p><code>quota -g 9000 -v</code> // Check that quota is enabled</p></li>
+</ol></li>
+
+<li><p>Create a docker container</p>
+
+<ol>
+<li><p><code>docker create -it busybox /bin/sh -c &quot;dd if=/dev/zero of=/file count=10 bs=1M&quot;</code></p>
+
+<pre><code>8d8c56dcfbf5cda9f9bfec7c6615577753292d9772ab455f581951d9a92d169d
+</code></pre></li>
+</ol></li>
+
+<li><p>Change group on the writable layer directory for this container</p>
+
+<ol>
+<li><p><code>chmod a+s /var/lib/docker/aufs/diff/8d8c56dcfbf5cda9f9bfec7c6615577753292d9772ab455f581951d9a92d169d</code></p></li>
+
+<li><p><code>chown :x /var/lib/docker/aufs/diff/8d8c56dcfbf5cda9f9bfec7c6615577753292d9772ab455f581951d9a92d169d</code></p></li>
+</ol></li>
+
+<li><p>Start the docker container</p>
+
+<ol>
+<li><p><code>docker start 8d</code></p></li>
+
+<li><p>Check usage using quota and group ‘x’</p></li>
+</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">   $ quota -g x -v
+   Disk quotas <span style="color:#00a8c8">for</span> group x <span style="color:#f92672">(</span>gid <span style="color:#ae81ff">9000</span><span style="color:#f92672">)</span>:
+   Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+   /dev/sda1   <span style="color:#ae81ff">10248</span>       <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>               <span style="color:#ae81ff">3</span>       <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span></code></pre></div>
+<p>Using the same workflow, we can add new sticky group IDs to emptyDir volumes and account for their usage against pods.</p>
+
+<p>Since each container requires a gid for the purposes of quota, we will have to reserve ranges of gids  for use by the kubelet. Since kubelet does not checkpoint its state, recovery of group id allocations will be an interesting problem. More on this later.</p></li>
+</ol>
+
+<p>Track the space occupied by images after it has been pulled locally as follows.</p>
+
+<p><em>Note: This approach requires serialized image pulls to be of any use to the kubelet.</em></p>
+
+<ol>
+<li><p>Create a group specifically for the graph driver</p>
+
+<ol>
+<li><code>groupadd -g 9001 docker-images</code></li>
+</ol></li>
+
+<li><p>Update group ownership on the ‘graph’ (tracks image metadata) and ‘storage driver’ directories.</p>
+
+<ol>
+<li><p><code>chown -R :9001 /var/lib/docker/[overlay | aufs]</code></p></li>
+
+<li><p><code>chmod a+s /var/lib/docker/[overlay | aufs]</code></p></li>
+
+<li><p><code>chown -R :9001 /var/lib/docker/graph</code></p></li>
+
+<li><p><code>chmod a+s /var/lib/docker/graph</code></p></li>
+</ol></li>
+
+<li><p>Any new images pulled or containers created will be accounted to the <code>docker-images</code> group by default.</p></li>
+
+<li><p>Once we update the group ownership on newly created containers to a different gid, the container writable layer&rsquo;s specific disk usage gets dropped from this group.</p></li>
+</ol>
+
+<h4 id="overlayfs-1">Overlayfs</h4>
+
+<p>Tested on Ubuntu 15.10.</p>
+
+<p>Overlayfs works similar to Aufs. The path to the writable directory for container writable layer changes.</p>
+
+<ul>
+<li><p>Setup Linux Quota following this <a href="https://www.google.com/url?q=https://www.howtoforge.com/tutorial/linux-quota-ubuntu-debian/&amp;sa=D&amp;ust=1446146816105000&amp;usg=AFQjCNHThn4nwfj1YLoVmv5fJ6kqAQ9FlQ">tutorial</a>.</p></li>
+
+<li><p>Create a new group ‘x’ on the host and enable quota for that group</p>
+
+<ul>
+<li><p><code>groupadd -g 9000 x</code></p></li>
+
+<li><p><code>setquota -g 9000 -a 0 100 0 100</code> // 100 blocks (4096 bytes each*)</p></li>
+
+<li><p><code>quota -g 9000 -v</code> // Check that quota is enabled</p></li>
+</ul></li>
+
+<li><p>Create a docker container</p>
+
+<ul>
+<li><p><code>docker create -it busybox /bin/sh -c &quot;dd if=/dev/zero of=/file count=10 bs=1M&quot;</code></p>
+
+<ul>
+<li><code>b8cc9fae3851f9bcefe922952b7bca0eb33aa31e68e9203ce0639fc9d3f3c61</code></li>
+</ul></li>
+</ul></li>
+
+<li><p>Change group on the writable layer’s directory for this container</p>
+
+<ul>
+<li><p><code>chmod -R a+s  /var/lib/docker/overlay/b8cc9fae3851f9bcefe922952b7bca0eb33aa31e68e9203ce0639fc9d3f3c61b/*</code></p></li>
+
+<li><p><code>chown -R :9000 /var/lib/docker/overlay/b8cc9fae3851f9bcefe922952b7bca0eb33aa31e68e9203ce0639fc9d3f3c61b/*</code></p></li>
+</ul></li>
+
+<li><p>Check quota before and after running the container.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  $ quota -g x -v
+  Disk quotas <span style="color:#00a8c8">for</span> group x <span style="color:#f92672">(</span>gid <span style="color:#ae81ff">9000</span><span style="color:#f92672">)</span>:
+  Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+  /dev/sda1      <span style="color:#ae81ff">48</span>       <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span>              <span style="color:#ae81ff">19</span>       <span style="color:#ae81ff">0</span>       <span style="color:#ae81ff">0</span></code></pre></div>
+<ul>
+<li><p>Start the docker container</p>
+
+<ul>
+<li><code>docker start b8</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>Notice the <strong>blocks</strong> has changed</p>
+
+<pre><code>```sh
+$ quota -g x -v
+Disk quotas for group x (gid 9000):
+Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+/dev/sda1   10288       0       0                20      0       0
+```
+</code></pre>
+
+<h5 id="device-mapper">Device mapper</h5>
+
+<p>Usage of Linux Quota should be possible for the purposes of volumes and log files.</p>
+
+<p>Devicemapper storage driver in docker uses <a href="https://www.kernel.org/doc/Documentation/device-mapper/thin-provisioning.txt">&ldquo;thin targets&rdquo;</a>. Underneath there are two block devices - “data” and “metadata”, using which more block devices are created for containers. More information <a href="http://www.projectatomic.io/docs/filesystems/">here</a>.</p>
+
+<p>These devices can be loopback or real storage devices.</p>
+
+<p>The base device has a maximum storage capacity. This means that the sum total of storage space occupied by images and containers cannot exceed this capacity.</p>
+
+<p>By default, all images and containers are created from an initial filesystem with a 10GB limit.</p>
+
+<p>A separate filesystem is created for each container as part of start (not create).</p>
+
+<p>It is possible to <a href="https://jpetazzo.github.io/2014/01/29/docker-device-mapper-resize/">resize</a> the container filesystem.</p>
+
+<p>For the purposes of image space tracking, we can</p>
+
+<h4 id="testing-notes">Testing notes:</h4>
+
+<p>Notice the <strong>Pool Name</strong></p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker info
+...
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-268480-pool
+ Pool Blocksize: <span style="color:#ae81ff">65</span>.54 kB
+ Backing Filesystem: extfs
+ Data file: /dev/loop0
+ Metadata file: /dev/loop1
+ Data Space Used: <span style="color:#ae81ff">2</span>.059 GB
+ Data Space Total: <span style="color:#ae81ff">107</span>.4 GB
+ Data Space Available: <span style="color:#ae81ff">48</span>.45 GB
+ Metadata Space Used: <span style="color:#ae81ff">1</span>.806 MB
+ Metadata Space Total: <span style="color:#ae81ff">2</span>.147 GB
+ Metadata Space Available: <span style="color:#ae81ff">2</span>.146 GB
+ Udev Sync Supported: <span style="color:#111">true</span>
+ Deferred Removal Enabled: <span style="color:#111">false</span>
+ Data loop file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata loop file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Library Version: <span style="color:#ae81ff">1</span>.02.99 <span style="color:#f92672">(</span><span style="color:#ae81ff">2015</span>-06-20<span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dmsetup table docker-8<span style="color:#8045ff">\:</span><span style="color:#ae81ff">1</span>-268480-pool
+<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">209715200</span> thin-pool <span style="color:#ae81ff">7</span>:1 <span style="color:#ae81ff">7</span>:0 <span style="color:#ae81ff">128</span> <span style="color:#ae81ff">32768</span> <span style="color:#ae81ff">1</span> skip_block_zeroing</code></pre></div>
+<p>128 is the data block size</p>
+
+<p>Usage from kernel for the primary block device</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dmsetup status docker-8<span style="color:#8045ff">\:</span><span style="color:#ae81ff">1</span>-268480-pool
+<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">209715200</span> thin-pool <span style="color:#ae81ff">37</span> <span style="color:#ae81ff">441</span>/524288 <span style="color:#ae81ff">31424</span>/1638400 - rw discard_passdown queue_if_no_space -</code></pre></div>
+<p>Usage/Available - <sup>31424</sup>&frasl;<sub>1638400</sub></p>
+
+<p>Usage in MB = 31424 * 512 * 128 (block size from above) bytes = 1964 MB</p>
+
+<p>Capacity in MB = 1638400 * 512 * 128 bytes = 100 GB</p>
+
+<h4 id="log-file-accounting">Log file accounting</h4>
+
+<ul>
+<li><p>Setup Linux quota for a container as mentioned above.</p></li>
+
+<li><p>Update group ownership on the following directories to that of the container group ID created for graphing. Adapting the examples above:</p>
+
+<ul>
+<li><p><code>chmod -R a+s  /var/lib/docker/**containers**/b8cc9fae3851f9bcefe922952b7bca0eb33aa31e68e9203ce0639fc9d3f3c61b/*</code></p></li>
+
+<li><p><code>chown -R :9000 /var/lib/docker/**container**/b8cc9fae3851f9bcefe922952b7bca0eb33aa31e68e9203ce0639fc9d3f3c61b/*</code></p></li>
+</ul></li>
+</ul>
+
+<h5 id="testing-titbits">Testing titbits</h5>
+
+<ul>
+<li><p>Ubuntu 15.10 doesn&rsquo;t ship with the quota module on virtual machines. <a href="http://askubuntu.com/questions/109585/quota-format-not-supported-in-kernel">Install ‘linux-image-extra-virtual’</a> package to get quota to work.</p></li>
+
+<li><p>Overlay storage driver needs kernels &gt;= 3.18. I used Ubuntu 15.10 to test Overlayfs.</p></li>
+
+<li><p>If you use a non-default location for docker storage, change <code>/var/lib/docker</code> in the examples to your storage location.</p></li>
+</ul>
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

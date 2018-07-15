@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-multicluster on Kubernetes Community</title>
+    <link>/sig-multicluster/</link>
+    <description>Recent content in sig-multicluster on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-multicluster/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CONTRIBUTING</title>
+      <link>/sig-multicluster/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-multicluster/contributing/</guid>
+      <description>Contributing The process for contributing code to Kubernetes via the sig-multicluster community.
+TL;DR  The sig-multicluster community page lists sig-multicluster leads and group meeting times. Request a feature by making an issue and mentioning @kubernetes/sig-multicluster-feature-requests. Write a design proposal before starting work on a new feature. Write tests!  Before You Begin Welcome to the Kubernetes sig-multicluster contributing guide. We are excited about the prospect of you joining our community!</description>
+    </item>
+    
+    <item>
+      <title>ONCALL</title>
+      <link>/sig-multicluster/oncall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-multicluster/oncall/</guid>
+      <description>Overview We have an oncall rotation for Federation in the SIG. The role description is as follows:
+ Ensure that the testgrid (https://k8s-testgrid.appspot.com/sig-multicluster) is green. This person will be the point of contact if testgrid turns red. Will identify the problem and fix it (most common scenarios: find culprit PR and revert it or free quota by deleting leaked resources). Will also report most common failure scenarios and suggest improvements.</description>
+    </item>
+    
+  </channel>
+</rss>

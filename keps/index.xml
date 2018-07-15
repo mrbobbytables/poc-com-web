@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keps on Kubernetes Community</title>
+    <link>/keps/</link>
+    <description>Recent content in keps on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/keps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0000-kep-template</title>
+      <link>/keps/0000-kep-template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/0000-kep-template/</guid>
+      <description>kep-number: 0 title: My First KEP authors: - &amp;ldquo;@janedoe&amp;rdquo; owning-sig: sig-xxx participating-sigs: - sig-aaa - sig-bbb reviewers: - TBD - &amp;ldquo;@alicedoe&amp;rdquo; approvers: - TBD - &amp;ldquo;@oscardoe&amp;rdquo; editor: TBD creation-date: yyyy-mm-dd last-updated: yyyy-mm-dd status: provisional see-also: - KEP-1 - KEP-2 replaces: - KEP-3 superseded-by:
+- KEP-100 Title This is the title of the KEP. Keep it simple and descriptive. A good title can help communicate what the KEP is and should be considered as part of any review.</description>
+    </item>
+    
+    <item>
+      <title>0001-kubernetes-enhancement-proposal-process</title>
+      <link>/keps/0001-kubernetes-enhancement-proposal-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/0001-kubernetes-enhancement-proposal-process/</guid>
+      <description>kep-number: 1 title: Kubernetes Enhancement Proposal Process authors: - &amp;ldquo;@calebamiles&amp;rdquo; - &amp;ldquo;@jbeda&amp;rdquo; owning-sig: sig-architecture participating-sigs: - kubernetes-wide reviewers: - name: &amp;ldquo;@timothysc&amp;rdquo; approvers: - name: &amp;ldquo;@bgrant0607&amp;rdquo; editor: name: &amp;ldquo;@jbeda&amp;rdquo; creation-date: 2017-08-22
+status: implementable Kubernetes Enhancement Proposal Process Table of Contents  Kubernetes Enhancement Proposal Process  Metadata Table of Contents Summary Motivation Reference-level explanation  What type of work should be tracked by a KEP KEP Template KEP Metadata KEP Workflow Git and GitHub Implementation KEP Editor Role Important Metrics Prior Art  Graduation Criteria Drawbacks Alternatives Unresolved Questions Mentors   Summary A standardized development process for Kubernetes is proposed in order to</description>
+    </item>
+    
+    <item>
+      <title>0002-cloud-controller-manager</title>
+      <link>/keps/sig-cloud-provider/0002-cloud-controller-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-cloud-provider/0002-cloud-controller-manager/</guid>
+      <description>kep-number: 2 title: Cloud Provider Controller Manager authors: - &amp;ldquo;@cheftako&amp;rdquo; - &amp;ldquo;@calebamiles&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; owning-sig: sig-apimachinery participating-sigs: - sig-apps - sig-aws - sig-azure - sig-cloud-provider - sig-gcp - sig-network - sig-openstack - sig-storage reviewers: - &amp;ldquo;@andrewsykim&amp;rdquo; - &amp;ldquo;@calebamiles&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; - &amp;ldquo;@jagosan&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: TBD status: provisional replaces:
+- contributors/design-proposals/cloud-provider/cloud-provider-refactoring.md Remove Cloud Provider Code From Kubernetes Core Table of Contents  Remove Cloud Provider Code From Kubernetes Core  Table of Contents Summary Motivation  Goals Intermediary Goals Non-Goals  Proposal  Controller Manager Changes Kubelet Changes API Server Changes Volume Management Changes Deployment Changes Implementation Details/Notes/Constraints  Repository Requirements  Notes for Repository Requirements Repository Timeline   Security Considerations  Graduation Criteria  Graduation to Beta  Process Goals   Implementation History Alternatives   Summary We want to remove any cloud provider specific logic from the kubernetes/kubernetes repo.</description>
+    </item>
+    
+    <item>
+      <title>0003-testgrid-conformance-e2e</title>
+      <link>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</guid>
+      <description>kep-number: 003 title: Reporting Conformance Test Results to Testgrid authors: - &amp;ldquo;@andrewsykim&amp;rdquo; owning-sig: sig-cloud-provider participating-sigs: - sig-testing - sig-release - sig-aws - sig-azure - sig-gcp - sig-ibmcloud - sig-openstack - sig-vmware reviewers: - TBD approvers: - TBD editor: TBD creation-date: 2018-06-06 last-updated: 2018-06-06 status: provisional
+Reporting Conformance Test Results to Testgrid Table of Contents  Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History  Summary This is a KEP outlining the motivation behind why cloud providers should periodically upload E2E conformance test results to Testgrid and how a cloud provider can go about doing this.</description>
+    </item>
+    
+    <item>
+      <title>0004-cloud-provider-template</title>
+      <link>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</guid>
+      <description>kep-number: 4 title: Cloud Provider Template authors: - &amp;ldquo;@janedoe&amp;rdquo; owning-sig: sig-cloud-provider participating-sigs: - sig-aaa - sig-bbb reviewers: - TBD - &amp;ldquo;@alicedoe&amp;rdquo; approvers: - &amp;ldquo;@andrewsykim&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; - &amp;ldquo;@jagosan&amp;rdquo; editor: TBD creation-date: yyyy-mm-dd last-updated: yyyy-mm-dd status: provisional see-also: - KEP-1 - KEP-2 replaces: - KEP-3 superseded-by:
+- KEP-100 Cloud Provider FooBar This is a KEP template, outlining how to propose a new cloud provider into the Kubernetes ecosystem.
+Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Requirements Proposal  Summary This is where you add a summary of your cloud provider and other additional information about your cloud provider that others may find useful.</description>
+    </item>
+    
+    <item>
+      <title>0005-contributor-site</title>
+      <link>/keps/sig-contributor-experience/0005-contributor-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-contributor-experience/0005-contributor-site/</guid>
+      <description>kep-number: 5 title: Contributor Site authors: - &amp;ldquo;@jbeda&amp;rdquo; owning-sig: sig-contributor-experience participating-sigs: - sig-architecture - sig-docs reviewers: - &amp;ldquo;@castrojo&amp;rdquo; approvers: - &amp;ldquo;@parispittman&amp;rdquo; editor: TBD creation-date: &amp;ldquo;2018-02-19&amp;rdquo; last-updated: &amp;ldquo;2018-03-07&amp;rdquo;
+status: implementable Contributor Site Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Risks and Mitigations  Graduation Criteria Implementation History Drawbacks Alternatives  Summary We need a way to organize and publish information targeted at contributors.</description>
+    </item>
+    
+    <item>
+      <title>0006-apply</title>
+      <link>/keps/0006-apply/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/0006-apply/</guid>
+      <description>kep-number: 6 title: Apply authors: - &amp;ldquo;@lavalamp&amp;rdquo; owning-sig: sig-api-machinery participating-sigs: - sig-api-machinery - sig-cli reviewers: - &amp;ldquo;@pwittrock&amp;rdquo; - &amp;ldquo;@erictune&amp;rdquo; approvers: - &amp;ldquo;@bgrant0607&amp;rdquo; editor: TBD creation-date: 2018-03-28 last-updated: 2018-03-28 status: provisional see-also: - n/a replaces: - n/a superseded-by:
+- n/a Apply Table of Contents  Apply  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints [optional] Risks and Mitigations  Graduation Criteria Implementation History Drawbacks Alternatives   Summary kubectl apply is a core part of the Kubernetes config workflow, but it is buggy and hard to fix.</description>
+    </item>
+    
+    <item>
+      <title>0007-20180403-community-forum</title>
+      <link>/keps/sig-contributor-experience/0007-20180403-community-forum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-contributor-experience/0007-20180403-community-forum/</guid>
+      <description>kep-number: 0007 title: A community forum for Kubernetes authors: - &amp;ldquo;@castrojo&amp;rdquo; owning-sig: sig-contributor-experience participating-sigs: reviewers: - &amp;ldquo;@jberkus&amp;rdquo; - &amp;ldquo;@joebeda&amp;rdquo; - &amp;ldquo;@cblecker&amp;rdquo; approvers: - &amp;ldquo;@parispittman&amp;rdquo; - &amp;ldquo;@grodrigues3&amp;rdquo;
+editor: TBD creation-date: 2018-04-03 last-updated: 2018-04-17
+status: provisional A community forum for Kubernetes Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  User Stories [optional]  Story 1 Story 2  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History Drawbacks  Summary Kubernetes is large enough that we should take a more active role in growing our community.</description>
+    </item>
+    
+    <item>
+      <title>0008-20180430-promote-sysctl-annotations-to-fields</title>
+      <link>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</guid>
+      <description>kep-number: 8 title: Protomote sysctl annotations to fields authors: - &amp;ldquo;@ingvagabund&amp;rdquo; owning-sig: sig-node participating-sigs: - sig-auth reviewers: - &amp;ldquo;@sjenning&amp;rdquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; approvers: - &amp;ldquo;@sjenning &amp;ldquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; editor: creation-date: 2018-04-30 last-updated: 2018-05-02 status: provisional see-also: replaces:
+superseded-by: Promote sysctl annotations to fields Table of Contents  Promote sysctl annotations to fields  Table of Contents Summary Motivation  Promote annotations to fields Promote &amp;ndash;experimental-allowed-unsafe-sysctls kubelet flag to kubelet config api option Gate the feature  Proposal  User Stories Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History   Summary Setting the sysctl parameters through annotations provided a successful story for defining better constraints of running applications.</description>
+    </item>
+    
+    <item>
+      <title>0008-kustomize</title>
+      <link>/keps/sig-cli/0008-kustomize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-cli/0008-kustomize/</guid>
+      <description>kep-number: 8 title: Kustomize authors: - &amp;ldquo;@pwittrock&amp;rdquo; - &amp;ldquo;@monopole&amp;rdquo; owning-sig: sig-cli participating-sigs: - sig-cli reviewers: - &amp;ldquo;@droot&amp;rdquo; approvers: - &amp;ldquo;@soltysh&amp;rdquo; editor: &amp;ldquo;@droot&amp;rdquo; creation-date: 2018-05-05 last-updated: 2018-05-23 status: implemented see-also: - n/a replaces: - kinflate # Old name for kustomize superseded-by:
+- n/a Kustomize Table of Contents  Kustomize  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints [optional] Risks and Mitigations Risks of Not Having a Solution  Graduation Criteria Implementation History Drawbacks Alternatives FAQ   Summary Declarative specification of Kubernetes objects is the recommended way to manage Kubernetes production workloads, however gaps in the kubectl tooling force users to write their own scripting and tooling to augment the declarative tools with preprocessing transformations.</description>
+    </item>
+    
+    <item>
+      <title>0009-node-heartbeat</title>
+      <link>/keps/sig-node/0009-node-heartbeat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-node/0009-node-heartbeat/</guid>
+      <description>kep-number: 8 title: Efficient Node Heartbeat authors: - &amp;ldquo;@wojtek-t&amp;rdquo; - &amp;ldquo;with input from @bgrant0607, @dchen1107, @yujuhong, @lavalamp&amp;rdquo; owning-sig: sig-node participating-sigs: - sig-scalability - sig-apimachinery - sig-scheduling reviewers: - &amp;ldquo;@deads2k&amp;rdquo; - &amp;ldquo;@lavalamp&amp;rdquo; approvers: - &amp;ldquo;@dchen1107&amp;rdquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; editor: TBD creation-date: 2018-04-27 last-updated: 2018-04-27 status: implementable see-also: - https://github.com/kubernetes/kubernetes/issues/14733 - https://github.com/kubernetes/kubernetes/pull/14735 replaces: - n/a superseded-by:
+- n/a Efficient Node Heartbeats Table of Contents Table of Contents  Efficient Node Heartbeats  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Risks and Mitigations  Graduation Criteria Implementation History Alternatives  Dedicated “heartbeat” object instead of “leader election” one Events instead of dedicated heartbeat object Reuse the Component Registration mechanisms Split Node object into two parts at etcd level Delta compression in etcd Replace etcd with other database    Summary Node heartbeats are necessary for correct functioning of Kubernetes cluster.</description>
+    </item>
+    
+  </channel>
+</rss>

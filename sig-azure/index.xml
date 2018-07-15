@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-azure on Kubernetes Community</title>
+    <link>/sig-azure/</link>
+    <description>Recent content in sig-azure on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>charter</title>
+      <link>/sig-azure/charter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-azure/charter/</guid>
+      <description>SIG Azure Charter The following is a charter for the Kubernetes Special Interest Group for Azure. It delineates the roles of SIG leadership, SIG members, as well as the organizational processes for the SIG, both as they relate to project management and technical processes for SIG subprojects.
+Roles SIG Chairs  Run operations and processes governing the SIG Seed members established at SIG founding Chairs MAY decide to step down at anytime and propose a replacement.</description>
+    </item>
+    
+  </channel>
+</rss>

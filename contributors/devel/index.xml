@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devel on Kubernetes Community</title>
+    <link>/contributors/devel/</link>
+    <description>Recent content in devel on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/contributors/devel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>adding-an-APIGroup</title>
+      <link>/contributors/devel/adding-an-apigroup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/adding-an-apigroup/</guid>
+      <description>Adding an API Group Please refer to api_changes.md.</description>
+    </item>
+    
+    <item>
+      <title>api-conventions</title>
+      <link>/contributors/devel/api-conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/api-conventions/</guid>
+      <description>API Conventions Updated: 3/7/2017
+This document is oriented at users who want a deeper understanding of the Kubernetes API structure, and developers wanting to extend the Kubernetes API. An introduction to using resources with kubectl can be found in the object management overview.
+Table of Contents
+ Types (Kinds)  Resources Objects  Metadata Spec and Status Typical status properties References to related objects Lists of named subobjects preferred over maps Primitive types Constants Unions  Lists and Simple kinds  Differing Representations Verbs on Resources  PATCH operations  Strategic Merge Patch   Idempotency Optional vs.</description>
+    </item>
+    
+    <item>
+      <title>api_changes</title>
+      <link>/contributors/devel/api_changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/api_changes/</guid>
+      <description>*This document is oriented at developers who want to change existing APIs. A set of API conventions, which applies to new APIs and to changes, can be found at API Conventions.
+Table of Contents
+ So you want to change the API?  Operational overview On compatibility Backward compatibility gotchas Incompatible API changes Changing versioned APIs Edit types.go Edit defaults.go Edit conversion.go Changing the internal structures Edit types.go Edit validation.</description>
+    </item>
+    
+    <item>
+      <title>architectural-roadmap</title>
+      <link>/contributors/devel/architectural-roadmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/architectural-roadmap/</guid>
+      <description>Kubernetes Architectural Roadmap Shared with the community
+Status: First draft
+Last update: 4/20/2017
+Authors: Brian Grant, Tim Hockin, and Clayton Coleman
+Intended audience: Kubernetes contributors
+Table of Contents
+ Kubernetes Architectural Roadmap  Summary/TL;DR Background System Layers  The Nucleus: API and Execution  The API and cluster control plane Execution  The Application Layer: Deployment and Routing The Governance Layer: Automation and Policy Enforcement The Interface Layer: Libraries and Tools The Ecosystem  Managing the matrix Layering of the system as it relates to security Next Steps   Summary/TL;DR This document describes the ongoing architectural development of the Kubernetes system, and the motivations behind it.</description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>/contributors/devel/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/automation/</guid>
+      <description>Kubernetes Development Automation Overview Kubernetes uses a variety of automated tools in an attempt to relieve developers of repetitive, low brain power work. This document attempts to describe these processes.
+Submit Queue In an effort to * reduce load on core developers * maintain end-to-end test stability * load test github&amp;rsquo;s label feature
+We have added an automated submit-queue to the github &amp;ldquo;munger&amp;rdquo; for kubernetes.
+The submit-queue does the following:</description>
+    </item>
+    
+    <item>
+      <title>bazel</title>
+      <link>/contributors/devel/bazel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/bazel/</guid>
+      <description>Build and test with Bazel Building and testing Kubernetes with Bazel is supported but not yet default.
+Go rules are managed by the gazelle tool, with some additional rules managed by the kazel tool. These tools are called via the hack/update-bazel.sh script.
+Instructions for installing Bazel can be found here.
+Several make rules have been created for common operations:
+ make bazel-build: builds all binaries in tree make bazel-test: runs all unit tests make bazel-test-integration: runs all integration tests make bazel-release: builds release tarballs, Docker images (for server components), and Debian images  You can also interact with Bazel directly; for example, to run all kubectl unit tests, run</description>
+    </item>
+    
+    <item>
+      <title>cherry-picks</title>
+      <link>/contributors/devel/cherry-picks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/cherry-picks/</guid>
+      <description>Overview This document explains how cherry picks are managed on release branches within the Kubernetes projects.
+Prerequisites  Contributor License Agreement is considered implicit for all code within cherry-pick pull requests, unless there is a large conflict. A pull request merged against the master branch. Release branch exists. The normal git and GitHub configured shell environment for pushing to your kubernetes origin fork on GitHub and making a pull request against a configured remote upstream that tracks &amp;ldquo;https://github.</description>
+    </item>
+    
+    <item>
+      <title>client-libraries</title>
+      <link>/contributors/devel/client-libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/client-libraries/</guid>
+      <description>Kubernetes API client libraries This document has been moved to https://kubernetes.io/docs/reference/using-api/client-libraries/.</description>
+    </item>
+    
+    <item>
+      <title>collab</title>
+      <link>/contributors/devel/collab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/collab/</guid>
+      <description>On Collaborative Development Code reviews All changes must be code reviewed. For non-maintainers this is obvious, since you can&amp;rsquo;t commit anyway. But even for maintainers, we want all changes to get at least one review, preferably (for non-trivial changes obligatorily) from someone who knows the areas the change touches. For non-trivial changes we may want two reviewers. The primary reviewer will make this decision and nominate a second reviewer, if needed.</description>
+    </item>
+    
+    <item>
+      <title>component-config-conventions</title>
+      <link>/contributors/devel/component-config-conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/component-config-conventions/</guid>
+      <description>Component Configuration Conventions Objective This document concerns the configuration of Kubernetes system components (as opposed to the configuration of user workloads running on Kubernetes). Component configuration is a major operational burden for operators of Kubernetes clusters. To date, much literature has been written on and much effort expended to improve component configuration. Despite this, the state of component configuration remains dissonant. This document attempts to aggregate that literature and propose a set of guidelines that component owners can follow to improve consistency across the project.</description>
+    </item>
+    
+    <item>
+      <title>container-runtime-interface</title>
+      <link>/contributors/devel/container-runtime-interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/container-runtime-interface/</guid>
+      <description>CRI: the Container Runtime Interface What is CRI? CRI (Container Runtime Interface) consists of a protobuf API, specifications/requirements (to-be-added), and libraries for container runtimes to integrate with kubelet on a node. CRI is currently in Alpha.
+In the future, we plan to add more developer tools such as the CRI validation tests.
+Why develop CRI? Prior to the existence of CRI, container runtimes (e.g., docker, rkt) were integrated with kubelet through implementing an internal, high-level interface in kubelet.</description>
+    </item>
+    
+    <item>
+      <title>controllers</title>
+      <link>/contributors/devel/controllers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/controllers/</guid>
+      <description>Writing Controllers A Kubernetes controller is an active reconciliation process. That is, it watches some object for the world&amp;rsquo;s desired state, and it watches the world&amp;rsquo;s actual state, too. Then, it sends instructions to try and make the world&amp;rsquo;s current state be more like the desired state.
+The simplest implementation of this is a loop:
+for { desired := getDesiredState() current := getCurrentState() makeChanges(desired, current) } Watches, etc, are all merely optimizations of this logic.</description>
+    </item>
+    
+    <item>
+      <title>cri-container-stats</title>
+      <link>/contributors/devel/cri-container-stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/cri-container-stats/</guid>
+      <description>Container Runtime Interface: Container Metrics Container runtime interface (CRI) provides an abstraction for container runtimes to integrate with Kubernetes. CRI expects the runtime to provide resource usage statistics for the containers.
+Background Historically Kubelet relied on the cAdvisor library, an open-source project hosted in a separate repository, to retrieve container metrics such as CPU and memory usage. These metrics are then aggregated and exposed through Kubelet&amp;rsquo;s Summary API for the monitoring pipeline (and other components) to consume.</description>
+    </item>
+    
+    <item>
+      <title>cri-testing-policy</title>
+      <link>/contributors/devel/cri-testing-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/cri-testing-policy/</guid>
+      <description>Container Runtime Interface: Testing Policy Owner: SIG-Node
+This document describes testing policy and process for runtimes implementing the Container Runtime Interface (CRI) to publish test results in a federated dashboard. The objective is to provide the Kubernetes community an easy way to track the conformance, stability, and supported features of a CRI runtime.
+This document focuses on Kubernetes node/cluster end-to-end (E2E) testing because many features require integration of runtime, OS, or even the cloud provider.</description>
+    </item>
+    
+    <item>
+      <title>cri-validation</title>
+      <link>/contributors/devel/cri-validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/cri-validation/</guid>
+      <description>Container Runtime Interface (CRI) Validation Testing CRI validation testing provides a test framework and a suite of tests to validate that the Container Runtime Interface (CRI) server implementation meets all the requirements. This allows the CRI runtime developers to verify that their runtime conforms to CRI, without needing to set up Kubernetes components or run Kubernetes end-to-end tests.
+CRI validation testing is GA since v1.11.0 and is hosted at the cri-tools repository.</description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>/contributors/devel/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/development/</guid>
+      <description>Development Guide This document is the canonical source of truth for things like supported toolchain versions for building Kubernetes.
+Please submit an issue on Github if you * Notice a requirement that this doc does not capture. * Find a different doc that specifies requirements (the doc should instead link here).
+Development branch requirements will change over time, but release branch requirements are frozen.
+Pre submit flight checks Determine whether your issue or pull request is improving Kubernetes&amp;rsquo; architecture or whether it&amp;rsquo;s simply fixing a bug.</description>
+    </item>
+    
+    <item>
+      <title>e2e-node-tests</title>
+      <link>/contributors/devel/e2e-node-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/e2e-node-tests/</guid>
+      <description>Node End-To-End tests Node e2e tests are component tests meant for testing the Kubelet code on a custom host environment.
+Tests can be run either locally or against a host running on GCE.
+Node e2e tests are run as both pre- and post- submit tests by the Kubernetes project.
+Note: Linux only. Mac and Windows unsupported.
+Note: There is no scheduler running. The e2e tests have to do manual scheduling, e.</description>
+    </item>
+    
+    <item>
+      <title>e2e-tests</title>
+      <link>/contributors/devel/e2e-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/e2e-tests/</guid>
+      <description>End-to-End Testing in Kubernetes Table of Contents
+ End-to-End Testing in Kubernetes  Overview Building Kubernetes and Running the Tests Cleaning up Advanced testing Installing/updating kubetest Extracting a specific version of kubernetes Bringing up a cluster for testing Federation e2e tests  Configuring federation e2e tests Image Push Repository Build Deploy federation control plane Run the Tests Teardown Shortcuts for test developers  Debugging clusters Local clusters  Testing against local clusters  Version-skewed and upgrade testing  Test jobs naming convention  Kinds of tests Viper configuration and hierarchichal test parameters.</description>
+    </item>
+    
+    <item>
+      <title>event-style-guide</title>
+      <link>/contributors/devel/event-style-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/event-style-guide/</guid>
+      <description>Event style guide Status: During Review
+Author: Marek Grabowski (gmarek@)
+Why the guide? The Event API change proposal is the first step towards having useful Events in the system. Another step is to formalize the Event style guide, i.e. set of properties that developers need to ensure when adding new Events to the system. This is necessary to ensure that we have a system in which all components emit consistently structured Events.</description>
+    </item>
+    
+    <item>
+      <title>flaky-tests</title>
+      <link>/contributors/devel/flaky-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/flaky-tests/</guid>
+      <description>Flaky tests Any test that fails occasionally is &amp;ldquo;flaky&amp;rdquo;. Since our merges only proceed when all tests are green, and we have a number of different CI systems running the tests in various combinations, even a small percentage of flakes results in a lot of pain for people waiting for their PRs to merge.
+Therefore, it&amp;rsquo;s very important that we write tests defensively. Situations that &amp;ldquo;almost never happen&amp;rdquo; happen with some regularity when run thousands of times in resource-constrained environments.</description>
+    </item>
+    
+    <item>
+      <title>flexvolume</title>
+      <link>/contributors/devel/flexvolume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/flexvolume/</guid>
+      <description>Flexvolume Flexvolume enables users to write their own drivers and add support for their volumes in Kubernetes. Vendor drivers should be installed in the volume plugin path on every Kubelet node and on master node(s) if --enable-controller-attach-detach Kubelet option is enabled.
+Flexvolume is a GA feature from Kubernetes 1.8 release onwards.
+Prerequisites Install the vendor driver on all nodes (also on master nodes if &amp;ldquo;&amp;ndash;enable-controller-attach-detach&amp;rdquo; Kubelet option is enabled) in the plugin path.</description>
+    </item>
+    
+    <item>
+      <title>generating-clientset</title>
+      <link>/contributors/devel/generating-clientset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/generating-clientset/</guid>
+      <description>Generation and release cycle of clientset Client-gen is an automatic tool that generates clientset based on API types. This doc introduces the use the client-gen, and the release cycle of the generated clientsets.
+Using client-gen The workflow includes three steps:
+1. Marking API types with tags: in pkg/apis/${GROUP}/${VERSION}/types.go, mark the types (e.g., Pods) that you want to generate clients for with the // +genclient tag. If the resource associated with the type is not namespace scoped (e.</description>
+    </item>
+    
+    <item>
+      <title>getting-builds</title>
+      <link>/contributors/devel/getting-builds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/getting-builds/</guid>
+      <description>Getting Kubernetes Builds You can use hack/get-build.sh to get a build or to use as a reference on how to get the most recent builds with curl. With get-build.sh you can grab the most recent stable build, the most recent release candidate, or the most recent build to pass our ci and gce e2e tests (essentially a nightly build).
+Run ./hack/get-build.sh -h for its usage.
+To get a build at a specific version (v1.</description>
+    </item>
+    
+    <item>
+      <title>godep</title>
+      <link>/contributors/devel/godep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/godep/</guid>
+      <description>Using godep to manage dependencies This document is intended to show a way for managing vendor/ tree dependencies in Kubernetes. If you do not need to manage vendored dependencies, you probably do not need to read this.
+Background As a tool, godep leaves much to be desired. It builds on go get, and adds the ability to pin dependencies to exact git version. The go get tool itself doesn&amp;rsquo;t have any concept of versions, and tends to blow up if it finds a git repo synced to anything but master, but that is exactly the state that godep leaves repos.</description>
+    </item>
+    
+    <item>
+      <title>gubernator</title>
+      <link>/contributors/devel/gubernator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/gubernator/</guid>
+      <description>Gubernator This document is oriented at developers who want to use Gubernator to debug while developing for Kubernetes.
+ Gubernator  What is Gubernator? Gubernator Features Test Failures list Log Filtering Gubernator for Local Tests Future Work   What is Gubernator? Gubernator is a webpage for viewing and filtering Kubernetes test results.
+Gubernator simplifies the debugging process and makes it easier to track down failures by automating many steps commonly taken in searching through logs, and by offering tools to filter through logs to find relevant lines.</description>
+    </item>
+    
+    <item>
+      <title>help-wanted</title>
+      <link>/contributors/devel/help-wanted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/help-wanted/</guid>
+      <description>Overview We use two labels help wanted and good first issue to identify issues that have been specially groomed for new contributors. The good first issue label is a subset of help wanted label, indicating that members have committed to providing extra assistance for new contributors. All good first issue items also have the help wanted label.
+We also have some suggestions for using these labels to help grow and improve our community.</description>
+    </item>
+    
+    <item>
+      <title>how-to-doc</title>
+      <link>/contributors/devel/how-to-doc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/how-to-doc/</guid>
+      <description>Document Conventions Updated: 11/3/2017
+Users and developers who want to write documents for Kubernetes can get started here.</description>
+    </item>
+    
+    <item>
+      <title>instrumentation</title>
+      <link>/contributors/devel/instrumentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/instrumentation/</guid>
+      <description>Instrumenting Kubernetes The following references and outlines general guidelines for metric instrumentation in Kubernetes components. Components are instrumented using the Prometheus Go client library. For non-Go components. Libraries in other languages are available.
+The metrics are exposed via HTTP in the Prometheus metric format, which is open and well-understood by a wide range of third party applications and vendors outside of the Prometheus eco-system.
+The general instrumentation advice from the Prometheus documentation applies.</description>
+    </item>
+    
+    <item>
+      <title>issues</title>
+      <link>/contributors/devel/issues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/issues/</guid>
+      <description>+NOTE: This document has moved to a new location</description>
+    </item>
+    
+    <item>
+      <title>kubectl-conventions</title>
+      <link>/contributors/devel/kubectl-conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/kubectl-conventions/</guid>
+      <description>Kubectl Conventions Updated: 3/23/2017
+Table of Contents
+ Kubectl Conventions  Principles Command conventions Create commands Rules for extending special resource alias - &amp;ldquo;all&amp;rdquo; Flag conventions Output conventions Documentation conventions kubectl Factory conventions Command implementation conventions Exit code conventions Generators   Principles  Strive for consistency across commands
+ Explicit should always override implicit
+ Environment variables should override default values
+ Command-line flags should override default values and environment variables</description>
+    </item>
+    
+    <item>
+      <title>kubelet-cri-networking</title>
+      <link>/contributors/devel/kubelet-cri-networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/kubelet-cri-networking/</guid>
+      <description>Container Runtime Interface (CRI) Networking Specifications Introduction Container Runtime Interface (CRI) is an ongoing project to allow container runtimes to integrate with kubernetes via a newly-defined API. This document specifies the network requirements for container runtime interface (CRI). CRI networking requirements expand upon kubernetes pod networking requirements. This document does not specify requirements from upper layers of kubernetes network stack, such as Service. More background on k8s networking could be found here</description>
+    </item>
+    
+    <item>
+      <title>kubemark-guide</title>
+      <link>/contributors/devel/kubemark-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/kubemark-guide/</guid>
+      <description>Kubemark User Guide Introduction Kubemark is a performance testing tool which allows users to run experiments on simulated clusters. The primary use case is scalability testing, as simulated clusters can be much bigger than the real ones. The objective is to expose problems with the master components (API server, controller manager or scheduler) that appear only on bigger clusters (e.g. small memory leaks).
+This document serves as a primer to understand what Kubemark is, what it is not, and how to use it.</description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>/contributors/devel/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/logging/</guid>
+      <description>Logging Conventions The following conventions for the glog levels to use. glog is globally preferred to log for better runtime control.
+ glog.Errorf() - Always an error
+ glog.Warningf() - Something unexpected, but probably not an error
+ glog.Infof() has multiple levels:
+ glog.V(0) - Generally useful for this to ALWAYS be visible to an operator Programmer errors Logging extra info about a panic CLI argument handling glog.V(1) - A reasonable default log level if you don&amp;rsquo;t want verbosity.</description>
+    </item>
+    
+    <item>
+      <title>mesos-style</title>
+      <link>/contributors/devel/mesos-style/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/mesos-style/</guid>
+      <description>Building Mesos/Omega-style frameworks on Kubernetes Introduction We have observed two different cluster management architectures, which can be categorized as &amp;ldquo;Borg-style&amp;rdquo; and &amp;ldquo;Mesos/Omega-style.&amp;rdquo; In the remainder of this document, we will abbreviate the latter as &amp;ldquo;Mesos-style.&amp;rdquo; Although out-of-the box Kubernetes uses a Borg-style architecture, it can also be configured in a Mesos-style architecture, and in fact can support both styles at the same time. This document describes the two approaches and describes how to deploy a Mesos-style architecture on Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>node-performance-testing</title>
+      <link>/contributors/devel/node-performance-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/node-performance-testing/</guid>
+      <description>Measuring Node Performance This document outlines the issues and pitfalls of measuring Node performance, as well as the tools available.
+Cluster Set-up There are lots of factors which can affect node performance numbers, so care must be taken in setting up the cluster to make the intended measurements. In addition to taking the following steps into consideration, it is important to document precisely which setup was used. For example, performance can vary wildly from commit-to-commit, so it is very important to document which commit or version of Kubernetes was used, which Docker version was used, etc.</description>
+    </item>
+    
+    <item>
+      <title>on-call-federation-build-cop</title>
+      <link>/contributors/devel/on-call-federation-build-cop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/on-call-federation-build-cop/</guid>
+      <description>Federation Buildcop Guide and Playbook Federation runs two classes of tests: CI and Pre-submits.
+CI  These tests run on the HEADs of master and release branches (starting from Kubernetes v1.7). As a result, they run on code that&amp;rsquo;s already merged. As the name suggests, they run continuously. Currently, they are configured to run at least once every 30 minutes. Federation CI tests run as periodic jobs on prow. CI jobs always run sequentially.</description>
+    </item>
+    
+    <item>
+      <title>profiling</title>
+      <link>/contributors/devel/profiling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/profiling/</guid>
+      <description>Profiling Kubernetes This document explain how to plug in profiler and how to profile Kubernetes services. To get familiar with the tools mentioned below, it is strongly recommended to read Profiling Go Programs.
+Profiling library Go comes with inbuilt &amp;lsquo;net/http/pprof&amp;rsquo; profiling library and profiling web service. The way service works is binding debug/pprof/ subtree on a running webserver to the profiler. Reading from subpages of debug/pprof returns pprof-formatted profiles of the running binary.</description>
+    </item>
+    
+    <item>
+      <title>running-locally</title>
+      <link>/contributors/devel/running-locally/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/running-locally/</guid>
+      <description>Getting started locally Table of Contents
+ Requirements  Linux Docker etcd go OpenSSL CFSSL  Clone the repository Starting the cluster Running a container Running a user defined pod Troubleshooting  I cannot reach service IPs on the network. I cannot create a replication controller with replica size greater than 1! What gives? I changed Kubernetes code, how do I run it? kubectl claims to start a container but get pods and docker ps don&amp;rsquo;t show it.</description>
+    </item>
+    
+    <item>
+      <title>scheduler</title>
+      <link>/contributors/devel/scheduler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/scheduler/</guid>
+      <description>The Kubernetes Scheduler The Kubernetes scheduler runs as a process alongside the other master components such as the API server. Its interface to the API server is to watch for Pods with an empty PodSpec.NodeName, and for each Pod, it posts a binding indicating where the Pod should be scheduled.
+Exploring the code We are dividing scheduler into three layers from high level: - cmd/kube-scheduler/scheduler.go: This is the main() entry that does initialization before calling the scheduler framework.</description>
+    </item>
+    
+    <item>
+      <title>scheduler_algorithm</title>
+      <link>/contributors/devel/scheduler_algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/scheduler_algorithm/</guid>
+      <description>Scheduler Algorithm in Kubernetes For each unscheduled Pod, the Kubernetes scheduler tries to find a node across the cluster according to a set of rules. A general introduction to the Kubernetes scheduler can be found at scheduler.md. In this document, the algorithm of how to select a node for the Pod is explained. There are two steps before a destination node of a Pod is chosen. The first step is filtering all the nodes and the second is ranking the remaining nodes to find a best fit for the Pod.</description>
+    </item>
+    
+    <item>
+      <title>staging</title>
+      <link>/contributors/devel/staging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/staging/</guid>
+      <description>Staging Directory and Publishing The staging/ directory of Kubernetes contains a number of pseudo repositories (&amp;ldquo;staging repos&amp;rdquo;). They are symlinked into Kubernetes&amp;rsquo; vendor/ directory for Golang to pick them up.
+We publish the staging repos using the publishing bot. It uses git filter-branch essentially to cut the staging directories into separate git trees and pushing the new commits to the corresponding real repositories in the kubernetes organization on Github.</description>
+    </item>
+    
+    <item>
+      <title>strategic-merge-patch</title>
+      <link>/contributors/devel/strategic-merge-patch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/strategic-merge-patch/</guid>
+      <description>Strategic Merge Patch Background Kubernetes supports a customized version of JSON merge patch called strategic merge patch. This patch format is used by kubectl apply, kubectl edit and kubectl patch, and contains specialized directives to control how specific fields are merged.
+In the standard JSON merge patch, JSON objects are always merged but lists are always replaced. Often that isn&amp;rsquo;t what we want. Let&amp;rsquo;s say we start with the following Pod:</description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>/contributors/devel/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/testing/</guid>
+      <description>Testing guide Table of Contents
+ Testing guide  Unit tests Run all unit tests Set go flags during unit tests Run unit tests from certain packages Run specific unit test cases in a package Stress running unit tests Unit test coverage Benchmark unit tests Integration tests Install etcd dependency Etcd test data Run integration tests Run a specific integration test End-to-End tests   This assumes you already read the development guide to install go, godeps, and configure your git client.</description>
+    </item>
+    
+    <item>
+      <title>update-release-docs</title>
+      <link>/contributors/devel/update-release-docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/update-release-docs/</guid>
+      <description>This document relates to the release process and can be found here.
+This file is a redirect stub. It should be deleted within 3 months from the current date, or by the release date of k8s v1.12, whichever comes sooner.</description>
+    </item>
+    
+    <item>
+      <title>updating-docs-for-feature-changes</title>
+      <link>/contributors/devel/updating-docs-for-feature-changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/updating-docs-for-feature-changes/</guid>
+      <description>This document relates to the release process and can be found here.
+This file is a redirect stub. It should be deleted within 3 months from the current date, or by the release date of k8s v1.12, whichever comes sooner.</description>
+    </item>
+    
+    <item>
+      <title>vagrant</title>
+      <link>/contributors/devel/vagrant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/vagrant/</guid>
+      <description>Getting started with Vagrant Running Kubernetes with Vagrant is an easy way to run/test/develop on your local machine in an environment using the same setup procedures when running on GCE or AWS cloud providers. This provider is not tested on a per PR basis, if you experience bugs when testing from HEAD, please open an issue.
+Prerequisites  Install latest version &amp;gt;= 1.8.1 of vagrant from http://www.vagrantup.com/downloads.html
+ Install a virtual machine host.</description>
+    </item>
+    
+    <item>
+      <title>welcome-to-kubernetes-new-developer-guide</title>
+      <link>/contributors/devel/welcome-to-kubernetes-new-developer-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/welcome-to-kubernetes-new-developer-guide/</guid>
+      <description>This page has moved to:
+https://git.k8s.io/community/contributors/guide/</description>
+    </item>
+    
+    <item>
+      <title>writing-a-getting-started-guide</title>
+      <link>/contributors/devel/writing-a-getting-started-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/writing-a-getting-started-guide/</guid>
+      <description>Writing a Getting Started Guide This page gives some advice for anyone planning to write or update a Getting Started Guide for Kubernetes. It also gives some guidelines which reviewers should follow when reviewing a pull request for a guide.
+A Getting Started Guide is instructions on how to create a Kubernetes cluster on top of a particular type(s) of infrastructure. Infrastructure includes: the IaaS provider for VMs; the node OS; inter-node networking; and node Configuration Management system.</description>
+    </item>
+    
+    <item>
+      <title>writing-good-e2e-tests</title>
+      <link>/contributors/devel/writing-good-e2e-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/writing-good-e2e-tests/</guid>
+      <description>Writing good e2e tests for Kubernetes Patterns and Anti-Patterns Goals of e2e tests Beyond the obvious goal of providing end-to-end system test coverage, there are a few less obvious goals that you should bear in mind when designing, writing and debugging your end-to-end tests. In particular, &amp;ldquo;flaky&amp;rdquo; tests, which pass most of the time but fail intermittently for difficult-to-diagnose reasons are extremely costly in terms of blurring our regression signals and slowing down our automated merge queue.</description>
+    </item>
+    
+  </channel>
+</rss>

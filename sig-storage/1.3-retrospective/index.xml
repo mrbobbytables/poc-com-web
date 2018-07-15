@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.3-retrospective on Kubernetes Community</title>
+    <link>/sig-storage/1.3-retrospective/</link>
+    <description>Recent content in 1.3-retrospective on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-storage/1.3-retrospective/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

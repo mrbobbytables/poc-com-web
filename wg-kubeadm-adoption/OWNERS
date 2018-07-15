@@ -1,0 +1,6 @@
+reviewers:
+  - wg-kubeadm-adoption-leads
+approvers:
+  - wg-kubeadm-adoption-leads
+labels:
+  - wg/kubeadm-adoption

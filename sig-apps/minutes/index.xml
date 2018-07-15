@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minutes on Kubernetes Community</title>
+    <link>/sig-apps/minutes/</link>
+    <description>Recent content in minutes on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-apps/minutes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2016-05-18</title>
+      <link>/sig-apps/minutes/2016-05-18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-05-18/</guid>
+      <description>May 18, 2016  The first SIG Apps meeting Intro from Michelle Discussion on the future of the SIG:  Mike from Rackspace offered to do a demo of the recursive functionality (issue) Idea: solicit the community for cases where their use cases aren&amp;rsquo;t met.  Demo from Prashanth B on PetSets (issue)  Supposed to make deploying and managing stateful apps easier. Will be alpha in 1.3. Zookeeper, mysql, cassandra are example apps to run in this A group of elements in the identity of a thing.</description>
+    </item>
+    
+    <item>
+      <title>2016-05-25</title>
+      <link>/sig-apps/minutes/2016-05-25/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-05-25/</guid>
+      <description>May 25, 2016  Intro by Michelle Mike Metral from Rackspace demo  Recursively process configuration files with the -R flag  Discuss the survey  Gabe from Deis, Mike from Red Hat, and Doug Davis from IBM are willing to chip in.  How can we provide Prashanth and pet sets feedback?  We need some docs on how to use it with some examples (2) that you can copy and paste.</description>
+    </item>
+    
+    <item>
+      <title>2016-06-08</title>
+      <link>/sig-apps/minutes/2016-06-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-06-08/</guid>
+      <description>June 8, 2016  Intro by Michelle Noorali Adnan Abdulhussein, Stacksmith lead at Bitnami, did a demo of Stacksmith  In the container world, updates to your application&amp;rsquo;s stack or environment are rolled out by bringing down outdated containers and replacing them with an updated container image. Tools like Docker and Kubernetes make it incredibly easy to do this, however, knowing when your stack is outdated or vulnerable and starting the upgrade process is still a manual step.</description>
+    </item>
+    
+    <item>
+      <title>2016-06-15</title>
+      <link>/sig-apps/minutes/2016-06-15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-06-15/</guid>
+      <description>June 15, 2016  Michelle Noorali gave an introduction Ben Hall, founder of katacoda, did a demo of katacoda  Katacoda is an interactive learning platform for software engineers. Ben showed off the current lessons on Kubernetes which are available now. Ben also talked about how companies/people can make their own interactive lessons and embed them. Contact Ben on Twitter: @Ben_Hall  Eric Chiang demoed new Role Based Access Control features and capability in Kubernetes 1.</description>
+    </item>
+    
+    <item>
+      <title>2016-06-22</title>
+      <link>/sig-apps/minutes/2016-06-22/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-06-22/</guid>
+      <description>June 22, 2016  Michelle Noorali gave a quick introduction Antoine Legrand did a demo of [KPM]((https://github.com/kubespray/kpm) Matt Farina gave an update on the SIG-apps survey  The survey ends this Friday, so there are only two more days to collect data. The survey can be found here. Please help us share the survey and get as much feedback on running apps in kubernetes as possible! If you&amp;rsquo;d like to help analyze the data, please contact @mattfarina.</description>
+    </item>
+    
+    <item>
+      <title>2016-06-29</title>
+      <link>/sig-apps/minutes/2016-06-29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-06-29/</guid>
+      <description>June 29, 2016  Bart Spaans gave a demo and talked about KubeFuse  Work with your Kubernetes cluster like it&amp;rsquo;s a file system You can also edit resources and update them in cluster on writes Find more details in this post Contact Bart on Twitter: @Work_of_Bart  The DRUD team showed off how they use Kubernetes Jobs  DRUD is a drupal and wordpress management platform built on Kubernetes KubeJobWatcher can be found here For help or questions, reach out to Erin at erin@newmediadenver.</description>
+    </item>
+    
+    <item>
+      <title>2016-07-06</title>
+      <link>/sig-apps/minutes/2016-07-06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-07-06/</guid>
+      <description>July 6, 2016  Matt Farina gave an introduction and overview of the agenda Chris Love gave a demo of his Cassandra cluster  It was a great example of PetSet in action His demo application is located at https://github.com/k8s-for-greeks/gpmr  Matt Farina gave an update on the analysis of the sig-apps survey  He will reach out to those interested in helping analyze the data It&amp;rsquo;s not too late to volunteer to help.</description>
+    </item>
+    
+    <item>
+      <title>2016-07-13</title>
+      <link>/sig-apps/minutes/2016-07-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-07-13/</guid>
+      <description>July 13, 2016  Michelle Noorali gave an introduction and overview of the agenda Christian Simon from JetStack gave a demo of Kube-Lego  Kube-Lego automatically requests certificates for Kubernetes Ingress resources Let&amp;rsquo;s Encrypt Here are the slides  Matt Farina gave an update on the analysis of the sig-apps survey  He has formed a team and should have results from the survey soon A blog post with the results will follow  Clayton Coleman called to attention that there are many open discussions on PetSet  Now is the time to get involved in key decision making conversations especially if you have already implemented a PetSet Follow along in the &amp;ldquo;Pet Set in Beta&amp;rdquo; issue (#28718) which also points to other relevant PetSet topics.</description>
+    </item>
+    
+    <item>
+      <title>2016-07-20</title>
+      <link>/sig-apps/minutes/2016-07-20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-07-20/</guid>
+      <description>July 20, 2016  Michelle Noorali gave an introduction and overview of the agenda Janet Kuo gave an overview of Deployment features  See her blog post See used minikube for the local cluster set up during her demo  Saad Ali gave an overview of Volume features and things to look forward to around Volumes  Check out his presentation  We are looking forward to the sig-apps survey results next week  Watch the recording.</description>
+    </item>
+    
+    <item>
+      <title>2016-07-27</title>
+      <link>/sig-apps/minutes/2016-07-27/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-07-27/</guid>
+      <description>July 27, 2016  Intro by Matt Gerred Dillon presented a demo of Deis including features in the 2.2 release.  To turn an application into a container it uses Heroku buildpacks. slugbuilder converts an application and buildpack into a container and puts the image into a private registry. Pod manifest, service manifest, etc are also created. Q: Is slugbuilder a separate microservice others can use? A: Yes. It&amp;rsquo;s a plugin to builder that can be used with other builders as well.</description>
+    </item>
+    
+    <item>
+      <title>2016-08-03</title>
+      <link>/sig-apps/minutes/2016-08-03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-apps/minutes/2016-08-03/</guid>
+      <description>August 03, 2016  Intro by Michelle Ryan J talked about &amp;ldquo;Defining Applications in Kubernetes(and Openshift).  His presentation can be found here and includes lots of helpful links. He went through some OpenShift primitives that are not in Kubernetes but may show up soon if the community sees a need. There was some in depth discussion about Deployments. Kubernetes has some concepts that came out of OpenShift Deployment Config.</description>
+    </item>
+    
+  </channel>
+</rss>

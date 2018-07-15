@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generator on Kubernetes Community</title>
+    <link>/generator/</link>
+    <description>Recent content in generator on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/generator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>custom_content</title>
+      <link>/generator/testdata/custom_content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/generator/testdata/custom_content/</guid>
+      <description> Auth SIG Covers improvements to Kubernetes authorization, authentication, and cluster security policy.
+Meetings  Wednesdays at 18:00 UTC (biweekly). Convert to your timezone.  Meeting notes and Agenda can be found here.
+Leads  Eric Chiang, CoreOS Jordan Liggitt, Red Hat David Eads, Red Hat  Contact  Slack Mailing list  FOO BAR BAZ </description>
+    </item>
+    
+    <item>
+      <title>example</title>
+      <link>/generator/testdata/example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/generator/testdata/example/</guid>
+      <description>Hello! Example custom content!</description>
+    </item>
+    
+    <item>
+      <title>no_custom_content</title>
+      <link>/generator/testdata/no_custom_content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/generator/testdata/no_custom_content/</guid>
+      <description> Auth SIG Covers improvements to Kubernetes authorization, authentication, and cluster security policy.
+Meetings  Wednesdays at 18:00 UTC (biweekly). Convert to your timezone.  Meeting notes and Agenda can be found here.
+Leads  Eric Chiang, CoreOS Jordan Liggitt, Red Hat David Eads, Red Hat  Contact  Slack Mailing list  </description>
+    </item>
+    
+  </channel>
+</rss>

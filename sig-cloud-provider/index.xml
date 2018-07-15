@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-cloud-provider on Kubernetes Community</title>
+    <link>/sig-cloud-provider/</link>
+    <description>Recent content in sig-cloud-provider on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-cloud-provider/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CHARTER</title>
+      <link>/sig-cloud-provider/charter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-cloud-provider/charter/</guid>
+      <description>SIG Cloud Provider Charter Mission The Cloud Provider SIG ensures that the Kubernetes ecosystem is evolving in a way that is neutral to all (public and private) cloud providers. It will be responsible for establishing standards and requirements that must be met by all providers to ensure optimal integration with Kubernetes.
+Subprojects &amp;amp; Areas of Focus  Maintaining parts of the Kubernetes project that allows Kubernetes to integrate with the underlying provider.</description>
+    </item>
+    
+  </channel>
+</rss>

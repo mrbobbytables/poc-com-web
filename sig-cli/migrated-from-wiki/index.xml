@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>migrated-from-wiki on Kubernetes Community</title>
+    <link>/sig-cli/migrated-from-wiki/</link>
+    <description>Recent content in migrated-from-wiki on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-cli/migrated-from-wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>contributor-guide-building-your-kubernetes-tool</title>
+      <link>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</guid>
+      <description>Client Tool Release Publishing Guidelines Projects should publish releases for client side tools.
+Go Projects Static Linking See Go executables are statically linked, except when they are not.
+ How to compile a statically linked binary: go file must be compiled without cgo support.  # Disable cgo export CGO_ENABLED=0  How to check if a binary is statically linked  # List dynamic dependencies (shared libraries): # 1. if it&amp;#39;s dynamically linked, you&amp;#39;ll see $ ldd &amp;lt;your_tool&amp;gt; linux-vdso.</description>
+    </item>
+    
+    <item>
+      <title>roadmap-kubectl</title>
+      <link>/sig-cli/migrated-from-wiki/roadmap-kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-cli/migrated-from-wiki/roadmap-kubectl/</guid>
+      <description>kubectl roadmap kubectl is the Kubernetes CLI.
+If you&amp;rsquo;d like to contribute, please read the conventions and familiarize yourself with existing commands.
+Owner: @kubernetes/kubectl
+Label: component/kubectl
+Motivation: kubectl brainstorm
+Add new commands / subcommands / flags  Simplify support for multiple files  Manifest that can specify multiple files / http(s) URLs Default manifest manifest (ala Dockerfile or Makefile) Unpack archive (tgz, zip) and then invoke “-f” on that directory URL shortening via default URL prefix  Imperative set commands view commands Support run --edit and create --edit More kubectl create &amp;lt;sub-command&amp;gt; Support --dry-run for every mutation kubectl commands aliases  Allow user defined aliases for resources and commands Suggest possibly matching kubectl commands  Improve kubectl run  Make generated objects more discoverable: suggest the user to do kubectl get all to see what&amp;rsquo;s generated (extend all to more resources) Make it optional to specify name (auto generate name from image) Make kubectl run --restart=Never creates Pods (instead of Jobs)  Create commands/flags for common get + template patterns (e.</description>
+    </item>
+    
+  </channel>
+</rss>

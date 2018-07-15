@@ -1,0 +1,12 @@
+reviewers:
+  - parispittman
+  - castrojo
+  - jdumars
+  - idvoretskyi
+approvers:
+  - castrojo
+  - parispittman
+  - sig-contributor-experience-leads
+labels:
+  - sig/contributor-experience
+  - area/community-management

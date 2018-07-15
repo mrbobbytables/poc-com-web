@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>migrated-from-wiki on Kubernetes Community</title>
+    <link>/sig-cluster-lifecycle/migrated-from-wiki/</link>
+    <description>Recent content in migrated-from-wiki on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-cluster-lifecycle/migrated-from-wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>roadmap-cluster-deployment</title>
+      <link>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</guid>
+      <description>OBSOLETE
+Cluster lifecycle includes deployment (infrastructure provisioning and bootstrapping Kubernetes), scaling, upgrades, and turndown.
+Owner: @kubernetes/sig-cluster-lifecycle (kubernetes-sig-cluster-lifecycle at googlegroups.com, sig-cluster-lifecycle on slack)
+There is no one-size-fits-all solution for cluster deployment and management (e.g., upgrades). There&amp;rsquo;s a spectrum of possible solutions, each with different tradeoffs: * opinionated solution (easier to use for a narrower solution space) vs. toolkit (easier to adapt and extend) * understandability (easier to modify) vs. configurability (addresses a broader solution space without coding)</description>
+    </item>
+    
+  </channel>
+</rss>

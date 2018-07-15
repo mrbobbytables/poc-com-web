@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-aws on Kubernetes Community</title>
+    <link>/sig-aws/</link>
+    <description>Recent content in sig-aws on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017_goals</title>
+      <link>/sig-aws/2017_goals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-aws/2017_goals/</guid>
+      <description>Kubernetes sig-aws Goals (2017) IAM improvements  We hope to offer a more seamless integration path to taking advantage of IAM roles in Kubernetes We are looking at implementations such as kube2iam  Statement Kubernetes components now have the ability to take advantage of IAM roles. The process is intuitive and easy.
+Networking in AWS  We hope to offer a knowledge base for networking in Kubernetes on AWS We will consolidate networking reports and metrics around Kubernetes e2e tests and grow our metric list over time  Statement A user can go to a single public location, and see a side by side comparison of networking avenues in Kubernetes on AWS.</description>
+    </item>
+    
+    <item>
+      <title>CONTRIBUTING</title>
+      <link>/sig-aws/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-aws/contributing/</guid>
+      <description>Contributing The process for contributing code to Kubernetes via SIG-aws community.
+Note: This page is focused on helping new contributors become active members of the community through sustained contributions.
+If you are interested in contributing to Kubernetes as a whole there is a top level contributor&amp;rsquo;s guide.
+Introduction Welcome to the Kubernetes sig-aws contributing guide. We are excited about the prospect of you joining our community! Mentoring and on-boarding new contributors is critical to the success of the project.</description>
+    </item>
+    
+    <item>
+      <title>kubernetes-on-aws</title>
+      <link>/sig-aws/kubernetes-on-aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-aws/kubernetes-on-aws/</guid>
+      <description>Kubernetes on Amazon Web Services This page lists different options, in alphabetic order, of starting a Kubernetes cluster on Amazon Web Services.
+ Clocker: http://www.clocker.io/tutorials/kubernetes-cluster.html Heptio: https://github.com/aws-quickstart/quickstart-heptio Juju Charms: https://jujucharms.com/canonical-kubernetes/ KAT - Kubernetes cluster on AWS with Terraform: https://github.com/xuwang/kube-aws-terraform Kargo: https://github.com/kubernetes-incubator/kargo Kismatic Enterprise Toolkit: https://github.com/apprenda/kismatic Kraken 2: https://github.com/samsung-cnct/k2 kube-aws: https://github.com/kubernetes-incubator/kube-aws Kubeadm Quickstart: https://github.com/upmc-enterprises/kubeadm-aws Kubernetes on AWS: https://github.com/zalando-incubator/kubernetes-on-aws/ Kubernetes Operations (kops): https://github.com/kubernetes/kops OpenShift: https://access.redhat.com/articles/2623521 Stackpoint.io: https://stackpoint.io Tack: https://github.com/kz8s/tack Tectonic: http://github.com/coreos/tectonic-installer Weaveworks AMI: https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-api-machinery on Kubernetes Community</title>
+    <link>/sig-api-machinery/</link>
+    <description>Recent content in sig-api-machinery on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-api-machinery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>api-extensions-position-statement</title>
+      <link>/sig-api-machinery/api-extensions-position-statement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-api-machinery/api-extensions-position-statement/</guid>
+      <description>API Extensions (SIG API Machinery position statement) Authors: Daniel Smith, David Eads (SIG API Machinery co-leads)
+Last edit: Feb 23
+Status: RELEASED
+Background We have observed a lot of confusion in the community around the general topic of ThirdPartyResources (TPRs) and apiserver aggregation (AA). We want to document the current position of the API Machinery SIG.
+Extremely briefly, TPR is a mechanism for lightweight, easy extension of the kubernetes API, which has collected a significant userbase.</description>
+    </item>
+    
+  </channel>
+</rss>

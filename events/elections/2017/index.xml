@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017 on Kubernetes Community</title>
+    <link>/events/elections/2017/</link>
+    <description>Recent content in 2017 on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/events/elections/2017/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RESULTS</title>
+      <link>/events/elections/2017/results/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/results/</guid>
+      <description>Results of the 2017 Steering Committee Election Number of seats open: 3 (2 year term), 3 (1 year term)
+Number of eligible voters: 392
+Number of votes cast: 309
+Turnout: 78.8%
+Raw ballot data
+Results The final ranking, using the &amp;ldquo;Schulze&amp;rdquo; Condorcet completion, is as follows:
+ Derek Carr Michelle Noorali Phillip Wittrock Michael Rubin Timothy St. Clair Quinton Hoole Aaron Crickenberger Caleb Miles Jaice Singer DuMars Kris Nova Justin Santa Barbara Alex Pollitt Sebastien Goasguen Ihor Dvoretskyi Adnan Abdulhussein Ilya Dmitrichenko Matt Farina Aaron Schlesinger Rob Hirschfeld Doug Davis  According to the limits on company representation, Google would be over-represented with this result, so Michael Rubin must be excluded.</description>
+    </item>
+    
+    <item>
+      <title>aaroncrickenberger_bio</title>
+      <link>/events/elections/2017/aaroncrickenberger_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/aaroncrickenberger_bio/</guid>
+      <description>Aaron Crickenberger I can be reached as @spiffxp on github, slack, gmail, linkedin, twitter, soundcloud, etc
+What I&amp;rsquo;ve done I have been involved in open source projects since 2007, cloud related projects since 2009, and Kubernetes since 2015.
+I co-founded SIG Testing. I actively contribute in SIG Contributor Experience, Release, Scale. If you attend the weekly Kubernetes Community meetings, chances are you&amp;rsquo;ve seen me (or at least my beard.)</description>
+    </item>
+    
+    <item>
+      <title>aaronschlesinger_bio</title>
+      <link>/events/elections/2017/aaronschlesinger_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/aaronschlesinger_bio/</guid>
+      <description>Aaron Schlesinger  Github: arschles Twitter: @arschles  About I&amp;rsquo;m a Sr. Software Engineer, Microsoft Azure Containers Group.
+I&amp;rsquo;m a passionate engineer, teacher and leader with over 10 years software engineering and architecture experience.
+I believe that Kubernetes will truly succeed when we improve the developer and user experience.
+Experience I&amp;rsquo;ve made contributions to helm, helm charts, minikube, service-catalog and I am a co-lead of SIG-Service-Catalog.
+Outside of Kubernetes, I&amp;rsquo;ve spent over 10 years speaking at conferences, teaching Go &amp;amp; Scala, building large systems, sitting on standards bodies, and contributing to other open source projects.</description>
+    </item>
+    
+    <item>
+      <title>adnanabdulhussein_bio</title>
+      <link>/events/elections/2017/adnanabdulhussein_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/adnanabdulhussein_bio/</guid>
+      <description>Adnan Abdulhussein  GitHub/Slack/Twitter: @prydonius Email: adnan@bitnami.com  Background I joined the Kubernetes community in 2016, and have contributed in a number of capacities since:
+ Core contributor of Helm Co-leading the Kubernetes Charts project Kicked off the Helm incubation process and community docs Co-leading SIG Apps Regularly speaking and advocating for Kubernetes  Prior to my involvement in Kubernetes, I have been an active maintainer of Bitnami&amp;rsquo;s open source container images.</description>
+    </item>
+    
+    <item>
+      <title>alexpollitt_bio</title>
+      <link>/events/elections/2017/alexpollitt_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/alexpollitt_bio/</guid>
+      <description>Alex Pollitt I am excited to have been nominated for the steering committee. I recognize that doing the role justice will be a demanding and time consuming commitment, but I would like to do my part to help maintain and foster the growth of this amazing community of contributors and users.
+For those of you who don’t know me, I am one of the founders of Tigera, the company behind Calico, and active contributors to flannel, CNI, Kubernetes, and Istio.</description>
+    </item>
+    
+    <item>
+      <title>calebamiles_bio</title>
+      <link>/events/elections/2017/calebamiles_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/calebamiles_bio/</guid>
+      <description>caleb miles Contact Information  GitHub/Slack: @calebamiles Email: caleb.miles@coreos.com  Problem solving style I am a huge fan of ideas which simplify and unify, possibly due to my undergraduate study of physics and mathematics. I believe that collaboration is incredibly important and that continuous feedback on incremental solutions are likely to produce the best outcome. I therefore try spend a lot of time talking with people about the problems that are important to them before stepping back to try to introduce a minimal solution based on their concerns.</description>
+    </item>
+    
+    <item>
+      <title>derekcarr_bio</title>
+      <link>/events/elections/2017/derekcarr_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/derekcarr_bio/</guid>
+      <description>Derek Carr  GitHub: @derekwaynecarr Employer: Red Hat  Roles Held  Co-founder, lead: sig-node, wg-resource-management Participate: api-machinery, autoscaling, federation, scheduling, service-catalog
+  About me I joined in 2014 as an early external contributor. After the first developer summit, I realized I had a lot to learn from the experience of others. My first PR enabled people to contribute to the project by running Kubernetes in a VM. Mentors in the community helped multiply the quality of my contributions.</description>
+    </item>
+    
+    <item>
+      <title>dougdavis_bio</title>
+      <link>/events/elections/2017/dougdavis_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/dougdavis_bio/</guid>
+      <description>Doug Davis  Github: @duglin Works for: IBM  Background I&amp;rsquo;ve been working on open source projects, and standards, for about 17 years, starting with being a co-initiator of the Apache Axis project; working on WS-* related projects and specifications, OpenStack, CloudFoundry, Docker and now Kubernetes, including as a co-lead of the Service-Catalog Incubator. I also founded the Web Services Testing Forum, a consortium of Web Service providers and consumers designed for interop testing of SOAP/WS-* specifications, as well as the soaphub on-line collaboration chat tool used by several communities.</description>
+    </item>
+    
+    <item>
+      <title>errordeveloper_bio</title>
+      <link>/events/elections/2017/errordeveloper_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/errordeveloper_bio/</guid>
+      <description>Ilya Dmitrchenko Manifesto Ilya has been contributing to Kubernetes since 2014. The focus of his contributions has been on solving general cluster provisioning and bootstrap problems and making networking easier. For example in 2016, he did the groundwork on the initial version of kubeadm.
+Ilya is a DX engineer at Weaveworks and is based in London. From there he travels (mostly in Europe) to educate the wider community about the benefits of containers and orchestration with Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>idvoretskyi_bio</title>
+      <link>/events/elections/2017/idvoretskyi_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/idvoretskyi_bio/</guid>
+      <description>Ihor Dvoretskyi Twitter: https://twitter.com/idvoretskyi
+GitHub: https://github.com/idvoretskyi
+Anywhere else: @idvoretskyi
+About me I&amp;rsquo;m a Developer Advocate for Cloud Native Computing Foundation, open source lover, passionate about the technologies and open source adoption; with the deep technical background, together with program and product management experience in the open source world. In a previous life, I’ve been a System Administrator and DevOps Engineer, passionate about the Cloud technologies. Later, I’ve joined Mirantis, one of the largest players in the OpenStack world, where I’ve started my collaboration with OpenStack community.</description>
+    </item>
+    
+    <item>
+      <title>jaicesingerdumars_bio</title>
+      <link>/events/elections/2017/jaicesingerdumars_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/jaicesingerdumars_bio/</guid>
+      <description>Jaice Singer DuMars Contact Information  GitHub: @jdumars Twitter: @jaydumars LinkedIn: Jaice Singer DuMars Works for: Microsoft  Why me? The steering committee represents a unique convergence of my passion for servant leadership, organizational dynamics, inclusion, advocacy, and process optimization. It&amp;rsquo;s always my highest purpose to be a voice and advocate for those I serve. And, if elected, I will faithfully serve the ever-changing, sometimes divergent, and always important needs of the Kubernetes community.</description>
+    </item>
+    
+    <item>
+      <title>kris-nova_bio</title>
+      <link>/events/elections/2017/kris-nova_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/kris-nova_bio/</guid>
+      <description>Kris Nova What is important to me Mental, philosophical, and design diversity. Period.
+I truly believe that the best teams and projects are those that embrace unique and sometimes conflicting ways of thinking.
+Having a leadership board of people who all think the same way, and all are moving in the right direction is stale and stagnant.
+ I want to help foster diversity in Kubernetes in both our design process, but also our goals and philosophies.</description>
+    </item>
+    
+    <item>
+      <title>mattfarina_bio</title>
+      <link>/events/elections/2017/mattfarina_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/mattfarina_bio/</guid>
+      <description>Matt Farina Technical leader, coder, author, presenter
+Governance and Organization The steering committee is chartered with figuring out the governance and organization of the Kubernetes community. Matt has years of experience in both non-profit and open source organizations. He has served on the board for two non-profits along with being involved in open source projects with mature governance models (e.g., Drupal and OpenStack).
+Matt believes that governance should enable people to easily navigate an organization and be empowered to be part of the community.</description>
+    </item>
+    
+    <item>
+      <title>michaelrubin_bio</title>
+      <link>/events/elections/2017/michaelrubin_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/michaelrubin_bio/</guid>
+      <description>Michael Rubin Bio GitHub: @matchstick
+About Me I have been a software engineer, technical manager, and leader for ~20 years. I am passionate about helping projects and people thrive. Today I lead a number of Kubernetes teams at Google, including Storage, Networking, Multi-cluster, Node, and more.
+I love coding and technology, but even more than that I love mentoring others and helping them to have impact and grow professionally. This is why I choose to support teams and projects as a technical manager.</description>
+    </item>
+    
+    <item>
+      <title>michellenoorali_bio</title>
+      <link>/events/elections/2017/michellenoorali_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/michellenoorali_bio/</guid>
+      <description>Michelle Noorali GitHub: @michelleN
+Twitter: @michellenoorali
+LinkedIn: Michelle Noorali
+History &amp;amp; Roles Held  Working with Kubernetes and have been part of the community since mid-2015 Co-founded and Co-lead Kubernetes SIG Apps for focusing on defining and managing applications in Kubernetes Core Maintainer of the Kubernetes Helm project Co-chair CloudNativeCon &amp;amp; KubeCon 2017  Why I&amp;rsquo;m here The Kubernetes community has been a special place for me, and I&amp;rsquo;m glad to be part of it.</description>
+    </item>
+    
+    <item>
+      <title>pwittrock_bio</title>
+      <link>/events/elections/2017/pwittrock_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/pwittrock_bio/</guid>
+      <description>Phillip Wittrock Bio GitHub: @pwittrock
+Problem solving style  Incremental approach to problem solving Try new things - build and iterate on minimalist solutions  What I find important I care deeply about helping people feel positive about what they are doing and empowered to do more. Within the Kubernetes community, I would like to focus on helping ensure contributors&amp;rsquo;:
+ time and contributions are impactful time and contributions are recognized and appreciated opinions are listened to and valued  Where I see myself contributing I believe it is important for the processes for contribution and maintenance of the project to be well communicated and understood within the community.</description>
+    </item>
+    
+    <item>
+      <title>quintonhoole_bio</title>
+      <link>/events/elections/2017/quintonhoole_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/quintonhoole_bio/</guid>
+      <description>Quinton Hoole  Github: quinton-hoole  About Me Currently I&amp;rsquo;m Technical Vice President of Cloud Computing At Huawei Technologies (185,000 employees globally, US$75BN annual revenue (2016), 32% annual revenue growth).
+I was the founding engineer of Amazon EC2 (2005-2010).
+I was the lead engineer at Nimbula.com (2010-2012), a Cloud IaaS startup which was acquired by Oracle in 2013.
+I was at Google from 2012-2016, first as Technical Lead and Manager of Ads Serving SRE, and then Engineering Lead on the Kubernetes team (2014-2016).</description>
+    </item>
+    
+    <item>
+      <title>rhirschfeld_bio</title>
+      <link>/events/elections/2017/rhirschfeld_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/rhirschfeld_bio/</guid>
+      <description>Rob Hirschfeld Bio  GitHub: @zehicle Twitter: @zehicle Blog: RobHirschfeld.com I work at RackN.com and live in Austin, Texas.  Governance Perspective: it&amp;rsquo;s about people, not tech Open source infrastructure automation is a critical foundation for the Internet and, thus, advancing society as a whole. In a very practical way, protecting open software is essential to building a better world. I am seeking a seat on the Kubernetes Steering Committee because I bring special perspectives to governing the project.</description>
+    </item>
+    
+    <item>
+      <title>sebastiengoasguen_bio</title>
+      <link>/events/elections/2017/sebastiengoasguen_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/sebastiengoasguen_bio/</guid>
+      <description>Sebastien Goasguen Contact  GitHub: @sebgoa Twitter: @sebgoa Linkedin Profile Employer: Bitnami  Vision Being a member of the steering committee is not a technical role, it is a temporary position to help the community grow and ensure that the project (at large) succeeds in the long term.
+The steering committee already has a long backlog of things to do and I submitted a PR some time ago to show my take on it.</description>
+    </item>
+    
+    <item>
+      <title>timothysc_bio</title>
+      <link>/events/elections/2017/timothysc_bio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/timothysc_bio/</guid>
+      <description>Timothy St. Clair Contact Information  GitHub/Slack: @timothysc Email: tstclair@heptio.com Twitter: @timothysc  Background I&amp;rsquo;ve been involved in the Kubernetes project since 2014, and prior to that I was an active member in the Mesos community, with over 10+ years of experience working on open source projects across a plethora of communities. During my tenure, I&amp;rsquo;ve been lucky enough to meet a number of great folks working on various SIGs:</description>
+    </item>
+    
+    <item>
+      <title>vote_for_justinsb</title>
+      <link>/events/elections/2017/vote_for_justinsb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/events/elections/2017/vote_for_justinsb/</guid>
+      <description>Vote for justinsb! You can see my full &amp;ldquo;manifesto&amp;rdquo; here; we&amp;rsquo;ve been asked to provide a shorter summary here.
+This election is critical. The steering committee is not an honorary position; it has effectively unlimited powers. Serving is a duty, not a privilege, and I humbly ask for your vote.
+I have been involved with Kubernetes since before 1.0, primarily on AWS support (I am a lead of sig-aws), but also contributed the original multi-zone &amp;amp; NodePort support.</description>
+    </item>
+    
+  </channel>
+</rss>

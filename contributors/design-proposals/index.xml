@@ -1,0 +1,2322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design-proposals on Kubernetes Community</title>
+    <link>/contributors/design-proposals/</link>
+    <description>Recent content in design-proposals on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/contributors/design-proposals/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design_Proposal_TEMPLATE</title>
+      <link>/contributors/design-proposals/design_proposal_template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/design_proposal_template/</guid>
+      <description>  Status: Pending
+Version: Alpha | Beta | GA
+Implementation Owner: TBD
+Motivation Proposal User Experience Use Cases &amp;lt;include full examples&amp;gt;
+Implementation Client/Server Backwards/Forwards compatibility Alternatives considered </description>
+    </item>
+    
+    <item>
+      <title>OBSOLETE_templates</title>
+      <link>/contributors/design-proposals/apps/obsolete_templates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/obsolete_templates/</guid>
+      <description>Templates+Parameterization: Repeatedly instantiating user-customized application topologies. Motivation Addresses https://github.com/kubernetes/kubernetes/issues/11492
+There are two main motivators for Template functionality in Kubernetes: Controller Instantiation and Application Definition
+Controller Instantiation Today the replication controller defines a PodTemplate which allows it to instantiate multiple pods with identical characteristics. This is useful but limited. Stateful applications have a need to instantiate multiple instances of a more sophisticated topology than just a single pod (e.g. they also need Volume definitions).</description>
+    </item>
+    
+    <item>
+      <title>accelerator-monitoring</title>
+      <link>/contributors/design-proposals/node/accelerator-monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/accelerator-monitoring/</guid>
+      <description>Monitoring support for hardware accelerators Version: Alpha
+Owner: @mindprince (agarwalrohit@google.com)
+Motivation We have had alpha support for running containers with GPUs attached in Kubernetes for a while. To take this to beta and GA, we need to provide GPU monitoring, so that users can get insights into how their GPU jobs are performing.
+Detailed Design The current metrics pipeline for Kubernetes is: - Container level metrics are collected by cAdvisor.</description>
+    </item>
+    
+    <item>
+      <title>access</title>
+      <link>/contributors/design-proposals/auth/access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/access/</guid>
+      <description>K8s Identity and Access Management Sketch This document suggests a direction for identity and access management in the Kubernetes system.
+Background High level goals are: - Have a plan for how identity, authentication, and authorization will fit in to the API. - Have a plan for partitioning resources within a cluster between independent organizational units. - Ease integration with existing enterprise and hosted scenarios.
+Actors Each of these can act as normal users or attackers.</description>
+    </item>
+    
+    <item>
+      <title>add-new-patchStrategy-to-clear-fields-not-present-in-patch</title>
+      <link>/contributors/design-proposals/api-machinery/add-new-patchstrategy-to-clear-fields-not-present-in-patch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/add-new-patchstrategy-to-clear-fields-not-present-in-patch/</guid>
+      <description>Add new patchStrategy to clear fields not present in the patch We introduce a new struct tag patchStrategy:&amp;quot;retainKeys&amp;quot; and a new optional directive $retainKeys: &amp;lt;list of fields&amp;gt; in the patch.
+The proposal of Full Union is in kubernetes/community#388.
+   Capability Supported By This Proposal Supported By Full Union     Auto clear missing fields on patch X X   Merge union fields on patch X X   Validate only 1 field set on type  X   Validate discriminator field matches one-of field  X   Support non-union patchKey X TBD   Support arbitrary combinations of set fields X     Use cases  As a user patching a map, I want keys mutually exclusive with those that I am providing to automatically be cleared.</description>
+    </item>
+    
+    <item>
+      <title>admission-control-webhooks</title>
+      <link>/contributors/design-proposals/api-machinery/admission-control-webhooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/admission-control-webhooks/</guid>
+      <description>Webhooks Beta PUBLIC Authors: @erictune, @caesarxuchao, @enisoc Thanks to: {@dbsmith, @smarterclayton, @deads2k, @cheftako, @jpbetz, @mbohlool, @mml, @janetkuo} for comments, data, prior designs, etc.
+[TOC]
+Summary This document proposes a detailed plan for bringing Webhooks to Beta. Highlights include (incomplete, see rest of doc for complete list) :
+ Adding the ability for webhooks to mutate.
+ Bootstrapping Monitoring Versioned rather than Internal data sent on hook Ordering behavior within webhooks, and with other admission phases, is better defined  This plan is compatible with the original design doc.</description>
+    </item>
+    
+    <item>
+      <title>admission-webhook-bootstrapping</title>
+      <link>/contributors/design-proposals/api-machinery/admission-webhook-bootstrapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/admission-webhook-bootstrapping/</guid>
+      <description>Webhook Bootstrapping Background Admission webhook is a feature that dynamically extends Kubernetes admission chain. Because the admission webhooks are in the critical path of admitting REST requests, broken webhooks could block the entire cluster, even blocking the reboot of the webhooks themselves. This design presents a way to avoid such bootstrap deadlocks.
+Objective  If one or more webhooks are down, it should be able restart them automatically. If a core system component that supports webhooks is down, the component should be able to restart.</description>
+    </item>
+    
+    <item>
+      <title>admission_control</title>
+      <link>/contributors/design-proposals/api-machinery/admission_control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/admission_control/</guid>
+      <description>Kubernetes Proposal - Admission Control Related PR:
+   Topic Link     Separate validation from RESTStorage http://issue.k8s.io/2977    Background High level goals: * Enable an easy-to-use mechanism to provide admission control to cluster. * Enable a provider to support multiple admission control strategies or author their own. * Ensure any rejected request can propagate errors back to the caller with why the request failed.</description>
+    </item>
+    
+    <item>
+      <title>admission_control_event_rate_limit</title>
+      <link>/contributors/design-proposals/api-machinery/admission_control_event_rate_limit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/admission_control_event_rate_limit/</guid>
+      <description>Admission control plugin: EventRateLimit Background This document proposes a system for using an admission control to enforce a limit on the number of event requests that the API Server will accept in a given time slice. In a large cluster with many namespaces managed by disparate administrators, there may be a small percentage of namespaces that have pods that are always in some type of error state, for which the kubelets and controllers in the cluster are producing a steady stream of error event requests.</description>
+    </item>
+    
+    <item>
+      <title>admission_control_extension</title>
+      <link>/contributors/design-proposals/api-machinery/admission_control_extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/admission_control_extension/</guid>
+      <description>Extension of Admission Control via Initializers and External Admission Enforcement Admission control is the primary business-logic policy and enforcement subsystem in Kubernetes. It provides synchronous hooks for all API operations and allows an integrator to impose additional controls on the system - rejecting, altering, or reacting to changes to core objects. Today each of these plugins must be compiled into Kubernetes. As Kubernetes grows, the requirement that all policy enforcement beyond coarse grained access control be done through in-tree compilation and distribution becomes unwieldy and limits administrators and the growth of the ecosystem.</description>
+    </item>
+    
+    <item>
+      <title>admission_control_limit_range</title>
+      <link>/contributors/design-proposals/resource-management/admission_control_limit_range/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/admission_control_limit_range/</guid>
+      <description>Admission control plugin: LimitRanger Background This document proposes a system for enforcing resource requirements constraints as part of admission control.
+Use cases  Ability to enumerate resource requirement constraints per namespace Ability to enumerate min/max resource constraints for a pod Ability to enumerate min/max resource constraints for a container Ability to specify default resource limits for a container Ability to specify default resource requests for a container Ability to enforce a ratio between request and limit for a resource.</description>
+    </item>
+    
+    <item>
+      <title>admission_control_resource_quota</title>
+      <link>/contributors/design-proposals/resource-management/admission_control_resource_quota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/admission_control_resource_quota/</guid>
+      <description>Admission control plugin: ResourceQuota Background This document describes a system for enforcing hard resource usage limits per namespace as part of admission control.
+Use cases  Ability to enumerate resource usage limits per namespace. Ability to monitor resource usage for tracked resources. Ability to reject resource usage exceeding hard quotas.  Data Model The ResourceQuota object is scoped to a Namespace.
+// The following identify resource constants for Kubernetes object types const ( // Pods, number  ResourcePods ResourceName = &amp;#34;pods&amp;#34; // Services, number  ResourceServices ResourceName = &amp;#34;services&amp;#34; // ReplicationControllers, number  ResourceReplicationControllers ResourceName = &amp;#34;replicationcontrollers&amp;#34; // ResourceQuotas, number  ResourceQuotas ResourceName = &amp;#34;resourcequotas&amp;#34; // ResourceSecrets, number  ResourceSecrets ResourceName = &amp;#34;secrets&amp;#34; // ResourcePersistentVolumeClaims, number  ResourcePersistentVolumeClaims ResourceName = &amp;#34;persistentvolumeclaims&amp;#34; ) // ResourceQuotaSpec defines the desired hard limits to enforce for Quota type ResourceQuotaSpec struct { // Hard is the set of desired hard limits for each named resource  Hard ResourceList `json:&amp;#34;hard,omitempty&amp;#34; description:&amp;#34;hard is the set of desired hard limits for each named resource; see http://releases.</description>
+    </item>
+    
+    <item>
+      <title>aggregated-api-servers</title>
+      <link>/contributors/design-proposals/api-machinery/aggregated-api-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/aggregated-api-servers/</guid>
+      <description>Aggregated API Servers Abstract We want to divide the single monolithic API server into multiple aggregated servers. Anyone should be able to write their own aggregated API server to expose APIs they want. Cluster admins should be able to expose new APIs at runtime by bringing up new aggregated servers.
+Motivation  Extensibility: We want to allow community members to write their own API servers to expose APIs they want.</description>
+    </item>
+    
+    <item>
+      <title>all-in-one-volume</title>
+      <link>/contributors/design-proposals/node/all-in-one-volume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/all-in-one-volume/</guid>
+      <description>Abstract Describes a proposal for a new volume type that can project secrets, configmaps, and downward API items.
+Motivation Users often need to build directories that contain multiple types of configuration and secret data. For example, a configuration directory for some software package may contain both config files and credentials. Currently, there is no way to achieve this in Kubernetes without scripting inside of a container.
+Constraints and Assumptions  The volume types must remain unchanged for backward compatibility There will be a new volume type for this proposed functionality, but no other API changes The new volume type should support atomic updates in the event of an input change  Use Cases  As a user, I want to automatically populate a single volume with the keys from multiple secrets, configmaps, and with downward API information, so that I can synthesize a single directory with various sources of information As a user, I want to populate a single volume with the keys from multiple secrets, configmaps, and with downward API information, explicitly specifying paths for each item, so that I can have full control over the contents of that volume  Populating a single volume without pathing A user should be able to map any combination of resources mentioned above into a single directory.</description>
+    </item>
+    
+    <item>
+      <title>alternate-api-representations</title>
+      <link>/contributors/design-proposals/api-machinery/alternate-api-representations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/alternate-api-representations/</guid>
+      <description>Alternate representations of API resources Abstract Naive clients benefit from allowing the server to returning resource information in a form that is easy to represent or is more efficient when dealing with resources in bulk. It should be possible to ask an API server to return a representation of one or more resources of the same type in a way useful for:
+ Retrieving a subset of object metadata in a list or watch of a resource, such as the metadata needed by the generic Garbage Collector or the Namespace Lifecycle Controller Dealing with generic operations like Scale correctly from a client across multiple API groups, versions, or servers Return a simple tabular representation of an object or list of objects for naive web or command-line clients to display (for kubectl get) Return a simple description of an object that can be displayed in a wide range of clients (for kubectl describe) Return the object with fields set by the server cleared (as kubectl export) which is dependent on the schema, not on user input.</description>
+    </item>
+    
+    <item>
+      <title>annotations-downward-api</title>
+      <link>/contributors/design-proposals/node/annotations-downward-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/annotations-downward-api/</guid>
+      <description>Exposing annotations via environment downward API Author: Michal Rostecki &amp;lt;michal@kinvolk.io&amp;gt;
+Introduction Annotations of the pod can be taken through the Kubernetes API, but currently there is no way to pass them to the application inside the container. This means that annotations can be used by the core Kubernetes services and the user outside of the Kubernetes cluster.
+Of course using Kubernetes API from the application running inside the container managed by Kubernetes is technically possible, but that&amp;rsquo;s an idea which denies the principles of microservices architecture.</description>
+    </item>
+    
+    <item>
+      <title>api-chunking</title>
+      <link>/contributors/design-proposals/api-machinery/api-chunking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/api-chunking/</guid>
+      <description>Allow clients to retrieve consistent API lists in chunks On large clusters, performing API queries that return all of the objects of a given resource type (GET /api/v1/pods, GET /api/v1/secrets) can lead to significant variations in peak memory use on the server and contribute substantially to long tail request latency.
+When loading very large sets of objects &amp;ndash; some clusters are now reaching 100k pods or equivalent numbers of supporting resources &amp;ndash; the system must:</description>
+    </item>
+    
+    <item>
+      <title>api-design</title>
+      <link>/contributors/design-proposals/multicluster/cluster-registry/api-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/cluster-registry/api-design/</guid>
+      <description>Cluster Registry API @perotinus, @madhusudancs
+Original draft: 08/16/2017
+Reviewed in SIG multi-cluster meeting on 8&amp;frasl;29
+This doc is a Markdown conversion of the original Cluster Registry API Google doc. That doc is deprecated, and this one is canonical; however, the old doc will be preserved so as not to lose comment and revision history that it contains.
+Table of Contents  Purpose Motivating use cases API Authorization-based filtering of the list of clusters Status Auth Key differences vs existing Federation API Cluster object Open questions  Purpose The cluster registry API is intended to provide a common abstraction for other tools that will perform operations on multiple clusters.</description>
+    </item>
+    
+    <item>
+      <title>api-group</title>
+      <link>/contributors/design-proposals/api-machinery/api-group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/api-group/</guid>
+      <description>Supporting multiple API groups Goal  Breaking the monolithic v1 API into modular groups and allowing groups to be enabled/disabled individually. This allows us to break the monolithic API server to smaller components in the future.
+ Supporting different versions in different groups. This allows different groups to evolve at different speed.
+ Supporting identically named kinds to exist in different groups. This is useful when we experiment new features of an API in the experimental group while supporting the stable API in the original group at the same time.</description>
+    </item>
+    
+    <item>
+      <title>apiserver-build-in-admission-plugins</title>
+      <link>/contributors/design-proposals/api-machinery/apiserver-build-in-admission-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/apiserver-build-in-admission-plugins/</guid>
+      <description>Build some Admission Controllers into the Generic API server library Related PR:
+   Topic Link     Admission Control https://git.k8s.io/community/contributors/design-proposals/api-machinery/admission_control.md    Introduction An admission controller is a piece of code that intercepts requests to the Kubernetes API - think a middleware. The API server lets you have a whole chain of them. Each is run in sequence before a request is accepted into the cluster.</description>
+    </item>
+    
+    <item>
+      <title>apiserver-count-fix</title>
+      <link>/contributors/design-proposals/api-machinery/apiserver-count-fix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/apiserver-count-fix/</guid>
+      <description>apiserver-count fix proposal Authors: @rphillips
+Table of Contents  Overview Known Issues Proposal Alternate Proposals  Custom Resource Definitions Refactor Old Reconciler   Overview Proposal to fix Issue #22609
+kube-apiserver currently has a command-line argument --apiserver-count specifying the number of api servers. This masterCount is used in the MasterCountEndpointReconciler on a 10 second interval to potentially cleanup stale API Endpoints. The issue is when the number of kube-apiserver instances gets below or above the masterCount.</description>
+    </item>
+    
+    <item>
+      <title>apiserver-watch</title>
+      <link>/contributors/design-proposals/api-machinery/apiserver-watch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/apiserver-watch/</guid>
+      <description>Abstract In the current system, most watch requests sent to apiserver are redirected to etcd. This means that for every watch request the apiserver opens a watch on etcd.
+The purpose of the proposal is to improve the overall performance of the system by solving the following problems:
+ having too many open watches on etcd avoiding deserializing/converting the same objects multiple times in different watch results  In the future, we would also like to add an indexing mechanism to the watch.</description>
+    </item>
+    
+    <item>
+      <title>apparmor</title>
+      <link>/contributors/design-proposals/auth/apparmor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/apparmor/</guid>
+      <description>Overview  Motivation Related work  Alpha Design  Overview Prerequisites API Changes Pod Security Policy Deploying profiles Testing  Beta Design  API Changes  Future work  System component profiles Deploying profiles Custom app profiles Security plugins Container Runtime Interface Alerting Profile authoring  Appendix  Overview AppArmor is a mandatory access control (MAC) system for Linux that supplements the standard Linux user and group based permissions.</description>
+    </item>
+    
+    <item>
+      <title>apply_refactor</title>
+      <link>/contributors/design-proposals/cli/apply_refactor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/apply_refactor/</guid>
+      <description>Apply v2 Background kubectl apply reads a file or set of files, and updates the cluster state based off the file contents. It does a couple things:
+ Create / Update / (Delete) the live resources based on the file contents Update currently and previously configured fields, without clobbering fields set by other means, such as imperative kubectl commands, other deployment and management tools, admission controllers, initializers, horizontal and vertical autoscalers, operators, and other controllers.</description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>/contributors/design-proposals/architecture/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/architecture/</guid>
+      <description>Kubernetes Design and Architecture A much more detailed and updated Architectural Roadmap is also available.
+Overview Kubernetes is a production-grade, open-source infrastructure for the deployment, scaling, management, and composition of application containers across clusters of hosts, inspired by previous work at Google. Kubernetes is more than just a “container orchestrator”. It aims to eliminate the burden of orchestrating physical/virtual compute, network, and storage infrastructure, and enable application operators and developers to focus entirely on container-centric primitives for self-service operation.</description>
+    </item>
+    
+    <item>
+      <title>auditing</title>
+      <link>/contributors/design-proposals/api-machinery/auditing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/auditing/</guid>
+      <description>Auditing Maciej Szulik (@soltysh) Dr. Stefan Schimanski (@sttts) Tim St. Clair (@timstclair)
+Abstract This proposal aims at extending the auditing log capabilities of the apiserver.
+Motivation and Goals With #27087 basic audit logging was added to Kubernetes. It basically implements access.log like http handler based logging of all requests in the apiserver API. It does not do deeper inspection of the API calls or of their payloads. Moreover, it has no specific knowledge of the API objects which are modified.</description>
+    </item>
+    
+    <item>
+      <title>aws_under_the_hood</title>
+      <link>/contributors/design-proposals/aws/aws_under_the_hood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/aws/aws_under_the_hood/</guid>
+      <description>Peeking under the hood of Kubernetes on AWS This document provides high-level insight into how Kubernetes works on AWS and maps to AWS objects. We assume that you are familiar with AWS.
+We encourage you to use kube-up to create clusters on AWS. We recommend that you avoid manual configuration but are aware that sometimes it&amp;rsquo;s the only option.
+Tip: You should open an issue and let us know what enhancements can be made to the scripts to better suit your needs.</description>
+    </item>
+    
+    <item>
+      <title>bound-service-account-tokens</title>
+      <link>/contributors/design-proposals/auth/bound-service-account-tokens/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/bound-service-account-tokens/</guid>
+      <description>Bound Service Account Tokens Author: @mikedanese
+Objective This document describes an API that would allow workloads running on Kubernetes to request JSON Web Tokens that are audience, time and eventually key bound.
+Background Kubernetes already provisions JWTs to workloads. This functionality is on by default and thus widely deployed. The current workload JWT system has serious issues:
+ Security: JWTs are not audience bound. Any recipient of a JWT can masquerade as the presenter to anyone else.</description>
+    </item>
+    
+    <item>
+      <title>bulk_watch</title>
+      <link>/contributors/design-proposals/api-machinery/bulk_watch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/bulk_watch/</guid>
+      <description>Background As part of increasing security of a cluster, we are planning to limit the ability of a given Kubelet (in general: node), to be able to read only resources associated with it. Those resources, in particular means: secrets, configmaps &amp;amp; persistentvolumeclaims. This is needed to avoid situation when compromising node de facto means compromising a cluster. For more details &amp;amp; discussions see https://github.com/kubernetes/kubernetes/issues/40476.
+However, by some extension to this effort, we would like to improve scalability of the system, by significantly reducing amount of api calls coming from kubelets.</description>
+    </item>
+    
+    <item>
+      <title>client-package-structure</title>
+      <link>/contributors/design-proposals/api-machinery/client-package-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/client-package-structure/</guid>
+      <description>Client: layering and package structure  Desired layers Transport RESTClient/request.go Mux layer High-level: Individual typed  High-level, typed: Discovery  High-level: Dynamic High-level: Client Sets Package Structure Client Guarantees (and testing)   Client: layering and package structure Desired layers Transport The transport layer is concerned with round-tripping requests to an apiserver somewhere. It consumes a Config object with options appropriate for this. (That&amp;rsquo;s most of the current client.</description>
+    </item>
+    
+    <item>
+      <title>cloud-provider-refactoring</title>
+      <link>/contributors/design-proposals/cloud-provider/cloud-provider-refactoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cloud-provider/cloud-provider-refactoring/</guid>
+      <description>Refactor Cloud Provider out of Kubernetes Core As kubernetes has evolved tremendously, it has become difficult for different cloudproviders (currently 7) to make changes and iterate quickly. Moreover, the cloudproviders are constrained by the kubernetes build/release life-cycle. This proposal aims to move towards a kubernetes code base where cloud providers specific code will move out of the core repository and into &amp;ldquo;official&amp;rdquo; repositories, where it will be maintained by the cloud providers themselves.</description>
+    </item>
+    
+    <item>
+      <title>cloudprovider-storage-metrics</title>
+      <link>/contributors/design-proposals/cloud-provider/cloudprovider-storage-metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cloud-provider/cloudprovider-storage-metrics/</guid>
+      <description>Cloud Provider (specifically GCE and AWS) metrics for Storage API calls Goal Kubernetes should provide metrics such as - count &amp;amp; latency percentiles for cloud provider API it uses to provision persistent volumes.
+In a ideal world - we would want these metrics for all cloud providers and for all API calls kubernetes makes but to limit the scope of this feature we will implement metrics for:
+ GCE AWS  We will also implement metrics only for storage API calls for now.</description>
+    </item>
+    
+    <item>
+      <title>cluster-role-aggregation</title>
+      <link>/contributors/design-proposals/auth/cluster-role-aggregation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/cluster-role-aggregation/</guid>
+      <description>Cluster Role Aggregation In order to support easy RBAC integration for CustomResources and Extension APIServers, we need to have a way for API extenders to add permissions to the &amp;ldquo;normal&amp;rdquo; roles for admin, edit, and view.
+These roles express an intent for the namespaced power of administrators of the namespace (manage ownership), editors of the namespace (manage content like pods), and viewers of the namespace (see what is present). As new APIs are made available, these roles should reflect that intent to prevent migration concerns every time a new API is added.</description>
+    </item>
+    
+    <item>
+      <title>command_execution_port_forwarding</title>
+      <link>/contributors/design-proposals/network/command_execution_port_forwarding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/command_execution_port_forwarding/</guid>
+      <description>Container Command Execution &amp;amp; Port Forwarding in Kubernetes Abstract This document describes how to use Kubernetes to execute commands in containers, with stdin/stdout/stderr streams attached and how to implement port forwarding to the containers.
+Background See the following related issues/PRs:
+ Support attach Real container ssh Provide easy debug network access to services OpenShift container command execution proposal  Motivation Users and administrators are accustomed to being able to access their systems via SSH to run remote commands, get shell access, and do port forwarding.</description>
+    </item>
+    
+    <item>
+      <title>configmap</title>
+      <link>/contributors/design-proposals/apps/configmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/configmap/</guid>
+      <description>Generic Configuration Object Abstract The ConfigMap API resource stores data used for the configuration of applications deployed on Kubernetes.
+The main focus of this resource is to:
+ Provide dynamic distribution of configuration data to deployed applications. Encapsulate configuration information and simplify Kubernetes deployments. Create a flexible configuration model for Kubernetes.  Motivation A Secret-like API resource is needed to store configuration data that pods can consume.
+Goals of this design:</description>
+    </item>
+    
+    <item>
+      <title>container-init</title>
+      <link>/contributors/design-proposals/node/container-init/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/container-init/</guid>
+      <description>Pod initialization @smarterclayton
+March 2016
+Proposal and Motivation Within a pod there is a need to initialize local data or adapt to the current cluster environment that is not easily achieved in the current container model. Containers start in parallel after volumes are mounted, leaving no opportunity for coordination between containers without specialization of the image. If two containers need to share common initialization data, both images must be altered to cooperate using filesystem or network semantics, which introduces coupling between images.</description>
+    </item>
+    
+    <item>
+      <title>container-runtime-interface-v1</title>
+      <link>/contributors/design-proposals/node/container-runtime-interface-v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/container-runtime-interface-v1/</guid>
+      <description>Redefine Container Runtime Interface The umbrella issue: #28789
+Motivation Kubelet employs a declarative pod-level interface, which acts as the sole integration point for container runtimes (e.g., docker and rkt). The high-level, declarative interface has caused higher integration and maintenance cost, and also slowed down feature velocity for the following reasons. 1. Not every container runtime supports the concept of pods natively. When integrating with Kubernetes, a significant amount of work needs to go into implementing a shim of significant size to support all pod features.</description>
+    </item>
+    
+    <item>
+      <title>container-storage-interface</title>
+      <link>/contributors/design-proposals/storage/container-storage-interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/container-storage-interface/</guid>
+      <description>CSI Volume Plugins in Kubernetes Design Doc Status: Pending
+Version: Alpha
+Author: Saad Ali (@saad-ali, saadali@google.com)
+This document was drafted here.
+Terminology    Term Definition     Container Storage Interface (CSI) A specification attempting to establish an industry standard interface that Container Orchestration Systems (COs) can use to expose arbitrary storage systems to their containerized workloads.   in-tree Code that exists in the core Kubernetes repository.</description>
+    </item>
+    
+    <item>
+      <title>containerized-mounter</title>
+      <link>/contributors/design-proposals/storage/containerized-mounter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/containerized-mounter/</guid>
+      <description>Containerized Mounter with Chroot for Container-Optimized OS Goal Due security and management overhead, our new Container-Optimized OS used by GKE does not carry certain storage drivers and tools needed for such as nfs and glusterfs. This project takes a containerized mount approach to package mount binaries into a container. Volume plugin will execute mount inside of container and share the mount with the host.
+Design  A docker image has storage tools (nfs and glusterfs) pre-installed and uploaded to gcs.</description>
+    </item>
+    
+    <item>
+      <title>containerized-mounter-pod</title>
+      <link>/contributors/design-proposals/storage/containerized-mounter-pod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/containerized-mounter-pod/</guid>
+      <description>Containerized mounter using volume utilities in pods Goal Kubernetes should be able to run all utilities that are needed to provision/attach/mount/unmount/detach/delete volumes in pods instead of running them on the host. The host can be a minimal Linux distribution without tools to create e.g. Ceph RBD or mount GlusterFS volumes.
+Secondary objectives These are not requirements per se, just things to consider before drawing the final design. * CNCF designs Container Storage Interface (CSI).</description>
+    </item>
+    
+    <item>
+      <title>control-plane-resilience</title>
+      <link>/contributors/design-proposals/multicluster/control-plane-resilience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/control-plane-resilience/</guid>
+      <description>Kubernetes and Cluster Federation Control Plane Resilience Long Term Design and Current Status by Quinton Hoole, Mike Danese and Justin Santa-Barbara December 14, 2015 Summary Some amount of confusion exists around how we currently, and in future want to ensure resilience of the Kubernetes (and by implication Kubernetes Cluster Federation) control plane. This document is an attempt to capture that definitively. It covers areas including self-healing, high availability, bootstrapping and recovery.</description>
+    </item>
+    
+    <item>
+      <title>controller-ref</title>
+      <link>/contributors/design-proposals/api-machinery/controller-ref/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/controller-ref/</guid>
+      <description>ControllerRef proposal  Authors: gmarek, enisoc Last edit: 2017-02-06 Status: partially implemented  Approvers: * [ ] briangrant * [ ] dbsmith
+Table of Contents
+ Goals Non-goals API Behavior Upgrading Implementation Alternatives History  Goals  The main goal of ControllerRef (controller reference) is to solve the problem of controllers that fight over controlled objects due to overlapping selectors (e.g. a ReplicaSet fighting with a ReplicationController over Pods because both controllers have label selectors that match those Pods).</description>
+    </item>
+    
+    <item>
+      <title>controller_history</title>
+      <link>/contributors/design-proposals/apps/controller_history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/controller_history/</guid>
+      <description>Controller History Author: kow3ns@
+Status: Proposal
+Abstract In Kubernetes, in order to update and rollback the configuration and binary images of controller managed Pods, users mutate DaemonSet, StatefulSet, and Deployment Objects, and the corresponding controllers attempt to transition the current state of the system to the new declared target state.
+To facilitate update and rollback for these controllers, and to provide a primitive that third-party controllers can build on, we propose a mechanism that allows controllers to manage a bounded history of revisions to the declared target state of their generated Objects.</description>
+    </item>
+    
+    <item>
+      <title>core-metrics-pipeline</title>
+      <link>/contributors/design-proposals/instrumentation/core-metrics-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/core-metrics-pipeline/</guid>
+      <description>Core Metrics in kubelet Author: David Ashpole (@dashpole)
+Last Updated: 1/31/2017
+Status: Proposal
+This document proposes a design for the set of metrics included in an eventual Core Metrics Pipeline.
+ Core Metrics in kubelet  Introduction Definitions Background Motivations Proposal Non Goals Design Metric Requirements: Proposed Core Metrics: On-Demand Design: Future Work   Introduction Definitions &amp;ldquo;Kubelet&amp;rdquo;: The daemon that runs on every kubernetes node and controls pod and container lifecycle, among many other things.</description>
+    </item>
+    
+    <item>
+      <title>coredns</title>
+      <link>/contributors/design-proposals/network/coredns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/coredns/</guid>
+      <description>Add CoreDNS for DNS-based Service Discovery Status: Pending
+Version: Alpha
+Implementation Owner: @johnbelamaric
+Motivation CoreDNS is another CNCF project and is the successor to SkyDNS, which kube-dns is based on. It is a flexible, extensible authoritative DNS server and directly integrates with the Kubernetes API. It can serve as cluster DNS, complying with the dns spec.
+CoreDNS has fewer moving parts than kube-dns, since it is a single executable and single process.</description>
+    </item>
+    
+    <item>
+      <title>cpu-manager</title>
+      <link>/contributors/design-proposals/node/cpu-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/cpu-manager/</guid>
+      <description>CPU Manager Authors:
+ @ConnorDoyle - Connor Doyle &amp;lt;connor.p.doyle@intel.com&amp;gt; @flyingcougar - Szymon Scharmach &amp;lt;szymon.scharmach@intel.com&amp;gt; @sjenning - Seth Jennings &amp;lt;sjenning@redhat.com&amp;gt;  Contents:
+ Overview Proposed changes Operations and observability Practical challenges Implementation roadmap Appendix A: cpuset pitfalls  Overview Problems to solve:
+ Poor or unpredictable performance observed compared to virtual machine based orchestration systems. Application latency and lower CPU throughput compared to VMs due to cpu quota being fulfilled across all cores, rather than exclusive cores, which results in fewer context switches and higher cache affinity.</description>
+    </item>
+    
+    <item>
+      <title>cri-dockershim-checkpoint</title>
+      <link>/contributors/design-proposals/node/cri-dockershim-checkpoint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/cri-dockershim-checkpoint/</guid>
+      <description>CRI: Dockershim PodSandbox Checkpoint Umbrella Issue #34672
+Background Container Runtime Interface (CRI) is an ongoing project to allow container runtimes to integrate with kubernetes via a newly-defined API. Dockershim is the Docker CRI implementation. This proposal aims to introduce checkpoint mechanism in dockershim.
+Motivation Why do we need checkpoint? With CRI, Kubelet only passes configurations (SandboxConfig, ContainerConfig and ImageSpec) when creating sandbox, container and image, and only use the reference id to manage them after creation.</description>
+    </item>
+    
+    <item>
+      <title>cri-windows</title>
+      <link>/contributors/design-proposals/node/cri-windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/cri-windows/</guid>
+      <description>CRI: Windows Container Configuration Authors: Jiangtian Li (@JiangtianLi), Pengfei Ni (@feiskyer), Patrick Lang(@PatrickLang)
+Status: Proposed
+Background Container Runtime Interface (CRI) defines APIs and configuration types for kubelet to integrate various container runtimes. The Open Container Initiative (OCI) Runtime Specification defines platform specific configuration, including Linux, Windows, and Solaris. Currently CRI only supports Linux container configuration. This proposal is to bring the Memory &amp;amp; CPU resource restrictions already specified in OCI for Windows to CRI.</description>
+    </item>
+    
+    <item>
+      <title>cronjob</title>
+      <link>/contributors/design-proposals/apps/cronjob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/cronjob/</guid>
+      <description>CronJob Controller (previously ScheduledJob) Abstract A proposal for implementing a new controller - CronJob controller - which will be responsible for managing time based jobs, namely: * once at a specified point in time, * repeatedly at a specified point in time.
+There is already a discussion regarding this subject: * Distributed CRON jobs #2156
+There are also similar solutions available, already: * Mesos Chronos * Quartz
+Use Cases  Be able to schedule a job execution at a given point in time.</description>
+    </item>
+    
+    <item>
+      <title>csi-client-structure-proposal</title>
+      <link>/contributors/design-proposals/api-machinery/csi-client-structure-proposal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/csi-client-structure-proposal/</guid>
+      <description>Overall Kubernetes Client Structure Status: Approved by SIG API Machinery on March 29th, 2017
+Authors: @lavalamp, @mbohlool
+last edit: 2017-3-22
+Goals  Users can build production-grade programmatic use of Kubernetes-style APIs in their language of choice.  New Concept Today, Kubernetes has the concept of an API Group. Sometimes it makes sense to package multiple groups together in a client, for example, the core APIs we publish today. I’ll call this a &amp;ldquo;group collection&amp;rdquo; as it sounds a bit better than “group group.</description>
+    </item>
+    
+    <item>
+      <title>csi-new-client-library-procedure</title>
+      <link>/contributors/design-proposals/api-machinery/csi-new-client-library-procedure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/csi-new-client-library-procedure/</guid>
+      <description>Kubernetes: New Client Library Procedure Status: Approved by SIG API Machinery on March 29th, 2017
+Authors: @mbohlool, @lavalamp
+Last Updated: 2017-03-06
+Background Kubernetes currently officially supports both Go and Python client libraries. The go client is developed and extracted from main kubernetes repositories in a complex process. On the other hand, the python client is based on OpenAPI, and is mostly generated code (via swagger-codegen). By generating the API Operations and Data Models, updating the client and tracking changes from main repositories becomes much more sustainable.</description>
+    </item>
+    
+    <item>
+      <title>custom-metrics-api</title>
+      <link>/contributors/design-proposals/instrumentation/custom-metrics-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/custom-metrics-api/</guid>
+      <description>Custom Metrics API The new metrics monitoring vision proposes an API that the Horizontal Pod Autoscaler can use to access arbitrary metrics.
+Similarly to the master metrics API, the new API should be structured around accessing metrics by referring to Kubernetes objects (or groups thereof) and a metric name. For this reason, the API could be useful for other consumers (most likely controllers) that want to consume custom metrics (similarly to how the master metrics API is generally useful to multiple cluster components).</description>
+    </item>
+    
+    <item>
+      <title>customresources-subresources</title>
+      <link>/contributors/design-proposals/api-machinery/customresources-subresources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/customresources-subresources/</guid>
+      <description>Subresources for CustomResources Authors: @nikhita, @sttts
+Table of Contents  Abstract Goals Non-Goals Proposed Extension of CustomResourceDefinition  API Types Feature Gate  Semantics  Validation Behavior  Status Scale  Status Behavior Scale Behavior  Status Replicas Behavior Selector Behavior   Implementation Plan Alternatives  Scope   Abstract CustomResourceDefinitions (CRDs) were introduced in 1.7. The objects defined by CRDs are called CustomResources (CRs). Currently, we do not provide subresources for CRs.</description>
+    </item>
+    
+    <item>
+      <title>customresources-validation</title>
+      <link>/contributors/design-proposals/api-machinery/customresources-validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/customresources-validation/</guid>
+      <description>Validation for CustomResources Authors: @nikhita, @sttts, some ideas integrated from @xiao-zhou’s proposal1
+Table of Contents  Overview Background  Goals Non-Goals  Proposed Extension of CustomResourceDefinition  API Types Examples  JSON-Schema Error messages   Validation Behavior  Metadata Server-Side Validation Client-Side Validation Comparison between server-side and client-side Validation Existing Instances and changing the Schema Outlook to Status Sub-Resources Outlook Admission Webhook  Implementation Plan Appendix  Expressiveness of JSON-Schema JSON-Schema Validation Runtime Complexity Alternatives  Direct Embedding of the Schema into the Spec External CustomResourceSchema Type    Overview This document proposes the design and describes a way to add JSON-Schema based validation for Custom Resources.</description>
+    </item>
+    
+    <item>
+      <title>customresources-versioning</title>
+      <link>/contributors/design-proposals/api-machinery/customresources-versioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/customresources-versioning/</guid>
+      <description>CRD Versioning The objective of this design document is to provide a machinery for Custom Resource Definition authors to define different resource version and a conversion mechanism between them.
+Background Custom Resource Definitions (CRDs) are a popular mechanism for extending Kubernetes, due to their ease of use compared with the main alternative of building an Aggregated API Server. They are, however, lacking a very important feature that all other kubernetes objects support: Versioning.</description>
+    </item>
+    
+    <item>
+      <title>daemon</title>
+      <link>/contributors/design-proposals/apps/daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/daemon/</guid>
+      <description>DaemonSet in Kubernetes Author: Ananya Kumar (@AnanyaKumar)
+Status: Implemented.
+This document presents the design of the Kubernetes DaemonSet, describes use cases, and gives an overview of the code.
+Motivation Many users have requested for a way to run a daemon on every node in a Kubernetes cluster, or on a certain set of nodes in a cluster. This is essential for use cases such as building a sharded datastore, or running a logger on every node.</description>
+    </item>
+    
+    <item>
+      <title>daemonset-update</title>
+      <link>/contributors/design-proposals/apps/daemonset-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/daemonset-update/</guid>
+      <description>DaemonSet Updates Author: @madhusudancs, @lukaszo, @janetkuo
+Status: Proposal
+Abstract A proposal for adding the update feature to DaemonSet. This feature will be implemented on server side (in DaemonSet API).
+Users already can update a DaemonSet today (Kubernetes release 1.5), which will not cause changes to its subsequent pods, until those pods are killed. In this proposal, we plan to add a &amp;ldquo;RollingUpdate&amp;rdquo; strategy which allows DaemonSet to downstream its changes to pods.</description>
+    </item>
+    
+    <item>
+      <title>declarative-application-management</title>
+      <link>/contributors/design-proposals/architecture/declarative-application-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/declarative-application-management/</guid>
+      <description>Declarative application management in Kubernetes  This article was authored by Brian Grant (bgrant0607) on 8/2/2017. The original Google Doc can be found here: https://goo.gl/T66ZcD
+ Most users will deploy a combination of applications they build themselves, also known as bespoke applications, and common off-the-shelf (COTS) components. Bespoke applications are typically stateless application servers, whereas COTS components are typically infrastructure (and frequently stateful) systems, such as databases, key-value stores, caches, and messaging systems.</description>
+    </item>
+    
+    <item>
+      <title>default-storage-class</title>
+      <link>/contributors/design-proposals/storage/default-storage-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/default-storage-class/</guid>
+      <description>Deploying a default StorageClass during installation Goal Usual Kubernetes installation tools should deploy a default StorageClass where it makes sense.
+&amp;ldquo;Usual installation tools&amp;rdquo; are:
+ cluster/kube-up.sh kops kubeadm  Other &amp;ldquo;installation tools&amp;rdquo; can (and should) deploy default StorageClass following easy steps described in this document, however we won&amp;rsquo;t touch them during implementation of this proposal.
+&amp;ldquo;Where it makes sense&amp;rdquo; are:
+ AWS Azure GCE Photon OpenStack vSphere  Explicitly, there is no default storage class on bare metal.</description>
+    </item>
+    
+    <item>
+      <title>deploy</title>
+      <link>/contributors/design-proposals/apps/deploy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/deploy/</guid>
+      <description>Deploy through CLI  Motivation Requirements Related kubectl Commands kubectl run kubectl scale and kubectl autoscale kubectl rollout kubectl set Mutating Operations Example Support in Deployment Deployment Status Deployment Revision Pause Deployments Failed Deployments   Deployment rolling update design proposal Author: @janetkuo
+Status: implemented
+Deploy through CLI Motivation Users can use Deployments or kubectl rolling-update to deploy in their Kubernetes clusters. A Deployment provides declarative update for Pods and ReplicationControllers, whereas rolling-update allows the users to update their earlier deployment without worrying about schemas and configurations.</description>
+    </item>
+    
+    <item>
+      <title>deployment</title>
+      <link>/contributors/design-proposals/apps/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/deployment/</guid>
+      <description>Deployment Authors: - Brian Grant (@bgrant0607) - Clayton Coleman (@smarterclayton) - Dan Mace (@ironcladlou) - David Oppenheimer (@davidopp) - Janet Kuo (@janetkuo) - Michail Kargakis (@kargakis) - Nikhil Jindal (@nikhiljindal)
+Abstract A proposal for implementing a new resource - Deployment - which will enable declarative config updates for ReplicaSets. Users will be able to create a Deployment, which will spin up a ReplicaSet to bring up the desired Pods. Users can also target the Deployment to an existing ReplicaSet either by rolling back an existing Deployment or creating a new Deployment that can adopt an existing ReplicaSet.</description>
+    </item>
+    
+    <item>
+      <title>device-plugin</title>
+      <link>/contributors/design-proposals/resource-management/device-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/device-plugin/</guid>
+      <description>Device Manager Proposal  Motivation Use Cases Objectives Non Objectives Vendor story End User story Device Plugin  Introduction Registration Unix Socket Protocol Overview API specification HealthCheck and Failure Recovery API Changes  Upgrading your cluster Installation Versioning References  Authors:
+ @RenaudWasTaken - Renaud Gaubert &amp;lt;rgaubert@NVIDIA.com&amp;gt; @jiayingz - Jiaying Zhang &amp;lt;jiayingz@google.com&amp;gt;  Motivation Kubernetes currently supports discovery of CPU and Memory primarily to a minimal extent. Very few devices are handled natively by Kubelet.</description>
+    </item>
+    
+    <item>
+      <title>disk-accounting</title>
+      <link>/contributors/design-proposals/node/disk-accounting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/disk-accounting/</guid>
+      <description>Author: Vishnu Kannan
+Last Updated: 11/16/2015
+Status: Pending Review
+This proposal is an attempt to come up with a means for accounting disk usage in Kubernetes clusters that are running docker as the container runtime. Some of the principles here might apply for other runtimes too.
+Why is disk accounting necessary? As of kubernetes v1.1 clusters become unusable over time due to the local disk becoming full. The kubelets on the node attempt to perform garbage collection of old containers and images, but that doesn&amp;rsquo;t prevent running pods from using up all the available disk space.</description>
+    </item>
+    
+    <item>
+      <title>downward_api_resources_limits_requests</title>
+      <link>/contributors/design-proposals/node/downward_api_resources_limits_requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/downward_api_resources_limits_requests/</guid>
+      <description>Downward API for resource limits and requests Background Currently the downward API (via environment variables and volume plugin) only supports exposing a Pod&amp;rsquo;s name, namespace, annotations, labels and its IP (see details). This document explains the need and design to extend them to expose resources (e.g. cpu, memory) limits and requests.
+Motivation Software applications require configuration to work optimally with the resources they&amp;rsquo;re allowed to use. Exposing the requested and limited amounts of available resources inside containers will allow these applications to be configured more easily.</description>
+    </item>
+    
+    <item>
+      <title>dynamic-admission-control-configuration</title>
+      <link>/contributors/design-proposals/api-machinery/dynamic-admission-control-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/dynamic-admission-control-configuration/</guid>
+      <description>Background The extensible admission control proposal proposed making admission control extensible. In the proposal, the initializer admission controller and the generic webhook admission controller are the two controllers that set default initializers and external admission hooks for resources newly created. These two admission controllers are in the same binary as the apiserver. This section gave a preliminary design of the dynamic configuration of the list of the default admission controls.</description>
+    </item>
+    
+    <item>
+      <title>dynamic-kubelet-configuration</title>
+      <link>/contributors/design-proposals/node/dynamic-kubelet-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/dynamic-kubelet-configuration/</guid>
+      <description>Dynamic Kubelet Configuration Abstract A proposal for making it possible to (re)configure Kubelets in a live cluster by providing config via the API server. Some subordinate items include local checkpointing of Kubelet configuration and the ability for the Kubelet to read config from a file on disk, rather than from command line flags.
+Motivation The Kubelet is currently configured via command-line flags. This is painful for a number of reasons: - It makes it difficult to change the way Kubelets are configured in a running cluster, because it is often tedious to change the Kubelet startup configuration (without adding your own configuration management system e.</description>
+    </item>
+    
+    <item>
+      <title>enhance-pluggable-policy</title>
+      <link>/contributors/design-proposals/auth/enhance-pluggable-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/enhance-pluggable-policy/</guid>
+      <description>Enhance Pluggable Policy While trying to develop an authorization plugin for Kubernetes, we found a few places where API extensions would ease development and add power. There are a few goals: 1. Provide an authorization plugin that can evaluate a .Authorize() call based on the full content of the request to RESTStorage. This includes information like the full verb, the content of creates and updates, and the names of resources being acted upon.</description>
+    </item>
+    
+    <item>
+      <title>envvar-configmap</title>
+      <link>/contributors/design-proposals/node/envvar-configmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/envvar-configmap/</guid>
+      <description>ConfigMaps as environment variables Goal Populating environment variables of a container from an entire ConfigMap.
+Design Points A container can specify a set of existing ConfigMaps to populate environment variables.
+There needs to be an easy way to isolate the variables introduced by a given ConfigMap. The contents of a ConfigMap may not be known in advance and it may be generated by someone or something else. Services may provide binding information via a ConfigMap.</description>
+    </item>
+    
+    <item>
+      <title>event_compression</title>
+      <link>/contributors/design-proposals/api-machinery/event_compression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/event_compression/</guid>
+      <description>Kubernetes Event Compression This document captures the design of event compression.
+Background Kubernetes components can get into a state where they generate tons of events.
+The events can be categorized in one of two ways:
+ same - The event is identical to previous events except it varies only on timestamp. similar - The event is identical to previous events except it varies on timestamp and message.  For example, when pulling a non-existing image, Kubelet will repeatedly generate image_not_existing and container_is_waiting events until upstream components correct the image.</description>
+    </item>
+    
+    <item>
+      <title>events-redesign</title>
+      <link>/contributors/design-proposals/instrumentation/events-redesign/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/events-redesign/</guid>
+      <description>Make Kubernetes Events useful and safe Status: Pending
+Version: Beta
+Implementation Owner: gmarek@google.com
+Approvers: - [X] thockin - API changes - [X] briangrant - API changes - [X] konryd - API changes from UI/UX side - [X] pszczesniak - logging team side - [X] wojtekt - performance side - [ ] derekwaynecarr - &amp;ldquo;I told you so&amp;rdquo; Events person:)
+Overview This document describes an effort which aims at fixing few issues in current way Events are structured and implemented.</description>
+    </item>
+    
+    <item>
+      <title>expansion</title>
+      <link>/contributors/design-proposals/node/expansion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/expansion/</guid>
+      <description>Variable expansion in pod command, args, and env Abstract A proposal for the expansion of environment variables using a simple $(var) syntax.
+Motivation It is extremely common for users to need to compose environment variables or pass arguments to their commands using the values of environment variables. Kubernetes should provide a facility for the 80% cases in order to decrease coupling and the use of workarounds.
+Goals  Define the syntax format Define the scoping and ordering of substitutions Define the behavior for unmatched variables Define the behavior for unexpected/malformed input  Constraints and Assumptions  This design should describe the simplest possible syntax to accomplish the use-cases.</description>
+    </item>
+    
+    <item>
+      <title>extending-api</title>
+      <link>/contributors/design-proposals/api-machinery/extending-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/extending-api/</guid>
+      <description>Adding custom resources to the Kubernetes API server This document describes the design for implementing the storage of custom API types in the Kubernetes API Server.
+Resource Model The ThirdPartyResource The ThirdPartyResource resource describes the multiple versions of a custom resource that the user wants to add to the Kubernetes API. ThirdPartyResource is a non-namespaced resource; attempting to place it in a namespace will return an error.
+Each ThirdPartyResource resource has the following: * Standard Kubernetes object metadata.</description>
+    </item>
+    
+    <item>
+      <title>external-lb-source-ip-preservation</title>
+      <link>/contributors/design-proposals/network/external-lb-source-ip-preservation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/external-lb-source-ip-preservation/</guid>
+      <description>Overview  Motivation  Alpha Design  Overview Traffic Steering using LB programming Traffic Steering using Health Checks Choice of traffic steering approaches by individual Cloud Provider implementations API Changes Local Endpoint Recognition Support Service Annotation to opt-in for new behaviour NodePort allocation for HealthChecks Behavior Changes expected External Traffic Blackholed on nodes with no local endpoints Traffic Balancing Changes Cloud Provider support GCE 1.4  GCE Expected Packet Source/Destination IP (Datapath) GCE Expected Packet Destination IP (HealthCheck path)  AWS TBD Openstack TBD Azure TBD Testing  Beta Design  API Changes from Alpha to Beta  Future work Appendix  Overview Kubernetes provides an external loadbalancer service type which creates a virtual external ip (in supported cloud provider environments) that can be used to load-balance traffic to the pods matching the service pod-selector.</description>
+    </item>
+    
+    <item>
+      <title>federated-api-servers</title>
+      <link>/contributors/design-proposals/multicluster/federated-api-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-api-servers/</guid>
+      <description>Federated API Servers Moved to aggregated-api-servers.md since cluster federation stole the word &amp;ldquo;federation&amp;rdquo; from this effort and it was very confusing.</description>
+    </item>
+    
+    <item>
+      <title>federated-hpa</title>
+      <link>/contributors/design-proposals/multicluster/federated-hpa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-hpa/</guid>
+      <description>Federated Pod Autoscaler Requirements &amp;amp; Design Document irfan.rehman@huawei.com, quinton.hoole@huawei.com
+Use cases 1 – Users can schedule replicas of same application, across the federated clusters, using replicaset (or deployment). Users however further might need to let the replicas be scaled independently in each cluster, depending on the current usage metrics of the replicas; including the CPU, memory and application defined custom metrics.
+2 - As stated in the previous use case, a federation user schedules replicas of same application, into federated clusters and subsequently creates a horizontal pod autoscaler targeting the object responsible for the replicas.</description>
+    </item>
+    
+    <item>
+      <title>federated-ingress</title>
+      <link>/contributors/design-proposals/multicluster/federated-ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-ingress/</guid>
+      <description>Kubernetes Federated Ingress  Requirements and High Level Design Quinton Hoole July 17, 2016  Overview/Summary Kubernetes Ingress provides an abstraction for sophisticated L7 load balancing through a single IP address (and DNS name) across multiple pods in a single Kubernetes cluster. Multiple alternative underlying implementations are provided, including one based on GCE L7 load balancing and another using an in-cluster nginx/HAProxy deployment (for non-GCE environments). An AWS implementation, based on Elastic Load Balancers and Route53 is under way by the community.</description>
+    </item>
+    
+    <item>
+      <title>federated-placement-policy</title>
+      <link>/contributors/design-proposals/multicluster/federated-placement-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-placement-policy/</guid>
+      <description>Policy-based Federated Resource Placement This document proposes a design for policy-based control over placement of Federated resources.
+Tickets:
+ https://github.com/kubernetes/kubernetes/issues/39982  Authors:
+ Torin Sandall (torin@styra.com, tsandall@github) and Tim Hinrichs (tim@styra.com). Based on discussions with Quinton Hoole (quinton.hoole@huawei.com, quinton-hoole@github), Nikhil Jindal (nikhiljindal@github).  Background Resource placement is a policy-rich problem affecting many deployments. Placement may be based on company conventions, external regulation, pricing and performance requirements, etc. Furthermore, placement policies evolve over time and vary across organizations.</description>
+    </item>
+    
+    <item>
+      <title>federated-replicasets</title>
+      <link>/contributors/design-proposals/multicluster/federated-replicasets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-replicasets/</guid>
+      <description>Federated ReplicaSets Requirements &amp;amp; Design Document This document is a markdown version converted from a working Google Doc. Please refer to the original for extended commentary and discussion.
+Author: Marcin Wielgus mwielgus@google.com Based on discussions with Quinton Hoole quinton@google.com, Wojtek Tyczyński wojtekt@google.com
+Overview Summary &amp;amp; Vision When running a global application on a federation of Kubernetes clusters the owner currently has to start it in multiple clusters and control whether he has both enough application replicas running locally in each of the clusters (so that, for example, users are handled by a nearby cluster, with low latency) and globally (so that there is always enough capacity to handle all traffic).</description>
+    </item>
+    
+    <item>
+      <title>federated-services</title>
+      <link>/contributors/design-proposals/multicluster/federated-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federated-services/</guid>
+      <description>Kubernetes Cluster Federation (previously nicknamed &amp;ldquo;Ubernetes&amp;rdquo;) Cross-cluster Load Balancing and Service Discovery Requirements and System Design by Quinton Hoole, Dec 3 2015 Requirements Discovery, Load-balancing and Failover  Internal discovery and connection: Pods/containers (running in a Kubernetes cluster) must be able to easily discover and connect to endpoints for Kubernetes services on which they depend in a consistent way, irrespective of whether those services exist in a different kubernetes cluster within the same cluster federation.</description>
+    </item>
+    
+    <item>
+      <title>federation</title>
+      <link>/contributors/design-proposals/multicluster/federation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federation/</guid>
+      <description>Kubernetes Cluster Federation (previously nicknamed &amp;ldquo;Ubernetes&amp;rdquo;) Requirements Analysis and Product Proposal by Quinton Hoole (quinton@google.com) Initial revision: 2015-03-05 Last updated: 2015-08-20 This doc: tinyurl.com/ubernetesv2 Original slides: tinyurl.com/ubernetes-slides Updated slides: tinyurl.com/ubernetes-whereto
+Introduction Today, each Kubernetes cluster is a relatively self-contained unit, which typically runs in a single &amp;ldquo;on-premise&amp;rdquo; data centre or single availability zone of a cloud provider (Google&amp;rsquo;s GCE, Amazon&amp;rsquo;s AWS, etc).
+Several current and potential Kubernetes users and customers have expressed a keen interest in tying together (&amp;ldquo;federating&amp;rdquo;) multiple clusters in some sensible way in order to enable the following kinds of use cases (intentionally vague):</description>
+    </item>
+    
+    <item>
+      <title>federation-clusterselector</title>
+      <link>/contributors/design-proposals/multicluster/federation-clusterselector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federation-clusterselector/</guid>
+      <description>ClusterSelector Federated Resource Placement This document proposes a design for label based control over placement of Federated resources.
+Tickets:
+ https://github.com/kubernetes/kubernetes/issues/29887  Authors:
+ Dan Wilson (emaildanwilson@github.com). Nikhil Jindal (nikhiljindal@github).  Background End users will often need a simple way to target a subset of clusters for deployment of resources. In some cases this will be for a specific cluster in other cases it will be groups of clusters. A few examples&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>federation-lite</title>
+      <link>/contributors/design-proposals/multicluster/federation-lite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federation-lite/</guid>
+      <description>Kubernetes Multi-AZ Clusters (previously nicknamed &amp;ldquo;Ubernetes-Lite&amp;rdquo;) Introduction Full Cluster Federation will offer sophisticated federation between multiple kubernetes clusters, offering true high-availability, multiple provider support &amp;amp; cloud-bursting, multiple region support etc. However, many users have expressed a desire for a &amp;ldquo;reasonably&amp;rdquo; high-available cluster, that runs in multiple zones on GCE or availability zones in AWS, and can tolerate the failure of a single zone without the complexity of running multiple clusters.</description>
+    </item>
+    
+    <item>
+      <title>federation-phase-1</title>
+      <link>/contributors/design-proposals/multicluster/federation-phase-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/federation-phase-1/</guid>
+      <description>Ubernetes Design Spec (phase one) Huawei PaaS Team
+INTRODUCTION In this document we propose a design for the “Control Plane” of Kubernetes (K8S) federation (a.k.a. “Ubernetes”). For background of this work please refer to this proposal. The document is arranged as following. First we briefly list scenarios and use cases that motivate K8S federation work. These use cases drive the design and they also verify the design. We summarize the functionality requirements from these use cases, and define the “in scope” functionalities that will be covered by this design (phase one).</description>
+    </item>
+    
+    <item>
+      <title>flakiness-sla</title>
+      <link>/contributors/design-proposals/testing/flakiness-sla/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/testing/flakiness-sla/</guid>
+      <description>Kubernetes Testing Flakiness SLA This document captures the expectations of the community about flakiness in our tests and our test infrastructure. It sets out an SLA (Service Level Agreement) for flakiness in our tests, as well as actions that we will take when we are out of SLA.
+Definition of &amp;ldquo;We&amp;rdquo; Throughout the document the term we is used. This is intended to refer to the Kubernetes project as a whole, and any governance structures the project puts in place.</description>
+    </item>
+    
+    <item>
+      <title>flannel-integration</title>
+      <link>/contributors/design-proposals/network/flannel-integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/flannel-integration/</guid>
+      <description>Flannel integration with Kubernetes Why?  Networking works out of the box. Cloud gateway configuration is regulated by quota. Consistent bare metal and cloud experience. Lays foundation for integrating with networking backends and vendors.  How? Thus:
+Master | Node1 ---------------------------------------------------------------------- {192.168.0.0/16, 256 /24} | docker | | | restart with podcidr apiserver &amp;lt;------------------ kubelet (sends podcidr) | | | here&#39;s podcidr, mtu flannel-server:10253 &amp;lt;------------------ flannel-daemon Allocates a /24 ------------------&amp;gt; [config iptables, VXLan] &amp;lt;------------------ [watch subnet leases] I just allocated ------------------&amp;gt; [config VXLan] another /24 |  Proposal Explaining vxlan is out of the scope of this document, however it does take some basic understanding to grok the proposal.</description>
+    </item>
+    
+    <item>
+      <title>flex-volumes-drivers-psp</title>
+      <link>/contributors/design-proposals/auth/flex-volumes-drivers-psp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/flex-volumes-drivers-psp/</guid>
+      <description>Allow Pod Security Policy to manage access to the Flexvolumes Current state Cluster admins can control the usage of specific volume types by using Pod Security Policy (PSP). Admins can allow the use of Flexvolumes by listing the flexVolume type in the volumes field. The only thing that can be managed is allowance or disallowance of Flexvolumes.
+Technically, Flexvolumes are implemented as vendor drivers. They are executable files that must be placed on every node at /usr/libexec/kubernetes/kubelet-plugins/volume/exec/&amp;lt;vendor~driver&amp;gt;/&amp;lt;driver&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title>flexvolume-deployment</title>
+      <link>/contributors/design-proposals/storage/flexvolume-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/flexvolume-deployment/</guid>
+      <description>Dynamic Flexvolume Plugin Discovery Objective Kubelet and controller-manager do not need to be restarted manually in order for new Flexvolume plugins to be recognized.
+Background Beginning in version 1.8, the Kubernetes Storage SIG is putting a stop to accepting in-tree volume plugins and advises all storage providers to implement out-of-tree plugins. Currently, there are two recommended implementations: Container Storage Interface (CSI) and Flexvolume.
+CSI provides a single interface that storage vendors can implement in order for their storage solutions to work across many different container orchestrators, and volume plugins are out-of-tree by design.</description>
+    </item>
+    
+    <item>
+      <title>garbage-collection</title>
+      <link>/contributors/design-proposals/api-machinery/garbage-collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/garbage-collection/</guid>
+      <description>Table of Contents
+ Overview Cascading deletion with Garbage Collector Orphaning the descendants with &amp;ldquo;orphan&amp;rdquo; finalizer  Part I. The finalizer framework Part II. The &amp;ldquo;orphan&amp;rdquo; finalizer  Related issues  Orphan adoption Upgrading a cluster to support cascading deletion  End-to-End Examples  Life of a Deployment and its descendants  Open Questions Considered and Rejected Designs 1. Tombstone + GC 2. Recovering from abnormal cascading deletion  Overview Currently most cascading deletion logic is implemented at client-side.</description>
+    </item>
+    
+    <item>
+      <title>gce-l4-loadbalancer-healthcheck</title>
+      <link>/contributors/design-proposals/gcp/gce-l4-loadbalancer-healthcheck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/gcp/gce-l4-loadbalancer-healthcheck/</guid>
+      <description>GCE L4 load-balancers&amp;rsquo; health checks for nodes Goal Set up health checks for GCE L4 load-balancer to ensure it is only targeting healthy nodes.
+Motivation On cloud providers which support external load balancers, setting the type field to &amp;ldquo;LoadBalancer&amp;rdquo; will provision a L4 load-balancer for the service (doc), which load-balances traffic to k8s nodes. As of k8s 1.6, we don&amp;rsquo;t create health check for L4 load-balancer by default, which means all traffic will be forwarded to any one of the nodes blindly.</description>
+    </item>
+    
+    <item>
+      <title>get-describe-apiserver-extensions</title>
+      <link>/contributors/design-proposals/cli/get-describe-apiserver-extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/get-describe-apiserver-extensions/</guid>
+      <description>Provide open-api extensions for kubectl get / kubectl describe columns Status: Pending
+Version: Alpha
+Motivation kubectl get and kubectl describe do not provide a rich experience for resources retrieved through federated apiservers and types not compiled into the kubectl binary. Kubectl should support printing columns configured per-type without having the types compiled in.
+Proposal Allow the apiserver to define the type specific columns that will be printed using the open-api swagger.</description>
+    </item>
+    
+    <item>
+      <title>gpu-support</title>
+      <link>/contributors/design-proposals/resource-management/gpu-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/gpu-support/</guid>
+      <description>GPU support  Objective Background Detailed discussion Inventory Scheduling The runtime  NVIDIA support  Event flow Too complex for now: nvidia-docker Implementation plan V0  Scheduling Runtime Other  Future work V1 V2 V3 Undetermined Security considerations   GPU support Author: @therc
+Date: Apr 2016
+Status: Design in progress, early implementation of requirements
+Objective Users should be able to request GPU resources for their workloads, as easily as for CPU or memory.</description>
+    </item>
+    
+    <item>
+      <title>grow-flexvolume-size</title>
+      <link>/contributors/design-proposals/storage/grow-flexvolume-size/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/grow-flexvolume-size/</guid>
+      <description>Proposal for Growing FlexVolume Size Authors: xingzhou
+Goals Since PVC resizing is introduced in Kubernetes v1.8, several volume plugins have already supported this feature, e.g. GlusterFS, AWS EBS. In this proposal, we are proposing to support FlexVolume expansion. So when user uses FlexVolume and corresponding volume driver to connect to his/her backend storage system, he/she can expand the PV size by updating PVC in Kubernetes.
+Non Goals  We only consider expanding FlexVolume size in this proposal.</description>
+    </item>
+    
+    <item>
+      <title>grow-volume-size</title>
+      <link>/contributors/design-proposals/storage/grow-volume-size/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/grow-volume-size/</guid>
+      <description>Growing Persistent Volume size Goals Enable users to increase size of PVs that their pods are using. The user will update PVC for requesting a new size. Underneath we expect that - a controller will apply the change to PV which is bound to the PVC.
+Non Goals  Reducing size of Persistent Volumes: We realize that, reducing size of PV is way riskier than increasing it. Reducing size of a PV could be a destructive operation and it requires support from underlying file system and volume type.</description>
+    </item>
+    
+    <item>
+      <title>horizontal-pod-autoscaler</title>
+      <link>/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler/</guid>
+      <description>Warning! This document might be outdated. Horizontal Pod Autoscaling Preface This document briefly describes the design of the horizontal autoscaler for pods. The autoscaler (implemented as a Kubernetes API resource and controller) is responsible for dynamically controlling the number of replicas of some collection (e.g. the pods of a ReplicationController) to meet some objective(s), for example a target per-pod CPU utilization.
+This design supersedes autoscaling.md.
+Overview The resource usage of a serving application usually varies over time: sometimes the demand for the application rises, and sometimes it drops.</description>
+    </item>
+    
+    <item>
+      <title>hpa-external-metrics</title>
+      <link>/contributors/design-proposals/autoscaling/hpa-external-metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/hpa-external-metrics/</guid>
+      <description>HPA v2 API extension proposal Objective Horizontal Pod Autoscaler v2 API allows users to autoscale based on custom metrics. However, there are some use-cases that are not well supported by the current API. The goal of this document is to propose the following changes to the API:
+ Allow autoscaling based on metrics coming from outside of Kubernetes. Example use-case is autoscaling based on a hosted cloud service used by a pod.</description>
+    </item>
+    
+    <item>
+      <title>hpa-status-conditions</title>
+      <link>/contributors/design-proposals/autoscaling/hpa-status-conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/hpa-status-conditions/</guid>
+      <description>Horizontal Pod Autoscaler Status Conditions Currently, the HPA status conveys the last scale time, current and desired replicas, and the last-retrieved values of the metrics used to autoscale.
+However, the status field conveys no information about whether or not the HPA controller encountered difficulties while attempting to fetch metrics, or to scale. While this information is generally conveyed via events, events are difficult to use to determine the current state of the HPA.</description>
+    </item>
+    
+    <item>
+      <title>hpa-v2</title>
+      <link>/contributors/design-proposals/autoscaling/hpa-v2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/hpa-v2/</guid>
+      <description>Horizontal Pod Autoscaler with Arbitrary Metrics The current Horizontal Pod Autoscaler object only has support for CPU as a percentage of requested CPU. While this is certainly a common case, one of the most frequently sought-after features for the HPA is the ability to scale on different metrics (be they custom metrics, memory, etc).
+The current HPA controller supports targeting &amp;ldquo;custom&amp;rdquo; metrics (metrics with a name prefixed with &amp;ldquo;custom/&amp;rdquo;) via an annotation, but this is suboptimal for a number of reasons: it does not allow for arbitrary &amp;ldquo;non-custom&amp;rdquo; metrics (e.</description>
+    </item>
+    
+    <item>
+      <title>hugepages</title>
+      <link>/contributors/design-proposals/resource-management/hugepages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/hugepages/</guid>
+      <description>HugePages support in Kubernetes Authors * Derek Carr (@derekwaynecarr) * Seth Jennings (@sjenning) * Piotr Prokop (@PiotrProkop)
+Status: In progress
+Abstract A proposal to enable applications running in a Kubernetes cluster to use huge pages.
+A pod may request a number of huge pages. The scheduler is able to place the pod on a node that can satisfy that request. The kubelet advertises an allocatable number of huge pages to support scheduling decisions.</description>
+    </item>
+    
+    <item>
+      <title>identifiers</title>
+      <link>/contributors/design-proposals/architecture/identifiers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/identifiers/</guid>
+      <description>Identifiers and Names in Kubernetes A summarization of the goals and recommendations for identifiers in Kubernetes. Described in GitHub issue #199.
+Definitions UID: A non-empty, opaque, system-generated value guaranteed to be unique in time and space; intended to distinguish between historical occurrences of similar entities.
+Name: A non-empty string guaranteed to be unique within a given scope at a particular time; used in resource URLs; provided by clients at creation time and encouraged to be human friendly; intended to facilitate creation idempotence and space-uniqueness of singleton objects, distinguish distinct entities, and reference particular entities across operations.</description>
+    </item>
+    
+    <item>
+      <title>image-provenance</title>
+      <link>/contributors/design-proposals/auth/image-provenance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/image-provenance/</guid>
+      <description>Overview Organizations wish to avoid running &amp;ldquo;unapproved&amp;rdquo; images.
+The exact nature of &amp;ldquo;approval&amp;rdquo; is beyond the scope of Kubernetes, but may include reasons like:
+ only run images that are scanned to confirm they do not contain vulnerabilities only run images that use a &amp;ldquo;required&amp;rdquo; base image only run images that contain binaries which were built from peer reviewed, checked-in source by a trusted compiler toolchain. only allow images signed by certain public keys.</description>
+    </item>
+    
+    <item>
+      <title>indexed-job</title>
+      <link>/contributors/design-proposals/apps/indexed-job/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/indexed-job/</guid>
+      <description>Design: Indexed Feature of Job object Summary This design extends kubernetes with user-friendly support for running embarrassingly parallel jobs.
+Here, parallel means on multiple nodes, which means multiple pods. By embarrassingly parallel, it is meant that the pods have no dependencies between each other. In particular, neither ordering between pods nor gang scheduling are supported.
+Users already have two other options for running embarrassingly parallel Jobs (described in the next section), but both have ease-of-use issues.</description>
+    </item>
+    
+    <item>
+      <title>initial-resources</title>
+      <link>/contributors/design-proposals/autoscaling/initial-resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/initial-resources/</guid>
+      <description>Abstract Initial Resources is a data-driven feature that based on historical data tries to estimate resource usage of a container without Resources specified and set them before the container is run. This document describes design of the component.
+Motivation Since we want to make Kubernetes as simple as possible for its users we don&amp;rsquo;t want to require setting Resources for container by its owner. On the other hand having Resources filled is critical for scheduling decisions.</description>
+    </item>
+    
+    <item>
+      <title>job</title>
+      <link>/contributors/design-proposals/apps/job/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/job/</guid>
+      <description>Job Controller Abstract A proposal for implementing a new controller - Job controller - which will be responsible for managing pod(s) that require running once to completion even if the machine the pod is running on fails, in contrast to what ReplicationController currently offers.
+Several existing issues and PRs were already created regarding that particular subject: * Job Controller #1624 * New Job resource #7380
+Use Cases  Be able to start one or several pods tracked as a single entity.</description>
+    </item>
+    
+    <item>
+      <title>kms-plugin-grpc-api</title>
+      <link>/contributors/design-proposals/auth/kms-plugin-grpc-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/kms-plugin-grpc-api/</guid>
+      <description>KMS Plugin API for secrets encryption Background Since v1.7, Kubernetes allows encryption of resources. It supports 3 kinds of encryptions: aescbc, aesgcm and secretbox. They are implemented as value transformer. This feature currently only supports encryption using keys in the configuration file (plain text, encoded with base64).
+Using an external trusted service to manage the keys separates the responsibility of key management from operating and managing a Kubernetes cluster. So a new transformer, “Envelope Transformer”, was introduced in 1.</description>
+    </item>
+    
+    <item>
+      <title>kubectl-create-from-env-file</title>
+      <link>/contributors/design-proposals/cli/kubectl-create-from-env-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/kubectl-create-from-env-file/</guid>
+      <description>Kubectl create configmap/secret &amp;ndash;env-file Goals Allow a Docker environment file (.env) to populate an entire ConfigMap or Secret. The populated ConfigMap or Secret can be referenced by a pod to load all the data contained within.
+Design The create configmap subcommand would add a new option called --from-env-file. The option will accept a single file. The option may not be used in conjunction with --from-file or --from-literal.
+The create secret generic subcommand would add a new option called --from-env-file.</description>
+    </item>
+    
+    <item>
+      <title>kubectl-exec-plugins</title>
+      <link>/contributors/design-proposals/auth/kubectl-exec-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/kubectl-exec-plugins/</guid>
+      <description>Out-of-tree client authentication providers Author: @ericchiang
+Objective This document describes a credential rotation strategy for client-go using an exec-based plugin mechanism.
+Motivation Kubernetes clients can provide three kinds of credentials: bearer tokens, TLS client certs, and basic authentication username and password. Kubeconfigs can either in-line the credential, load credentials from a file, or can use an AuthProvider to actively fetch and rotate credentials. AuthProviders are compiled into client-go and target specific providers (GCP, Keystone, Azure AD) or implement a specification supported but a subset of vendors (OpenID Connect).</description>
+    </item>
+    
+    <item>
+      <title>kubectl-extension</title>
+      <link>/contributors/design-proposals/cli/kubectl-extension/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/kubectl-extension/</guid>
+      <description>Kubectl Extension Abstract Allow kubectl to be extended to include other commands that can provide new functionality without recompiling Kubectl
+Motivation and Background Kubernetes is designed to be a composable and extensible system, with the ability to add new APIs and features via Third Party Resources or API federation, by making the server provide functionality that eases writing generic clients, and by supporting other authentication systems. Given that kubectl is the primary method for interacting with the server, some new extensions are difficult to make usable for end users without recompiling that command.</description>
+    </item>
+    
+    <item>
+      <title>kubectl-login</title>
+      <link>/contributors/design-proposals/cli/kubectl-login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/kubectl-login/</guid>
+      <description>Kubectl Login Subcommand Authors: Eric Chiang (@ericchiang)
+Goals kubectl login is an entrypoint for any user attempting to connect to an existing server. It should provide a more tailored experience than the existing kubectl config including config validation, auth challenges, and discovery.
+Short term the subcommand should recognize and attempt to help:
+ New users with an empty configuration trying to connect to a server. Users with no credentials, by prompt for any required information.</description>
+    </item>
+    
+    <item>
+      <title>kubectl_apply_getsetdiff_last_applied_config</title>
+      <link>/contributors/design-proposals/cli/kubectl_apply_getsetdiff_last_applied_config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/kubectl_apply_getsetdiff_last_applied_config/</guid>
+      <description>Kubectl apply subcommands for last-config Abstract kubectl apply uses the last-applied-config annotation to compute the removal of fields from local object configuration files and then send patches to delete those fields from the live object. Reading or updating the last-applied-config is complex as it requires parsing out and writing to the annotation. Here we propose a set of porcelain commands for users to better understand what is going on in the system and make updates.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-auth</title>
+      <link>/contributors/design-proposals/node/kubelet-auth/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-auth/</guid>
+      <description>Kubelet Authentication / Authorization Author: Jordan Liggitt (jliggitt@redhat.com)
+Overview The kubelet exposes endpoints which give access to data of varying sensitivity, and allow performing operations of varying power on the node and within containers. There is no built-in way to limit or subdivide access to those endpoints, so deployers must secure the kubelet API using external, ad-hoc methods.
+This document proposes a method for authenticating and authorizing access to the kubelet API, using interfaces and methods that complement the existing authentication and authorization used by the API server.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-authorizer</title>
+      <link>/contributors/design-proposals/node/kubelet-authorizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-authorizer/</guid>
+      <description>Scoped Kubelet API Access Author: Jordan Liggitt (jliggitt@redhat.com)
+Overview Kubelets are primarily responsible for: * creating and updating status of their Node API object * running and updating status of Pod API objects bound to their node * creating/deleting &amp;ldquo;mirror pod&amp;rdquo; API objects for statically-defined pods running on their node
+To run a pod, a kubelet must have read access to the following objects referenced by the pod spec: * Secrets * ConfigMaps * PersistentVolumeClaims (and any bound PersistentVolume or referenced StorageClass object)</description>
+    </item>
+    
+    <item>
+      <title>kubelet-cri-logging</title>
+      <link>/contributors/design-proposals/node/kubelet-cri-logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-cri-logging/</guid>
+      <description>CRI: Log management for container stdout/stderr streams Goals and non-goals Container Runtime Interface (CRI) is an ongoing project to allow container runtimes to integrate with kubernetes via a newly-defined API. The goal of this proposal is to define how container&amp;rsquo;s stdout/stderr log streams should be handled in CRI.
+The explicit non-goal is to define how (non-stdout/stderr) application logs should be handled. Collecting and managing arbitrary application logs is a long-standing issue [1] in kubernetes and is worth a proposal of its own.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-eviction</title>
+      <link>/contributors/design-proposals/node/kubelet-eviction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-eviction/</guid>
+      <description>Kubelet - Eviction Policy Authors: Derek Carr (@derekwaynecarr), Vishnu Kannan (@vishh)
+Status: Proposed (memory evictions WIP)
+This document presents a specification for how the kubelet evicts pods when compute resources are too low.
+Goals The node needs a mechanism to preserve stability when available compute resources are low.
+This is especially important when dealing with incompressible compute resources such as memory or disk. If either resource is exhausted, the node would become unstable.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-hypercontainer-runtime</title>
+      <link>/contributors/design-proposals/node/kubelet-hypercontainer-runtime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-hypercontainer-runtime/</guid>
+      <description>Kubelet HyperContainer Container Runtime Authors: Pengfei Ni (@feiskyer), Harry Zhang (@resouer)
+Abstract This proposal aims to support HyperContainer container runtime in Kubelet.
+Motivation HyperContainer is a Hypervisor-agnostic Container Engine that allows you to run Docker images using hypervisors (KVM, Xen, etc.). By running containers within separate VM instances, it offers a hardware-enforced isolation, which is required in multi-tenant environments.
+Goals  Complete pod/container/image lifecycle management with HyperContainer. Setup network by network plugins.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-rkt-runtime</title>
+      <link>/contributors/design-proposals/node/kubelet-rkt-runtime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-rkt-runtime/</guid>
+      <description>Next generation rkt runtime integration Authors: Euan Kemp (@euank), Yifan Gu (@yifan-gu)
+Abstract This proposal describes the design and road path for integrating rkt with kubelet with the new container runtime interface.
+Background Currently, the Kubernetes project supports rkt as a container runtime via an implementation under pkg/kubelet/rkt package.
+This implementation, for historical reasons, has required implementing a large amount of logic shared by the original Docker implementation.
+In order to make additional container runtime integrations easier, more clearly defined, and more consistent, a new Container Runtime Interface (CRI) is being designed.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-rootfs-distribution</title>
+      <link>/contributors/design-proposals/node/kubelet-rootfs-distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-rootfs-distribution/</guid>
+      <description>Running Kubelet in a Chroot Authors: Vishnu Kannan &amp;lt;vishh@google.com&amp;gt;, Euan Kemp &amp;lt;euan.kemp@coreos.com&amp;gt;, Brandon Philips &amp;lt;brandon.philips@coreos.com&amp;gt;
+Introduction The Kubelet is a critical component of Kubernetes that must be run on every node in a cluster.
+However, right now it&amp;rsquo;s not always easy to run it correctly. The Kubelet has a number of dependencies that must exist in its filesystem, including various mount and network utilities. Missing any of these can lead to unexpected differences between Kubernetes hosts.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-systemd</title>
+      <link>/contributors/design-proposals/node/kubelet-systemd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/kubelet-systemd/</guid>
+      <description>Kubelet and systemd interaction Author: Derek Carr (@derekwaynecarr)
+Status: Proposed
+Motivation Many Linux distributions have either adopted, or plan to adopt systemd as their init system.
+This document describes how the node should be configured, and a set of enhancements that should be made to the kubelet to better integrate with these distributions independent of container runtime.
+Scope of proposal This proposal does not account for running the kubelet in a container.</description>
+    </item>
+    
+    <item>
+      <title>kubemark</title>
+      <link>/contributors/design-proposals/scalability/kubemark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scalability/kubemark/</guid>
+      <description>Kubemark proposal Goal of this document This document describes a design of Kubemark - a system that allows performance testing of a Kubernetes cluster. It describes the assumption, high level design and discusses possible solutions for lower-level problems. It is supposed to be a starting point for more detailed discussion.
+Current state and objective Currently performance testing happens on ‘live’ clusters of up to 100 Nodes. It takes quite a while to start such cluster or to push updates to all Nodes, and it uses quite a lot of resources.</description>
+    </item>
+    
+    <item>
+      <title>local-storage-overview</title>
+      <link>/contributors/design-proposals/storage/local-storage-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/local-storage-overview/</guid>
+      <description>Local Storage Management Authors: vishh@, msau42@
+This document presents a strawman for managing local storage in Kubernetes. We expect to provide a UX and high level design overview for managing most user workflows. More detailed design and implementation will be added once the community agrees with the high level design presented here.
+Goals  Enable ephemeral &amp;amp; durable access to local storage Support storage requirements for all workloads supported by Kubernetes Provide flexibility for users/vendors to utilize various types of storage devices Define a standard partitioning scheme for storage drives for all Kubernetes nodes Provide storage usage isolation for shared partitions Support random access storage devices only (e.</description>
+    </item>
+    
+    <item>
+      <title>local-storage-pv</title>
+      <link>/contributors/design-proposals/storage/local-storage-pv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/local-storage-pv/</guid>
+      <description>Local Storage Persistent Volumes Authors: @msau42, @vishh, @dhirajh, @ianchakeres
+This document presents a detailed design for supporting persistent local storage, as outlined in Local Storage Overview. Supporting all the use cases for persistent local storage will take many releases, so this document will be extended for each new release as we add more features.
+Goals  Allow pods to mount any local block or filesystem based volume. Allow pods to mount dedicated local disks, or channeled partitions as volumes for IOPS isolation.</description>
+    </item>
+    
+    <item>
+      <title>metadata-policy</title>
+      <link>/contributors/design-proposals/api-machinery/metadata-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/metadata-policy/</guid>
+      <description>MetadataPolicy and its use in choosing the scheduler in a multi-scheduler system Status: Not Implemented
+Introduction This document describes a new API resource, MetadataPolicy, that configures an admission controller to take one or more actions based on an object&amp;rsquo;s metadata. Initially the metadata fields that the predicates can examine are labels and annotations, and the actions are to add one or more labels and/or annotations, or to reject creation/update of the object.</description>
+    </item>
+    
+    <item>
+      <title>metrics-server</title>
+      <link>/contributors/design-proposals/instrumentation/metrics-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/metrics-server/</guid>
+      <description>Metrics Server Resource Metrics API is an effort to provide a first-class Kubernetes API (stable, versioned, discoverable, available through apiserver and with client support) that serves resource usage metrics for pods and nodes. The use cases were discussed and the API was proposed a while ago in another proposal. This document describes the architecture and the design of the second part of this effort: making the mentioned API available in the same way as the other Kubernetes APIs.</description>
+    </item>
+    
+    <item>
+      <title>monitoring_architecture</title>
+      <link>/contributors/design-proposals/instrumentation/monitoring_architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/monitoring_architecture/</guid>
+      <description>Kubernetes monitoring architecture Executive Summary Monitoring is split into two pipelines:
+ A core metrics pipeline consisting of Kubelet, a resource estimator, a slimmed-down Heapster called metrics-server, and the API server serving the master metrics API. These metrics are used by core system components, such as scheduling logic (e.g. scheduler and horizontal pod autoscaling based on system metrics) and simple out-of-the-box UI components (e.g. kubectl top). This pipeline is not intended for integration with third-party monitoring systems.</description>
+    </item>
+    
+    <item>
+      <title>mount-options</title>
+      <link>/contributors/design-proposals/storage/mount-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/mount-options/</guid>
+      <description>Mount options for mountable volume types Goal Enable Kubernetes admins to specify mount options with mountable volumes such as - nfs, glusterfs or aws-ebs etc.
+Motivation We currently support network filesystems: NFS, Glusterfs, Ceph FS, SMB (Azure file), Quobytes, and local filesystems such as ext[3|4] and XFS.
+Mount time options that are operationally important and have no security implications should be supported. Examples are NFS&amp;rsquo;s TCP mode, versions, lock mode, caching mode; Glusterfs&amp;rsquo;s caching mode; SMB&amp;rsquo;s version, locking, id mapping; and more.</description>
+    </item>
+    
+    <item>
+      <title>multi-fields-merge-key</title>
+      <link>/contributors/design-proposals/cli/multi-fields-merge-key/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/multi-fields-merge-key/</guid>
+      <description>Multi-fields Merge Key in Strategic Merge Patch Abstract Support multi-fields merge key in Strategic Merge Patch.
+Background Strategic Merge Patch is covered in this doc. In Strategic Merge Patch, we use Merge Key to identify the entries in the list of non-primitive types. It must always be present and unique to perform the merge on the list of non-primitive types, and will be preserved.
+The merge key exists in the struct tag (e.</description>
+    </item>
+    
+    <item>
+      <title>multi-platform</title>
+      <link>/contributors/design-proposals/multi-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multi-platform/</guid>
+      <description>Kubernetes for multiple platforms Author: Lucas Käldström (@luxas)
+Status (25th of August 2016): Some parts are already implemented; but still there quite a lot of work to be done.
+Abstract We obviously want Kubernetes to run on as many platforms as possible, in order to make Kubernetes an even more powerful system. This is a proposal that explains what should be done in order to achieve a true cross-platform container management system.</description>
+    </item>
+    
+    <item>
+      <title>multicluster-reserved-namespaces</title>
+      <link>/contributors/design-proposals/multicluster/multicluster-reserved-namespaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/multicluster-reserved-namespaces/</guid>
+      <description>Multicluster reserved namespaces @perotinus
+06/06/2018
+Background sig-multicluster has identified the need for a canonical set of namespaces that can be used for supporting multicluster applications and use cases. Initially, an issue was filed in the cluster-registry repository describing the need for a namespace that would be used for public, global cluster records. This topic was further discussed at the SIG meeting on June 5, 2018 and in a thread on the SIG mailing list.</description>
+    </item>
+    
+    <item>
+      <title>multiple-schedulers</title>
+      <link>/contributors/design-proposals/scheduling/multiple-schedulers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/multiple-schedulers/</guid>
+      <description>Multi-Scheduler in Kubernetes Status: Design &amp;amp; Implementation in progress.
+ Contact @HaiyangDING for questions &amp;amp; suggestions.
+ Motivation In current Kubernetes design, there is only one default scheduler in a Kubernetes cluster. However it is common that multiple types of workload, such as traditional batch, DAG batch, streaming and user-facing production services, are running in the same cluster and they need to be scheduled in different ways. For example, in Omega batch workload and service workload are scheduled by two types of schedulers: the batch workload is scheduled by a scheduler which looks at the current usage of the cluster to improve the resource usage rate and the service workload is scheduled by another one which considers the reserved resources in the cluster and many other constraints since their performance must meet some higher SLOs.</description>
+    </item>
+    
+    <item>
+      <title>namespaces</title>
+      <link>/contributors/design-proposals/architecture/namespaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/namespaces/</guid>
+      <description>Namespaces Abstract A Namespace is a mechanism to partition resources created by users into a logically named group.
+Motivation A single cluster should be able to satisfy the needs of multiple user communities.
+Each user community wants to be able to work in isolation from other communities.
+Each user community has its own:
+ resources (pods, services, replication controllers, etc.) policies (who can or cannot perform actions in their community) constraints (this community is allowed this much quota, etc.</description>
+    </item>
+    
+    <item>
+      <title>network-policy</title>
+      <link>/contributors/design-proposals/network/network-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/network-policy/</guid>
+      <description>NetworkPolicy Abstract A proposal for implementing a new resource - NetworkPolicy - which will enable definition of ingress policies for selections of pods.
+The design for this proposal has been created by, and discussed extensively within the Kubernetes networking SIG. It has been implemented and tested using Kubernetes API extensions by various networking solutions already.
+In this design, users can create various NetworkPolicy objects which select groups of pods and define how those pods should be allowed to communicate with each other.</description>
+    </item>
+    
+    <item>
+      <title>networking</title>
+      <link>/contributors/design-proposals/network/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/networking/</guid>
+      <description>Networking There are 4 distinct networking problems to solve:
+ Highly-coupled container-to-container communications Pod-to-Pod communications Pod-to-Service communications External-to-internal communications  Model and motivation Kubernetes deviates from the default Docker networking model (though as of Docker 1.8 their network plugins are getting closer). The goal is for each pod to have an IP in a flat shared networking namespace that has full communication with other physical computers and containers across the network.</description>
+    </item>
+    
+    <item>
+      <title>no-new-privs</title>
+      <link>/contributors/design-proposals/auth/no-new-privs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/no-new-privs/</guid>
+      <description>No New Privileges  Description  Interactions with other Linux primitives  Current Implementations  Support in Docker Support in rkt Support in OCI runtimes  Existing SecurityContext objects Changes of SecurityContext objects Pod Security Policy changes  Description In Linux, the execve system call can grant more privileges to a newly-created process than its parent process. Considering security issues, since Linux kernel v3.5, there is a new flag named no_new_privs added to prevent those new privileges from being granted to the processes.</description>
+    </item>
+    
+    <item>
+      <title>node-allocatable</title>
+      <link>/contributors/design-proposals/node/node-allocatable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/node-allocatable/</guid>
+      <description>Node Allocatable Resources Authors: timstclair@, vishh@ Overview Kubernetes nodes typically run many OS system daemons in addition to kubernetes daemons like kubelet, runtime, etc. and user pods. Kubernetes assumes that all the compute resources available, referred to as Capacity, in a node are available for user pods. In reality, system daemons use non-trivial amount of resources and their availability is critical for the stability of the system. To address this issue, this proposal introduces the concept of Allocatable which identifies the amount of compute resources available to user pods.</description>
+    </item>
+    
+    <item>
+      <title>node-usernamespace-remapping</title>
+      <link>/contributors/design-proposals/node/node-usernamespace-remapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/node-usernamespace-remapping/</guid>
+      <description>Support Node-Level User Namespaces Remapping  Summary Motivation Goals Non-Goals Use Stories Proposal Future Work Risks and Mitigations Graduation Criteria Alternatives  Authors:
+ Mrunal Patel &amp;lt;mpatel@redhat.com&amp;gt; Jan Pazdziora &amp;lt;jpazdziora@redhat.com&amp;gt; Vikas Choudhary &amp;lt;vichoudh@redhat.com&amp;gt;  Summary Container security consists of many different kernel features that work together to make containers secure. User namespaces is one such feature that enables interesting possibilities for containers by allowing them to be root inside the container while not being root on the host.</description>
+    </item>
+    
+    <item>
+      <title>nodeaffinity</title>
+      <link>/contributors/design-proposals/scheduling/nodeaffinity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/nodeaffinity/</guid>
+      <description>Node affinity and NodeSelector Introduction This document proposes a new label selector representation, called NodeSelector, that is similar in many ways to LabelSelector, but is a bit more flexible and is intended to be used only for selecting nodes.
+In addition, we propose to replace the map[string]string in PodSpec that the scheduler currently uses as part of restricting the set of nodes onto which a pod is eligible to schedule, with a field of type Affinity that contains one or more affinity specifications.</description>
+    </item>
+    
+    <item>
+      <title>nodeport-ip-range</title>
+      <link>/contributors/design-proposals/network/nodeport-ip-range/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/nodeport-ip-range/</guid>
+      <description>Support specifying NodePort IP range Author: @m1093782566
+Objective This document proposes creating a option for kube-proxy to specify NodePort IP range.
+Background NodePort type service gives developers the freedom to set up their own load balancers, to expose one or more nodes’ IPs directly. The service will be visible as the nodes&amp;rsquo;s IPs. For now, the NodePort addresses are the IPs from all available interfaces.
+With iptables magic, all the IPs whose ADDRTYPE matches dst-type LOCAL will be taken as the address of NodePort, which might look like,</description>
+    </item>
+    
+    <item>
+      <title>optional-configmap</title>
+      <link>/contributors/design-proposals/node/optional-configmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/optional-configmap/</guid>
+      <description>Optional ConfigMaps and Secrets Goal Allow the ConfigMaps or Secrets that are used to populate the environment variables of a container and files within a Volume to be optional.
+Use Cases When deploying an application to multiple environments like development, test, and production, there may be certain environment variables that must reflect the values that are relevant to said environment. One way to do so would be to have a well named ConfigMap which contains all the environment variables needed.</description>
+    </item>
+    
+    <item>
+      <title>performance-related-monitoring</title>
+      <link>/contributors/design-proposals/instrumentation/performance-related-monitoring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/performance-related-monitoring/</guid>
+      <description>Performance Monitoring Reason for this document This document serves as a place to gather information about past performance regressions, their reason and impact and discuss ideas to avoid similar regressions in the future. Main reason behind doing this is to understand what kind of monitoring needs to be in place to keep Kubernetes fast.
+Known past and present performance issues Higher logging level causing scheduler stair stepping Issue https://github.com/kubernetes/kubernetes/issues/14216 was opened because @spiffxp observed a regression in scheduler performance in 1.</description>
+    </item>
+    
+    <item>
+      <title>persistent-storage</title>
+      <link>/contributors/design-proposals/storage/persistent-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/persistent-storage/</guid>
+      <description>Persistent Storage This document proposes a model for managing persistent, cluster-scoped storage for applications requiring long lived data.
+Abstract Two new API kinds:
+A PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. See Persistent Volume Guide for how to use it.
+A PersistentVolumeClaim (PVC) is a user&amp;rsquo;s request for a persistent volume to use in a pod. It is analogous to a pod.</description>
+    </item>
+    
+    <item>
+      <title>pod-lifecycle-event-generator</title>
+      <link>/contributors/design-proposals/node/pod-lifecycle-event-generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/pod-lifecycle-event-generator/</guid>
+      <description>Kubelet: Pod Lifecycle Event Generator (PLEG) In Kubernetes, Kubelet is a per-node daemon that manages the pods on the node, driving the pod states to match their pod specifications (specs). To achieve this, Kubelet needs to react to changes in both (1) pod specs and (2) the container states. For the former, Kubelet watches the pod specs changes from multiple sources; for the latter, Kubelet polls the container runtime periodically (e.</description>
+    </item>
+    
+    <item>
+      <title>pod-pid-namespace</title>
+      <link>/contributors/design-proposals/node/pod-pid-namespace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/pod-pid-namespace/</guid>
+      <description>Shared PID Namespace  Status: Pending Version: Alpha Implementation Owner: @verb  Motivation Pods share namespaces where possible, but support for sharing the PID namespace had not been defined due to lack of support in Docker. This created an implicit API on which certain container images now rely. This document proposes adding support for sharing a process namespace between containers in a pod while maintaining backwards compatibility with the existing implicit API.</description>
+    </item>
+    
+    <item>
+      <title>pod-preemption</title>
+      <link>/contributors/design-proposals/scheduling/pod-preemption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/pod-preemption/</guid>
+      <description>Pod Preemption in Kubernetes Status: Draft
+Author: @bsalamat
+ Pod Preemption in Kubernetes Objectives  Non-Goals  Background  Terminology  Overview Detailed Design  Preemption scenario Scheduler performs preemption Preemption order Preemption - Eviction workflow Race condition in multi-scheduler clusters Starvation Problem Supporting PodDisruptionBudget Supporting Inter-Pod Affinity on Lower Priority Pods Supporting Cross Node Preemption  Interactions with Cluster Autoscaler Alternatives Considered  Rescheduler or Kubelet performs preemption Preemption order  References  Objectives  Define the concept of preemption in Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>pod-preset</title>
+      <link>/contributors/design-proposals/service-catalog/pod-preset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/service-catalog/pod-preset/</guid>
+      <description>Pod Preset  Abstract Motivation Constraints and Assumptions Use Cases  Summary Prior Art Objectives  Proposed Changes  PodPreset API object  Validations  AdmissionControl Plug-in: PodPreset  Behavior PodPreset Exclude Annotation   Examples  Simple Pod Spec Example Pod Spec with ConfigMap Example ReplicaSet with Pod Spec Example Multiple PodPreset Example Conflict Example   Abstract Describes a policy resource that allows for the loose coupling of a Pod&amp;rsquo;s definition from additional runtime requirements for that Pod.</description>
+    </item>
+    
+    <item>
+      <title>pod-priority-api</title>
+      <link>/contributors/design-proposals/scheduling/pod-priority-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/pod-priority-api/</guid>
+      <description>Priority in Kubernetes API @bsalamat
+May 2017 * Objective * Non-Goals * Background * Overview * Detailed Design * Effect of priority on scheduling * Effect of priority on preemption * Priority in PodSpec * Priority Classes * Resolving priority class names * Ordering of priorities * System Priority Class Names * Modifying Priority Classes * Drawbacks of changing priority names * Priority and QoS classes
+Objective  How to specify priority for workloads in Kubernetes API.</description>
+    </item>
+    
+    <item>
+      <title>pod-priority-resourcequota</title>
+      <link>/contributors/design-proposals/scheduling/pod-priority-resourcequota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/pod-priority-resourcequota/</guid>
+      <description>Priority in ResourceQuota Authors:
+Harry Zhang @resouer Vikas Choudhary @vikaschoudhary16
+Main Reviewers:
+Bobby @bsalamat Derek @derekwaynecarr
+Dec 2017
+ Objective  Non-Goals  Background Overview Detailed Design  Changes in ResourceQuota Changes in Admission Controller configuration Expected behavior of ResourceQuota admission controller and Quota system  Backward Compatibility   Sample user story 1 Sample user story 2  Objective This feature is designed to make ResourceQuota become priority aware, several sub-tasks are included.</description>
+    </item>
+    
+    <item>
+      <title>pod-resolv-conf</title>
+      <link>/contributors/design-proposals/network/pod-resolv-conf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/pod-resolv-conf/</guid>
+      <description>Custom /etc/resolv.conf  Status: pending Version: alpha Implementation owner: Bowei Du &amp;lt;bowei@google.com&amp;gt;, Zihong Zheng &amp;lt;zihongz@google.com&amp;gt;  Overview The /etc/resolv.conf in a pod is managed by Kubelet and its contents are generated based on pod.dnsPolicy. For dnsPolicy: Default, the search and nameserver fields are taken from the resolve.conf on the node where the pod is running. If the dnsPolicy is ClusterFirst, the search contents of the resolv.conf is the hosts resolv.</description>
+    </item>
+    
+    <item>
+      <title>pod-resource-management</title>
+      <link>/contributors/design-proposals/node/pod-resource-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/pod-resource-management/</guid>
+      <description>Kubelet pod level resource management Authors:
+ Buddha Prakash (@dubstack) Vishnu Kannan (@vishh) Derek Carr (@derekwaynecarr)  Last Updated: 02/21/2017
+Status: Implementation planned for Kubernetes 1.6
+This document proposes a design for introducing pod level resource accounting to Kubernetes. It outlines the implementation and associated rollout plan.
+Introduction Kubernetes supports container level isolation by allowing users to specify compute resource requirements via requests and limits on individual containers. The kubelet delegates creation of a cgroup sandbox for each container to its associated container runtime.</description>
+    </item>
+    
+    <item>
+      <title>pod-safety</title>
+      <link>/contributors/design-proposals/storage/pod-safety/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/pod-safety/</guid>
+      <description>Pod Safety, Consistency Guarantees, and Storage Implications @smarterclayton @bprashanth
+October 2016
+Proposal and Motivation A pod represents the finite execution of one or more related processes on the cluster. In order to ensure higher level consistent controllers can safely build on top of pods, the exact guarantees around its lifecycle on the cluster must be clarified, and it must be possible for higher order controllers and application authors to correctly reason about the lifetime of those processes and their access to cluster resources in a distributed computing environment.</description>
+    </item>
+    
+    <item>
+      <title>pod-security-context</title>
+      <link>/contributors/design-proposals/auth/pod-security-context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/pod-security-context/</guid>
+      <description>Abstract A proposal for refactoring SecurityContext to have pod-level and container-level attributes in order to correctly model pod- and container-level security concerns.
+Motivation Currently, containers have a SecurityContext attribute which contains information about the security settings the container uses. In practice, many of these attributes are uniform across all containers in a pod. Simultaneously, there is also a need to apply the security context pattern at the pod level to correctly model security attributes that apply only at a pod level.</description>
+    </item>
+    
+    <item>
+      <title>pod-security-policy</title>
+      <link>/contributors/design-proposals/auth/pod-security-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/pod-security-policy/</guid>
+      <description>Abstract PodSecurityPolicy allows cluster administrators to control the creation and validation of a security context for a pod and containers. The intent of PodSecurityPolicy is to protect the cluster from the pod and containers, not to protect a pod or containers from a user.
+Motivation Administration of a multi-tenant cluster requires the ability to provide varying sets of permissions among the tenants, the infrastructure components, and end users of the system who may themselves be administrators within their own isolated namespace.</description>
+    </item>
+    
+    <item>
+      <title>podaffinity</title>
+      <link>/contributors/design-proposals/scheduling/podaffinity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/podaffinity/</guid>
+      <description>Inter-pod topological affinity and anti-affinity Introduction NOTE: It is useful to read about node affinity first.
+This document describes a proposal for specifying and implementing inter-pod topological affinity and anti-affinity. By that we mean: rules that specify that certain pods should be placed in the same topological domain (e.g. same node, same rack, same zone, same power domain, etc.) as some other pods, or, conversely, should not be placed in the same topological domain as some other pods.</description>
+    </item>
+    
+    <item>
+      <title>postpone-pv-deletion</title>
+      <link>/contributors/design-proposals/storage/postpone-pv-deletion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/postpone-pv-deletion/</guid>
+      <description>Postpone deletion of a Persistent Volume if it is bound by a PVC Status: Pending
+Version: Beta
+Implementation Owner: NickrenREN@
+Motivation Admin can delete a Persistent Volume (PV) that is being used by a PVC. It may result in data loss.
+Proposal Postpone the PV deletion until the PV is not used by any PVC.
+User Experience Use Cases  Admin deletes a PV that is being used by a PVC and a pod referring that PVC is not aware of this.</description>
+    </item>
+    
+    <item>
+      <title>postpone-pvc-deletion-if-used-in-a-pod</title>
+      <link>/contributors/design-proposals/storage/postpone-pvc-deletion-if-used-in-a-pod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/postpone-pvc-deletion-if-used-in-a-pod/</guid>
+      <description>Postpone Deletion of a Persistent Volume Claim in case It Is Used by a Pod Status: Proposal
+Version: GA
+Implementation Owner: @pospispa
+Motivation User can delete a Persistent Volume Claim (PVC) that is being used by a pod. This may have negative impact on the pod and it may result in data loss.
+For more details see issue https://github.com/kubernetes/kubernetes/issues/45143
+Proposal Postpone the PVC deletion until the PVC is not used by any pod.</description>
+    </item>
+    
+    <item>
+      <title>predicates-ordering</title>
+      <link>/contributors/design-proposals/scheduling/predicates-ordering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/predicates-ordering/</guid>
+      <description>predicates ordering Status: proposal
+Author: yastij Approvers: * gmarek * bsalamat * k82cn
+Abstract This document describes how and why reordering predicates helps to achieve performance for the kubernetes scheduler. We will expose the motivations behind this proposal, The two steps/solution we see to tackle this problem and the timeline decided to implement these.
+Motivation While working on a Pull request related to a proposal, we saw that the order of running predicates isn’t defined.</description>
+    </item>
+    
+    <item>
+      <title>preserve-order-in-strategic-merge-patch</title>
+      <link>/contributors/design-proposals/cli/preserve-order-in-strategic-merge-patch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/preserve-order-in-strategic-merge-patch/</guid>
+      <description>Preserve Order in Strategic Merge Patch Author: @mengqiy
+Motivation Background of the Strategic Merge Patch is covered here.
+The Kubernetes API may apply semantic meaning to the ordering of items within a list, however the strategic merge patch does not keeping the ordering of elements. Ordering has semantic meaning for Environment variables, as later environment variables may reference earlier environment variables, but not the other way around.
+One use case is the environment variables.</description>
+    </item>
+    
+    <item>
+      <title>principles</title>
+      <link>/contributors/design-proposals/architecture/principles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/principles/</guid>
+      <description>Design Principles Principles to follow when extending Kubernetes.
+API See also the API conventions.
+ All APIs should be declarative. API objects should be complementary and composable, not opaque wrappers. The control plane should be transparent &amp;ndash; there are no hidden internal APIs. The cost of API operations should be proportional to the number of objects intentionally operated upon. Therefore, common filtered lookups must be indexed. Beware of patterns of multiple API calls that would incur quadratic behavior.</description>
+    </item>
+    
+    <item>
+      <title>proc-mount-type</title>
+      <link>/contributors/design-proposals/auth/proc-mount-type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/proc-mount-type/</guid>
+      <description>ProcMount/ProcMountType Option Background Currently the way docker and most other container runtimes work is by masking and setting as read-only certain paths in /proc. This is to prevent data from being exposed into a container that should not be. However, there are certain use-cases where it is necessary to turn this off.
+Motivation For end-users who would like to run unprivileged containers using user namespaces nested inside CRI containers, we need an option to have a ProcMount.</description>
+    </item>
+    
+    <item>
+      <title>project-design-and-plan</title>
+      <link>/contributors/design-proposals/multicluster/cluster-registry/project-design-and-plan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/multicluster/cluster-registry/project-design-and-plan/</guid>
+      <description>Cluster registry design and plan @perotinus
+Updated: 11/2/17
+REVIEWED in SIG-multicluster meeting on 10&amp;frasl;24
+This doc is a Markdown conversion of the original Cluster registry design and plan Google doc. That doc is deprecated, and this one is canonical; however, the old doc will be preserved so as not to lose comment and revision history that it contains.
+Table of Contents  Background Goal Technical requirements  Alpha Beta Later  Implementation design  Alternatives Using a CRD  Tooling design  User tooling  Repository process Release strategy  Version skew  Test strategy Milestones and timelines  Alpha (targeting late Q4 &amp;lsquo;17) Beta (targeting mid Q1 &amp;lsquo;18) Stable (targeting mid Q2 &amp;lsquo;18) Later   Background SIG-multicluster has identified a cluster registry as being a key enabling component for multi-cluster use cases.</description>
+    </item>
+    
+    <item>
+      <title>propagation</title>
+      <link>/contributors/design-proposals/node/propagation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/propagation/</guid>
+      <description>HostPath Volume Propagation Abstract A proposal to add support for propagation mode in HostPath volume, which allows mounts within containers to visible outside the container and mounts after pods creation visible to containers. Propagation modes contains &amp;ldquo;shared&amp;rdquo;, &amp;ldquo;slave&amp;rdquo;, &amp;ldquo;private&amp;rdquo;, &amp;ldquo;unbindable&amp;rdquo;. Out of them, docker supports &amp;ldquo;shared&amp;rdquo; / &amp;ldquo;slave&amp;rdquo; / &amp;ldquo;private&amp;rdquo;.
+Several existing issues and PRs were already created regarding that particular subject: * Capability to specify mount propagation mode of per volume with docker #20698 * Set propagation to &amp;ldquo;shared&amp;rdquo; for hostPath volume #31504</description>
+    </item>
+    
+    <item>
+      <title>protobuf</title>
+      <link>/contributors/design-proposals/api-machinery/protobuf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/protobuf/</guid>
+      <description>Protobuf serialization and internal storage @smarterclayton
+March 2016
+Proposal and Motivation The Kubernetes API server is a &amp;ldquo;dumb server&amp;rdquo; which offers storage, versioning, validation, update, and watch semantics on API resources. In a large cluster the API server must efficiently retrieve, store, and deliver large numbers of coarse-grained objects to many clients. In addition, Kubernetes traffic is heavily biased towards intra-cluster traffic - as much as 90% of the requests served by the APIs are for internal cluster components like nodes, controllers, and proxies.</description>
+    </item>
+    
+    <item>
+      <title>pv-to-rbd-mapping</title>
+      <link>/contributors/design-proposals/storage/pv-to-rbd-mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/pv-to-rbd-mapping/</guid>
+      <description>RBD Volume to PV Mapping Authors: krmayankk@
+Problem The RBD Dynamic Provisioner currently generates rbd volume names which are random. The current implementation generates a UUID and the rbd image name becomes image := fmt.Sprintf(&amp;ldquo;kubernetes-dynamic-pvc-%s&amp;rdquo;, uuid.NewUUID()). This RBD image name is stored in the PV. The PV also has a reference to the PVC to which it binds. The problem with this approach is that if there is a catastrophic etcd data loss and all PV&amp;rsquo;s are gone, there is no way to recover the mapping from RBD to PVC.</description>
+    </item>
+    
+    <item>
+      <title>raw-block-pv</title>
+      <link>/contributors/design-proposals/storage/raw-block-pv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/raw-block-pv/</guid>
+      <description>Raw Block Consumption in Kubernetes Authors: erinboyd@, screeley44@, mtanino@
+This document presents a proposal for managing raw block storage in Kubernetes using the persistent volume source API as a consistent model of consumption.
+Terminology  Raw Block Device - a physically attached device devoid of a filesystem Raw Block Volume - a logical abstraction of the raw block device as defined by a path Filesystem on Block - a formatted (ie xfs) filesystem on top of a raw block device  Goals  Enable durable access to block storage Provide flexibility for users/vendors to utilize various types of storage devices Agree on API changes for block Provide a consistent security model for block devices Provide a means for running containerized block storage offerings as non-privileged container  Non Goals  Support all storage devices natively in upstream Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>release-notes</title>
+      <link>/contributors/design-proposals/release/release-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/release/release-notes/</guid>
+      <description>Kubernetes Release Notes djmm@google.com Last Updated: 2016-04-06
+ Kubernetes Release Notes  Objective Background The Problem The (general) Solution  Then why not just list every change that was submitted, CHANGELOG-style?  Options Collection Design Publishing Design Location Layout  Alpha/Beta/Patch Releases Major/Minor Releases  Work estimates Caveats / Considerations   Objective Define a process and design tooling for collecting, arranging and publishing release notes for Kubernetes releases, automating as much of the process as possible.</description>
+    </item>
+    
+    <item>
+      <title>release-test-signal</title>
+      <link>/contributors/design-proposals/release/release-test-signal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/release/release-test-signal/</guid>
+      <description>Overview Describes the process and tooling (find_green_build) used to find a binary signal from the Kubernetes testing framework for the purposes of selecting a release candidate. Currently this process is used to gate all Kubernetes releases.
+Motivation Previously, the guidance in the (now deprecated) release document was to &amp;ldquo;look for green tests&amp;rdquo;. That is, of course, decidedly insufficient.
+Software releases should have the goal of being primarily automated and having a gating binary test signal is a key component to that ultimate goal.</description>
+    </item>
+    
+    <item>
+      <title>rescheduler</title>
+      <link>/contributors/design-proposals/scheduling/rescheduler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/rescheduler/</guid>
+      <description>Rescheduler design space @davidopp, @erictune, @briangrant
+July 2015
+Introduction and definition A rescheduler is an agent that proactively causes currently-running Pods to be moved, so as to optimize some objective function for goodness of the layout of Pods in the cluster. (The objective function doesn&amp;rsquo;t have to be expressed mathematically; it may just be a collection of ad-hoc rules, but in principle there is an objective function. Implicitly an objective function is described by the scheduler&amp;rsquo;s predicate and priority functions.</description>
+    </item>
+    
+    <item>
+      <title>rescheduling</title>
+      <link>/contributors/design-proposals/scheduling/rescheduling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/rescheduling/</guid>
+      <description>Controlled Rescheduling in Kubernetes Overview Although the Kubernetes scheduler(s) try to make good placement decisions for pods, conditions in the cluster change over time (e.g. jobs finish and new pods arrive, nodes are removed due to failures or planned maintenance or auto-scaling down, nodes appear due to recovery after a failure or re-joining after maintenance or auto-scaling up or adding new hardware to a bare-metal cluster), and schedulers are not omniscient (e.</description>
+    </item>
+    
+    <item>
+      <title>rescheduling-for-critical-pods</title>
+      <link>/contributors/design-proposals/scheduling/rescheduling-for-critical-pods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/rescheduling-for-critical-pods/</guid>
+      <description>Rescheduler: guaranteed scheduling of critical addons Motivation In addition to Kubernetes core components like api-server, scheduler, controller-manager running on a master machine there is a bunch of addons which due to various reasons have to run on a regular cluster node, not the master. Some of them are critical to have fully functional cluster: Heapster, DNS, UI. Users can break their cluster by evicting a critical addon (either manually or as a side effect of another operation like upgrade) which possibly can become pending (for example when the cluster is highly utilized).</description>
+    </item>
+    
+    <item>
+      <title>resource-management</title>
+      <link>/contributors/design-proposals/architecture/resource-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/architecture/resource-management/</guid>
+      <description>Kubernetes Resource Management  This article was authored by Brian Grant (bgrant0607) on 2/20/2018. The original Google Doc can be found here.
+ Kubernetes is not just API-driven, but is API-centric.
+At the center of the Kubernetes control plane is the apiserver, which implements common functionality for all of the system’s APIs. Both user clients and components implementing the business logic of Kubernetes, called controllers, interact with the same APIs.</description>
+    </item>
+    
+    <item>
+      <title>resource-metrics-api</title>
+      <link>/contributors/design-proposals/instrumentation/resource-metrics-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/resource-metrics-api/</guid>
+      <description>Resource Metrics API This document describes API part of MVP version of Resource Metrics API effort in Kubernetes. Once the agreement will be made the document will be extended to also cover implementation details. The shape of the effort may be also a subject of changes once we will have more well-defined use cases.
+Goal The goal for the effort is to provide resource usage metrics for pods and nodes through the API server.</description>
+    </item>
+    
+    <item>
+      <title>resource-qos</title>
+      <link>/contributors/design-proposals/node/resource-qos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/resource-qos/</guid>
+      <description>Resource Quality of Service in Kubernetes Author(s): Vishnu Kannan (vishh@), Ananya Kumar (@AnanyaKumar) Last Updated: 5/17/2016
+Status: Implemented
+This document presents the design of resource quality of service for containers in Kubernetes, and describes use cases and implementation details.
+Introduction This document describes the way Kubernetes provides different levels of Quality of Service to pods depending on what they request. Pods that need to stay up reliably can request guaranteed resources, while pods with less stringent requirements can use resources with weaker or no guarantee.</description>
+    </item>
+    
+    <item>
+      <title>resource-quota-scoping</title>
+      <link>/contributors/design-proposals/resource-management/resource-quota-scoping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/resource-management/resource-quota-scoping/</guid>
+      <description>Resource Quota - Scoping resources Problem Description Ability to limit compute requests and limits The existing ResourceQuota API object constrains the total amount of compute resource requests. This is useful when a cluster-admin is interested in controlling explicit resource guarantees such that there would be a relatively strong guarantee that pods created by users who stay within their quota will find enough free resources in the cluster to be able to schedule.</description>
+    </item>
+    
+    <item>
+      <title>resources</title>
+      <link>/contributors/design-proposals/scheduling/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/resources/</guid>
+      <description>Note: this is a design doc, which describes features that have not been completely implemented. User documentation of the current state is here. The tracking issue for implementation of this model is #168. Currently, both limits and requests of memory and cpu on containers (not pods) are supported. &amp;ldquo;memory&amp;rdquo; is in bytes and &amp;ldquo;cpu&amp;rdquo; is in milli-cores.
+The Kubernetes resource model To do good pod placement, Kubernetes needs to know how big pods are, as well as the sizes of the nodes onto which they are being placed.</description>
+    </item>
+    
+    <item>
+      <title>rules-review-api</title>
+      <link>/contributors/design-proposals/rules-review-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/rules-review-api/</guid>
+      <description>&amp;ldquo;What can I do?&amp;rdquo; API Author: Eric Chiang (eric.chiang@coreos.com)
+Overview Currently, to determine if a user is authorized to perform a set of actions, that user has to query each action individually through a SelfSubjectAccessReview.
+Beyond making the authorization layer hard to reason about, it means web interfaces such as the OpenShift Web Console, Tectonic Console, and Kubernetes Dashboard, have to perform individual calls for every resource a page displays.</description>
+    </item>
+    
+    <item>
+      <title>runas-groupid</title>
+      <link>/contributors/design-proposals/auth/runas-groupid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/runas-groupid/</guid>
+      <description>RunAsGroup Proposal Author: krmayankk@
+Status: Proposal
+Abstract As a Kubernetes User, we should be able to specify both user id and group id for the containers running inside a pod on a per Container basis, similar to how docker allows that using docker run options -u, --user=&amp;quot;&amp;quot; Username or UID (format: &amp;lt;name|uid&amp;gt;[:&amp;lt;group|gid&amp;gt;]) format.
+PodSecurityContext allows Kubernetes users to specify RunAsUser which can be overridden by RunAsUser in SecurityContext on a per Container basis.</description>
+    </item>
+    
+    <item>
+      <title>runtime-client-server</title>
+      <link>/contributors/design-proposals/node/runtime-client-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/runtime-client-server/</guid>
+      <description>Client/Server container runtime Abstract A proposal of client/server implementation of kubelet container runtime interface.
+Motivation Currently, any container runtime has to be linked into the kubelet. This makes experimentation difficult, and prevents users from landing an alternate container runtime without landing code in core kubernetes.
+To facilitate experimentation and to enable user choice, this proposal adds a client/server implementation of the new container runtime interface. The main goal of this proposal is:</description>
+    </item>
+    
+    <item>
+      <title>runtime-pod-cache</title>
+      <link>/contributors/design-proposals/node/runtime-pod-cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/runtime-pod-cache/</guid>
+      <description>Kubelet: Runtime Pod Cache This proposal builds on top of the Pod Lifecycle Event Generator (PLEG) proposed in #12802. It assumes that Kubelet subscribes to the pod lifecycle event stream to eliminate periodic polling of pod states. Please see #12802. for the motivation and design concept for PLEG.
+Runtime pod cache is an in-memory cache which stores the status of all pods, and is maintained by PLEG. It serves as a single source of truth for internal pod status, freeing Kubelet from querying the container runtime.</description>
+    </item>
+    
+    <item>
+      <title>scalability-testing</title>
+      <link>/contributors/design-proposals/scalability/scalability-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scalability/scalability-testing/</guid>
+      <description>Background We have a goal to be able to scale to 1000-node clusters by end of 2015. As a result, we need to be able to run some kind of regression tests and deliver a mechanism so that developers can test their changes with respect to performance.
+Ideally, we would like to run performance tests also on PRs - although it might be impossible to run them on every single PR, we may introduce a possibility for a reviewer to trigger them if the change has non obvious impact on the performance (something like &amp;ldquo;k8s-bot run scalability tests please&amp;rdquo; should be feasible).</description>
+    </item>
+    
+    <item>
+      <title>schedule-DS-pod-by-scheduler</title>
+      <link>/contributors/design-proposals/scheduling/schedule-ds-pod-by-scheduler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/schedule-ds-pod-by-scheduler/</guid>
+      <description>Schedule DaemonSet Pods by default scheduler, not DaemonSet controller @k82cn, Feb 2018, #42002.
+Motivation A DaemonSet ensures that all (or some) nodes run a copy of a pod. As nodes are added to the cluster, pods are added to them. As nodes are removed from the cluster, those pods are garbage collected. Normally, the machine that a pod runs on is selected by the Kubernetes scheduler; however, pods of DaemonSet are created and scheduled by DaemonSet controller who leveraged kube-scheduler’s predicates policy.</description>
+    </item>
+    
+    <item>
+      <title>scheduler-equivalence-class</title>
+      <link>/contributors/design-proposals/scheduling/scheduler-equivalence-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/scheduler-equivalence-class/</guid>
+      <description>Equivalence class based scheduling in Kubernetes Authors:
+@resouer @wojtek-t @davidopp
+Guideline  Objectives  Goals Non-Goals  Background  Terminology  Overview Detailed Design  Define equivalence class Equivalence class in predicate phase Keep equivalence class cache up-to-date  Notes for scheduler developers References  Objectives Goals  Define the equivalence class for pods during predicate phase in Kubernetes. Define how to use equivalence class to speed up predicate process.</description>
+    </item>
+    
+    <item>
+      <title>scheduler_extender</title>
+      <link>/contributors/design-proposals/scheduling/scheduler_extender/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/scheduler_extender/</guid>
+      <description>Scheduler extender There are three ways to add new scheduling rules (predicates and priority functions) to Kubernetes: (1) by adding these rules to the scheduler and recompiling, described here, (2) implementing your own scheduler process that runs instead of, or alongside of, the standard Kubernetes scheduler, (3) implementing a &amp;ldquo;scheduler extender&amp;rdquo; process that the standard Kubernetes scheduler calls out to as a final pass when making scheduling decisions.
+This document describes the third approach.</description>
+    </item>
+    
+    <item>
+      <title>seccomp</title>
+      <link>/contributors/design-proposals/node/seccomp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/seccomp/</guid>
+      <description>Abstract A proposal for adding alpha support for seccomp to Kubernetes. Seccomp is a system call filtering facility in the Linux kernel which lets applications define limits on system calls they may make, and what should happen when system calls are made. Seccomp is used to reduce the attack surface available to applications.
+Motivation Applications use seccomp to restrict the set of system calls they can make. Recently, container runtimes have begun adding features to allow the runtime to interact with seccomp on behalf of the application, which eliminates the need for applications to link against libseccomp directly.</description>
+    </item>
+    
+    <item>
+      <title>secret-configmap-downwardapi-file-mode</title>
+      <link>/contributors/design-proposals/node/secret-configmap-downwardapi-file-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/secret-configmap-downwardapi-file-mode/</guid>
+      <description>Secrets, configmaps and downwardAPI file mode bits Author: Rodrigo Campos (@rata), Tim Hockin (@thockin)
+Date: July 2016
+Status: Design in progress
+Goal Allow users to specify permission mode bits for a secret/configmap/downwardAPI file mounted as a volume. For example, if a secret has several keys, a user should be able to specify the permission mode bits for any file, and they may all have different modes.
+Let me say that with &amp;ldquo;permission&amp;rdquo; I only refer to the file mode here and I may use them interchangeably.</description>
+    </item>
+    
+    <item>
+      <title>secrets</title>
+      <link>/contributors/design-proposals/auth/secrets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/secrets/</guid>
+      <description>Abstract A proposal for the distribution of secrets (passwords, keys, etc) to the Kubelet and to containers inside Kubernetes using a custom volume type. See the secrets example for more information.
+Motivation Secrets are needed in containers to access internal resources like the Kubernetes master or external resources such as git repositories, databases, etc. Users may also want behaviors in the kubelet that depend on secret data (credentials for image pull from a docker registry) associated with pods.</description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>/contributors/design-proposals/auth/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/security/</guid>
+      <description>Security in Kubernetes Kubernetes should define a reasonable set of security best practices that allows processes to be isolated from each other, from the cluster infrastructure, and which preserves important boundaries between those who manage the cluster, and those who use the cluster.
+While Kubernetes today is not primarily a multi-tenant system, the long term evolution of Kubernetes will increasingly rely on proper boundaries between users and administrators. The code running on the cluster must be appropriately isolated and secured to prevent malicious parties from affecting the entire cluster.</description>
+    </item>
+    
+    <item>
+      <title>security_context</title>
+      <link>/contributors/design-proposals/auth/security_context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/security_context/</guid>
+      <description>Security Contexts Abstract A security context is a set of constraints that are applied to a container in order to achieve the following goals (from security design):
+ Ensure a clear isolation between container and the underlying host it runs on Limit the ability of the container to negatively impact the infrastructure or other containers  Background The problem of securing containers in Kubernetes has come up before and the potential problems with container security are well known.</description>
+    </item>
+    
+    <item>
+      <title>selector-generation</title>
+      <link>/contributors/design-proposals/apps/selector-generation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/selector-generation/</guid>
+      <description>Design Goals Make it really hard to accidentally create a job which has an overlapping selector, while still making it possible to chose an arbitrary selector, and without adding complex constraint solving to the APIserver.
+Use Cases  user can leave all label and selector fields blank and system will fill in reasonable ones: non-overlappingness guaranteed. user can put on the pod template some labels that are useful to the user, without reasoning about non-overlappingness.</description>
+    </item>
+    
+    <item>
+      <title>selinux</title>
+      <link>/contributors/design-proposals/node/selinux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/selinux/</guid>
+      <description>Abstract A proposal for enabling containers in a pod to share volumes using a pod level SELinux context.
+Motivation Many users have a requirement to run pods on systems that have SELinux enabled. Volume plugin authors should not have to explicitly account for SELinux except for volume types that require special handling of the SELinux context during setup.
+Currently, each container in a pod has an SELinux context. This is not an ideal factoring for sharing resources using SELinux.</description>
+    </item>
+    
+    <item>
+      <title>selinux-enhancements</title>
+      <link>/contributors/design-proposals/node/selinux-enhancements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/selinux-enhancements/</guid>
+      <description>Abstract Presents a proposal for enhancing the security of Kubernetes clusters using SELinux and simplifying the implementation of SELinux support within the Kubelet by removing the need to label the Kubelet directory with an SELinux context usable from a container.
+Motivation The current Kubernetes codebase relies upon the Kubelet directory being labeled with an SELinux context usable from a container. This means that a container escaping namespace isolation will be able to use any file within the Kubelet directory without defeating kernel MAC (mandatory access control).</description>
+    </item>
+    
+    <item>
+      <title>server-get</title>
+      <link>/contributors/design-proposals/api-machinery/server-get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/server-get/</guid>
+      <description>Expose get output from the server Today, all clients must reproduce the tabular and describe output implemented in kubectl to perform simple lists of objects. This logic in many cases is non-trivial and condenses multiple fields into succinct output. It also requires that every client provide rendering logic for every possible type, including those provided by API aggregation or third party resources which may not be known at compile time.</description>
+    </item>
+    
+    <item>
+      <title>service-discovery</title>
+      <link>/contributors/design-proposals/network/service-discovery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/service-discovery/</guid>
+      <description>Service Discovery Proposal Goal of this document To consume a service, a developer needs to know the full URL and a description of the API. Kubernetes contains the host and port information of a service, but it lacks the scheme and the path information needed if the service is not bound at the root. In this document we propose some standard kubernetes service annotations to fix these gaps. It is important that these annotations are a standard to allow for standard service discovery across Kubernetes implementations.</description>
+    </item>
+    
+    <item>
+      <title>service-external-name</title>
+      <link>/contributors/design-proposals/network/service-external-name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/service-external-name/</guid>
+      <description>Service externalName Author: Tim Hockin (@thockin), Rodrigo Campos (@rata), Rudi C (@therc)
+Date: August 2016
+Status: Implementation in progress
+Goal Allow a service to have a CNAME record in the cluster internal DNS service. For example, the lookup for a db service could return a CNAME that points to the RDS resource something.rds.aws.amazon.com. No proxying is involved.
+Motivation There were many related issues, but we&amp;rsquo;ll try to summarize them here.</description>
+    </item>
+    
+    <item>
+      <title>service_accounts</title>
+      <link>/contributors/design-proposals/auth/service_accounts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/auth/service_accounts/</guid>
+      <description>Service Accounts Motivation Processes in Pods may need to call the Kubernetes API. For example: - scheduler - replication controller - node controller - a map-reduce type framework which has a controller that then tries to make a dynamically determined number of workers and watch them - continuous build and push system - monitoring system
+They also may interact with services other than the Kubernetes API, such as: - an image repository, such as docker &amp;ndash; both when the images are pulled to start the containers, and for writing images in the case of pods that generate images.</description>
+    </item>
+    
+    <item>
+      <title>simple-rolling-update</title>
+      <link>/contributors/design-proposals/cli/simple-rolling-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/cli/simple-rolling-update/</guid>
+      <description>Simple rolling update This is a lightweight design document for simple rolling update in kubectl.
+Complete execution flow can be found here. See the example of rolling update for more information.
+Lightweight rollout Assume that we have a current replication controller named foo and it is running image image:v1
+kubectl rolling-update foo [foo-v2] --image=myimage:v2
+If the user doesn&amp;rsquo;t specify a name for the &amp;lsquo;next&amp;rsquo; replication controller, then the &amp;lsquo;next&amp;rsquo; replication controller is renamed to the name of the original replication controller.</description>
+    </item>
+    
+    <item>
+      <title>stateful-apps</title>
+      <link>/contributors/design-proposals/apps/stateful-apps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/stateful-apps/</guid>
+      <description>StatefulSets: Running pods which need strong identity and storage Motivation Many examples of clustered software systems require stronger guarantees per instance than are provided by the Replication Controller (aka Replication Controllers). Instances of these systems typically require:
+ Data per instance which should not be lost even if the pod is deleted, typically on a persistent volume  Some cluster instances may have tens of TB of stored data - forcing new instances to replicate data from other members over the network is onerous  A stable and unique identity associated with that instance of the storage - such as a unique member id A consistent network identity that allows other members to locate the instance even if the pod is deleted A predictable number of instances to ensure that systems can form a quorum  This may be necessary during initialization  Ability to migrate from node to node with stable network identity (DNS name) The ability to scale up in a controlled fashion, but are very rarely scaled down without human intervention  Kubernetes should expose a pod controller (a StatefulSet) that satisfies these requirements in a flexible manner.</description>
+    </item>
+    
+    <item>
+      <title>statefulset-update</title>
+      <link>/contributors/design-proposals/apps/statefulset-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/apps/statefulset-update/</guid>
+      <description>StatefulSet Updates Author: kow3ns@
+Status: Proposal
+Abstract Currently (as of Kubernetes 1.6), .Spec.Replicas and .Spec.Template.Containers are the only mutable fields of the StatefulSet API object. Updating .Spec.Replicas will scale the number of Pods in the StatefulSet. Updating .Spec.Template.Containers causes all subsequently created Pods to have the specified containers. In order to cause the StatefulSet controller to apply its updated .Spec, users must manually delete each Pod. This manual method of applying updates is error prone.</description>
+    </item>
+    
+    <item>
+      <title>support_traffic_shaping_for_kubelet_cni</title>
+      <link>/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/</guid>
+      <description>Support traffic shaping for CNI network plugin Version: Alpha
+Authors: @m1093782566
+Motivation and background Currently the kubenet code supports applying basic traffic shaping during pod setup. This will happen if bandwidth-related annotations have been added to the pod&amp;rsquo;s metadata, for example:
+{ &amp;#34;kind&amp;#34;: &amp;#34;Pod&amp;#34;, &amp;#34;metadata&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;iperf-slow&amp;#34;, &amp;#34;annotations&amp;#34;: { &amp;#34;kubernetes.io/ingress-bandwidth&amp;#34;: &amp;#34;10M&amp;#34;, &amp;#34;kubernetes.io/egress-bandwidth&amp;#34;: &amp;#34;10M&amp;#34; } } } Our current implementation uses the linux tc to add an download(ingress) and upload(egress) rate limiter using 1 root qdisc, 2 class(one for ingress and one for egress) and 2 filter(one for ingress and one for egress attached to the ingress and egress classes respectively).</description>
+    </item>
+    
+    <item>
+      <title>svcacct-token-volume-source</title>
+      <link>/contributors/design-proposals/storage/svcacct-token-volume-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/svcacct-token-volume-source/</guid>
+      <description>Service Account Token Volumes Authors: @smarterclayton @liggitt @mikedanese
+Summary Kubernetes is able to provide pods with unique identity tokens that can prove the caller is a particular pod to a Kubernetes API server. These tokens are injected into pods as secrets. This proposal proposes a new mechanism of distribution with support for improved service account tokens and explores how to migrate from the existing mechanism backwards compatibly.
+Motivation Many workloads running on Kubernetes need to prove to external parties who they are in order to participate in a larger application environment.</description>
+    </item>
+    
+    <item>
+      <title>synchronous-garbage-collection</title>
+      <link>/contributors/design-proposals/api-machinery/synchronous-garbage-collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/synchronous-garbage-collection/</guid>
+      <description>Table of Contents
+ Overview API Design  Standard Finalizers OwnerReference DeleteOptions  Components changes  API Server Garbage Collector Controllers  Handling circular dependencies Unhandled cases Implications to existing clients  Overview Users of the server-side garbage collection need to determine if the garbage collection is done. For example: * Currently kubectl delete rc blocks until all the pods are terminating. To convert to use server-side garbage collection, kubectl has to be able to determine if the garbage collection is done.</description>
+    </item>
+    
+    <item>
+      <title>sysctl</title>
+      <link>/contributors/design-proposals/node/sysctl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/sysctl/</guid>
+      <description>Setting Sysctls on the Pod Level This proposal aims at extending the current pod specification with support for namespaced kernel parameters (sysctls) set for each pod.
+Roadmap v1.4 initial implementation for v1.4 https://github.com/kubernetes/kubernetes/pull/27180  node-level whitelist for safe sysctls: kernel.shm_rmid_forced, net.ipv4.ip_local_port_range, net.ipv4.tcp_max_syn_backlog, net.ipv4.tcp_syncookies (disabled by-default) unsafe sysctls: kernel.msg*, kernel.sem, kernel.shm*, fs.mqueue.*, net.* new kubelet flag: --experimental-allowed-unsafe-sysctls PSP default: *  document node-level whitelist with kubectl flags and taints/tolerations document host-level sysctls with daemon sets + taints/tolerations in parallel: kernel upstream patches to fix ipc accounting for 4.</description>
+    </item>
+    
+    <item>
+      <title>taint-node-by-condition</title>
+      <link>/contributors/design-proposals/scheduling/taint-node-by-condition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/taint-node-by-condition/</guid>
+      <description>Taints Node according to NodeConditions @k82cn, @gmarek, @jamiehannaford, Jul 15, 2017
+Relevant issues:  https://github.com/kubernetes/kubernetes/issues/42001 https://github.com/kubernetes/kubernetes/issues/45717  Motivation In kubernetes 1.8 and before, there are six Node Conditions, each with three possible values: True, False or Unknown. Kubernetes components modify and check those node conditions without any consideration to pods and their specs. For example, the scheduler will filter out all nodes whose NetworkUnavailable condition is True, meaning that pods on the host network can not be scheduled to those nodes, even though a user might want that.</description>
+    </item>
+    
+    <item>
+      <title>taint-toleration-dedicated</title>
+      <link>/contributors/design-proposals/scheduling/taint-toleration-dedicated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/scheduling/taint-toleration-dedicated/</guid>
+      <description>Taints, Tolerations, and Dedicated Nodes Introduction This document describes taints and tolerations, which constitute a generic mechanism for restricting the set of pods that can use a node. We also describe one concrete use case for the mechanism, namely to limit the set of users (or more generally, authorization domains) who can access a set of nodes (a feature we call dedicated nodes). There are many other uses&amp;ndash;for example, a set of nodes with a particular piece of hardware could be reserved for pods that require that hardware, or a node could be marked as unschedulable when it is being drained before shutdown, or a node could trigger evictions when it experiences hardware or software problems or abnormal node configurations; see issues #17190 and #3885 for more discussion.</description>
+    </item>
+    
+    <item>
+      <title>thirdpartyresources</title>
+      <link>/contributors/design-proposals/api-machinery/thirdpartyresources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/api-machinery/thirdpartyresources/</guid>
+      <description>Moving ThirdPartyResources to beta Background There are a number of important issues with the alpha version of ThirdPartyResources that we wish to address to move TPR to beta. The list is tracked here, and also includes feedback from existing Kubernetes ThirdPartyResource users. This proposal covers the steps we believe are necessary to move TPR to beta and to prevent future challenges in upgrading.
+Goals  Ensure ThirdPartyResource APIs operate consistently with first party Kubernetes APIs.</description>
+    </item>
+    
+    <item>
+      <title>troubleshoot-running-pods</title>
+      <link>/contributors/design-proposals/node/troubleshoot-running-pods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/node/troubleshoot-running-pods/</guid>
+      <description>Troubleshoot Running Pods  Status: Pending Version: Alpha Implementation Owner: @verb  This proposal seeks to add first class support for troubleshooting by creating a mechanism to execute a shell or other troubleshooting tools inside a running pod without requiring that the associated container images include such tools.
+Motivation Development Many developers of native Kubernetes applications wish to treat Kubernetes as an execution platform for custom binaries produced by a build system.</description>
+    </item>
+    
+    <item>
+      <title>vault-based-kms-provider</title>
+      <link>/contributors/design-proposals/vault-based-kms-provider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/vault-based-kms-provider/</guid>
+      <description>Vault based KMS provider for envelope encryption of secrets in etcd3 Abstract Kubernetes, starting with the release 1.7, adds Alpha support ( via PRs 41939 and 46460) to encrypt secrets and resources in etcd3 via a configured Provider. This release supports three providers viz. aesgcm, aescbc, secretbox. These providers store the encryption key(s) locally in a server configuration file. The provider encrypts and decrypts secrets in-process. Building upon these, a KMS provider framework with an option to support different KMS providers like google cloud KMS is being added via PRs 48574 and 49350.</description>
+    </item>
+    
+    <item>
+      <title>versioning</title>
+      <link>/contributors/design-proposals/release/versioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/release/versioning/</guid>
+      <description>Kubernetes Release Versioning Reference: Semantic Versioning
+Legend:
+ Kube X.Y.Z refers to the version (git tag) of Kubernetes that is released. This versions all components: apiserver, kubelet, kubectl, etc. (X is the major version, Y is the minor version, and Z is the patch version.)  Release versioning Minor version scheme and timeline  Kube X.Y.0-alpha.W, W &amp;gt; 0 (Branch: master)  Alpha releases are released roughly every two weeks directly from the master branch.</description>
+    </item>
+    
+    <item>
+      <title>vertical-pod-autoscaler</title>
+      <link>/contributors/design-proposals/autoscaling/vertical-pod-autoscaler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/autoscaling/vertical-pod-autoscaler/</guid>
+      <description>Vertical Pod Autoscaler Authors: kgrygiel, mwielgus Contributors: DirectXMan12, fgrzadkowski, jszczepkowski, smarterclayton
+Vertical Pod Autoscaler (#10782), later referred to as VPA (aka. &amp;ldquo;rightsizing&amp;rdquo; or &amp;ldquo;autopilot&amp;rdquo;) is an infrastructure service that automatically sets resource requirements of Pods and dynamically adjusts them in runtime, based on analysis of historical resource utilization, amount of resources available in the cluster and real-time events, such as OOMs.
+ Introduction  Background Purpose Related features  Requirements  Functional Availability Extensibility  Design  Overview Architecture overview API Admission Controller Recommender Updater Recommendation model History Storage Open questions  Future work  Pods that require VPA to start Combining vertical and horizontal scaling Batch workloads  Alternatives considered  Pods point at VPA VPA points at Deployment Actuation using the Deployment update mechanism    Introduction Background  Compute resources Resource QoS Admission Controllers External Admission Webhooks  Purpose Vertical scaling has two objectives:</description>
+    </item>
+    
+    <item>
+      <title>volume-hostpath-qualifiers</title>
+      <link>/contributors/design-proposals/storage/volume-hostpath-qualifiers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-hostpath-qualifiers/</guid>
+      <description>Support HostPath volume existence qualifiers Introduction A Host volume source is probably the simplest volume type to define, needing only a single path. However, that simplicity comes with many assumptions and caveats.
+This proposal describes one of the issues associated with Host volumes &amp;mdash; their silent and implicit creation of directories on the host &amp;mdash; and proposes a solution.
+Problem Right now, under Docker, when a bindmount references a hostPath, that path will be created as an empty directory, owned by root, if it does not already exist.</description>
+    </item>
+    
+    <item>
+      <title>volume-metrics</title>
+      <link>/contributors/design-proposals/storage/volume-metrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-metrics/</guid>
+      <description>Volume operation metrics Goal Capture high level metrics for various volume operations in Kubernetes.
+Motivation Currently we don&amp;rsquo;t have high level metrics that captures time taken and success/failures rates of various volume operations.
+This proposal aims to implement capturing of these metrics at a level higher than individual volume plugins.
+Implementation Metric format and collection Volume metrics emitted will fall under category of service metrics as defined in Kubernetes Monitoring Architecture.</description>
+    </item>
+    
+    <item>
+      <title>volume-ownership-management</title>
+      <link>/contributors/design-proposals/storage/volume-ownership-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-ownership-management/</guid>
+      <description>Volume plugins and idempotency Currently, volume plugins have a SetUp method which is called in the context of a higher-level workflow within the kubelet which has externalized the problem of managing the ownership of volumes. This design has a number of drawbacks that can be mitigated by completely internalizing all concerns of volume setup behind the volume plugin SetUp method.
+Known issues with current externalized design  The ownership management is currently repeatedly applied, which breaks packages that require special permissions in order to work correctly There is a gap between files being mounted/created by volume plugins and when their ownership is set correctly; race conditions exist around this Solving the correct application of ownership management in an externalized model is difficult and makes it clear that the a transaction boundary is being broken by the externalized design  Additional issues with externalization Fully externalizing any one concern of volumes is difficult for a number of reasons:</description>
+    </item>
+    
+    <item>
+      <title>volume-provisioning</title>
+      <link>/contributors/design-proposals/storage/volume-provisioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-provisioning/</guid>
+      <description>Abstract Real Kubernetes clusters have a variety of volumes which differ widely in size, iops performance, retention policy, and other characteristics. Administrators need a way to dynamically provision volumes of these different types to automatically meet user demand.
+A new mechanism called &amp;lsquo;storage classes&amp;rsquo; is proposed to provide this capability.
+Motivation In Kubernetes 1.2, an alpha form of limited dynamic provisioning was added that allows a single volume type to be provisioned in clouds that offer special volume types.</description>
+    </item>
+    
+    <item>
+      <title>volume-selectors</title>
+      <link>/contributors/design-proposals/storage/volume-selectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-selectors/</guid>
+      <description>Abstract Real Kubernetes clusters have a variety of volumes which differ widely in size, iops performance, retention policy, and other characteristics. A mechanism is needed to enable administrators to describe the taxonomy of these volumes, and for users to make claims on these volumes based on their attributes within this taxonomy.
+A label selector mechanism is proposed to enable flexible selection of volumes by persistent volume claims.
+Motivation Currently, users of persistent volumes have the ability to make claims on those volumes based on some criteria such as the access modes the volume supports and minimum resources offered by a volume.</description>
+    </item>
+    
+    <item>
+      <title>volume-snapshotting</title>
+      <link>/contributors/design-proposals/storage/volume-snapshotting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-snapshotting/</guid>
+      <description>Kubernetes Snapshotting Proposal Authors: Cindy Wang
+Background Many storage systems (GCE PD, Amazon EBS, etc.) provide the ability to create &amp;ldquo;snapshots&amp;rdquo; of a persistent volumes to protect against data loss. Snapshots can be used in place of a traditional backup system to back up and restore primary and critical data. Snapshots allow for quick data backup (for example, it takes a fraction of a second to create a GCE PD snapshot) and offer fast recovery time objectives (RTOs) and recovery point objectives (RPOs).</description>
+    </item>
+    
+    <item>
+      <title>volume-topology-scheduling</title>
+      <link>/contributors/design-proposals/storage/volume-topology-scheduling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volume-topology-scheduling/</guid>
+      <description>Volume Topology-aware Scheduling Authors: @msau42, @lichuqiang
+This document presents a detailed design for making the default Kubernetes scheduler aware of volume topology constraints, and making the PersistentVolumeClaim (PVC) binding aware of scheduling decisions.
+Definitions  Topology: Rules to describe accessibility of an object with respect to location in a cluster. Domain: A grouping of locations within a cluster. For example, &amp;lsquo;node1&amp;rsquo;, &amp;lsquo;rack10&amp;rsquo;, &amp;lsquo;zone5&amp;rsquo;. Topology Key: A description of a general class of domains.</description>
+    </item>
+    
+    <item>
+      <title>volume_stats_pvc_ref</title>
+      <link>/contributors/design-proposals/instrumentation/volume_stats_pvc_ref/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/instrumentation/volume_stats_pvc_ref/</guid>
+      <description>Add PVC reference in Volume Stats Background Pod volume stats tracked by kubelet do not currently include any information about the PVC (if the pod volume was referenced via a PVC)
+This prevents exposing (and querying) volume metrics labeled by PVC name which is preferable for users, given that PVC is a top-level API object.
+Proposal Modify VolumeStats tracked in Kubelet and populate with PVC info:
+// VolumeStats contains data about Volume filesystem usage.</description>
+    </item>
+    
+    <item>
+      <title>volumes</title>
+      <link>/contributors/design-proposals/storage/volumes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/design-proposals/storage/volumes/</guid>
+      <description>Abstract A proposal for sharing volumes between containers in a pod using a special supplemental group.
+Motivation Kubernetes volumes should be usable regardless of the UID a container runs as. This concern cuts across all volume types, so the system should be able to handle them in a generalized way to provide uniform functionality across all volume types and lower the barrier to new plugins.
+Goals of this design:</description>
+    </item>
+    
+  </channel>
+</rss>

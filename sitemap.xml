@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/keps/0000-kep-template/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/0001-kubernetes-enhancement-proposal-process/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/0002-cloud-controller-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0003-cluster-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-contributor-experience/0005-contributor-site/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/0006-apply/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-contributor-experience/0007-20180403-community-forum/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0007-pod-ready&#43;&#43;/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cli/0008-kustomize/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0009-node-heartbeat/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0010-20180314-coredns-ga-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0011-ipvs-proxier/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0012-20180518-coredns-default-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-storage/1.3-retrospective/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-05-18/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-05-25/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-06-08/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-06-15/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-06-22/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-06-29/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-07-06/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-07-13/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-07-20/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-07-27/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/2016-08-03/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-aws/2017_goals/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/archive/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/sig-cloud-provider/charter/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-aws/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-multicluster/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/contribsummitinformation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/design_proposal_template/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/k8syoutubecollaboration/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/kubdevsummitvoting/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/kubernetes_1st_bday/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/kubernetes_dev_summit/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/obsolete_templates/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-multicluster/oncall/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/results/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/aaroncrickenberger_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/aaronschlesinger_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/accelerator-monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/access/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/add-new-patchstrategy-to-clear-fields-not-present-in-patch/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/adding-an-apigroup/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/admission-control-webhooks/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/admission-webhook-bootstrapping/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/admission_control/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/admission_control_event_rate_limit/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/admission_control_extension/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/admission_control_limit_range/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/admission_control_resource_quota/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/adnanabdulhussein_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/agenda/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/aggregated-api-servers/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/alexpollitt_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/all-in-one-volume/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/alternate-api-representations/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/annotations-downward-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/announcement/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/api-chunking/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/api-conventions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/cluster-registry/api-design/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-api-machinery/api-extensions-position-statement/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/api-group/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-windows/api-tracking/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/api_call_latency/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/api_changes/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/api_extensions_latency/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/apiserver-build-in-admission-plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/apiserver-count-fix/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/apiserver-watch/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/apparmor/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/application_service_definition_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/apply_refactor/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/architectural-roadmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/auditing/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/automation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/aws/aws_under_the_hood/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-architecture/backlog/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/bazel/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/bound-service-account-tokens/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/breaking-up-the-monolith/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/bulk_watch/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/calebamiles_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-architecture/charter/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-azure/charter/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/charter/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/cherry-picks/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/client-libraries/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/client-package-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/clientgo-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/cloud-provider/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cloud-provider/cloud-provider-refactoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cloud-provider/cloudprovider-storage-metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/cluster-deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/cluster-role-aggregation/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/cluster_federation_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/cluster_lifecycle_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/clustering/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/clustering/</loc>
+  </url>
+  
+  <url>
+    <loc>/code-of-conduct/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/coding-conventions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/collab/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/command_execution_port_forwarding/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/community-expectations/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/community-maintenance/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/community-meeting/</loc>
+  </url>
+  
+  <url>
+    <loc>/community-membership/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/component-config-conventions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/configmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/container-identity/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/container-init/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/container-runtime-interface/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/container-runtime-interface-v1/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/container-storage-interface/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/containerized-mounter/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/containerized-mounter-pod/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-storage/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/contributor-cheatsheet/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/control-plane-resilience/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/controller-ref/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/controller_history/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/controllers/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/core-metrics-pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/coredns/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/cpu-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/crds-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/cri-container-stats/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/cri-dockershim-checkpoint/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/cri-testing-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/cri-validation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/cri-windows/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/cronjob/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/csi-client-structure-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/csi-new-client-library-procedure/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/current-state-of-client-libraries/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/custom-metrics-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/generator/testdata/custom_content/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/customresources-subresources/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/customresources-validation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/customresources-versioning/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/daemon/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/daemonset-update/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/dashboard-ux-breakout/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/declarative-application-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/default-storage-class/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/deploy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/derekcarr_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/development/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/device-plugin/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/devtools-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/disk-accounting/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/dougdavis_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/downward_api_resources_limits_requests/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/dramatically-simplify-cluster-creation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/dynamic-admission-control-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/dynamic-kubelet-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/e2e-node-tests/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/e2e-tests/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/enhance-pluggable-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/envvar-configmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/errordeveloper_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/event-style-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/event_compression/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/events-redesign/</loc>
+  </url>
+  
+  <url>
+    <loc>/generator/testdata/example/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/expansion/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/extending-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/extending-kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/external-lb-source-ip-preservation/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/feature-roadmap-2018/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/feature-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-api-servers/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-hpa/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-ingress/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-placement-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-replicasets/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federated-services/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federation-clusterselector/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federation-lite/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/federation-phase-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/fixit201606/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/testing/flakiness-sla/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/flaky-tests/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/flannel-integration/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/flex-volumes-drivers-psp/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/flexvolume/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/flexvolume-deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/processes/formal-scalability-processes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/garbage-collection/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/gcp/gce-l4-loadbalancer-healthcheck/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/generating-clientset/</loc>
+  </url>
+  
+  <url>
+    <loc>/generator/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/get-describe-apiserver-extensions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/getting-builds/</loc>
+  </url>
+  
+  <url>
+    <loc>/github-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/github-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/goals/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/godep/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/google-summer-of-code/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/</loc>
+  </url>
+  
+  <url>
+    <loc>/governance/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/gpu-support/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/group-mentee-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/group-mentoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/grow-flexvolume-size/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/grow-volume-size/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/gubernator/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/ha_master/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/help-wanted/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/high-availability/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/horizontal-pod-autoscaler/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/how-to-doc/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/hpa-external-metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/hpa-status-conditions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/hpa-v2/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/hugepages/</loc>
+  </url>
+  
+  <url>
+    <loc>/icons/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/identifiers/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/idvoretskyi_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/image-provenance/</loc>
+  </url>
+  
+  <url>
+    <loc>/incubator/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/indexed-job/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/initial-resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/instrumentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/issue-triage/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/issues/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/jaicesingerdumars_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/job/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/blogs/k8s-services-scalability-issues/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/kms-plugin-grpc-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/kris-nova_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/kubectl-conventions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/kubectl-create-from-env-file/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/kubectl-exec-plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/kubectl-extension/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/kubectl-login/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/kubectl_apply_getsetdiff_last_applied_config/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-auth/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-authorizer/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-cri-logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/kubelet-cri-networking/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-eviction/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-hypercontainer-runtime/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-rkt-runtime/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-rootfs-distribution/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/kubelet-systemd/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/kubelet-tls-bootstrap/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scalability/kubemark/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/kubemark-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-aws/kubernetes-on-aws/</loc>
+  </url>
+  
+  <url>
+    <loc>/github-management/kubernetes-repositories/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/local-cluster-ux/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/local-storage-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/local-storage-pv/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/markdown-link-style-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/mattfarina_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/meet-our-contributors/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/mentor-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/mentoring-events/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/mesos-style/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/metadata-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/metrics-server/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/michaelrubin_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/michellenoorali_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/migrated-from-wiki/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cluster-lifecycle/migrated-from-wiki/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/migrated-from-wiki/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-docs/migrated-from-wiki/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/minutes/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/moderation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/monitoring_architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/mount-options/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/multi-fields-merge-key/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multi-platform/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/multicluster-reserved-namespaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/multiple-schedulers/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/namespaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/network-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/networking/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/networking-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/new-contributor-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/new-contributor-workshop/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/no-new-privs/</loc>
+  </url>
+  
+  <url>
+    <loc>/generator/testdata/no_custom_content/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/node-allocatable/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/node-performance-testing/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/node-usernamespace-remapping/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/nodeaffinity/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/nodeport-ip-range/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/office-hours/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/on-call-federation-build-cop/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/optional-configmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/github-management/org-owners-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/outreachy/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/owners/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/performance-related-monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/github-management/permissions/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/persistent-storage/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/pod-lifecycle-event-generator/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/pod-pid-namespace/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/pod-preemption/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/service-catalog/pod-preset/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/pod-priority-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/pod-priority-resourcequota/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/pod-resolv-conf/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/pod-resource-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/pod-safety/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/pod-security-context/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/pod-security-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/pod_startup_latency/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/podaffinity/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/postpone-pv-deletion/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/postpone-pvc-deletion-if-used-in-a-pod/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/predicates-ordering/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/preserve-order-in-strategic-merge-patch/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/principles/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/proc-mount-type/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/profiling/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/multicluster/cluster-registry/project-design-and-plan/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/propagation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/protobuf/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/configs-and-limits/provider-configs/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/pull-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/pv-to-rbd-mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/pwittrock_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/quintonhoole_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/raw-block-pv/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/release/release-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/release-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/release/release-test-signal/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/rescheduler/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/rescheduling/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/rescheduling-for-critical-pods/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/architecture/resource-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/resource-metrics-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/resource-qos/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/resource-management/resource-quota-scoping/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-big-data/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/rhirschfeld_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-docs/migrated-from-wiki/roadmap-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/migrated-from-wiki/roadmap-kubectl/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/role-of-sig-lead/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/rules-review-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/runas-groupid/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/running-locally/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/runtime-client-server/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/runtime-pod-cache/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/runtimeconfig/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/scalability-good-practices/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/governance/scalability-regressions-case-studies/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scalability/scalability-testing/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/scaling-new-contributors/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/schedule-ds-pod-by-scheduler/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/scheduler/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/scheduler-equivalence-class/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/scheduler_algorithm/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/scheduler_extender/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/sebastiengoasguen_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/seccomp/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/secret-configmap-downwardapi-file-mode/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/secrets/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/security/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/security_context/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/selector-generation/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/self-hosted-kubelet/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cluster-lifecycle/self-hosted-kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/selinux/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/selinux-enhancements/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/server-get/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/service-discovery/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/service-external-name/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/auth/service_accounts/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/05-leadership-summit/session-notes/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>/github-management/setting-up-cla-check/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/should-k8s-use-feature-branches/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-api-machinery/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-apps/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-apps/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-auth/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-autoscaling/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-aws/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-aws/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-azure/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-big-data/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/sig-charter-template/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cloud-provider/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cluster-lifecycle/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-cluster-ops/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-contributor-experience/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-creation-procedure/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-gcp/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/sig-governance/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-governance/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/sig-governance-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-ibmcloud/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-instrumentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-list/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-multicluster/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-network/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-node/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-on-premise/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-openstack/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-pm/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-release/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-rktnetes/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scheduling/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-service-catalog/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-storage/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-testing/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-ui/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-vmware/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-windows/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/cli/simple-rolling-update/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/slack-guidelines/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/slos/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/staging/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/stateful-apps/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/apps/statefulset-update/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2016/developer-summit-2016/statefulset_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/steering-committee-update/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2018/05-contributor-summit/steering-update/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/strategic-merge-patch/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/svcacct-token-volume-source/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/synchronous-garbage-collection/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/sysctl/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/system_throughput/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/taint-node-by-condition/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/scheduling/taint-toleration-dedicated/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/testing/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/the1-on-1hour/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/api-machinery/thirdpartyresources/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/configs-and-limits/thresholds/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/timothysc_bio/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/node/troubleshoot-running-pods/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/update-release-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/updating-docs-for-feature-changes/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/vagrant/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/vault-based-kms-provider/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/release/versioning/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/autoscaling/vertical-pod-autoscaler/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-hostpath-qualifiers/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-ownership-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-storage/volume-plugin-faq/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-provisioning/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-selectors/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-snapshotting/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volume-topology-scheduling/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/instrumentation/volume_stats_pvc_ref/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/design-proposals/storage/volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/elections/2017/vote_for_justinsb/</loc>
+  </url>
+  
+  <url>
+    <loc>/sig-scalability/slos/watch_latency/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/welcome-to-kubernetes-new-developer-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-app-def/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-apply/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-cluster-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-container-identity/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-iot-edge/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-kubeadm-adoption/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-machine-learning/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-multitenancy/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/wg-resource-management/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/writing-a-getting-started-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/writing-good-e2e-tests/</loc>
+  </url>
+  
+  <url>
+    <loc>/communication/zoom-guidelines/</loc>
+  </url>
+  
+</urlset>

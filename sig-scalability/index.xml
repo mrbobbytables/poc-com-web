@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-scalability on Kubernetes Community</title>
+    <link>/sig-scalability/</link>
+    <description>Recent content in sig-scalability on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sig-scalability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>api_call_latency</title>
+      <link>/sig-scalability/slos/api_call_latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/api_call_latency/</guid>
+      <description>API call latency SLIs/SLOs details User stories  As a user of vanilla Kubernetes, I want some guarantee how quickly I get the response from an API call. As an administrator of Kubernetes cluster, if I know characteristics of my external dependencies of apiserver (e.g custom admission plugins, webhooks and initializers) I want to be able to provide guarantees for API calls latency to users of my cluster.  Other notes  We obviously can’t give any guarantee in general, because cluster administrators are allowed to register custom admission plugins, webhooks and/or initializers, which we don’t have any control about and they obviously impact API call latencies.</description>
+    </item>
+    
+    <item>
+      <title>api_extensions_latency</title>
+      <link>/sig-scalability/slos/api_extensions_latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/api_extensions_latency/</guid>
+      <description> API call extension points latency SLIs details User stories  As an administrator, if API calls are slow, I would like to know if this is because slow extension points (admission plugins, webhooks, initializers) and if so which ones are responsible for it.  </description>
+    </item>
+    
+    <item>
+      <title>formal-scalability-processes</title>
+      <link>/sig-scalability/processes/formal-scalability-processes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/processes/formal-scalability-processes/</guid>
+      <description>Formal Scalability Processes by Shyam JVS, Google Inc
+February 2018
+Introduction Scalability is a very crucial aspect of kubernetes and has allowed many customers to adopt it with confidence. K8s started scaling to 5000 nodes beginning from release 1.6. Building and maintaining a performant and scalable system needs conscious efforts from the whole developer community. Lack of solid measures have caused problems (both scalability and release-related) in the past - for e.</description>
+    </item>
+    
+    <item>
+      <title>goals</title>
+      <link>/sig-scalability/goals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/goals/</guid>
+      <description>Kubernetes Scaling and Performance Goals by Quinton Hoole and Wojciech Tyczynski, Google Inc
+April 2016
+This document is a markdown version converted from a working Google Doc. Please refer to the original for extended commentary and discussion.
+Introduction What size clusters do we think that we should support with Kubernetes in the short to medium term? How performant do we think that the control system should be at scale? What resource overhead should the Kubernetes control system reasonably consume?</description>
+    </item>
+    
+    <item>
+      <title>k8s-services-scalability-issues</title>
+      <link>/sig-scalability/blogs/k8s-services-scalability-issues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/blogs/k8s-services-scalability-issues/</guid>
+      <description>Known Scalability Issues with Kubernetes Services by Shyam JVS, Google Inc (with inputs from Brian Grant, Wojciech Tyczynski &amp;amp; Dan Winship)
+June 2018
+This document serves as a catalog of issues we&amp;rsquo;ve known/discovered with kubernetes services as of June 2018, focusing on their scalability/performance. The purpose of the document is to make the information common knowledge for the community, so we can work together towards improving it. Listing them below in no particular order.</description>
+    </item>
+    
+    <item>
+      <title>pod_startup_latency</title>
+      <link>/sig-scalability/slos/pod_startup_latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/pod_startup_latency/</guid>
+      <description>Pod startup latency SLI/SLO details User stories  As a user of vanilla Kubernetes, I want some guarantee how quickly my pods will be started.  Other notes  Only schedulable and stateless pods contribute to the SLI:  If there is no space in the cluster to place the pod, there is not much we can do about it (it is task for Cluster Autoscaler which should have separate SLIs/SLOs).</description>
+    </item>
+    
+    <item>
+      <title>provider-configs</title>
+      <link>/sig-scalability/configs-and-limits/provider-configs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/configs-and-limits/provider-configs/</guid>
+      <description>Scalability Testing/Analysis Environment and Goals Project practice is to perform baseline scalability testing and analysis on a large single machine (VM or server) with all control plane processing on that single node. The single large machine provides sufficient scalability to scale to 5000 node density tests. The typical machine for testing at this scale is at the larger end of the VM scale available on public cloud providers, but is by no means the largest available.</description>
+    </item>
+    
+    <item>
+      <title>scalability-regressions-case-studies</title>
+      <link>/sig-scalability/governance/scalability-regressions-case-studies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/governance/scalability-regressions-case-studies/</guid>
+      <description>Kubernetes Scalability/Performance Regressions - Case Studies &amp;amp; Insights by Shyam JVS, Google Inc
+February 2018
+Overview This document is a compilation of some interesting scalability/performance regression stories from the past. These were identified/studied/fixed largely by sig-scalability. We begin by listing them down, along with their succinct explanations, features/components that were involved, and relevant SIGs (besides sig-scalability). We also accompany them with data on what was the smallest scale, both for real and simulated (i.</description>
+    </item>
+    
+    <item>
+      <title>slos</title>
+      <link>/sig-scalability/slos/slos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/slos/</guid>
+      <description>Kubernetes scalability and performance SLIs/SLOs What Kubernetes guarantees? One of the important aspects of Kubernetes is its scalability and performance characteristic. As Kubernetes user or operator/administrator of a cluster you would expect to have some guarantees in those areas.
+The goal of this doc is to organize the guarantees that Kubernetes provides in these areas.
+What do we require from SLIs/SLOs? We are going to define more SLIs and SLOs based on the most important indicators in the system.</description>
+    </item>
+    
+    <item>
+      <title>system_throughput</title>
+      <link>/sig-scalability/slos/system_throughput/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/system_throughput/</guid>
+      <description>System throughput SLI/SLO details User stories  As a user, I want a guarantee that my workload of X pods can be started within a given time As a user, I want to understand how quickly I can react to a dramatic change in workload profile when my workload exhibits very bursty behavior (e.g. shop during Back Friday Sale) As a user, I want a guarantee how quickly I can recreate the whole setup in case of a serious disaster which brings the whole cluster down.</description>
+    </item>
+    
+    <item>
+      <title>thresholds</title>
+      <link>/sig-scalability/configs-and-limits/thresholds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/configs-and-limits/thresholds/</guid>
+      <description>Kubernetes Scalability thresholds Background Since 1.6 release Kubernetes officially supports 5000-node clusters. However, the question is what that actually means. As of early Q3 2017 we are in the process of defining set of performance-related SLIs (Service Level Indicators) and SLOs (Service Level Objectives).
+However, no matter what SLIs and SLOs we have, there will always be some users coming and saying that their cluster is not meeting the SLOs.</description>
+    </item>
+    
+    <item>
+      <title>watch_latency</title>
+      <link>/sig-scalability/slos/watch_latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sig-scalability/slos/watch_latency/</guid>
+      <description>Watch latency SLI details User stories  As an administrator, if Kubernetes is slow, I would like to know if the root cause of it is slow api-machinery (slow watch) or something farther the path (lack of network bandwidth, slow or cpu-starved controllers, &amp;hellip;)  Other notes  Pretty much all control loops in Kubernetes are watch-based. As a result slow watch means slow system in general. Note that how we measure it silently assumes no clock-skew in case of cluster with multiple masters.</description>
+    </item>
+    
+  </channel>
+</rss>

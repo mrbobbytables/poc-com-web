@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guide on Kubernetes Community</title>
+    <link>/contributors/guide/</link>
+    <description>Recent content in guide on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/contributors/guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>coding-conventions</title>
+      <link>/contributors/guide/coding-conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/coding-conventions/</guid>
+      <description>Coding Conventions Updated: 1/24/2018
+Table of Contents
+ Coding Conventions  Code conventions Testing conventions Directory and file conventions   Code conventions  Bash
+ https://google.github.io/styleguide/shell.xml
+ Ensure that build, release, test, and cluster-management scripts run on macOS
+  Go
+ Go Code Review Comments
+ Effective Go
+ Know and avoid Go landmines
+ Comment your code.
+ Go&amp;rsquo;s commenting conventions If reviewers ask questions about why the code is the way it is, that&amp;rsquo;s a sign that comments might be helpful.</description>
+    </item>
+    
+    <item>
+      <title>community-expectations</title>
+      <link>/contributors/guide/community-expectations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/community-expectations/</guid>
+      <description>Community Expectations Kubernetes is a community project. Consequently, it is wholly dependent on its community to provide a productive, friendly and collaborative environment.
+The first and foremost goal of the Kubernetes community is to develop orchestration technology that radically simplifies the process of creating reliable distributed systems. However a second, equally important goal is the creation of a community that fosters easy, agile development of such orchestration systems.
+We therefore describe the expectations for members of the Kubernetes community.</description>
+    </item>
+    
+    <item>
+      <title>contributor-cheatsheet</title>
+      <link>/contributors/guide/contributor-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/contributor-cheatsheet/</guid>
+      <description>Kubernetes Cheat Sheet A list of common resources when contributing to Kubernetes.
+   Repo PRs Issues Notes     Kubernetes PRs Issues Meeting Notes   Community PRs Issues    Docs PRs Issues     Getting Started  Contributor Guide  Workflow  Gubernator Dashboard - k8s.reviews Submit Queue Bot commands GitHub labels Release Buckets Developer Guide  Cherry Picking Guide - Queue  Kubernetes Code Search, maintained by @dims  SIGs and Working Groups  Master SIG list  Community  Calendar kubernetes-dev kubernetes-users Slack channels StackOverflow YouTube Channel  Tests  Current Test Status Aggregated Failures Test Grid Test Health Test History  Email Aliases  community@kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>github-workflow</title>
+      <link>/contributors/guide/github-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/github-workflow/</guid>
+      <description>Workflow 1 Fork in the cloud  Visit https://github.com/kubernetes/kubernetes Click Fork button (top right) to establish a cloud-based fork.  2 Clone fork to local storage Per Go&amp;rsquo;s workspace instructions, place Kubernetes&amp;rsquo; code on your GOPATH using the following cloning procedure.
+Define a local working directory:
+# If your GOPATH has multiple paths, pick # just one and use it instead of $GOPATH here. # You must follow exactly this pattern, # neither `$GOPATH/src/github.</description>
+    </item>
+    
+    <item>
+      <title>issue-triage</title>
+      <link>/contributors/guide/issue-triage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/issue-triage/</guid>
+      <description>Kubernetes Issue Triage Guidelines Purpose Speed up issue management.
+The Kubernetes issues are listed at https://github.com/kubernetes/kubernetes/issues and are identified with labels. For example, an issue that belongs to SIG Network group will eventually be set to label sig/network. New issues will start out without any labels. The detailed list of labels can be found at https://github.com/kubernetes/kubernetes/labels. While working on triaging issues you may not have privilege to assign specific label (e.</description>
+    </item>
+    
+    <item>
+      <title>owners</title>
+      <link>/contributors/guide/owners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/owners/</guid>
+      <description>OWNERS files Overview OWNERS files are used to designate responsibility over different parts of the Kubernetes codebase. Today, we use them to assign the reviewer and approver roles used in our two-phase code review process. Our OWNERS files were inspired by Chromium OWNERS files, which in turn inspired GitHub&amp;rsquo;s CODEOWNERS files.
+The velocity of a project that uses code review is limited by the number of people capable of reviewing code.</description>
+    </item>
+    
+    <item>
+      <title>pull-requests</title>
+      <link>/contributors/guide/pull-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/pull-requests/</guid>
+      <description>Pull Request Process This doc explains the process and best practices for submitting a pull request to the Kubernetes project and its associated subrepositories. It should serve as a reference for all contributors, and be useful especially to new and infrequent submitters.
+ Before You Submit a Pull Request  Run Local Verifications  The Pull Request Submit Process  The Testing and Merge Workflow Marking Unfinished Pull Requests Comment Commands Reference Automation How the e2e Tests Work  Why was my Pull Request closed?</description>
+    </item>
+    
+    <item>
+      <title>release-notes</title>
+      <link>/contributors/guide/release-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/release-notes/</guid>
+      <description>Adding Release Notes On the kubernetes/kubernetes repository, release notes are required for any pull request with user-visible changes, such as bug-fixes, feature additions, and output format changes.
+To meet this requirement, do one of the following: - Add notes in the release notes block, or - Update the release note label
+If you don&amp;rsquo;t add release notes in the pull request template, the do-not-merge/release-note-label-needed label is added to your pull request automatically after you create it.</description>
+    </item>
+    
+    <item>
+      <title>scalability-good-practices</title>
+      <link>/contributors/guide/scalability-good-practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/scalability-good-practices/</guid>
+      <description>Scalability Good Practices for Kubernetes contributors This document is written for contributors who would like to avoid their code being reverted for performance reasons
+Table of Contents
+ Who should read this document and what is in it? What does it mean to &amp;ldquo;break scalability&amp;rdquo;? Examples  Inefficient use of memory Explicit lists from the API server Superfluous API calls Complex and expensive computations on a critical path Big dependency changes  Summary Closing remarks  Who should read this document and what is in it?</description>
+    </item>
+    
+  </channel>
+</rss>
