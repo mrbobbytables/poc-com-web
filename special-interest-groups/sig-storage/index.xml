@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-storage on Kubernetes Community</title>
+    <link>/special-interest-groups/sig-storage/</link>
+    <description>Recent content in sig-storage on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/special-interest-groups/sig-storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>contributing</title>
+      <link>/special-interest-groups/sig-storage/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-storage/contributing/</guid>
+      <description>Ramping up on Kubernetes Storage We recommend the following presentations, docs, and videos to help get familiar with Kubernetes Storage concepts.
+   Date Title Link Description     - Persistent Volume Framework Doc Public user docs for Kubenretes Persistent Volume framework.   2018 May 03 SIG Storage Intro Video An overview of SIG Storage By Saad Ali at Kubecon EU 2018.   2018 May 04 Kubernetes Storage Lingo 101 Video An overview of various terms used in Kubernetes storage and what they mean by Saad Ali at Kubecon EU 2018.</description>
+    </item>
+    
+    <item>
+      <title>volume-plugin-faq</title>
+      <link>/special-interest-groups/sig-storage/volume-plugin-faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-storage/volume-plugin-faq/</guid>
+      <description>Kubernetes Volume Plugin FAQ for Storage Vendors Last Updated: 02/08/2018
+What is Kubernetes volume plugin?
+A Kubernetes Volume plugin extends the Kubernetes volume interface to support a block and/or file storage system.
+In-tree vs. Out-of-Tree Volume Plugins How do I implement a Volume plugin?
+There are three methods to implement a volume plugin: 1. In-tree volume plugin 2. Out-of-tree FlexVolume driver 3. Out-of-tree CSI driver
+The Kubernetes Storage SIG, which is responsible for all volume code in the Kubernetes core repository, is no longer accepting new in-tree volume plugins.</description>
+    </item>
+    
+  </channel>
+</rss>

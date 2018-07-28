@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>migrated-from-wiki on Kubernetes Community</title>
+    <link>/sigs-and-wgs/sig-docs/migrated-from-wiki/</link>
+    <description>Recent content in migrated-from-wiki on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/sig-docs/migrated-from-wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>roadmap-docs</title>
+      <link>/sigs-and-wgs/sig-docs/migrated-from-wiki/roadmap-docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/sig-docs/migrated-from-wiki/roadmap-docs/</guid>
+      <description> Docs and examples roadmap If you&amp;rsquo;d like to help with documentation, please read the kubernetes.io site instructions.
+If you&amp;rsquo;d like to contribute an example, please read the guidelines.
+Owners: @kubernetes/docs, @kubernetes/examples
+Labels: kind/documentation, kind/example
+We&amp;rsquo;re currently planning a documentation site overhaul. Join kubernetes-dev@googlegroups.com to gain access to the proposals.
+ Overhaul proposal Mocks API documentation improvements  </description>
+    </item>
+    
+  </channel>
+</rss>

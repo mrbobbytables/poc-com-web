@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sigs-and-wgs on Kubernetes Community</title>
+    <link>/sigs-and-wgs/</link>
+    <description>Recent content in sigs-and-wgs on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CONTRIBUTING</title>
+      <link>/sigs-and-wgs/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributing/</guid>
+      <description>Contributing to the Community Repo Welcome to the Kubernetes Community contributing guide. We are excited about the prospect of you joining our community!
+Getting Started We have full documentation on how to get started contributing here:
+ Kubernetes Contributor Guide - Main contributor documentation Contributor Cheat Sheet - Common resources for existing developers  Mentorship  Mentoring Initiatives - We have a diverse set of mentorship programs available that are always looking for volunteers!</description>
+    </item>
+    
+    <item>
+      <title>bootstrapping-process</title>
+      <link>/sigs-and-wgs/committee-code-of-conduct/bootstrapping-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/committee-code-of-conduct/bootstrapping-process/</guid>
+      <description>Bootstrapping Document for Kubernetes Code of Conduct Committee This document (created by the Kubernetes Steering Committee) outlines what the Code of Conduct Committee (CoCC) is responsible for, how to create it, and the rough processes for them to get started.
+Objectives of the CoCC  Maintain the Code of Conduct (CoC) document and iterate as needed.  All CoC revisions must be approved by the Steering Committee. Currently, we use the CNCF CoC.</description>
+    </item>
+    
+    <item>
+      <title>code-of-conduct</title>
+      <link>/sigs-and-wgs/code-of-conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/code-of-conduct/</guid>
+      <description>Kubernetes Community Code of Conduct Kubernetes follows the CNCF Code of Conduct.</description>
+    </item>
+    
+    <item>
+      <title>communication</title>
+      <link>/sigs-and-wgs/communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/communication/</guid>
+      <description>NOTE: This document has moved to a new location.</description>
+    </item>
+    
+    <item>
+      <title>community-membership</title>
+      <link>/sigs-and-wgs/community-membership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/community-membership/</guid>
+      <description>Community membership Note: This document is in progress
+This doc outlines the various responsibilities of contributor roles in Kubernetes. The Kubernetes project is subdivided into subprojects under SIGs. Responsibilities for most roles are scoped to these subprojects.
+   Role Responsibilities Requirements Defined by     member active contributor in the community sponsored by 2 reviewers. multiple contributions to the project. Kubernetes GitHub org member.   reviewer review contributions from other members history of review and authorship in a subproject OWNERS file reviewer entry.</description>
+    </item>
+    
+    <item>
+      <title>incubator</title>
+      <link>/sigs-and-wgs/incubator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/incubator/</guid>
+      <description>IMPORTANT - The Kubernetes Incubator process is now deprecated and has been superseded by Kubernetes subprojects For information on creating a repository for a subproject see: kubernetes-repositories
+Each SIG should define the process for sponsoring new subprojects in its charter. For information on SIG governance and charters see: SIG governance
+Kubernetes Incubator Process Authors: Brandon Philips brandon.philips@coreos.com, Sarah Novotny sarahnovotny@google.com, Brian Grant briangrant@google.com
+Kubernetes Incubator The Kubernetes Incubator is where all new Kubernetes projects should start.</description>
+    </item>
+    
+    <item>
+      <title>sig-creation-procedure</title>
+      <link>/sigs-and-wgs/sig-creation-procedure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/sig-creation-procedure/</guid>
+      <description>SIG creation procedure Moved to sig governance</description>
+    </item>
+    
+    <item>
+      <title>sig-governance</title>
+      <link>/sigs-and-wgs/sig-governance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/sig-governance/</guid>
+      <description>SIG Governance In order to standardize Special Interest Group efforts, create maximum transparency, and route contributors to the appropriate SIG, SIGs should follow the guidelines stated below:
+ Meet regularly, at least for 30 minutes every 3 weeks, except November and December Keep up-to-date meeting notes, linked from the SIG&amp;rsquo;s page in the community repo Announce meeting agenda and minutes after each meeting, on their SIG mailing list Record SIG meeting and make it publicly available Ensure the SIG&amp;rsquo;s mailing list and slack channel are archived Report activity in the weekly community meeting at least once every 6 weeks Participate in release planning meetings and retrospectives, and burndown meetings, as needed Ensure related work happens in a project-owned github org and repository, with code and tests explicitly owned and supported by the SIG, including issue triage, PR reviews, test-failure response, bug fixes, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

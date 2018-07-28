@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Kubernetes Community</title>
+    <link>/sigs-and-wgs/events/</link>
+    <description>Recent content in Events on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0300-0345_CODEORGANIZATION</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/</guid>
+      <description>Code Organization and Release Process Improvement **Identify the following before beginning your session. Do note move forward until these are decided / assigned: **
+ Session Topic: Code Organization and Release Process Improvement Topic Facilitator(s): bgrant0607@ Note-taker(s) (Collaborating on this doc): jdumars@ Person responsible for converting to Markdown &amp;amp; uploading to Github: michellen@  Session Notes Background from November dev summit:  Slides Notes  Github orgs: Github supports 2 levels of hierarchy, orgs and repos, and we need to use both effectively.</description>
+    </item>
+    
+    <item>
+      <title>0905-0930_STATE_OF_THE_KUBE</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/</guid>
+      <description>State of the Kube Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: STATE OF THE KUBE Topic Facilitator(s): Tim Hockin Note-taker(s) (Collaborating on this doc): Jason Singer DuMars, Nilay Yener Person responsible for converting to Markdown &amp;amp; uploading to Github: nyener@  Session Notes  789 companies 15 timezones 41.3 commits daily 2505 devs 100 days between releases 3549 commits since v1.</description>
+    </item>
+    
+    <item>
+      <title>0940-1000_PROJECT_GOALS_ROADMAP</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/</guid>
+      <description>Project Goals &amp;amp; Roadmap Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: Project Goals and Roadmap Topic Facilitator(s): Apart Sinha, Google &amp;amp; Ihop Dvoretskyi, Mirantis Note-taker(s) (Collaborating on this doc): Jason Singer DuMars, Nilay Yener Person responsible for converting to Markdown &amp;amp; uploading to Github: nyener@  Session Notes (primarily discussion, for the presentation see: Link )</description>
+    </item>
+    
+    <item>
+      <title>1015-1115_UPDATES_GOVERNANCE_AND_CNCF</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/</guid>
+      <description>Updates : Governance &amp;amp; CNCF Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: Updates : Governance &amp;amp; CNCF Topic Facilitator(s): Brian Grant, Google &amp;amp; Brandon Philips, CoreOS Note-taker(s) (Collaborating on this doc): Jason Singer DuMars, Nilay Yener Person responsible for converting to Markdown &amp;amp; uploading to Github: nyener@  Session Notes Link
+BGrant: Please do not rathole on minutiae, but please comment on the governance documents, we need to understand that this formalizes the escalation path B Philips: Steering committee is focused on watching the details</description>
+    </item>
+    
+    <item>
+      <title>1145_1245_ARCHITECTURAL_ROADMAP</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/</guid>
+      <description>Architectural Roadmap Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: Architectural Roadmap Topic Facilitator(s): Brian Grant Note-taker(s) (Collaborating on this doc): Jason Singer DuMars, Nilay Yener Person responsible for converting to Markdown &amp;amp; uploading to Github: nyener@  Session Notes Link
+Not using “core” because it is overloaded - substituting “nucleus” instead ~ absolute necessities for Kubernetes to function</description>
+    </item>
+    
+    <item>
+      <title>1345-1430_SIGGOVERNANCE</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/</guid>
+      <description>SIG Governance and Check-in Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: SIG Governance and check-in Topic Facilitator(s): brendandburns@ Note-taker(s) (Collaborating on this doc): jbeda@ Person responsible for converting to Markdown &amp;amp; uploading to Github: philips@  Session Notes  Core discussions about SIG leadership  Is the SIG lead role more like an on-call position or a team lead?</description>
+    </item>
+    
+    <item>
+      <title>1500-1545_COMMUNITY_LADDER</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/</guid>
+      <description>Community Building &amp;amp; Ladder Session Original Title: “Building community effectiveness (Contributor ladder, Code of Conduct &amp;amp; Committee)”
+ Session Area: Community Topic Facilitator(s): Sarah Novotny Note-taker(s) (Collaborating on this doc):  Rob Hirschfeld @zehicle Jess Frazzelle  Person responsible for converting to Markdown &amp;amp; uploading to Github: Rob Hirschfeld @zehicle  Session Notes Classes of Communities being discussed: * Developer / User - using the API * Developer / Operator - running the Infrastructure / DevOps * Developer / Contributor - writing the Kubernetes code, docs, any sort of non-technical contribution</description>
+    </item>
+    
+    <item>
+      <title>1600-1740_PRESENTATIONS_FROM_BREAKOUTS_AND_CALL_TO_ACTIONS</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/</guid>
+      <description>Presentations From Breakouts with Call to Actions Identify the following before beginning your session. Do not move forward until these are decided / assigned:
+ Session Topic: Presentations From Breakouts with Call to Actions Topic Facilitator(s): sarahnovotny@ Note-taker(s) (Collaborating on this doc): Jason Singer DuMars, Nilay Yener Person responsible for converting to Markdown &amp;amp; uploading to Github: nyener@  Session Notes SIG GOVERNANCE AND SIG CHECK IN  Discussed cross cutting SIG concerns and how to accomplish Create certificate for SIGs SIG Leads office hours SIG Leads mailing list ~ open vs.</description>
+    </item>
+    
+    <item>
+      <title>ContribSummitInformation</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/contribsummitinformation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/contribsummitinformation/</guid>
+      <description>2017 Kubernetes Contributor Summit Information fka DevSummit
+What: The Contributor Summit provides an avenue for Kubernetes contributors to connect face to face and mindshare about future community development and community governance endeavors.
+In some sense, the summit is a real-life extension of the community meetings and SIG meetings.
+When: December 5th, 2017 (before KubeCon)
+All day event with happy hour reception to close
+Agenda:
+Times in CST
+- 08:00 am - Registration and light breakfast</description>
+    </item>
+    
+    <item>
+      <title>KubDevSummitVoting</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/kubdevsummitvoting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/kubdevsummitvoting/</guid>
+      <description>###Kubernetes Developer&amp;rsquo;s Summit Discussion Topics Voting ### A voting poll for discussion topic proposals has been created, and the link to the poll can be found here.
+The poll will close on 10/07/16 at 23:59:59 PDT.
+How Does it Work? #### The voting uses the Condorcet method, which relies on relative rankings to pick winners. You can read more about the Condorcet method and the voting service we&amp;rsquo;re using on the CIVS website.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes_1st_Bday</title>
+      <link>/sigs-and-wgs/events/2016/kubernetes_1st_bday/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/kubernetes_1st_bday/</guid>
+      <description>Kubernetes 1st Birthday Announcement Dear Kubernauts,
+Happy birthday! The Kubernetes community is celebrating the first anniversary for the v1.0 release on July 21st, 2016. We are reaching out to you as the chief point(s) of contact for your local Kubernetes meetup to encourage you to throw a Kubernetes birthday party!
+This is very exciting for the Kubernetes community, and we are happy to support your party planning efforts. We have swag we can provide (including awesome Kubernetes party hats!</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes_Dev_Summit</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/kubernetes_dev_summit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/kubernetes_dev_summit/</guid>
+      <description>Kubernetes Dev Summit Edit - Event Location ## The event is on the 4th Floor of the Union Street Tower of the Sheraton Seattle Hotel.
+About the Event # The Kubernetes Developers&amp;rsquo; Summit provides an avenue for Kubernetes developers to connect face to face and mindshare about future community development and community governance endeavors.
+In some sense, the summit is a real-life extension of the community meetings and SIG meetings.</description>
+    </item>
+    
+    <item>
+      <title>announcement</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/announcement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/announcement/</guid>
+      <description>This is an announcement for the 2017 Kubernetes Leadership Summit, which will occur on June 2nd, 2017 in San Jose, CA. This event will be similar to the Kubernetes Developer&amp;rsquo;s Summit in November 2016, but involving a smaller smaller audience comprised solely of leaders and influencers of the community. These leaders and influences include the SIG leads, release managers, and representatives from several companies, including (but not limited to) Google, Red Hat, CoreOS, WeaveWorks, Deis, and Mirantis.</description>
+    </item>
+    
+    <item>
+      <title>application_service_definition_notes</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/application_service_definition_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/application_service_definition_notes/</guid>
+      <description>Service/Application Definition We think we need to help out the developers in how do we organize our services and how do I define them nicely and deploy on our orchestrator of choice. Writing the Kube files is a steep learning curve. So can we have something which is a little bit easier?
+Helm solves one purpose for this.
+Helm contrib: one of the things folks as us is they start from a dockerfile, and they want to have a workflow where they go from dockerfile&amp;ndash;&amp;gt;imagebuild&amp;ndash;&amp;gt;registry&amp;ndash;&amp;gt;resource def.</description>
+    </item>
+    
+    <item>
+      <title>breaking-up-the-monolith</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/breaking-up-the-monolith/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/breaking-up-the-monolith/</guid>
+      <description>Breaking Up The Monolith Note Takers: Josh Berkus(@jberkus), Aaron Crickenberger (@spiffxp)
+Here&amp;rsquo;s what we&amp;rsquo;re covering: build process, issue tracking, logistics.
+Question: are we committed emotionally 100% to splitting the monolith Opinion: committed, but need to define what that means (past provides the impetus)
+We&amp;rsquo;ve been trying [the monolith] for so long and it&amp;rsquo;s too expensive.
+ erictune: as the project matures the core can&amp;rsquo;t keep growing at the same rate mattfarina: reason to break it up - developer experience,difficulty to contribute pushes people away from contributing (hard to step into issue queue, etc) clayton: I&amp;rsquo;m scared by this because kubectl is never going to be simpler, it may be easier to just write a new one erictune: ecosystem yes, more contributors&amp;hellip; narrowly defined core no bburns: we don&amp;rsquo;t do a good job of measuring the cost of this, we love breaking things up because it&amp;rsquo;s &amp;ldquo;cleaner&amp;rdquo; but we&amp;rsquo;re not estimating the cost in terms of the human effort and complexity lavalamp: respectfully disagree, we have estimated the cost, knew it was going to be painfu but we haven&amp;rsquo;t had a choice timstclair: nobody has ever answered the question to be of how we&amp;rsquo;re going to deliver a set of binaries as part of a release, there isn&amp;rsquo;t a cohesive plan for doing this timstclair: how are you actually going to get test infra to test all the things bburns: how do you actually find the commit that causes a failure in e2e lavalamp: have you see the doc I have posted everywhere this comes up?</description>
+    </item>
+    
+    <item>
+      <title>cloud-native-design-refactoring-across-k8s</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/</guid>
+      <description>Contributor Summit - KubeCon 2017
+Cloud Native Design/Refactoring across Kubernetes
+*Lead: Joe Beda(*@jbeda)*
+*Co-lead: Amit Kumar Jaiswal(*@AMIT_GKP)*
+Abstract
+Explore how to cleanly support cloud-native behaviors, such as standardized Kubernetes logs, injectable configuration and common queryable APIs in Kubernetes components. While this discussion isn&amp;rsquo;t only about containers, orchestrating OpenStack deployment/management within Kubernetes via OpenStack-Helm or Kolla-Kubernetes paves the way for better upgrade capabilities. They will also improve the ability to run individual Kubernetes services independently or in combination with other adjacent technologies.</description>
+    </item>
+    
+    <item>
+      <title>cloud-provider</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/cloud-provider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/cloud-provider/</guid>
+      <description>CloudProvider Update Lead: Walter Fender / cheftako
+Notetaker: Jago Macleod / jagosan 4pm
+Goals:
+Make it easy for any new cloud provider to be able to add support for new cloud provider without having to submit code to k/k repo. [good shape!] For currently in-tree cloud providers to be able to build and release without having to ‘wait’ for upstream kubernetes. (e.g. security patches and features) Also suboptimal that for technical reasons, other cloudprovider’s ‘init’s are being run in the hosting cloud provider’s environments.</description>
+    </item>
+    
+    <item>
+      <title>cluster_federation_notes</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/cluster_federation_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/cluster_federation_notes/</guid>
+      <description>Cluster Federation There&amp;rsquo;s a whole bunch of reasons why federation is interesting. There&amp;rsquo;s HA, there&amp;rsquo;s geographic locality, there&amp;rsquo;s just managing very large clusters. Use cases:
+ HA Hybrid Cloud Geo/latency Scalability (many large clusters instead of one gigantic one) visibility of multiple clusters  You don&amp;rsquo;t actually need federation for geo-location now, but it helps. The mental model for this is kind of like Amazon AZ or Google zones. Sometimes we don&amp;rsquo;t care where a resource is but sometimes we do.</description>
+    </item>
+    
+    <item>
+      <title>cluster_lifecycle_notes</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/cluster_lifecycle_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/cluster_lifecycle_notes/</guid>
+      <description>Cluster Lifecycle Deployment &amp;amp; Upgrade Roadmap Moderator: Mike Danese
+Note taker: Robert Bailey
+Date: 2016-11-10
+Goals Discuss HA, upgrades, and config management beyond kubeadm/kops &amp;amp; try to identify things that are currently underserved (upgrade testing, version skew policy, security upgrades)
+Discussion kubeadm - not destined for production? * Doing resource provisioning (cloud VMs) is out of scope * Should be a toolbox that does the common parts of cluster lifecycle * And should be able to break out just the pieces that you want * Found a bunch of common parts of existing cluster deployment and want to build more of it into the core</description>
+    </item>
+    
+    <item>
+      <title>community-meeting</title>
+      <link>/sigs-and-wgs/events/community-meeting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/community-meeting/</guid>
+      <description>Kubernetes Weekly Community Meeting We have PUBLIC and RECORDED weekly meeting every Thursday at 5pm UTC.
+See it on the web at calendar.google.com , or paste this iCal url into any iCal client. Do NOT copy the meetings over to a your personal calendar, you will miss meeting updates. Instead use your client&amp;rsquo;s calendaring feature to say you are attending the meeting so that any changes made to meetings will be reflected on your personal calendar.</description>
+    </item>
+    
+    <item>
+      <title>container-identity</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/container-identity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/container-identity/</guid>
+      <description>Container identity
+Lead: Greg Castle
+How are people using k8s service accounts
+ Default service accounts?
+ User:
+ (Zalando)
+ 55 clusters
+ Only allow pre-set service accounts postgres &amp;ldquo;operator service accounts&amp;rdquo;
+ Don’t enable RBAC
+ Namespaces: usually use the default namespace, more sophisticated clients can use namespaces
+ Cluster per product
+ CRD that defines request for an OAuth2 token
+ Q: Would you want to tie it to a Kubernetes service account.</description>
+    </item>
+    
+    <item>
+      <title>current-state-of-client-libraries</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/current-state-of-client-libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/current-state-of-client-libraries/</guid>
+      <description>Story so far is described at /contributors/design-proposals/api-machinery/csi-client-structure-proposal.md - linked from https://github.com/kubernetes-client/community/blob/master/design-docs/clients-library-structure.md
+Would like libs to be more &amp;ldquo;fluent&amp;rdquo; - should join up with the native language features e.g. JavaDoc, per-platform
+OpenAPI (Swagger) has limitations which force ugly workarounds. - e.g. doesn&amp;rsquo;t cover returning different types in response to a call e.g. a result or an error. - OpenAPI 3 fixes a number of these limitations
+Key difficulty is which verbs apply to which objects - Go doesn&amp;rsquo;t natively have this concept.</description>
+    </item>
+    
+    <item>
+      <title>dashboard-ux-breakout</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/dashboard-ux-breakout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/dashboard-ux-breakout/</guid>
+      <description>Kubernetes Dashboard UX breakout session 12.5.17, led by Rahul Dhide (rahuldhide) and Dan Romlein
+ Resources:
+ Dashboard User Types #975
+ Dashboard User Types and Use Cases
+ SIG UI weekly
+  Notes
+ 2018 Dashboard strategy.
+ Deck
+ Github issue
+  Kubectl access via Dashboard.
+ Dhaval: Provide context to issues.  Third-party Widgets.
+ Custom Views.
+ Dhaval: Custom views will be very useful to share the event details, contextual information, and logs with specific time ranges.</description>
+    </item>
+    
+    <item>
+      <title>enabling-kubernetes-ecosystem</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/</guid>
+      <description>Kubernetes Ecosystem Notes by @directxman12
+ How do we e.g. have an object validator
+ Went looking, found 2, second b/c first didn’t work well enough  How do we enable people to build tools that consume and assist with working with Kubernetes
+ Kube-fuse, validatators, etc
+ How do we make those discoverable
+ Difficult to find via GitHub search
+ Difficult to find via search engines (find blog posts, etc, and not the tools)</description>
+    </item>
+    
+    <item>
+      <title>extending-kubernetes</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/extending-kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/extending-kubernetes/</guid>
+      <description>Extending Kubernetes Note Taker: Clayton Coleman (smarterclayton)
+ Questions
+ Do we have enough extension mechanisms?
+ See below
+ Implementing network injection that isn’t a CNI injection of some form is hard
+ e.g. adding in arbitrary network devices, for example   Are Flex Volumes enough?
+ Maybe?  Are we doing ok on kubectl extensions?
+ Yes, we’re heading in the right direction with plugins
+ Kubectl itself should be developed using its own mechanisms</description>
+    </item>
+    
+    <item>
+      <title>feature-roadmap-2018</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/feature-roadmap-2018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/feature-roadmap-2018/</guid>
+      <description>Contributor summit - Kubecon 2017
+@AUTHORS - CONNOR DOYLE
+@SLIDE AUTHORS ARE THE PRESENTERS
+@SKETCHNOTES AUTHOR DAN ROMLEIN
+2018 features and roadmap update Presenters: Jaice, Aparna, Ihor, Craig, Caleb
+Slidedeck: https://docs.google.com/presentation/d/10AcxtnYFT9Btg_oTV4yWGNRZy41BKK9OjK3rjwtje0g/edit?usp=sharing
+What is SIG PM: the &amp;ldquo;periscope&amp;rdquo; of Kubernetes
+ They look out for what’s next, translate what’s going on in the community to what that means for Kubernetes
+ Responsible for Roadmap and Features Process
+  Understanding the release notes is difficult sometimes since the docs aren&amp;rsquo;t always done by the time the release team is compiling the notes.</description>
+    </item>
+    
+    <item>
+      <title>feature-workflow</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/feature-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/feature-workflow/</guid>
+      <description>Feature Workflow Notes by @jberkus
+TSC: Getting something done in Kubernetes is byzantine. You need to know someone, who to ask, where to go. If you aren&amp;rsquo;t already involved in the Kubernetes community, it&amp;rsquo;s really hard to get involved. Vendors don&amp;rsquo;t know where to go.
+Jeremy: we had to watch the bug tracker to figure out what sig owned the thing we wanted to change.
+TSC: so you create a proposal.</description>
+    </item>
+    
+    <item>
+      <title>fixit201606</title>
+      <link>/sigs-and-wgs/events/2016/fixit201606/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/fixit201606/</guid>
+      <description>#Fixit Event June 2016
+Google runs internal fixit weeks. During these weeks the teams set aside all critical deadlines, showstopper bugs, regular development &amp;ndash; everything &amp;ndash; to pull together to achieve a common goal. And, we invite the Kubernetes community to join the June 2016 fixit.
+Please take a look at anything that is kind/flake or, with our 1.4 focus on &amp;ldquo;mean time to dopamine&amp;rdquo; for our users, help team/ux or spend time triaging, de-duplicating, or closing issues that were opened before 20160101 or check out the issues in our docs repository.</description>
+    </item>
+    
+    <item>
+      <title>kubernetes-client-libraries-open-space</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/</guid>
+      <description>Notes from the open space discussion at the Kubernetes Contributor Summit 2017 lead by @brendandburns
+Three high-level topics:
+ Client libraries and autogeneration OpenAPI description status Fluent libraries (ie. those with native sensibilities) - is this scalable given need for lots of hand-written code?  Early shout-out for the Common LISP client :)
+Currently Java, Python, .Net, Javascript clients are all silver. Reference to the badge and capabilities descriptions Python still outside the clients org - should this move from incubator?</description>
+    </item>
+    
+    <item>
+      <title>office-hours</title>
+      <link>/sigs-and-wgs/events/office-hours/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/office-hours/</guid>
+      <description>Kubernetes Community Office Hours Office Hours is a live stream where we answer live questions about Kubernetes from users on the YouTube channel. Office hours are a regularly scheduled meeting where people can bring topics to discuss with the greater community. They are great for answering questions, getting feedback on how you’re using Kubernetes, or to just passively learn by following along.
+When and Where Third Wednesday of every month, there are two sessions:</description>
+    </item>
+    
+    <item>
+      <title>onboarding-new-developers-through-better-docs</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/</guid>
+      <description>Onboarding Developers through Better Documentation
+@ K8s Contributor Summit, 12&amp;frasl;5
+Note Taker: Jared Bhatti (jaredbhatti), Andrew Chen (chenopis), Solly Ross (directxman12)
+[[TOC]]
+Goal  Understand how we’re currently onboarding developers now
+ Understand the &amp;ldquo;rough edges&amp;rdquo; of the onboarding experience for new users
+ Understand how we can better target the needs of our audience
+ Understand if our contributor process will meet the documentation needs.
+  Note: the focus is on documentation, so we won’t be able to act on suggestions outside of that (but we will consider them!</description>
+    </item>
+    
+    <item>
+      <title>role-of-sig-lead</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/role-of-sig-lead/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/role-of-sig-lead/</guid>
+      <description>What is the role of a sig lead Notetaker: @MHBauer
+Lots of sig leads are present in the room
+If there is a doc it’s years out of date
+Joe wants to redefine the session Power and role of sig leads is defined in how we pick these people. Voting? Membership? What do we do for governance in general
+Paul: Roles that are valuable that are not sig lead. Svc cat, moderator of discussions and took notes.</description>
+    </item>
+    
+    <item>
+      <title>scaling-new-contributors</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/scaling-new-contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/scaling-new-contributors/</guid>
+      <description>Scaling New Contributors Lead: Vishnu Kannan
+Notetaker: Chris Love
+New pull requests are plateauing in k/k Takes much longer for a PR to get through
+Contributor Experience 3 mo for PR merged - minor PR that was a fix Nobody reviewed - was ignored PRs are lacking process to get them on milestones Lack of organization and understanding PR process There is a need for a sig buyin We have a explicate state machine, instead of a implicate state machine We do have a well defined process for new contributors to follow We need to have committed resources to a PR, File an issue first, then file a PR When the needs sig is there, the issue will be processed and you can find out which sig</description>
+    </item>
+    
+    <item>
+      <title>scaling-up-and-scaling-down-and-addon-management</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/</guid>
+      <description>Scaling Up &amp;amp; Scaling Down &amp;amp; Addon Management Session… Notes by @justinsb
+Scaling Up &amp;amp; Scaling Down Lots of users that want to run on a single node cluster - one node, one core thockin’s position: 1 node 1 core should continue to work (with 3.75GB, but ideally less than 2GB) Works today but only just - e.g. you only have 0.2 cores left today Addons / core components written with a different target in mind Some of the choices not optimal for single node (e.</description>
+    </item>
+    
+    <item>
+      <title>session-notes</title>
+      <link>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/readme/</guid>
+      <description>Per the Template &amp;amp; Instruction Document, upload your session notes here with the name format:
+HHMM-HHMM_SESSIONTITLE.md
+where HHMM is the time in 24-hour format.</description>
+    </item>
+    
+    <item>
+      <title>should-k8s-use-feature-branches</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/should-k8s-use-feature-branches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/should-k8s-use-feature-branches/</guid>
+      <description>Should Kubernetes use feature branches? Lead: Brian Grant
+Note Taker(s): Aaron Crickenberger
+Focusing on our current release cadence:
+ We spend several weeks putting features in We spend several weeks stabilizing the week kinda/sortof  The people who are managing the release process don’t have the ability to push back and say this can’t go in and we don’t want to slip the release so they’re left powerless
+In earlier session today over breaking up monolith:</description>
+    </item>
+    
+    <item>
+      <title>statefulset_notes</title>
+      <link>/sigs-and-wgs/events/2016/developer-summit-2016/statefulset_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2016/developer-summit-2016/statefulset_notes/</guid>
+      <description>StatefulSets Session Topics to talk about: * local volumes * requests for the storage sig * reclaim policies * Filtering APIs for scheduler * Data locality * State of the StateFulSet * Portable IPs * Sticky Regions * Renaming Pods
+State of the StatefulSet 1.5 will come out soon, we&amp;rsquo;ll go beta for StatefulSets in that one. One of the questions is what are the next steps for Statefulsets? One thing is a long beta, so that we know we can trust statefulsets and they&amp;rsquo;re safe.</description>
+    </item>
+    
+    <item>
+      <title>steering-committee-update</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/steering-committee-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/steering-committee-update/</guid>
+      <description>Steering Committee Update Notes by @jberkus
+Showed list of Steering Committee backlog.
+We had a meeting, and the two big items we&amp;rsquo;d been pushing on hard were:
+ votining in the proposals in the bootstrap committee how we&amp;rsquo;re going to handle incubator and contrib etc.  Incubator/contrib: one of our big concerns are what the the consequences for projects and ecosystems. We&amp;rsquo;re still discussing it, please be patient. In the process of solving the incubator process, we have to answer what is kubernetes, which is probably SIGs, but what&amp;rsquo;s a SIG, and who decides, and &amp;hellip; we end up having to examine everything.</description>
+    </item>
+    
+    <item>
+      <title>whats-up-with-sig-cluster-lifecycle</title>
+      <link>/sigs-and-wgs/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/</guid>
+      <description>What&amp;rsquo;s Up with SIG-Cluster-Lifecycle Notes by @jberkus
+Luxas talking: I can go over what we did last year, but I&amp;rsquo;d like to see your ideas about what we should be doing for the future, especially around hosting etc.
+How can we make Kubeadm beta for next year? Opinions: * HA * etcd-multihost * some solution for apiserver, controller * Self-hosted Kubeadm
+Q: Can someone write a statement on purpose &amp;amp; scope of Kubeadm?</description>
+    </item>
+    
+  </channel>
+</rss>

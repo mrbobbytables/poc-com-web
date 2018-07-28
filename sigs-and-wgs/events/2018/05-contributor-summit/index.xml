@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>05-contributor-summit on Kubernetes Community</title>
+    <link>/sigs-and-wgs/events/2018/05-contributor-summit/</link>
+    <description>Recent content in 05-contributor-summit on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/events/2018/05-contributor-summit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>clientgo-notes</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/clientgo-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/clientgo-notes/</guid>
+      <description>Client-go Lead: munnerz with assist from lavalamp
+Slides: combined with the CRD session here (CRD is first; client-go is after)
+Thanks to our notetakers: kragniz, mrbobbytales, directxman12, onyiny-ang
+Goals for the Session  What is currently painful when building a controller Questions around best practices As someone new:  What is hard to grasp?  As someone experienced:  What important bits of info do you think are critical   Pain points when building controller  A lot of boilerplate  Work queues HasSynced functions Re-queuing  Lack of deep documentation in these areas  Some documentation exists, bot focused on k/k core  Securing webhooks &amp;amp; APIServers Validation schemas TLS, the number of certs is a pain point  It is hard right now, the internal k8s CA has been used a bit.</description>
+    </item>
+    
+    <item>
+      <title>crds-notes</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/crds-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/crds-notes/</guid>
+      <description>CRDs - future and painpoints Lead: sttts
+Slides: combined with the client-go session here
+Thanks to our notetakers: mrbobbytales, kragniz, tpepper, and onyiny-ang
+outlook - aggregation  API stable since 1.10. There is a lack of tools and library support. GSoC project with @xmudrii: share etcd storage  kubectl create etcdstorage your api-server  Store custom data in etcd  outlook custom resources 1.11: * alpha: multiplier versions with/without conversion * alpha: pruning - blocker for GA - unspecified fields are removed * deep change of semantics of custom resources * from JSON blob store to schema based storage * alpha: defaulting - defaults from openapi validation schema are applied * alpha: graceful deletion - (maybe?</description>
+    </item>
+    
+    <item>
+      <title>devtools-notes</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/devtools-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/devtools-notes/</guid>
+      <description>Developer Tools: Leads: errordeveloper, r2d4
+Slides: n/a
+Thanks to our notetakers: mrbobbytales, onyiny-ang
+What APIs should we target, what parts of the developer workflow haven&amp;rsquo;t been covered yet?
+ Do you think the Developer tools for Kubernetes is a solved problem?  A: No   Long form responses from SIG Apps survey  Need to talk about developer experience Kubernetes Community can do a lot more in helping evangelize Software development workflow, including CI/CD.</description>
+    </item>
+    
+    <item>
+      <title>networking-notes</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/networking-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/networking-notes/</guid>
+      <description>Networking Lead: thockin
+Slides: here
+Thanks to our notetakers: onyiny-ang, mrbobbytales, tpepper
+This session is not declaring what&amp;rsquo;s being implemented next, but rather laying out the problems that loom.
+Coming soon  kube-proxy with IPVS  currently beta  core DNS replacing kube DNS  currently beta  pod &amp;ldquo;ready++&amp;rdquo;  allow external systems to participate in rolling updates. Say your load-balancer takes 5-10 seconds to program, when you bring up new pod and take down old pod the load balancer has lost old backends but hasn&amp;rsquo;t yet added new backends.</description>
+    </item>
+    
+    <item>
+      <title>new-contributor-notes</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-notes/</guid>
+      <description>Kubernetes New Contributor Workshop - KubeCon EU 2018 - Notes Joining in the beginning was onboarding on a yacht Now is more onboarding a BIG cruise ship.
+Will be a Hard schedule, and let&amp;rsquo;s hope we can achieve everything Sig-contributor-experience -&amp;gt; from Non-member contributors to Owner
+SIG presentation  SIG-docs &amp;amp; SIG-contributor-experience: Docs and website contribution SIG-testing: Testing contribution SIG-* (depends on the area to contribute on): Code contribution  =&amp;gt; Find your first topics: bug, feature, learning, community development and documentation</description>
+    </item>
+    
+    <item>
+      <title>new-contributor-workshop</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-workshop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-workshop/</guid>
+      <description>Kubernetes Summit: New Contributor Workshop
+This was presented as one continuous 3-hour training with a break. For purposes of live coding exercises, participants were asked to bring a laptop with git installed.
+This course was captured on video, and the playlist can be found here.
+Course Playlist Part One: * Opening * Welcome contributors * Who this is for * Program * The contributor ladder * CLA signing * Why we have a CLA * Going through the signing process * Choose Your Own Adventure: Figuring out where to contribute * Docs &amp;amp; Website * Testing * Community management * Code * Main code * Drivers, platforms, plugins, subprojects * Finding your first topic * Things that fit into your work at work * Interest match * Skills match * Choose your own adventure exercise * Let&amp;rsquo;s talk: Communication * Importance of communication * Community standards and courtesy * Mailing Lists (esp Kube-dev) * Slack * Github Issues &amp;amp; PRs * Zoom meetings &amp;amp; calendar * Office hours, MoC, other events * Meetups * Communication exercise * The SIG system * What are SIGs and WGs * Finding the right SIG * Most active SIGs * SIG Membership, governance * WGs and Subprojects * Repositories * Tour de Repo * Core Repo * Website/docs * Testing * Other core repos * Satellite Repos * Owners files * Repo membership * BREAK (20min)</description>
+    </item>
+    
+    <item>
+      <title>steering-update</title>
+      <link>/sigs-and-wgs/events/2018/05-contributor-summit/steering-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/events/2018/05-contributor-summit/steering-update/</guid>
+      <description>Steering Committee Update Leads: pwittrock, timothysc
+Thanks to our notetaker: tpepper
+ incubation is deprecated, &amp;ldquo;associated&amp;rdquo; projects are a thing WG are horizontal across SIGs and are ephemeral. Subprojects own a piece of code and relate to a SIG. Example: SIG-Cluster-Lifecycle with kubeadm, kops, etc. under it. SIG charters: PR a proposed new SIG with the draft charter. Discussion can then happen on GitHub around the evolving charter. This is cleaner and more efficient than discussing on mailing list.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kubernetes Community</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.44" />
+
+<title>slos :: Kubernetes Community</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/sigs-and-wgs/sig-scalability/slos/slos/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="/">Kubernetes Community</a>
+  
+
+    </div>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        <section id="shortcuts">
+                <li class="" role=""><a href="/sig-list/"  rel="noopener">sig list</a></li>
+        </section>
+    <li data-nav-id="/sigs-and-wgs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/">sigs-and-wgs</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/">
+            contributor-guide-building-your-kubernetes-tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/migrated-from-wiki/roadmap-kubectl/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/migrated-from-wiki/roadmap-kubectl/">
+            roadmap-kubectl
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+
+
+
+ <a href='/'>Kubernetes Community</a> > <a href='/sigs-and-wgs/'>sigs-and-wgs</a> > <a href='/sigs-and-wgs/sig-scalability/'>sig-scalability</a> > slos
+
+ 
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#kubernetes-scalability-and-performance-slis-slos">Kubernetes scalability and performance SLIs/SLOs</a>
+<ul>
+<li><a href="#what-kubernetes-guarantees">What Kubernetes guarantees?</a></li>
+<li><a href="#what-do-we-require-from-slis-slos">What do we require from SLIs/SLOs?</a></li>
+<li><a href="#types-of-slos">Types of SLOs</a>
+<ul>
+<li><a href="#steady-state-slos">Steady state SLOs</a></li>
+<li><a href="#burst-slo">Burst SLO</a></li>
+</ul></li>
+<li><a href="#environment">Environment</a></li>
+<li><a href="#thresholds">Thresholds</a></li>
+<li><a href="#kubernetes-slis-slos">Kubernetes SLIs/SLOs</a>
+<ul>
+<li><a href="#steady-state-slis-slos">Steady state SLIs/SLOs</a></li>
+<li><a href="#burst-slis-slos">Burst SLIs/SLOs</a></li>
+<li><a href="#other-slis">Other SLIs</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>slos</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<h1 id="kubernetes-scalability-and-performance-slis-slos">Kubernetes scalability and performance SLIs/SLOs</h1>
+
+<h2 id="what-kubernetes-guarantees">What Kubernetes guarantees?</h2>
+
+<p>One of the important aspects of Kubernetes is its scalability and performance
+characteristic. As Kubernetes user or operator/administrator of a cluster
+you would expect to have some guarantees in those areas.</p>
+
+<p>The goal of this doc is to organize the guarantees that Kubernetes provides
+in these areas.</p>
+
+<h2 id="what-do-we-require-from-slis-slos">What do we require from SLIs/SLOs?</h2>
+
+<p>We are going to define more SLIs and SLOs based on the most important indicators
+in the system.</p>
+
+<p>Our SLOs need to have the following properties:
+- <b> They need to be testable </b> <br/>
+  That means that we need to have a benchmark to measure if it&rsquo;s met.
+- <b> They need to be understandable for users </b> <br/>
+  In particular, they need to be understandable for people not familiar
+  with the system internals, i.e. their formulation can&rsquo;t depend on some
+  arcane knowledge.</p>
+
+<p>However, we may introduce some internal (for developers only) SLIs, that
+may be useful for understanding performance characterstic of the system,
+but for which we don&rsquo;t provide any guarantees for users and thus may not
+be fully understandable for users.</p>
+
+<p>On the other hand, we do NOT require that our SLOs:
+- are measurable in a running cluster (though that&rsquo;s desired if possible) <br/>
+  In other words, not SLOs need to be easily translatable to SLAs.
+  Being able to benchmark is enough for us.</p>
+
+<h2 id="types-of-slos">Types of SLOs</h2>
+
+<p>While SLIs are very generic and don&rsquo;t really depend on anything (they just
+define what and how we measure), it&rsquo;s not the case for SLOs.
+SLOs provide guarantees, and satisfying them may depend on meeting some
+specific requirements.</p>
+
+<p>As a result, we build our SLOs in &ldquo;you promise, we promise&rdquo; format.
+That means, that we provide you a guarantee only if you satisfy the requirement
+that we put on you.</p>
+
+<p>As a consequence we introduce the two types of SLOs.</p>
+
+<h3 id="steady-state-slos">Steady state SLOs</h3>
+
+<p>With steady state SLOs, we provide guarantees about system&rsquo;s behavior during
+normal operations. We are able to provide much more guarantees in that situation.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Definition" data-lang="Definition">We define system to be in steady state when the cluster churn per second is &lt;= 20, where
+
+churn = #(Pod spec creations/updates/deletions) + #(user originated requests) in a given second</code></pre></div>
+<h3 id="burst-slo">Burst SLO</h3>
+
+<p>With burst SLOs, we provide guarantees on how system behaves under the heavy load
+(when user wants the system to do something as quickly as possible not caring too
+much about response time).</p>
+
+<h2 id="environment">Environment</h2>
+
+<p>In order to meet the SLOs, system must run in the environment satisfying
+the following criteria:
+- Runs a single or more appropriate sized master machines
+- Main etcd running on master machine(s)
+- Events are stored in a separate etcd running on the master machine(s)
+- Kubernetes version is at least X.Y.Z
+- &hellip;</p>
+
+<p><strong>TODO: Document other necessary configuration.</strong></p>
+
+<h2 id="thresholds">Thresholds</h2>
+
+<p>To make the cluster eligible for SLO, users also can&rsquo;t have too many objects in
+their clusters. More concretely, the number of different objects in the cluster
+MUST satisfy thresholds defined in <a href="/sig-scalability/configs-and-limits/thresholds.md">thresholds file</a>.</p>
+
+<h2 id="kubernetes-slis-slos">Kubernetes SLIs/SLOs</h2>
+
+<p>The currently existing SLIs/SLOs are enough to guarantee that cluster isn&rsquo;t
+completely dead. However, the are not enough to satisfy user&rsquo;s needs in most
+of the cases.</p>
+
+<p>We are looking into extending the set of SLIs/SLOs to cover more parts of
+Kubernetes.</p>
+
+<pre><code>Prerequisite: Kubernetes cluster is available and serving.
+</code></pre>
+
+<h3 id="steady-state-slis-slos">Steady state SLIs/SLOs</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>SLI</th>
+<th>SLO</th>
+<th>User stories, test scenarios, &hellip;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Official</strong></td>
+<td>Latency<sup><a href="#footnote1">1</a></sup> of mutating<sup><a href="#footnote2">2</a></sup> API calls for single objects for every (resource, verb) pair, measured as 99th percentile over last 5 minutes</td>
+<td>In default Kubernetes installation, for every (resource, verb) pair, excluding virtual and aggregated resources and Custom Resource Definitions, 99th percentile per cluster-day<sup><a href="#footnote3">3</a></sup> &lt;= 1s</td>
+<td><a href="./api_call_latency">Details</a></td>
+</tr>
+
+<tr>
+<td><strong>Official</strong></td>
+<td>Latency<sup><a href="#footnote1">1</a></sup> of non-streaming read-only<sup><a href="#footnote3">4</a></sup> API calls for every (resource, scope<sup><a href="#footnote4">5</a></sup>) pair, measured as 99th percentile over last 5 minutes</td>
+<td>In default Kubernetes installation, for every (resource, scope) pair, excluding virtual and aggregated resources and Custom Resource Definitions, 99th percentile per cluster-day (a) &lt;= 1s if <code>scope=resource</code> (b) &lt;= 5s if <code>scope=namespace</code> &copy; &lt;= 30s if <code>scope=cluster</code></td>
+<td><a href="./api_call_latency">Details</a></td>
+</tr>
+
+<tr>
+<td><strong>Official</strong></td>
+<td>Startup latency of stateless<sup><a href="#footnode6">6</a></sup> and schedulable<sup><a href="#footnote7">7</a></sup> pods, excluding time to pull images and run init containers, measured from pod creation timestamp to when all its containers are reported as started and observed via watch, measured as 99th percentile over last 5 minutes</td>
+<td>In default Kubernetes installation, 99th percentile per cluster-day &lt;= 5s</td>
+<td><a href="./pod_startup_latency">Details</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="footnote1">[1]</a>By latency of API call in this doc we mean time
+from the moment when apiserver gets the request to last byte of response sent
+to the user.</p>
+
+<p><a name="footnote2">[2]</a>By mutating API calls we mean POST, PUT, DELETE
+and PATCH.</p>
+
+<p><a name="footnote3">[3]</a> For the purpose of visualization it will be a
+sliding window. However, for the purpose of reporting the SLO, it means one
+point per day (whether SLO was satisfied on a given day or not).</p>
+
+<p><a name="footnote4">[4]</a>By non-streaming read-only API calls we mean GET
+requests without <code>watch=true</code> option set. (Note that in Kubernetes internally
+it translates to both GET and LIST calls).</p>
+
+<p><a name="footnote5">[5]</a>A scope of a request can be either (a) <code>resource</code>
+if the request is about a single object, (b) <code>namespace</code> if it is about objects
+from a single namespace or &copy; <code>cluster</code> if it spawns objects from multiple
+namespaces.</p>
+
+<p><a name="footnode6">[6]</a>A <code>stateless pod</code> is defined as a pod that doesn&rsquo;t
+mount volumes with sources other than secrets, config maps, downward API and
+empty dir.</p>
+
+<p><a name="footnode7">[7]</a>By schedulable pod we mean a pod that can be
+scheduled in the cluster without causing any preemption.</p>
+
+<h3 id="burst-slis-slos">Burst SLIs/SLOs</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>SLI</th>
+<th>SLO</th>
+<th>User stories, test scenarios, &hellip;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>WIP</td>
+<td>Time to start 30*#nodes pods, measured from test scenario start until observing last Pod as ready</td>
+<td>Benchmark: when all images present on all Nodes, 99th percentile &lt;= X minutes</td>
+<td><a href="./system_throughput">Details</a></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="other-slis">Other SLIs</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>SLI</th>
+<th>User stories, &hellip;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>WIP</td>
+<td>Watch latency for every resource, (from the moment when object is stored in database to when it&rsquo;s ready to be sent to all watchers), measured as 99th percentile over last 5 minutes</td>
+<td>TODO</td>
+</tr>
+
+<tr>
+<td>WIP</td>
+<td>Admission latency for each admission plugin type, measured as 99th percentile over last 5 minutes</td>
+<td><a href="./api_extensions_latency">Details</a></td>
+</tr>
+
+<tr>
+<td>WIP</td>
+<td>Webhook call latency for each webhook type, measured as 99th percentile over last 5 minutes</td>
+<td><a href="./api_extensions_latency">Details</a></td>
+</tr>
+
+<tr>
+<td>WIP</td>
+<td>Initializer latency for each initializer, measured as 99th percentile over last 5 minutes</td>
+<td><a href="./api_extensions_latency">Details</a></td>
+</tr>
+</tbody>
+</table>
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

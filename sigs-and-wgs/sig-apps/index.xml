@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-apps on Kubernetes Community</title>
+    <link>/sigs-and-wgs/sig-apps/</link>
+    <description>Recent content in sig-apps on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/sig-apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CONTRIBUTING</title>
+      <link>/sigs-and-wgs/sig-apps/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/sig-apps/contributing/</guid>
+      <description>Contributing to SIG Apps Welcome to contributing to SIG Apps.
+SIG Apps has multiple areas you can contribute to. Those contributions can be in the form of code, documentation, support, being involved in mailing list discussions, attending meetings, and more. This guide describes different major functional areas SIG Apps is involved in, provides an overview of the areas, and gives pointers on getting more involved in each area. Consider this a launching point or the start of a choose your own adventure for SIG Apps.</description>
+    </item>
+    
+    <item>
+      <title>agenda</title>
+      <link>/sigs-and-wgs/sig-apps/agenda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/sig-apps/agenda/</guid>
+      <description>Agenda Note, the minutes and agenda have moved to Google Docs.
+August 17, 2016  Intro / Agenda Brian Hardock of the Deis Helm team will demo Helm.  Helm is a tool for creating and managing Kubernetes native applications.  Adnan Abdulhussein from Bitnami will walk us through example helm charts for Kubernetes native applications  August 10, 2016  Intro / Agenda PoC demo and discussion of AppController Working discussion of Pet Set beta steps led by Clayton Coleman and Prashanth B.</description>
+    </item>
+    
+  </channel>
+</rss>

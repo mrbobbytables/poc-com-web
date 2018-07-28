@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Committee-code-of-conducts on Kubernetes Community</title>
+    <link>/committee-code-of-conduct/</link>
+    <description>Recent content in Committee-code-of-conducts on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/committee-code-of-conduct/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bootstrapping-process</title>
+      <link>/committee-code-of-conduct/bootstrapping-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/committee-code-of-conduct/bootstrapping-process/</guid>
+      <description>Bootstrapping Document for Kubernetes Code of Conduct Committee This document (created by the Kubernetes Steering Committee) outlines what the Code of Conduct Committee (CoCC) is responsible for, how to create it, and the rough processes for them to get started.
+Objectives of the CoCC  Maintain the Code of Conduct (CoC) document and iterate as needed.  All CoC revisions must be approved by the Steering Committee. Currently, we use the CNCF CoC.</description>
+    </item>
+    
+  </channel>
+</rss>

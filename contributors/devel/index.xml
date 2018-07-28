@@ -88,7 +88,7 @@ Several make rules have been created for common operations:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contributors/devel/cherry-picks/</guid>
-      <description>Overview This document explains how cherry picks are managed on release branches within the Kubernetes projects.
+      <description>Overview This document explains how cherry picks are managed on release branches within the Kubernetes projects. A common use case for this task is for backporting PRs from master to release branches.
 Prerequisites  Contributor License Agreement is considered implicit for all code within cherry-pick pull requests, unless there is a large conflict. A pull request merged against the master branch. Release branch exists. The normal git and GitHub configured shell environment for pushing to your kubernetes origin fork on GitHub and making a pull request against a configured remote upstream that tracks &amp;ldquo;https://github.</description>
     </item>
     
@@ -117,6 +117,16 @@ Prerequisites  Contributor License Agreement is considered implicit for all code
       
       <guid>/contributors/devel/component-config-conventions/</guid>
       <description>Component Configuration Conventions Objective This document concerns the configuration of Kubernetes system components (as opposed to the configuration of user workloads running on Kubernetes). Component configuration is a major operational burden for operators of Kubernetes clusters. To date, much literature has been written on and much effort expended to improve component configuration. Despite this, the state of component configuration remains dissonant. This document attempts to aggregate that literature and propose a set of guidelines that component owners can follow to improve consistency across the project.</description>
+    </item>
+    
+    <item>
+      <title>conformance-tests</title>
+      <link>/contributors/devel/conformance-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/conformance-tests/</guid>
+      <description>Conformance Testing in Kubernetes The Kubernetes conformance test suite is a set of testcases, currently a subset of the integration/e2e tests, that the Architecture SIG has approved to define the core set of interoperable features that all Kubernetes deployments must support.
+Contributors must write and submit e2e tests first (approved by owning Sigs). Once the new tests prove to be stable in CI runs, later create a follow up PR to add the test to conformance.</description>
     </item>
     
     <item>
@@ -245,7 +255,7 @@ Prerequisites Install the vendor driver on all nodes (also on master nodes if &a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contributors/devel/generating-clientset/</guid>
-      <description>Generation and release cycle of clientset Client-gen is an automatic tool that generates clientset based on API types. This doc introduces the use the client-gen, and the release cycle of the generated clientsets.
+      <description>Generation and release cycle of clientset Client-gen is an automatic tool that generates clientset based on API types. This doc introduces the use of client-gen, and the release cycle of the generated clientsets.
 Using client-gen The workflow includes three steps:
 1. Marking API types with tags: in pkg/apis/${GROUP}/${VERSION}/types.go, mark the types (e.g., Pods) that you want to generate clients for with the // +genclient tag. If the resource associated with the type is not namespace scoped (e.</description>
     </item>

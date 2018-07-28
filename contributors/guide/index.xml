@@ -72,6 +72,18 @@ The Kubernetes issues are listed at https://github.com/kubernetes/kubernetes/iss
     </item>
     
     <item>
+      <title>non-code-contributions</title>
+      <link>/contributors/guide/non-code-contributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/non-code-contributions/</guid>
+      <description>Non-code Contributions This section is new and in progress. Expect this document to change often.
+If you are interested in helping define and structure this work, check the weekly meeting notes for information on how to get involved. You can also find us in the SIG Contributor Experience slack channel.
+New contributors welcome!
+ Plan of attack  Identify Non-Dev focused roles  Tasks tied to these roles Examples:  Technical project leadership  SIG contribution  Leading contributor communities Promotion of people and projects  Recognition  Managing communication tools  Zoom, Slack, Discourse, &amp;hellip;  Writing articles/blogs  Capture it somewhere, not sure where yet Feed into Kube.</description>
+    </item>
+    
+    <item>
       <title>owners</title>
       <link>/contributors/guide/owners/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>content on Kubernetes Community</title>
+    <title>Kubernetes Community</title>
     <link>/</link>
-    <description>Recent content in content on Kubernetes Community</description>
+    <description>Recent content on Kubernetes Community</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -31,177 +31,13 @@ status: implementable Kubernetes Enhancement Proposal Process Table of Contents 
     </item>
     
     <item>
-      <title>0002-cloud-controller-manager</title>
-      <link>/keps/sig-cloud-provider/0002-cloud-controller-manager/</link>
+      <title>0018-20180711-azure-availability-zones</title>
+      <link>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/keps/sig-cloud-provider/0002-cloud-controller-manager/</guid>
-      <description>kep-number: 2 title: Cloud Provider Controller Manager authors: - &amp;ldquo;@cheftako&amp;rdquo; - &amp;ldquo;@calebamiles&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; owning-sig: sig-apimachinery participating-sigs: - sig-apps - sig-aws - sig-azure - sig-cloud-provider - sig-gcp - sig-network - sig-openstack - sig-storage reviewers: - &amp;ldquo;@andrewsykim&amp;rdquo; - &amp;ldquo;@calebamiles&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; - &amp;ldquo;@jagosan&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: TBD status: provisional replaces:
-- contributors/design-proposals/cloud-provider/cloud-provider-refactoring.md Remove Cloud Provider Code From Kubernetes Core Table of Contents  Remove Cloud Provider Code From Kubernetes Core  Table of Contents Summary Motivation  Goals Intermediary Goals Non-Goals  Proposal  Controller Manager Changes Kubelet Changes API Server Changes Volume Management Changes Deployment Changes Implementation Details/Notes/Constraints  Repository Requirements  Notes for Repository Requirements Repository Timeline   Security Considerations  Graduation Criteria  Graduation to Beta  Process Goals   Implementation History Alternatives   Summary We want to remove any cloud provider specific logic from the kubernetes/kubernetes repo.</description>
-    </item>
-    
-    <item>
-      <title>0003-cluster-api</title>
-      <link>/keps/sig-cluster-lifecycle/0003-cluster-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cluster-lifecycle/0003-cluster-api/</guid>
-      <description>kep-number: 3 title: Kubernetes Cluster Management API status: provisional authors: - &amp;ldquo;@roberthbailey&amp;rdquo; - &amp;ldquo;@pipejakob&amp;rdquo; owning-sig: sig-cluster-lifecycle reviewers: - &amp;ldquo;@thockin&amp;rdquo; approvers: - &amp;ldquo;@roberthbailey&amp;rdquo; editor: - &amp;ldquo;@roberthbailey&amp;rdquo; creation-date: 2018-01-19
-last-updated: 2018-01-22 Kubernetes Cluster Management API Table of Contents  Kubernetes Cluster Management API  Metadata Table of Contents Summary Motivation Goals Non-goals Challenges and Open Questions Proposal Driving Use Cases Cluster-level API Machine API  Capabilities Overview In-place vs. Replace Omitted Capabilities Conditions Types  Graduation Criteria Implementation History Drawbacks Alternatives   Summary We are building a set of Kubernetes cluster management APIs to enable common cluster lifecycle operations (install, upgrade, repair, delete) across disparate environments.</description>
-    </item>
-    
-    <item>
-      <title>0003-testgrid-conformance-e2e</title>
-      <link>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</guid>
-      <description>kep-number: 003 title: Reporting Conformance Test Results to Testgrid authors: - &amp;ldquo;@andrewsykim&amp;rdquo; owning-sig: sig-cloud-provider participating-sigs: - sig-testing - sig-release - sig-aws - sig-azure - sig-gcp - sig-ibmcloud - sig-openstack - sig-vmware reviewers: - TBD approvers: - TBD editor: TBD creation-date: 2018-06-06 last-updated: 2018-06-06 status: provisional
-Reporting Conformance Test Results to Testgrid Table of Contents  Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History  Summary This is a KEP outlining the motivation behind why cloud providers should periodically upload E2E conformance test results to Testgrid and how a cloud provider can go about doing this.</description>
-    </item>
-    
-    <item>
-      <title>0004-bootstrap-checkpointing</title>
-      <link>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</guid>
-      <description>kep-number: 4 title: Kubernetes Bootstrap Checkpointing Proposal status: implemented authors: - &amp;ldquo;@timothysc&amp;rdquo; owning-sig: sig-cluster-lifecycle participating-sigs: - sig-node reviewers: - &amp;ldquo;@yujuhong&amp;rdquo; - &amp;ldquo;@luxas&amp;rdquo; - &amp;ldquo;@roberthbailey&amp;rdquo; approvers: - &amp;ldquo;@yujuhong&amp;rdquo; - &amp;ldquo;@roberthbailey&amp;rdquo; editor: name: &amp;ldquo;@timothysc&amp;rdquo; creation-date: 2017-10-20
-last-updated: 2018-01-23 Kubernetes Bootstrap Checkpointing Proposal Table of Contents  Summary Objectives  Goals Non-Goals  Proposal  User Stories  Graduation Criteria Implementation History Unresolved Questions  Summary There are several methods to deploy a kubernetes cluster, one method that offers some unique advantages is self hosting.</description>
-    </item>
-    
-    <item>
-      <title>0004-cloud-provider-template</title>
-      <link>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</guid>
-      <description>kep-number: 4 title: Cloud Provider Template authors: - &amp;ldquo;@janedoe&amp;rdquo; owning-sig: sig-cloud-provider participating-sigs: - sig-aaa - sig-bbb reviewers: - TBD - &amp;ldquo;@alicedoe&amp;rdquo; approvers: - &amp;ldquo;@andrewsykim&amp;rdquo; - &amp;ldquo;@hogepodge&amp;rdquo; - &amp;ldquo;@jagosan&amp;rdquo; editor: TBD creation-date: yyyy-mm-dd last-updated: yyyy-mm-dd status: provisional see-also: - KEP-1 - KEP-2 replaces: - KEP-3 superseded-by:
-- KEP-100 Cloud Provider FooBar This is a KEP template, outlining how to propose a new cloud provider into the Kubernetes ecosystem.
-Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Requirements Proposal  Summary This is where you add a summary of your cloud provider and other additional information about your cloud provider that others may find useful.</description>
-    </item>
-    
-    <item>
-      <title>0005-contributor-site</title>
-      <link>/keps/sig-contributor-experience/0005-contributor-site/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-contributor-experience/0005-contributor-site/</guid>
-      <description>kep-number: 5 title: Contributor Site authors: - &amp;ldquo;@jbeda&amp;rdquo; owning-sig: sig-contributor-experience participating-sigs: - sig-architecture - sig-docs reviewers: - &amp;ldquo;@castrojo&amp;rdquo; approvers: - &amp;ldquo;@parispittman&amp;rdquo; editor: TBD creation-date: &amp;ldquo;2018-02-19&amp;rdquo; last-updated: &amp;ldquo;2018-03-07&amp;rdquo;
-status: implementable Contributor Site Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Risks and Mitigations  Graduation Criteria Implementation History Drawbacks Alternatives  Summary We need a way to organize and publish information targeted at contributors.</description>
-    </item>
-    
-    <item>
-      <title>0006-apply</title>
-      <link>/keps/0006-apply/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/0006-apply/</guid>
-      <description>kep-number: 6 title: Apply authors: - &amp;ldquo;@lavalamp&amp;rdquo; owning-sig: sig-api-machinery participating-sigs: - sig-api-machinery - sig-cli reviewers: - &amp;ldquo;@pwittrock&amp;rdquo; - &amp;ldquo;@erictune&amp;rdquo; approvers: - &amp;ldquo;@bgrant0607&amp;rdquo; editor: TBD creation-date: 2018-03-28 last-updated: 2018-03-28 status: provisional see-also: - n/a replaces: - n/a superseded-by:
-- n/a Apply Table of Contents  Apply  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints [optional] Risks and Mitigations  Graduation Criteria Implementation History Drawbacks Alternatives   Summary kubectl apply is a core part of the Kubernetes config workflow, but it is buggy and hard to fix.</description>
-    </item>
-    
-    <item>
-      <title>0007-20180403-community-forum</title>
-      <link>/keps/sig-contributor-experience/0007-20180403-community-forum/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-contributor-experience/0007-20180403-community-forum/</guid>
-      <description>kep-number: 0007 title: A community forum for Kubernetes authors: - &amp;ldquo;@castrojo&amp;rdquo; owning-sig: sig-contributor-experience participating-sigs: reviewers: - &amp;ldquo;@jberkus&amp;rdquo; - &amp;ldquo;@joebeda&amp;rdquo; - &amp;ldquo;@cblecker&amp;rdquo; approvers: - &amp;ldquo;@parispittman&amp;rdquo; - &amp;ldquo;@grodrigues3&amp;rdquo;
-editor: TBD creation-date: 2018-04-03 last-updated: 2018-04-17
-status: provisional A community forum for Kubernetes Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  User Stories [optional]  Story 1 Story 2  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History Drawbacks  Summary Kubernetes is large enough that we should take a more active role in growing our community.</description>
-    </item>
-    
-    <item>
-      <title>0007-pod-ready&#43;&#43;</title>
-      <link>/keps/sig-network/0007-pod-ready&#43;&#43;/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-network/0007-pod-ready&#43;&#43;/</guid>
-      <description>kep-number: 1 title: Pod Ready++ authors: - &amp;ldquo;freehan@&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-node - sig-cli reviewers: - thockin@ - dchen1107@ approvers: - thockin@ - dchen1107@ editor: freehan@ creation-date: 2018-04-01 last-updated: 2018-04-01 status: provisional
-Pod Ready++ Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History Alternatives  Summary This proposal aims to add extensibility to pod readiness.</description>
-    </item>
-    
-    <item>
-      <title>0008-20180430-promote-sysctl-annotations-to-fields</title>
-      <link>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</guid>
-      <description>kep-number: 8 title: Protomote sysctl annotations to fields authors: - &amp;ldquo;@ingvagabund&amp;rdquo; owning-sig: sig-node participating-sigs: - sig-auth reviewers: - &amp;ldquo;@sjenning&amp;rdquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; approvers: - &amp;ldquo;@sjenning &amp;ldquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; editor: creation-date: 2018-04-30 last-updated: 2018-05-02 status: provisional see-also: replaces:
-superseded-by: Promote sysctl annotations to fields Table of Contents  Promote sysctl annotations to fields  Table of Contents Summary Motivation  Promote annotations to fields Promote &amp;ndash;experimental-allowed-unsafe-sysctls kubelet flag to kubelet config api option Gate the feature  Proposal  User Stories Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History   Summary Setting the sysctl parameters through annotations provided a successful story for defining better constraints of running applications.</description>
-    </item>
-    
-    <item>
-      <title>0008-20180504-kubeadm-config-beta</title>
-      <link>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</guid>
-      <description>kep-number: draft-20180412 title: Kubeadm Config Draft authors: - &amp;ldquo;@liztio&amp;rdquo; owning-sig: sig-cluster-lifecycle participating-sigs: [] reviewers: - &amp;ldquo;@timothysc&amp;rdquo; approvers: - TBD editor: TBD creation-date: 2018-04-12 last-updated: 2018-04-12 status: draft see-also: [] replaces: []
-superseded-by: [] Kubeadm Config to Beta Table of Contents A table of contents is helpful for quickly jumping to sections of a KEP and for highlighting any additional information provided beyond the standard KEP template.
-Table of Contents</description>
-    </item>
-    
-    <item>
-      <title>0008-kustomize</title>
-      <link>/keps/sig-cli/0008-kustomize/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cli/0008-kustomize/</guid>
-      <description>kep-number: 8 title: Kustomize authors: - &amp;ldquo;@pwittrock&amp;rdquo; - &amp;ldquo;@monopole&amp;rdquo; owning-sig: sig-cli participating-sigs: - sig-cli reviewers: - &amp;ldquo;@droot&amp;rdquo; approvers: - &amp;ldquo;@soltysh&amp;rdquo; editor: &amp;ldquo;@droot&amp;rdquo; creation-date: 2018-05-05 last-updated: 2018-05-23 status: implemented see-also: - n/a replaces: - kinflate # Old name for kustomize superseded-by:
-- n/a Kustomize Table of Contents  Kustomize  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints [optional] Risks and Mitigations Risks of Not Having a Solution  Graduation Criteria Implementation History Drawbacks Alternatives FAQ   Summary Declarative specification of Kubernetes objects is the recommended way to manage Kubernetes production workloads, however gaps in the kubectl tooling force users to write their own scripting and tooling to augment the declarative tools with preprocessing transformations.</description>
-    </item>
-    
-    <item>
-      <title>0009-node-heartbeat</title>
-      <link>/keps/sig-node/0009-node-heartbeat/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-node/0009-node-heartbeat/</guid>
-      <description>kep-number: 8 title: Efficient Node Heartbeat authors: - &amp;ldquo;@wojtek-t&amp;rdquo; - &amp;ldquo;with input from @bgrant0607, @dchen1107, @yujuhong, @lavalamp&amp;rdquo; owning-sig: sig-node participating-sigs: - sig-scalability - sig-apimachinery - sig-scheduling reviewers: - &amp;ldquo;@deads2k&amp;rdquo; - &amp;ldquo;@lavalamp&amp;rdquo; approvers: - &amp;ldquo;@dchen1107&amp;rdquo; - &amp;ldquo;@derekwaynecarr&amp;rdquo; editor: TBD creation-date: 2018-04-27 last-updated: 2018-04-27 status: implementable see-also: - https://github.com/kubernetes/kubernetes/issues/14733 - https://github.com/kubernetes/kubernetes/pull/14735 replaces: - n/a superseded-by:
-- n/a Efficient Node Heartbeats Table of Contents Table of Contents  Efficient Node Heartbeats  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Risks and Mitigations  Graduation Criteria Implementation History Alternatives  Dedicated “heartbeat” object instead of “leader election” one Events instead of dedicated heartbeat object Reuse the Component Registration mechanisms Split Node object into two parts at etcd level Delta compression in etcd Replace etcd with other database    Summary Node heartbeats are necessary for correct functioning of Kubernetes cluster.</description>
-    </item>
-    
-    <item>
-      <title>0010-20180314-coredns-GA-proposal</title>
-      <link>/keps/sig-network/0010-20180314-coredns-ga-proposal/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-network/0010-20180314-coredns-ga-proposal/</guid>
-      <description>kep-number: 10 title: Graduate CoreDNS to GA authors: - &amp;ldquo;@johnbelamaric&amp;rdquo; - &amp;ldquo;@rajansandeep&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-cluster-lifecycle reviewers: - &amp;ldquo;@bowei&amp;rdquo; - &amp;ldquo;@thockin&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: &amp;ldquo;@rajansandeep&amp;rdquo; creation-date: 2018-03-21 last-updated: 2018-05-18 status: provisional
-see-also: https://github.com/kubernetes/community/pull/2167 Graduate CoreDNS to GA Table of Contents  Summary Motivation  Goals Non-Goals  Proposal  User Cases  Graduation Criteria Implementation History  Summary CoreDNS is sister CNCF project and is the successor to SkyDNS, on which kube-dns is based.</description>
-    </item>
-    
-    <item>
-      <title>0011-ipvs-proxier</title>
-      <link>/keps/sig-network/0011-ipvs-proxier/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-network/0011-ipvs-proxier/</guid>
-      <description>kep-number: TBD title: IPVS Load Balancing Mode in Kubernetes status: implemented authors: - &amp;ldquo;@rramkumar1&amp;rdquo; owning-sig: sig-network reviewers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo; editor: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo;
-creation-date: 2018-03-21 IPVS Load Balancing Mode in Kubernetes Note: This is a retroactive KEP. Credit goes to @m1093782566, @haibinxie, and @quinton-hoole for all information &amp;amp; design in this KEP.
-Important References: https://github.com/kubernetes/community/pull/692/files
-Table of Contents  Summary Motivation  Goals Non-goals  Proposal  Kube-Proxy Parameter Changes Build Changes Deployment Changes Design Considerations IPVS service network topology Port remapping Falling back to iptables Supporting NodePort service Supporting ClusterIP service Supporting LoadBalancer service Session Affinity Cleaning up inactive rules Sync loop pseudo code  Graduation Criteria Implementation History Drawbacks Alternatives  Summary We are building a new implementation of kube proxy built on top of IPVS (IP Virtual Server).</description>
-    </item>
-    
-    <item>
-      <title>0012-20180518-coredns-default-proposal</title>
-      <link>/keps/sig-network/0012-20180518-coredns-default-proposal/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-network/0012-20180518-coredns-default-proposal/</guid>
-      <description>kep-number: 11 title: Switch CoreDNS to the default DNS authors: - &amp;ldquo;@johnbelamaric&amp;rdquo; - &amp;ldquo;@rajansandeep&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-cluster-lifecycle reviewers: - &amp;ldquo;@bowei&amp;rdquo; - &amp;ldquo;@thockin&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: &amp;ldquo;@rajansandeep&amp;rdquo; creation-date: 2018-05-18 last-updated: 2018-05-18
-status: provisional Switch CoreDNS to the default DNS Table of Contents  Summary Goals Proposal  User Cases  Graduation Criteria Implementation History  Summary CoreDNS is now well-established in Kubernetes as the DNS service, with CoreDNS starting as an alpha feature from Kubernetes v1.</description>
-    </item>
-    
-    <item>
-      <title>0015-kubeadm-join-master</title>
-      <link>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</guid>
-      <description>kubeadm join &amp;ndash;master workflow Metadata --- kep-number: 15 title: kubeadm join --master workflow status: accepted authors: - &amp;#34;@fabriziopandini&amp;#34; owning-sig: sig-cluster-lifecycle reviewers: - &amp;#34;@chuckha” - &amp;#34;@detiber&amp;#34; - &amp;#34;@luxas&amp;#34; approvers: - &amp;#34;@luxas&amp;#34; - &amp;#34;@timothysc&amp;#34; editor: - &amp;#34;@fabriziopandini&amp;#34; creation-date: 2018-01-28 last-updated: 2018-06-29 see-also: - KEP 0004 Table of Contents  kubeadm join &amp;ndash;master workflow  Metadata Table of Contents Summary Motivation  Goals Non-goals Challenges and Open Questions  Proposal  User Stories  Create a cluster with more than one master nodes (static workflow) Add a new master node (dynamic workflow)  Implementation Details  Initialize the Kubernetes cluster Preparing for execution of kubeadm join &amp;ndash;master The kubeadm join &amp;ndash;master workflow dynamic workflow (advertise-address == controlplaneAddress) Static workflow (advertise-address !</description>
+      <guid>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</guid>
+      <description>kep-number: 18 title: Azure Availability Zones authors: - &amp;ldquo;@feiskyer&amp;rdquo; owning-sig: sig-azure participating-sigs: - sig-azure - sig-storage reviewers: - name: &amp;ldquo;@khenidak&amp;rdquo; - name: &amp;ldquo;@colemickens&amp;rdquo; approvers: - name: &amp;ldquo;@brendanburns&amp;rdquo; editor: TBD creation-date: 2018-07-11 last-updated: 2018-07-11
+status: provisional Azure Availability Zones Table of Contents  Azure Availability Zones  Summary Scopes and Non-scopes Scopes Non-scopes AZ label format Cloud provider options Node registration Get by instance metadata Get by Go SDK LoadBalancer and PublicIP AzureDisk PVLabeler PersistentVolumeLabel StorageClass Appendix   Summary This proposal aims to add Azure Availability Zones (AZ) support to Kubernetes.</description>
     </item>
     
     <item>
@@ -288,119 +124,119 @@ Not using “core” because it is overloaded - substituting “nucleus” inste
     
     <item>
       <title>2016-05-18</title>
-      <link>/sig-apps/minutes/2016-05-18/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-05-18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-05-18/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-05-18/</guid>
       <description>May 18, 2016  The first SIG Apps meeting Intro from Michelle Discussion on the future of the SIG:  Mike from Rackspace offered to do a demo of the recursive functionality (issue) Idea: solicit the community for cases where their use cases aren&amp;rsquo;t met.  Demo from Prashanth B on PetSets (issue)  Supposed to make deploying and managing stateful apps easier. Will be alpha in 1.3. Zookeeper, mysql, cassandra are example apps to run in this A group of elements in the identity of a thing.</description>
     </item>
     
     <item>
       <title>2016-05-25</title>
-      <link>/sig-apps/minutes/2016-05-25/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-05-25/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-05-25/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-05-25/</guid>
       <description>May 25, 2016  Intro by Michelle Mike Metral from Rackspace demo  Recursively process configuration files with the -R flag  Discuss the survey  Gabe from Deis, Mike from Red Hat, and Doug Davis from IBM are willing to chip in.  How can we provide Prashanth and pet sets feedback?  We need some docs on how to use it with some examples (2) that you can copy and paste.</description>
     </item>
     
     <item>
       <title>2016-06-08</title>
-      <link>/sig-apps/minutes/2016-06-08/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-06-08/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-06-08/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-06-08/</guid>
       <description>June 8, 2016  Intro by Michelle Noorali Adnan Abdulhussein, Stacksmith lead at Bitnami, did a demo of Stacksmith  In the container world, updates to your application&amp;rsquo;s stack or environment are rolled out by bringing down outdated containers and replacing them with an updated container image. Tools like Docker and Kubernetes make it incredibly easy to do this, however, knowing when your stack is outdated or vulnerable and starting the upgrade process is still a manual step.</description>
     </item>
     
     <item>
       <title>2016-06-15</title>
-      <link>/sig-apps/minutes/2016-06-15/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-06-15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-06-15/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-06-15/</guid>
       <description>June 15, 2016  Michelle Noorali gave an introduction Ben Hall, founder of katacoda, did a demo of katacoda  Katacoda is an interactive learning platform for software engineers. Ben showed off the current lessons on Kubernetes which are available now. Ben also talked about how companies/people can make their own interactive lessons and embed them. Contact Ben on Twitter: @Ben_Hall  Eric Chiang demoed new Role Based Access Control features and capability in Kubernetes 1.</description>
     </item>
     
     <item>
       <title>2016-06-22</title>
-      <link>/sig-apps/minutes/2016-06-22/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-06-22/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-06-22/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-06-22/</guid>
       <description>June 22, 2016  Michelle Noorali gave a quick introduction Antoine Legrand did a demo of [KPM]((https://github.com/kubespray/kpm) Matt Farina gave an update on the SIG-apps survey  The survey ends this Friday, so there are only two more days to collect data. The survey can be found here. Please help us share the survey and get as much feedback on running apps in kubernetes as possible! If you&amp;rsquo;d like to help analyze the data, please contact @mattfarina.</description>
     </item>
     
     <item>
       <title>2016-06-29</title>
-      <link>/sig-apps/minutes/2016-06-29/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-06-29/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-06-29/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-06-29/</guid>
       <description>June 29, 2016  Bart Spaans gave a demo and talked about KubeFuse  Work with your Kubernetes cluster like it&amp;rsquo;s a file system You can also edit resources and update them in cluster on writes Find more details in this post Contact Bart on Twitter: @Work_of_Bart  The DRUD team showed off how they use Kubernetes Jobs  DRUD is a drupal and wordpress management platform built on Kubernetes KubeJobWatcher can be found here For help or questions, reach out to Erin at erin@newmediadenver.</description>
     </item>
     
     <item>
       <title>2016-07-06</title>
-      <link>/sig-apps/minutes/2016-07-06/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-07-06/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-07-06/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-07-06/</guid>
       <description>July 6, 2016  Matt Farina gave an introduction and overview of the agenda Chris Love gave a demo of his Cassandra cluster  It was a great example of PetSet in action His demo application is located at https://github.com/k8s-for-greeks/gpmr  Matt Farina gave an update on the analysis of the sig-apps survey  He will reach out to those interested in helping analyze the data It&amp;rsquo;s not too late to volunteer to help.</description>
     </item>
     
     <item>
       <title>2016-07-13</title>
-      <link>/sig-apps/minutes/2016-07-13/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-07-13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-07-13/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-07-13/</guid>
       <description>July 13, 2016  Michelle Noorali gave an introduction and overview of the agenda Christian Simon from JetStack gave a demo of Kube-Lego  Kube-Lego automatically requests certificates for Kubernetes Ingress resources Let&amp;rsquo;s Encrypt Here are the slides  Matt Farina gave an update on the analysis of the sig-apps survey  He has formed a team and should have results from the survey soon A blog post with the results will follow  Clayton Coleman called to attention that there are many open discussions on PetSet  Now is the time to get involved in key decision making conversations especially if you have already implemented a PetSet Follow along in the &amp;ldquo;Pet Set in Beta&amp;rdquo; issue (#28718) which also points to other relevant PetSet topics.</description>
     </item>
     
     <item>
       <title>2016-07-20</title>
-      <link>/sig-apps/minutes/2016-07-20/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-07-20/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-07-20/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-07-20/</guid>
       <description>July 20, 2016  Michelle Noorali gave an introduction and overview of the agenda Janet Kuo gave an overview of Deployment features  See her blog post See used minikube for the local cluster set up during her demo  Saad Ali gave an overview of Volume features and things to look forward to around Volumes  Check out his presentation  We are looking forward to the sig-apps survey results next week  Watch the recording.</description>
     </item>
     
     <item>
       <title>2016-07-27</title>
-      <link>/sig-apps/minutes/2016-07-27/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-07-27/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-07-27/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-07-27/</guid>
       <description>July 27, 2016  Intro by Matt Gerred Dillon presented a demo of Deis including features in the 2.2 release.  To turn an application into a container it uses Heroku buildpacks. slugbuilder converts an application and buildpack into a container and puts the image into a private registry. Pod manifest, service manifest, etc are also created. Q: Is slugbuilder a separate microservice others can use? A: Yes. It&amp;rsquo;s a plugin to builder that can be used with other builders as well.</description>
     </item>
     
     <item>
       <title>2016-08-03</title>
-      <link>/sig-apps/minutes/2016-08-03/</link>
+      <link>/special-interest-groups/sig-apps/minutes/2016-08-03/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/minutes/2016-08-03/</guid>
+      <guid>/special-interest-groups/sig-apps/minutes/2016-08-03/</guid>
       <description>August 03, 2016  Intro by Michelle Ryan J talked about &amp;ldquo;Defining Applications in Kubernetes(and Openshift).  His presentation can be found here and includes lots of helpful links. He went through some OpenShift primitives that are not in Kubernetes but may show up soon if the community sees a need. There was some in depth discussion about Deployments. Kubernetes has some concepts that came out of OpenShift Deployment Config.</description>
     </item>
     
     <item>
       <title>2017_goals</title>
-      <link>/sig-aws/2017_goals/</link>
+      <link>/special-interest-groups/sig-aws/2017_goals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-aws/2017_goals/</guid>
+      <guid>/special-interest-groups/sig-aws/2017_goals/</guid>
       <description>Kubernetes sig-aws Goals (2017) IAM improvements  We hope to offer a more seamless integration path to taking advantage of IAM roles in Kubernetes We are looking at implementations such as kube2iam  Statement Kubernetes components now have the ability to take advantage of IAM roles. The process is intuitive and easy.
 Networking in AWS  We hope to offer a knowledge base for networking in Kubernetes on AWS We will consolidate networking reports and metrics around Kubernetes e2e tests and grow our metric list over time  Statement A user can go to a single public location, and see a side by side comparison of networking avenues in Kubernetes on AWS.</description>
     </item>
     
     <item>
       <title>CHARTER</title>
-      <link>/sig-cloud-provider/charter/</link>
+      <link>/special-interest-groups/sig-cloud-provider/charter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cloud-provider/charter/</guid>
+      <guid>/special-interest-groups/sig-cloud-provider/charter/</guid>
       <description>SIG Cloud Provider Charter Mission The Cloud Provider SIG ensures that the Kubernetes ecosystem is evolving in a way that is neutral to all (public and private) cloud providers. It will be responsible for establishing standards and requirements that must be met by all providers to ensure optimal integration with Kubernetes.
 Subprojects &amp;amp; Areas of Focus  Maintaining parts of the Kubernetes project that allows Kubernetes to integrate with the underlying provider.</description>
     </item>
@@ -420,31 +256,20 @@ What am I agreeing to? There are two versions of the CLA:
     
     <item>
       <title>CONTRIBUTING</title>
-      <link>/contributing/</link>
+      <link>/special-interest-groups/sig-apps/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/contributing/</guid>
-      <description>Contributing to the Community Repo Welcome to the Kubernetes Community contributing guide. We are excited about the prospect of you joining our community!
-Getting Started We have full documentation on how to get started contributing here:
- Kubernetes Contributor Guide - Main contributor documentation Contributor Cheat Sheet - Common resources for existing developers  Mentorship  Mentoring Initiatives - We have a diverse set of mentorship programs available that are always looking for volunteers!</description>
-    </item>
-    
-    <item>
-      <title>CONTRIBUTING</title>
-      <link>/sig-apps/contributing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sig-apps/contributing/</guid>
+      <guid>/special-interest-groups/sig-apps/contributing/</guid>
       <description>Contributing to SIG Apps Welcome to contributing to SIG Apps.
 SIG Apps has multiple areas you can contribute to. Those contributions can be in the form of code, documentation, support, being involved in mailing list discussions, attending meetings, and more. This guide describes different major functional areas SIG Apps is involved in, provides an overview of the areas, and gives pointers on getting more involved in each area. Consider this a launching point or the start of a choose your own adventure for SIG Apps.</description>
     </item>
     
     <item>
       <title>CONTRIBUTING</title>
-      <link>/sig-aws/contributing/</link>
+      <link>/special-interest-groups/sig-aws/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-aws/contributing/</guid>
+      <guid>/special-interest-groups/sig-aws/contributing/</guid>
       <description>Contributing The process for contributing code to Kubernetes via SIG-aws community.
 Note: This page is focused on helping new contributors become active members of the community through sustained contributions.
 If you are interested in contributing to Kubernetes as a whole there is a top level contributor&amp;rsquo;s guide.
@@ -453,10 +278,10 @@ Introduction Welcome to the Kubernetes sig-aws contributing guide. We are excite
     
     <item>
       <title>CONTRIBUTING</title>
-      <link>/sig-cli/contributing/</link>
+      <link>/special-interest-groups/sig-cli/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cli/contributing/</guid>
+      <guid>/special-interest-groups/sig-cli/contributing/</guid>
       <description>Contributing Welcome to the Kubernetes sig-cli contributing guide. We are excited about the prospect of you joining our community!
 Before You Begin We strongly recommend you to understand the main Kubernetes Contributor Guide and adhere to the contribution rules (specially signing the CLA).
 You can also check the Contributor Cheat Sheet, with common resources for existing developers.
@@ -466,10 +291,10 @@ Please be aware that all contributions to Kubernetes require time and commitment
     
     <item>
       <title>CONTRIBUTING</title>
-      <link>/sig-multicluster/contributing/</link>
+      <link>/special-interest-groups/sig-multicluster/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-multicluster/contributing/</guid>
+      <guid>/special-interest-groups/sig-multicluster/contributing/</guid>
       <description>Contributing The process for contributing code to Kubernetes via the sig-multicluster community.
 TL;DR  The sig-multicluster community page lists sig-multicluster leads and group meeting times. Request a feature by making an issue and mentioning @kubernetes/sig-multicluster-feature-requests. Write a design proposal before starting work on a new feature. Write tests!  Before You Begin Welcome to the Kubernetes sig-multicluster contributing guide. We are excited about the prospect of you joining our community!</description>
     </item>
@@ -570,10 +395,10 @@ Controller Instantiation Today the replication controller defines a PodTemplate 
     
     <item>
       <title>ONCALL</title>
-      <link>/sig-multicluster/oncall/</link>
+      <link>/special-interest-groups/sig-multicluster/oncall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-multicluster/oncall/</guid>
+      <guid>/special-interest-groups/sig-multicluster/oncall/</guid>
       <description>Overview We have an oncall rotation for Federation in the SIG. The role description is as follows:
  Ensure that the testgrid (https://k8s-testgrid.appspot.com/sig-multicluster) is green. This person will be the point of contact if testgrid turns red. Will identify the problem and fix it (most common scenarios: find culprit PR and revert it or free quota by deleting leaked resources). Will also report most common failure scenarios and suggest improvements.</description>
     </item>
@@ -744,10 +569,10 @@ Use cases  Ability to enumerate resource usage limits per namespace. Ability to 
     
     <item>
       <title>agenda</title>
-      <link>/sig-apps/agenda/</link>
+      <link>/special-interest-groups/sig-apps/agenda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-apps/agenda/</guid>
+      <guid>/special-interest-groups/sig-apps/agenda/</guid>
       <description>Agenda Note, the minutes and agenda have moved to Google Docs.
 August 17, 2016  Intro / Agenda Brian Hardock of the Deis Helm team will demo Helm.  Helm is a tool for creating and managing Kubernetes native applications.  Adnan Abdulhussein from Bitnami will walk us through example helm charts for Kubernetes native applications  August 10, 2016  Intro / Agenda PoC demo and discussion of AppController Working discussion of Pet Set beta steps led by Clayton Coleman and Prashanth B.</description>
     </item>
@@ -850,10 +675,10 @@ Table of Contents  Purpose Motivating use cases API Authorization-based filterin
     
     <item>
       <title>api-extensions-position-statement</title>
-      <link>/sig-api-machinery/api-extensions-position-statement/</link>
+      <link>/special-interest-groups/sig-api-machinery/api-extensions-position-statement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-api-machinery/api-extensions-position-statement/</guid>
+      <guid>/special-interest-groups/sig-api-machinery/api-extensions-position-statement/</guid>
       <description>API Extensions (SIG API Machinery position statement) Authors: Daniel Smith, David Eads (SIG API Machinery co-leads)
 Last edit: Feb 23
 Status: RELEASED
@@ -874,10 +699,10 @@ Extremely briefly, TPR is a mechanism for lightweight, easy extension of the kub
     
     <item>
       <title>api-tracking</title>
-      <link>/sig-windows/api-tracking/</link>
+      <link>/special-interest-groups/sig-windows/api-tracking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-windows/api-tracking/</guid>
+      <guid>/special-interest-groups/sig-windows/api-tracking/</guid>
       <description>Windows &amp;amp; Kubernetes APIs This document will grow into an API by API list of work that needs to be done to clarify Windows &amp;amp; Linux differences. This will be used to help clarify what needs to be eventually implemented (need a tracking issue), or not implemented (need a doc note).
 Volumes V1.Pod.Volumes
 Out of the various volume types, these should all be possible on Windows but tests are lacking:</description>
@@ -885,10 +710,10 @@ Out of the various volume types, these should all be possible on Windows but tes
     
     <item>
       <title>api_call_latency</title>
-      <link>/sig-scalability/slos/api_call_latency/</link>
+      <link>/special-interest-groups/sig-scalability/slos/api_call_latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/api_call_latency/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/api_call_latency/</guid>
       <description>API call latency SLIs/SLOs details User stories  As a user of vanilla Kubernetes, I want some guarantee how quickly I get the response from an API call. As an administrator of Kubernetes cluster, if I know characteristics of my external dependencies of apiserver (e.g custom admission plugins, webhooks and initializers) I want to be able to provide guarantees for API calls latency to users of my cluster.  Other notes  We obviously can’t give any guarantee in general, because cluster administrators are allowed to register custom admission plugins, webhooks and/or initializers, which we don’t have any control about and they obviously impact API call latencies.</description>
     </item>
     
@@ -905,10 +730,10 @@ Table of Contents
     
     <item>
       <title>api_extensions_latency</title>
-      <link>/sig-scalability/slos/api_extensions_latency/</link>
+      <link>/special-interest-groups/sig-scalability/slos/api_extensions_latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/api_extensions_latency/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/api_extensions_latency/</guid>
       <description> API call extension points latency SLIs details User stories  As an administrator, if API calls are slow, I would like to know if this is because slow extension points (admission plugins, webhooks, initializers) and if so which ones are responsible for it.  </description>
     </item>
     
@@ -1035,10 +860,10 @@ Tip: You should open an issue and let us know what enhancements can be made to t
     
     <item>
       <title>backlog</title>
-      <link>/sig-architecture/backlog/</link>
+      <link>/special-interest-groups/sig-architecture/backlog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-architecture/backlog/</guid>
+      <guid>/special-interest-groups/sig-architecture/backlog/</guid>
       <description>Backlog Processes  KEP process rollout and iteration New repo process API review process Conformance test suite change review process Escalation process Branching policy  SIG-related  Improve charter to meet expectations of Steering Committee Clarify criteria for areas out of scope for the SIG Formalize decision processes Identify subprojects/subefforts Determine initial reviewers and approvers How are SIG leads chosen  Documentation  Update What Is Kubernetes on the web site Architectural diagram Document who owns client library, build, and release artifacts Document who owns conformance definition, profiles, etc.</description>
     </item>
     
@@ -1063,6 +888,16 @@ Several make rules have been created for common operations:
       <guid>/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/</guid>
       <description>Super Simple Discovery API Overview It is surprisingly hard to figure out how to talk to a Kubernetes cluster. Not only do clients need to know where to look on the network, they also need to identify the set of root certificates to trust when talking to that endpoint.
 This presents a set of problems: * It should be super easy for users to configure client systems with a minimum of effort kubectl or kubeadm init (or other client systems).</description>
+    </item>
+    
+    <item>
+      <title>bootstrapping-process</title>
+      <link>/committee-code-of-conduct/bootstrapping-process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/committee-code-of-conduct/bootstrapping-process/</guid>
+      <description>Bootstrapping Document for Kubernetes Code of Conduct Committee This document (created by the Kubernetes Steering Committee) outlines what the Code of Conduct Committee (CoCC) is responsible for, how to create it, and the rough processes for them to get started.
+Objectives of the CoCC  Maintain the Code of Conduct (CoC) document and iterate as needed.  All CoC revisions must be approved by the Steering Committee. Currently, we use the CNCF CoC.</description>
     </item>
     
     <item>
@@ -1111,10 +946,10 @@ However, by some extension to this effort, we would like to improve scalability 
     
     <item>
       <title>charter</title>
-      <link>/sig-architecture/charter/</link>
+      <link>/special-interest-groups/sig-architecture/charter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-architecture/charter/</guid>
+      <guid>/special-interest-groups/sig-architecture/charter/</guid>
       <description>SIG Architecture Charter This charter is a WIP.
 The Architecture SIG maintains and evolves the design principles of Kubernetes, and provides a consistent body of expertise necessary to ensure architectural consistency over time.
 The scope covers issues that span all the system&amp;rsquo;s components, how they fit together, how they interact, etc.
@@ -1124,20 +959,20 @@ Specific areas of focus include:
     
     <item>
       <title>charter</title>
-      <link>/sig-azure/charter/</link>
+      <link>/special-interest-groups/sig-azure/charter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-azure/charter/</guid>
+      <guid>/special-interest-groups/sig-azure/charter/</guid>
       <description>SIG Azure Charter The following is a charter for the Kubernetes Special Interest Group for Azure. It delineates the roles of SIG leadership, SIG members, as well as the organizational processes for the SIG, both as they relate to project management and technical processes for SIG subprojects.
 Roles SIG Chairs  Run operations and processes governing the SIG Seed members established at SIG founding Chairs MAY decide to step down at anytime and propose a replacement.</description>
     </item>
     
     <item>
       <title>charter</title>
-      <link>/sig-contributor-experience/charter/</link>
+      <link>/special-interest-groups/sig-contributor-experience/charter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-contributor-experience/charter/</guid>
+      <guid>/special-interest-groups/sig-contributor-experience/charter/</guid>
       <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our [README]()
 Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s [README]()</description>
     </item>
@@ -1148,7 +983,7 @@ Processes and Responsibilities  Chairs run weekly meetings in accordance with SI
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contributors/devel/cherry-picks/</guid>
-      <description>Overview This document explains how cherry picks are managed on release branches within the Kubernetes projects.
+      <description>Overview This document explains how cherry picks are managed on release branches within the Kubernetes projects. A common use case for this task is for backporting PRs from master to release branches.
 Prerequisites  Contributor License Agreement is considered implicit for all code within cherry-pick pull requests, unless there is a large conflict. A pull request merged against the master branch. Release branch exists. The normal git and GitHub configured shell environment for pushing to your kubernetes origin fork on GitHub and making a pull request against a configured remote upstream that tracks &amp;ldquo;https://github.</description>
     </item>
     
@@ -1283,15 +1118,6 @@ Once a cluster is established, the following is true:
     </item>
     
     <item>
-      <title>code-of-conduct</title>
-      <link>/code-of-conduct/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/code-of-conduct/</guid>
-      <description>Kubernetes Community Code of Conduct Kubernetes follows the CNCF Code of Conduct.</description>
-    </item>
-    
-    <item>
       <title>coding-conventions</title>
       <link>/contributors/guide/coding-conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1331,15 +1157,6 @@ Background See the following related issues/PRs:
     </item>
     
     <item>
-      <title>communication</title>
-      <link>/communication/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/communication/</guid>
-      <description>NOTE: This document has moved to a new location.</description>
-    </item>
-    
-    <item>
       <title>community-expectations</title>
       <link>/contributors/guide/community-expectations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1352,10 +1169,10 @@ We therefore describe the expectations for members of the Kubernetes community.<
     
     <item>
       <title>community-maintenance</title>
-      <link>/sig-contributor-experience/community-maintenance/</link>
+      <link>/special-interest-groups/sig-contributor-experience/community-maintenance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-contributor-experience/community-maintenance/</guid>
+      <guid>/special-interest-groups/sig-contributor-experience/community-maintenance/</guid>
       <description>Community Maintenance This document outlines maintenance tasks that SIG Contributor Experience should be doing on a regular basis. Copy this list into a new Github issue, for example &amp;ldquo;Community Maintenance Tasks for 2Q 2018&amp;rdquo;. Then people can volunteer to audit different parts of the project at once. These tasks should be done at a minimum of twice a year, but ideally once a quarter.
 If any of these tasks can be automated, then do so, however most of these require a human to make a judgement decision.</description>
     </item>
@@ -1400,6 +1217,16 @@ This doc outlines the various responsibilities of contributor roles in Kubernete
 The main focus of this resource is to:
  Provide dynamic distribution of configuration data to deployed applications. Encapsulate configuration information and simplify Kubernetes deployments. Create a flexible configuration model for Kubernetes.  Motivation A Secret-like API resource is needed to store configuration data that pods can consume.
 Goals of this design:</description>
+    </item>
+    
+    <item>
+      <title>conformance-tests</title>
+      <link>/contributors/devel/conformance-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/devel/conformance-tests/</guid>
+      <description>Conformance Testing in Kubernetes The Kubernetes conformance test suite is a set of testcases, currently a subset of the integration/e2e tests, that the Architecture SIG has approved to define the core set of interoperable features that all Kubernetes deployments must support.
+Contributors must write and submit e2e tests first (approved by owning Sigs). Once the new tests prove to be stable in CI runs, later create a follow up PR to add the test to conformance.</description>
     </item>
     
     <item>
@@ -1490,10 +1317,10 @@ Secondary objectives These are not requirements per se, just things to consider 
     
     <item>
       <title>contributing</title>
-      <link>/sig-storage/contributing/</link>
+      <link>/special-interest-groups/sig-storage/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-storage/contributing/</guid>
+      <guid>/special-interest-groups/sig-storage/contributing/</guid>
       <description>Ramping up on Kubernetes Storage We recommend the following presentations, docs, and videos to help get familiar with Kubernetes Storage concepts.
    Date Title Link Description     - Persistent Volume Framework Doc Public user docs for Kubenretes Persistent Volume framework.   2018 May 03 SIG Storage Intro Video An overview of SIG Storage By Saad Ali at Kubecon EU 2018.   2018 May 04 Kubernetes Storage Lingo 101 Video An overview of various terms used in Kubernetes storage and what they mean by Saad Ali at Kubecon EU 2018.</description>
     </item>
@@ -1510,10 +1337,10 @@ Secondary objectives These are not requirements per se, just things to consider 
     
     <item>
       <title>contributor-guide-building-your-kubernetes-tool</title>
-      <link>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</link>
+      <link>/special-interest-groups/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</guid>
+      <guid>/special-interest-groups/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</guid>
       <description>Client Tool Release Publishing Guidelines Projects should publish releases for client side tools.
 Go Projects Static Linking See Go executables are statically linked, except when they are not.
  How to compile a statically linked binary: go file must be compiled without cgo support.  # Disable cgo export CGO_ENABLED=0  How to check if a binary is statically linked  # List dynamic dependencies (shared libraries): # 1. if it&amp;#39;s dynamically linked, you&amp;#39;ll see $ ldd &amp;lt;your_tool&amp;gt; linux-vdso.</description>
@@ -1721,17 +1548,6 @@ Key difficulty is which verbs apply to which objects - Go doesn&amp;rsquo;t nati
       <guid>/contributors/design-proposals/instrumentation/custom-metrics-api/</guid>
       <description>Custom Metrics API The new metrics monitoring vision proposes an API that the Horizontal Pod Autoscaler can use to access arbitrary metrics.
 Similarly to the master metrics API, the new API should be structured around accessing metrics by referring to Kubernetes objects (or groups thereof) and a metric name. For this reason, the API could be useful for other consumers (most likely controllers) that want to consume custom metrics (similarly to how the master metrics API is generally useful to multiple cluster components).</description>
-    </item>
-    
-    <item>
-      <title>custom_content</title>
-      <link>/generator/testdata/custom_content/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/generator/testdata/custom_content/</guid>
-      <description> Auth SIG Covers improvements to Kubernetes authorization, authentication, and cluster security policy.
-Meetings  Wednesdays at 18:00 UTC (biweekly). Convert to your timezone.  Meeting notes and Agenda can be found here.
-Leads  Eric Chiang, CoreOS Jordan Liggitt, Red Hat David Eads, Red Hat  Contact  Slack Mailing list  FOO BAR BAZ </description>
     </item>
     
     <item>
@@ -1986,10 +1802,10 @@ Note: There is no scheduler running. The e2e tests have to do manual scheduling,
     
     <item>
       <title>effective-reviewable</title>
-      <link>/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</link>
+      <link>/special-interest-groups/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</guid>
+      <guid>/special-interest-groups/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</guid>
       <description>Or, one weird trick to make Reviewable awesome
 The Kubernetes team is still new to Reviewable. As you discover new cool features and workflows, add them here. Once we have built up a good number of tricks we can reorganize this list.
  Hold off on publishing comments (using the &amp;ldquo;Publish&amp;rdquo; button) until you have completed your review. (source) When leaving comments, select a &amp;ldquo;disposition&amp;rdquo; (the button with your profile picture) to indicate whether the comment requires resolution, or is just advisory and hence requires no response.</description>
@@ -2074,15 +1890,6 @@ Version: Beta
 Implementation Owner: gmarek@google.com
 Approvers: - [X] thockin - API changes - [X] briangrant - API changes - [X] konryd - API changes from UI/UX side - [X] pszczesniak - logging team side - [X] wojtekt - performance side - [ ] derekwaynecarr - &amp;ldquo;I told you so&amp;rdquo; Events person:)
 Overview This document describes an effort which aims at fixing few issues in current way Events are structured and implemented.</description>
-    </item>
-    
-    <item>
-      <title>example</title>
-      <link>/generator/testdata/example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/generator/testdata/example/</guid>
-      <description>Hello! Example custom content!</description>
     </item>
     
     <item>
@@ -2341,10 +2148,10 @@ CSI provides a single interface that storage vendors can implement in order for 
     
     <item>
       <title>formal-scalability-processes</title>
-      <link>/sig-scalability/processes/formal-scalability-processes/</link>
+      <link>/special-interest-groups/sig-scalability/processes/formal-scalability-processes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/processes/formal-scalability-processes/</guid>
+      <guid>/special-interest-groups/sig-scalability/processes/formal-scalability-processes/</guid>
       <description>Formal Scalability Processes by Shyam JVS, Google Inc
 February 2018
 Introduction Scalability is a very crucial aspect of kubernetes and has allowed many customers to adopt it with confidence. K8s started scaling to 5000 nodes beginning from release 1.6. Building and maintaining a performant and scalable system needs conscious efforts from the whole developer community. Lack of solid measures have caused problems (both scalability and release-related) in the past - for e.</description>
@@ -2376,7 +2183,7 @@ Motivation On cloud providers which support external load balancers, setting the
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contributors/devel/generating-clientset/</guid>
-      <description>Generation and release cycle of clientset Client-gen is an automatic tool that generates clientset based on API types. This doc introduces the use the client-gen, and the release cycle of the generated clientsets.
+      <description>Generation and release cycle of clientset Client-gen is an automatic tool that generates clientset based on API types. This doc introduces the use of client-gen, and the release cycle of the generated clientsets.
 Using client-gen The workflow includes three steps:
 1. Marking API types with tags: in pkg/apis/${GROUP}/${VERSION}/types.go, mark the types (e.g., Pods) that you want to generate clients for with the // +genclient tag. If the resource associated with the type is not namespace scoped (e.</description>
     </item>
@@ -2417,10 +2224,10 @@ Define a local working directory:
     
     <item>
       <title>goals</title>
-      <link>/sig-scalability/goals/</link>
+      <link>/special-interest-groups/sig-scalability/goals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/goals/</guid>
+      <guid>/special-interest-groups/sig-scalability/goals/</guid>
       <description>Kubernetes Scaling and Performance Goals by Quinton Hoole and Wojciech Tyczynski, Google Inc
 April 2016
 This document is a markdown version converted from a working Google Doc. Please refer to the original for extended commentary and discussion.
@@ -2651,18 +2458,6 @@ The exact nature of &amp;ldquo;approval&amp;rdquo; is beyond the scope of Kubern
     </item>
     
     <item>
-      <title>incubator</title>
-      <link>/incubator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/incubator/</guid>
-      <description>IMPORTANT - The Kubernetes Incubator process is now deprecated and has been superseded by Kubernetes subprojects For information on creating a repository for a subproject see: kubernetes-repositories
-Each SIG should define the process for sponsoring new subprojects in its charter. For information on SIG governance and charters see: SIG governance
-Kubernetes Incubator Process Authors: Brandon Philips brandon.philips@coreos.com, Sarah Novotny sarahnovotny@google.com, Brian Grant briangrant@google.com
-Kubernetes Incubator The Kubernetes Incubator is where all new Kubernetes projects should start.</description>
-    </item>
-    
-    <item>
       <title>indexed-job</title>
       <link>/contributors/design-proposals/apps/indexed-job/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2735,10 +2530,10 @@ Use Cases  Be able to start one or several pods tracked as a single entity.</des
     
     <item>
       <title>k8s-services-scalability-issues</title>
-      <link>/sig-scalability/blogs/k8s-services-scalability-issues/</link>
+      <link>/special-interest-groups/sig-scalability/blogs/k8s-services-scalability-issues/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/blogs/k8s-services-scalability-issues/</guid>
+      <guid>/special-interest-groups/sig-scalability/blogs/k8s-services-scalability-issues/</guid>
       <description>Known Scalability Issues with Kubernetes Services by Shyam JVS, Google Inc (with inputs from Brian Grant, Wojciech Tyczynski &amp;amp; Dan Winship)
 June 2018
 This document serves as a catalog of issues we&amp;rsquo;ve known/discovered with kubernetes services as of June 2018, focusing on their scalability/performance. The purpose of the document is to make the information common knowledge for the community, so we can work together towards improving it. Listing them below in no particular order.</description>
@@ -2768,10 +2563,10 @@ Having a leadership board of people who all think the same way, and all are movi
     
     <item>
       <title>kubeadm-1.6</title>
-      <link>/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</link>
+      <link>/special-interest-groups/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</guid>
+      <guid>/special-interest-groups/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</guid>
       <description>Kubernetes Postmortem: kubeadm 1.6.0 release Incident Date: 2017-03-28
 Owners: Jacob Beacham (@pipejakob)
 Collaborators: Joe Beda (@jbeda), Mike Danese (@mikedanese), Robert Bailey (@roberthbailey)
@@ -2996,10 +2791,10 @@ Currently Java, Python, .Net, Javascript clients are all silver. Reference to th
     
     <item>
       <title>kubernetes-on-aws</title>
-      <link>/sig-aws/kubernetes-on-aws/</link>
+      <link>/special-interest-groups/sig-aws/kubernetes-on-aws/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-aws/kubernetes-on-aws/</guid>
+      <guid>/special-interest-groups/sig-aws/kubernetes-on-aws/</guid>
       <description>Kubernetes on Amazon Web Services This page lists different options, in alphabetic order, of starting a Kubernetes cluster on Amazon Web Services.
  Clocker: http://www.clocker.io/tutorials/kubernetes-cluster.html Heptio: https://github.com/aws-quickstart/quickstart-heptio Juju Charms: https://jujucharms.com/canonical-kubernetes/ KAT - Kubernetes cluster on AWS with Terraform: https://github.com/xuwang/kube-aws-terraform Kargo: https://github.com/kubernetes-incubator/kargo Kismatic Enterprise Toolkit: https://github.com/apprenda/kismatic Kraken 2: https://github.com/samsung-cnct/k2 kube-aws: https://github.com/kubernetes-incubator/kube-aws Kubeadm Quickstart: https://github.com/upmc-enterprises/kubeadm-aws Kubernetes on AWS: https://github.com/zalando-incubator/kubernetes-on-aws/ Kubernetes Operations (kops): https://github.com/kubernetes/kops OpenShift: https://access.redhat.com/articles/2623521 Stackpoint.io: https://stackpoint.io Tack: https://github.com/kz8s/tack Tectonic: http://github.com/coreos/tectonic-installer Weaveworks AMI: https://github.</description>
     </item>
@@ -3061,10 +2856,10 @@ Goals  Allow pods to mount any local block or filesystem based volume. Allow pod
     
     <item>
       <title>markdown-link-style-guide</title>
-      <link>/sig-contributor-experience/markdown-link-style-guide/</link>
+      <link>/special-interest-groups/sig-contributor-experience/markdown-link-style-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-contributor-experience/markdown-link-style-guide/</guid>
+      <guid>/special-interest-groups/sig-contributor-experience/markdown-link-style-guide/</guid>
       <description>Markdown Link Style Guide Markdown provides for a number of different ways to link between documents. There are advantages and disadvantages of each method.
  If you are linking between documents in the same folder, the easiest way to do it is use a relative link.
 See this other document [here](document-2).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
@@ -3318,17 +3113,6 @@ Course Playlist Part One: * Opening * Welcome contributors * Who this is for * P
     </item>
     
     <item>
-      <title>no_custom_content</title>
-      <link>/generator/testdata/no_custom_content/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/generator/testdata/no_custom_content/</guid>
-      <description> Auth SIG Covers improvements to Kubernetes authorization, authentication, and cluster security policy.
-Meetings  Wednesdays at 18:00 UTC (biweekly). Convert to your timezone.  Meeting notes and Agenda can be found here.
-Leads  Eric Chiang, CoreOS Jordan Liggitt, Red Hat David Eads, Red Hat  Contact  Slack Mailing list  </description>
-    </item>
-    
-    <item>
       <title>node-allocatable</title>
       <link>/contributors/design-proposals/node/node-allocatable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3377,6 +3161,18 @@ In addition, we propose to replace the map[string]string in PodSpec that the sch
 Objective This document proposes creating a option for kube-proxy to specify NodePort IP range.
 Background NodePort type service gives developers the freedom to set up their own load balancers, to expose one or more nodes’ IPs directly. The service will be visible as the nodes&amp;rsquo;s IPs. For now, the NodePort addresses are the IPs from all available interfaces.
 With iptables magic, all the IPs whose ADDRTYPE matches dst-type LOCAL will be taken as the address of NodePort, which might look like,</description>
+    </item>
+    
+    <item>
+      <title>non-code-contributions</title>
+      <link>/contributors/guide/non-code-contributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/guide/non-code-contributions/</guid>
+      <description>Non-code Contributions This section is new and in progress. Expect this document to change often.
+If you are interested in helping define and structure this work, check the weekly meeting notes for information on how to get involved. You can also find us in the SIG Contributor Experience slack channel.
+New contributors welcome!
+ Plan of attack  Identify Non-Dev focused roles  Tasks tied to these roles Examples:  Technical project leadership  SIG contribution  Leading contributor communities Promotion of people and projects  Recognition  Managing communication tools  Zoom, Slack, Discourse, &amp;hellip;  Writing articles/blogs  Capture it somewhere, not sure where yet Feed into Kube.</description>
     </item>
     
     <item>
@@ -3439,10 +3235,10 @@ Prior to creating an organization please contact the steering committee for dire
     
     <item>
       <title>outreachy</title>
-      <link>/sig-cli/outreachy/</link>
+      <link>/special-interest-groups/sig-cli/outreachy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cli/outreachy/</guid>
+      <guid>/special-interest-groups/sig-cli/outreachy/</guid>
       <description>Outreachy Kubernetes, specifically the SIG-CLI, is happy to announce our participation in the Outreachy program, running from December 2017 to March 2018. Please see the main program page for general information about the program, such as its purpose, timeline, eligibility requirements, and how to apply.
 Schedule
  October 23: application deadline for other Outreachy communities October 30: application deadline for Kubernetes Outreachy applications November 9: selection decisions are made December 5 - March 5: internship  What is Kubernetes?</description>
@@ -3608,10 +3404,10 @@ Motivation Administration of a multi-tenant cluster requires the ability to prov
     
     <item>
       <title>pod_startup_latency</title>
-      <link>/sig-scalability/slos/pod_startup_latency/</link>
+      <link>/special-interest-groups/sig-scalability/slos/pod_startup_latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/pod_startup_latency/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/pod_startup_latency/</guid>
       <description>Pod startup latency SLI/SLO details User stories  As a user of vanilla Kubernetes, I want some guarantee how quickly my pods will be started.  Other notes  Only schedulable and stateless pods contribute to the SLI:  If there is no space in the cluster to place the pod, there is not much we can do about it (it is task for Cluster Autoscaler which should have separate SLIs/SLOs).</description>
     </item>
     
@@ -3723,10 +3519,10 @@ Table of Contents  Background Goal Technical requirements  Alpha Beta Later  Imp
     
     <item>
       <title>projects</title>
-      <link>/sig-contributor-experience/projects/</link>
+      <link>/special-interest-groups/sig-contributor-experience/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-contributor-experience/projects/</guid>
+      <guid>/special-interest-groups/sig-contributor-experience/projects/</guid>
       <description>Projects and Goals note - this is a temporary file until we can figure out a better project management solution.
 This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our [README]().</description>
     </item>
@@ -3754,10 +3550,10 @@ Proposal and Motivation The Kubernetes API server is a &amp;ldquo;dumb server&am
     
     <item>
       <title>provider-configs</title>
-      <link>/sig-scalability/configs-and-limits/provider-configs/</link>
+      <link>/special-interest-groups/sig-scalability/configs-and-limits/provider-configs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/configs-and-limits/provider-configs/</guid>
+      <guid>/special-interest-groups/sig-scalability/configs-and-limits/provider-configs/</guid>
       <description>Scalability Testing/Analysis Environment and Goals Project practice is to perform baseline scalability testing and analysis on a large single machine (VM or server) with all control plane processing on that single node. The single large machine provides sufficient scalability to scale to 5000 node density tests. The typical machine for testing at this scale is at the larger end of the VM scale available on public cloud providers, but is by no means the largest available.</description>
     </item>
     
@@ -3930,10 +3726,10 @@ The Kubernetes resource model To do good pod placement, Kubernetes needs to know
     
     <item>
       <title>resources</title>
-      <link>/sig-big-data/resources/</link>
+      <link>/special-interest-groups/sig-big-data/resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-big-data/resources/</guid>
+      <guid>/special-interest-groups/sig-big-data/resources/</guid>
       <description> Resources Spark  Spark on Kubernetes Design Proposal Spark Dynamic Allocation Proposal SPARK-JIRA Kubernetes Issue #34377 External Repository  HDFS  Data Locality Doc External Repository  Airflow  Airflow roadmap  </description>
     </item>
     
@@ -3948,10 +3744,10 @@ The Kubernetes resource model To do good pod placement, Kubernetes needs to know
     
     <item>
       <title>roadmap-cluster-deployment</title>
-      <link>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</link>
+      <link>/special-interest-groups/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</guid>
+      <guid>/special-interest-groups/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</guid>
       <description>OBSOLETE
 Cluster lifecycle includes deployment (infrastructure provisioning and bootstrapping Kubernetes), scaling, upgrades, and turndown.
 Owner: @kubernetes/sig-cluster-lifecycle (kubernetes-sig-cluster-lifecycle at googlegroups.com, sig-cluster-lifecycle on slack)
@@ -3960,10 +3756,10 @@ There is no one-size-fits-all solution for cluster deployment and management (e.
     
     <item>
       <title>roadmap-docs</title>
-      <link>/sig-docs/migrated-from-wiki/roadmap-docs/</link>
+      <link>/special-interest-groups/sig-docs/migrated-from-wiki/roadmap-docs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-docs/migrated-from-wiki/roadmap-docs/</guid>
+      <guid>/special-interest-groups/sig-docs/migrated-from-wiki/roadmap-docs/</guid>
       <description> Docs and examples roadmap If you&amp;rsquo;d like to help with documentation, please read the kubernetes.io site instructions.
 If you&amp;rsquo;d like to contribute an example, please read the guidelines.
 Owners: @kubernetes/docs, @kubernetes/examples
@@ -3974,10 +3770,10 @@ We&amp;rsquo;re currently planning a documentation site overhaul. Join kubernete
     
     <item>
       <title>roadmap-kubectl</title>
-      <link>/sig-cli/migrated-from-wiki/roadmap-kubectl/</link>
+      <link>/special-interest-groups/sig-cli/migrated-from-wiki/roadmap-kubectl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-cli/migrated-from-wiki/roadmap-kubectl/</guid>
+      <guid>/special-interest-groups/sig-cli/migrated-from-wiki/roadmap-kubectl/</guid>
       <description>kubectl roadmap kubectl is the Kubernetes CLI.
 If you&amp;rsquo;d like to contribute, please read the conventions and familiarize yourself with existing commands.
 Owner: @kubernetes/kubectl
@@ -4076,10 +3872,10 @@ Table of Contents
     
     <item>
       <title>scalability-regressions-case-studies</title>
-      <link>/sig-scalability/governance/scalability-regressions-case-studies/</link>
+      <link>/special-interest-groups/sig-scalability/governance/scalability-regressions-case-studies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/governance/scalability-regressions-case-studies/</guid>
+      <guid>/special-interest-groups/sig-scalability/governance/scalability-regressions-case-studies/</guid>
       <description>Kubernetes Scalability/Performance Regressions - Case Studies &amp;amp; Insights by Shyam JVS, Google Inc
 February 2018
 Overview This document is a compilation of some interesting scalability/performance regression stories from the past. These were identified/studied/fixed largely by sig-scalability. We begin by listing them down, along with their succinct explanations, features/components that were involved, and relevant SIGs (besides sig-scalability). We also accompany them with data on what was the smallest scale, both for real and simulated (i.</description>
@@ -4358,38 +4154,6 @@ In earlier session today over breaking up monolith:</description>
     </item>
     
     <item>
-      <title>sig-charter-template</title>
-      <link>/committee-steering/governance/sig-charter-template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/committee-steering/governance/sig-charter-template/</guid>
-      <description>SIG YOURSIG Charter This charter adheres to the conventions described in the Kubernetes Charter README and uses the Roles and Organization Management outlined in sig-governance.
-Scope Include a 2-3 sentence summary of what work SIG TODO does. Imagine trying to explain your work to a colleague who is familiar with Kubernetes but not necessarily all of the internals.
-In scope Link to SIG section in sigs.yaml
-Code, Binaries and Services  list of what qualifies a piece of code, binary or service as falling into the scope of this SIG e.</description>
-    </item>
-    
-    <item>
-      <title>sig-creation-procedure</title>
-      <link>/sig-creation-procedure/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sig-creation-procedure/</guid>
-      <description>SIG creation procedure Moved to sig governance</description>
-    </item>
-    
-    <item>
-      <title>sig-governance</title>
-      <link>/committee-steering/governance/sig-governance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/committee-steering/governance/sig-governance/</guid>
-      <description>SIG Roles and Organizational Governance This charter adheres to the conventions described in the Kubernetes Charter README.
-This document will be updated as needed to meet the current needs of the Kubernetes project.
-Roles Notes on Roles Unless otherwise stated, individuals are expected to be responsive and active within their roles. Within this section &amp;ldquo;member&amp;rdquo; refers to a member of a Chair, Tech Lead or Subproject Owner Role. (this different from a SIG or Organization Member).</description>
-    </item>
-    
-    <item>
       <title>sig-governance</title>
       <link>/sig-governance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4397,31 +4161,6 @@ Roles Notes on Roles Unless otherwise stated, individuals are expected to be res
       <guid>/sig-governance/</guid>
       <description>SIG Governance In order to standardize Special Interest Group efforts, create maximum transparency, and route contributors to the appropriate SIG, SIGs should follow the guidelines stated below:
  Meet regularly, at least for 30 minutes every 3 weeks, except November and December Keep up-to-date meeting notes, linked from the SIG&amp;rsquo;s page in the community repo Announce meeting agenda and minutes after each meeting, on their SIG mailing list Record SIG meeting and make it publicly available Ensure the SIG&amp;rsquo;s mailing list and slack channel are archived Report activity in the weekly community meeting at least once every 6 weeks Participate in release planning meetings and retrospectives, and burndown meetings, as needed Ensure related work happens in a project-owned github org and repository, with code and tests explicitly owned and supported by the SIG, including issue triage, PR reviews, test-failure response, bug fixes, etc.</description>
-    </item>
-    
-    <item>
-      <title>sig-governance-requirements</title>
-      <link>/committee-steering/governance/sig-governance-requirements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/committee-steering/governance/sig-governance-requirements/</guid>
-      <description>SIG Governance Requirements Goals This document outlines the recommendations and requirements for defining SIG and subproject governance.
-This doc uses rfc2119 to indicate keyword requirement levels. Sub elements of a list inherit the requirements of the parent by default unless overridden.
-Checklist Following is the checklist of items that should be considered as part of defining governance for any subarea of the Kubernetes project.
-Roles  MUST enumerate any roles within the SIG and the responsibilities of each MUST define process for changing the membership of roles  When and how new members are chosen / added to each role When and how existing members are retired from each role  SHOULD define restrictions / requirements for membership of roles MAY define target staffing numbers of roles  Organizational management  MUST define when and how collaboration between members of the SIG is organized</description>
-    </item>
-    
-    <item>
-      <title>sig-list</title>
-      <link>/sig-list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sig-list/</guid>
-      <description>SIGs and Working Groups Most community activity is organized into Special Interest Groups (SIGs), time bounded Working Groups, and the community meeting.
-SIGs follow these guidelines although each of these groups may operate a little differently depending on their needs and workflow.
-Each group&amp;rsquo;s material is in its subdirectory in this project.
-When the need arises, a new SIG can be created
-Master SIG List    Name Label Chairs Contact Meetings     API Machinery api-machinery * Daniel Smith, Google</description>
     </item>
     
     <item>
@@ -4449,10 +4188,10 @@ Chat is searchable and public. Do not make comments that you would not say on a 
     
     <item>
       <title>slos</title>
-      <link>/sig-scalability/slos/slos/</link>
+      <link>/special-interest-groups/sig-scalability/slos/slos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/slos/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/slos/</guid>
       <description>Kubernetes scalability and performance SLIs/SLOs What Kubernetes guarantees? One of the important aspects of Kubernetes is its scalability and performance characteristic. As Kubernetes user or operator/administrator of a cluster you would expect to have some guarantees in those areas.
 The goal of this doc is to organize the guarantees that Kubernetes provides in these areas.
 What do we require from SLIs/SLOs? We are going to define more SLIs and SLOs based on the most important indicators in the system.</description>
@@ -4533,6 +4272,15 @@ In the standard JSON merge patch, JSON objects are always merged but lists are a
     </item>
     
     <item>
+      <title>subproject-responsibilites</title>
+      <link>/github-management/subproject-responsibilites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/subproject-responsibilites/</guid>
+      <description>GitHub Management Subproject Responsibilities This subproject will be responsible for: - Establishing policies, standards, and procedures for routine GitHub management tasks, including but not limited to: org membership, org permissions, repo creation/administration - Establishing a policy around &amp;ldquo;Org Owner&amp;rdquo; permissions, and grant/limit these privileges accordingly - Establishing policies and best practices for bot accounts, service accounts, webooks, and third-party integrations - Maintaining documentation related to the above - Establishing a &amp;ldquo;GitHub Administration team&amp;rdquo; that will oversee the execution of GitHub management tasks (inviting new members to the org, creating repos, executing moderation decisions, auditing permissions) - Working with other sigs and interested parties in the project to execute GitHub tasks where required</description>
+    </item>
+    
+    <item>
       <title>support_traffic_shaping_for_kubelet_cni</title>
       <link>/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4577,10 +4325,10 @@ Roadmap v1.4 initial implementation for v1.4 https://github.com/kubernetes/kuber
     
     <item>
       <title>system_throughput</title>
-      <link>/sig-scalability/slos/system_throughput/</link>
+      <link>/special-interest-groups/sig-scalability/slos/system_throughput/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/system_throughput/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/system_throughput/</guid>
       <description>System throughput SLI/SLO details User stories  As a user, I want a guarantee that my workload of X pods can be started within a given time As a user, I want to understand how quickly I can react to a dramatic change in workload profile when my workload exhibits very bursty behavior (e.g. shop during Back Friday Sale) As a user, I want a guarantee how quickly I can recreate the whole setup in case of a serious disaster which brings the whole cluster down.</description>
     </item>
     
@@ -4636,10 +4384,10 @@ Goals  Ensure ThirdPartyResource APIs operate consistently with first party Kube
     
     <item>
       <title>thresholds</title>
-      <link>/sig-scalability/configs-and-limits/thresholds/</link>
+      <link>/special-interest-groups/sig-scalability/configs-and-limits/thresholds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/configs-and-limits/thresholds/</guid>
+      <guid>/special-interest-groups/sig-scalability/configs-and-limits/thresholds/</guid>
       <description>Kubernetes Scalability thresholds Background Since 1.6 release Kubernetes officially supports 5000-node clusters. However, the question is what that actually means. As of early Q3 2017 we are in the process of defining set of performance-related SLIs (Service Level Indicators) and SLOs (Service Level Objectives).
 However, no matter what SLIs and SLOs we have, there will always be some users coming and saying that their cluster is not meeting the SLOs.</description>
     </item>
@@ -4760,10 +4508,10 @@ Known issues with current externalized design  The ownership management is curre
     
     <item>
       <title>volume-plugin-faq</title>
-      <link>/sig-storage/volume-plugin-faq/</link>
+      <link>/special-interest-groups/sig-storage/volume-plugin-faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-storage/volume-plugin-faq/</guid>
+      <guid>/special-interest-groups/sig-storage/volume-plugin-faq/</guid>
       <description>Kubernetes Volume Plugin FAQ for Storage Vendors Last Updated: 02/08/2018
 What is Kubernetes volume plugin?
 A Kubernetes Volume plugin extends the Kubernetes volume interface to support a block and/or file storage system.
@@ -4851,10 +4599,10 @@ I have been involved with Kubernetes since before 1.0, primarily on AWS support 
     
     <item>
       <title>watch_latency</title>
-      <link>/sig-scalability/slos/watch_latency/</link>
+      <link>/special-interest-groups/sig-scalability/slos/watch_latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/sig-scalability/slos/watch_latency/</guid>
+      <guid>/special-interest-groups/sig-scalability/slos/watch_latency/</guid>
       <description>Watch latency SLI details User stories  As an administrator, if Kubernetes is slow, I would like to know if the root cause of it is slow api-machinery (slow watch) or something farther the path (lack of network bandwidth, slow or cpu-starved controllers, &amp;hellip;)  Other notes  Pretty much all control loops in Kubernetes are watch-based. As a result slow watch means slow system in general. Note that how we measure it silently assumes no clock-skew in case of cluster with multiple masters.</description>
     </item>
     

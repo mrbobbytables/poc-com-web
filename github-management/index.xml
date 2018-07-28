@@ -53,5 +53,14 @@ If you are a Kubernetes GitHub organization or repo owner, and would like to set
 Setup the webhook  Go to the settings for your organization or webhook, and choose Webhooks from the menu, then &amp;ldquo;Add webhook&amp;rdquo;  Payload URL: https://identity.</description>
     </item>
     
+    <item>
+      <title>subproject-responsibilites</title>
+      <link>/github-management/subproject-responsibilites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github-management/subproject-responsibilites/</guid>
+      <description>GitHub Management Subproject Responsibilities This subproject will be responsible for: - Establishing policies, standards, and procedures for routine GitHub management tasks, including but not limited to: org membership, org permissions, repo creation/administration - Establishing a policy around &amp;ldquo;Org Owner&amp;rdquo; permissions, and grant/limit these privileges accordingly - Establishing policies and best practices for bot accounts, service accounts, webooks, and third-party integrations - Maintaining documentation related to the above - Establishing a &amp;ldquo;GitHub Administration team&amp;rdquo; that will oversee the execution of GitHub management tasks (inviting new members to the org, creating repos, executing moderation decisions, auditing permissions) - Working with other sigs and interested parties in the project to execute GitHub tasks where required</description>
+    </item>
+    
   </channel>
 </rss>

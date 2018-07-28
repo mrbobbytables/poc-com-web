@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-cli on Kubernetes Community</title>
+    <link>/special-interest-groups/sig-cli/</link>
+    <description>Recent content in sig-cli on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/special-interest-groups/sig-cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CONTRIBUTING</title>
+      <link>/special-interest-groups/sig-cli/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-cli/contributing/</guid>
+      <description>Contributing Welcome to the Kubernetes sig-cli contributing guide. We are excited about the prospect of you joining our community!
+Before You Begin We strongly recommend you to understand the main Kubernetes Contributor Guide and adhere to the contribution rules (specially signing the CLA).
+You can also check the Contributor Cheat Sheet, with common resources for existing developers.
+The process for contributing code to Kubernetes via SIG-CLI community.
+Please be aware that all contributions to Kubernetes require time and commitment from project maintainers to direct and review work.</description>
+    </item>
+    
+    <item>
+      <title>outreachy</title>
+      <link>/special-interest-groups/sig-cli/outreachy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-cli/outreachy/</guid>
+      <description>Outreachy Kubernetes, specifically the SIG-CLI, is happy to announce our participation in the Outreachy program, running from December 2017 to March 2018. Please see the main program page for general information about the program, such as its purpose, timeline, eligibility requirements, and how to apply.
+Schedule
+ October 23: application deadline for other Outreachy communities October 30: application deadline for Kubernetes Outreachy applications November 9: selection decisions are made December 5 - March 5: internship  What is Kubernetes?</description>
+    </item>
+    
+  </channel>
+</rss>

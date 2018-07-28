@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster-lifecycles on Kubernetes Community</title>
+    <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/</link>
+    <description>Recent content in Cluster-lifecycles on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bootstrap-discovery</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/</guid>
+      <description>Super Simple Discovery API Overview It is surprisingly hard to figure out how to talk to a Kubernetes cluster. Not only do clients need to know where to look on the network, they also need to identify the set of root certificates to trust when talking to that endpoint.
+This presents a set of problems: * It should be super easy for users to configure client systems with a minimum of effort kubectl or kubeadm init (or other client systems).</description>
+    </item>
+    
+    <item>
+      <title>cluster-deployment</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/cluster-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/cluster-deployment/</guid>
+      <description>Objective Simplify the cluster provisioning process for a cluster with one master and multiple worker nodes. It should be secured with SSL and have all the default add-ons. There should not be significant differences in the provisioning process across deployment targets (cloud provider + OS distribution) once machines meet the node specification.
+Overview Cluster provisioning can be broken into a number of phases, each with their own exit criteria. In some cases, multiple phases will be combined together to more seamlessly automate the cluster setup, but in all cases the phases can be run sequentially to provision a functional cluster.</description>
+    </item>
+    
+    <item>
+      <title>clustering</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/clustering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/clustering/</guid>
+      <description>Clustering in Kubernetes Overview The term &amp;ldquo;clustering&amp;rdquo; refers to the process of having all members of the Kubernetes cluster find and trust each other. There are multiple different ways to achieve clustering with different security and usability profiles. This document attempts to lay out the user experiences for clustering that Kubernetes aims to address.
+Once a cluster is established, the following is true:
+ Master -&amp;gt; Node The master needs to know which nodes can take work and what their current status is wrt capacity.</description>
+    </item>
+    
+    <item>
+      <title>dramatically-simplify-cluster-creation</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/dramatically-simplify-cluster-creation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/dramatically-simplify-cluster-creation/</guid>
+      <description>Proposal: Dramatically Simplify Kubernetes Cluster Creation  Please note: this proposal doesn&amp;rsquo;t reflect final implementation, it&amp;rsquo;s here for the purpose of capturing the original ideas. You should probably read kubeadm docs, to understand the end-result of this effor.
+ Luke Marsden &amp;amp; many others in SIG-cluster-lifecycle.
+17th August 2016
+This proposal aims to capture the latest consensus and plan of action of SIG-cluster-lifecycle. It should satisfy the first bullet point required by the feature description.</description>
+    </item>
+    
+    <item>
+      <title>ha_master</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/ha_master/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/ha_master/</guid>
+      <description>Automated HA master deployment Author: filipg@, jsz@
+Introduction We want to allow users to easily replicate kubernetes masters to have highly available cluster, initially using kube-up.sh and kube-down.sh.
+This document describes technical design of this feature. It assumes that we are using aforementioned scripts for cluster deployment. All of the ideas described in the following sections should be easy to implement on GCE, AWS and other cloud providers.
+It is a non-goal to design a specific setup for bare-metal environment, which might be very different.</description>
+    </item>
+    
+    <item>
+      <title>high-availability</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/high-availability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/high-availability/</guid>
+      <description>High Availability of Scheduling and Controller Components in Kubernetes This document is deprecated. For more details about running a highly available cluster master, please see the admin instructions document.</description>
+    </item>
+    
+    <item>
+      <title>kubelet-tls-bootstrap</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/kubelet-tls-bootstrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/kubelet-tls-bootstrap/</guid>
+      <description>Kubelet TLS bootstrap Author: George Tankersley (george.tankersley@coreos.com)
+Preface This document describes a method for a kubelet to bootstrap itself into a TLS-secured cluster. Crucially, it automates the provision and distribution of signed certificates.
+Overview When a kubelet runs for the first time, it must be given TLS assets or generate them itself. In the first case, this is a burden on the cluster admin and a significant logistical barrier to secure Kubernetes rollouts.</description>
+    </item>
+    
+    <item>
+      <title>local-cluster-ux</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/local-cluster-ux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/local-cluster-ux/</guid>
+      <description>Kubernetes Local Cluster Experience This proposal attempts to improve the existing local cluster experience for kubernetes. The current local cluster experience is sub-par and often not functional. There are several options to setup a local cluster (docker, vagrant, linux processes, etc) and we do not test any of them continuously. Here are some highlighted issues: - Docker based solution breaks with docker upgrades, does not support DNS, and many kubelet features are not functional yet inside a container.</description>
+    </item>
+    
+    <item>
+      <title>runtimeconfig</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/runtimeconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/runtimeconfig/</guid>
+      <description>Overview Proposes adding a --feature-config to core kube system components: apiserver , scheduler, controller-manager, kube-proxy, and selected addons. This flag will be used to enable/disable alpha features on a per-component basis.
+Motivation Motivation is enabling/disabling features that are not tied to an API group. API groups can be selectively enabled/disabled in the apiserver via existing --runtime-config flag on apiserver, but there is currently no mechanism to toggle alpha features that are controlled by e.</description>
+    </item>
+    
+    <item>
+      <title>self-hosted-kubelet</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/self-hosted-kubelet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/self-hosted-kubelet/</guid>
+      <description>Proposal: Self-hosted kubelet Abstract In a self-hosted Kubernetes deployment (see this comment for background on self hosted kubernetes), we have the initial bootstrap problem. When running self-hosted components, there needs to be a mechanism for pivoting from the initial bootstrap state to the kubernetes-managed (self-hosted) state. In the case of a self-hosted kubelet, this means pivoting from the initial kubelet defined and run on the host, to the kubelet pod which has been scheduled to the node.</description>
+    </item>
+    
+    <item>
+      <title>self-hosted-kubernetes</title>
+      <link>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/self-hosted-kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/contributors/design-proposals/cluster-lifecycle/self-hosted-kubernetes/</guid>
+      <description>Proposal: Self-hosted Control Plane Author: Brandon Philips brandon.philips@coreos.com
+Motivations  Running our components in pods would solve many problems, which we&amp;rsquo;ll otherwise need to implement other, less portable, more brittle solutions to, and doesn&amp;rsquo;t require much that we don&amp;rsquo;t need to do for other reasons. Full self-hosting is the eventual goal.
+ Brian Grant (ref)   What is self-hosted? Self-hosted Kubernetes runs all required and optional components of a Kubernetes cluster on top of Kubernetes itself.</description>
+    </item>
+    
+  </channel>
+</rss>

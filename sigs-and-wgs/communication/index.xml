@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>communication on Kubernetes Community</title>
+    <link>/sigs-and-wgs/communication/</link>
+    <description>Recent content in communication on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/communication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>K8sYoutubeCollaboration</title>
+      <link>/sigs-and-wgs/communication/k8syoutubecollaboration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/communication/k8syoutubecollaboration/</guid>
+      <description>Kubernetes Youtube Channel Collaboration Meeting Playlists The Kubernetes Youtube Channel has separate playlists for each SIG’s meeting recordings, as well as recordings of other meetings (i.e. Cloud Native, Kubernetes Community meetings).
+To better serve the community, we have set up collaboration on these playlists, so that anyone with the appropriate link to the particular playlist can upload videos to that particular playlist (links &amp;amp; playlists are 1:1).
+Each SIG playlist’s link will be shared with the SIG’s leadership, and other playlists&amp;rsquo; links (i.</description>
+    </item>
+    
+    <item>
+      <title>moderation</title>
+      <link>/sigs-and-wgs/communication/moderation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/communication/moderation/</guid>
+      <description>Moderation on Kubernetes Communications Channels This page describes the rules and best practices for people chosen to moderate Kubernetes communications channels. This includes, Slack and the mailing lists and any communication tool used in an official manner by the project.
+Roles and Responsibilities As part of volunteering to become a moderator you are now representative of the Kubernetes community and it is your responsibility to remain aware of your contributions in this space.</description>
+    </item>
+    
+    <item>
+      <title>slack-guidelines</title>
+      <link>/sigs-and-wgs/communication/slack-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/communication/slack-guidelines/</guid>
+      <description>SLACK GUIDELINES Slack is the main communication platform for Kubernetes outside of our mailing lists. It’s important that conversation stays on topic in each channel, and that everyone abides by the Code of Conduct. We have over 30,000 members who should all expect to have a positive experience.
+Chat is searchable and public. Do not make comments that you would not say on a video recording or in another public space.</description>
+    </item>
+    
+    <item>
+      <title>zoom-guidelines</title>
+      <link>/sigs-and-wgs/communication/zoom-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/communication/zoom-guidelines/</guid>
+      <description>Zoom Guidelines Zoom is the main video communication platform for Kubernetes. It is used for running the community meeting and SIG meetings. Since the Zoom meetings are open to the general public, a Zoom host has to moderate a meeting if a person is in violation of the code of conduct.
+These guidelines are meant as a tool to help Kubernetes members manage their Zoom resources. Check the main moderation page for more information on other tools and general moderation guidelines.</description>
+    </item>
+    
+  </channel>
+</rss>

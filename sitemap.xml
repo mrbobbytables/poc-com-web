@@ -11,71 +11,7 @@
   </url>
   
   <url>
-    <loc>/keps/sig-cloud-provider/0002-cloud-controller-manager/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0003-cluster-api/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-contributor-experience/0005-contributor-site/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/0006-apply/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-contributor-experience/0007-20180403-community-forum/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0007-pod-ready&#43;&#43;/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cli/0008-kustomize/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-node/0009-node-heartbeat/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0010-20180314-coredns-ga-proposal/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0011-ipvs-proxier/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0012-20180518-coredns-default-proposal/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</loc>
+    <loc>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</loc>
   </url>
   
   <url>
@@ -95,7 +31,7 @@
   </url>
   
   <url>
-    <loc>/sig-storage/1.3-retrospective/</loc>
+    <loc>/special-interest-groups/sig-storage/1.3-retrospective/</loc>
   </url>
   
   <url>
@@ -119,47 +55,47 @@
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-05-18/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-05-18/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-05-25/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-05-25/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-06-08/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-06-08/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-06-15/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-06-15/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-06-22/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-06-22/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-06-29/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-06-29/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-07-06/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-07-06/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-07-13/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-07-13/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-07-20/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-07-20/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-07-27/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-07-27/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/2016-08-03/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/2016-08-03/</loc>
   </url>
   
   <url>
@@ -167,7 +103,7 @@
   </url>
   
   <url>
-    <loc>/sig-aws/2017_goals/</loc>
+    <loc>/special-interest-groups/sig-aws/2017_goals/</loc>
   </url>
   
   <url>
@@ -176,7 +112,7 @@
   </url>
   
   <url>
-    <loc>/sig-cloud-provider/charter/</loc>
+    <loc>/special-interest-groups/sig-cloud-provider/charter/</loc>
   </url>
   
   <url>
@@ -184,23 +120,19 @@
   </url>
   
   <url>
-    <loc>/contributing/</loc>
+    <loc>/special-interest-groups/sig-apps/contributing/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/contributing/</loc>
+    <loc>/special-interest-groups/sig-aws/contributing/</loc>
   </url>
   
   <url>
-    <loc>/sig-aws/contributing/</loc>
+    <loc>/special-interest-groups/sig-cli/contributing/</loc>
   </url>
   
   <url>
-    <loc>/sig-cli/contributing/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-multicluster/contributing/</loc>
+    <loc>/special-interest-groups/sig-multicluster/contributing/</loc>
   </url>
   
   <url>
@@ -210,6 +142,11 @@
   
   <url>
     <loc>/contributors/design-proposals/cluster-lifecycle/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/committee-code-of-conduct/</loc>
     <priority>0</priority>
   </url>
   
@@ -249,6 +186,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/events/2016/kubernetes_1st_bday/</loc>
   </url>
   
@@ -261,7 +203,7 @@
   </url>
   
   <url>
-    <loc>/sig-multicluster/oncall/</loc>
+    <loc>/special-interest-groups/sig-multicluster/oncall/</loc>
   </url>
   
   <url>
@@ -330,7 +272,7 @@
   </url>
   
   <url>
-    <loc>/sig-apps/agenda/</loc>
+    <loc>/special-interest-groups/sig-apps/agenda/</loc>
   </url>
   
   <url>
@@ -370,7 +312,7 @@
   </url>
   
   <url>
-    <loc>/sig-api-machinery/api-extensions-position-statement/</loc>
+    <loc>/special-interest-groups/sig-api-machinery/api-extensions-position-statement/</loc>
   </url>
   
   <url>
@@ -378,11 +320,11 @@
   </url>
   
   <url>
-    <loc>/sig-windows/api-tracking/</loc>
+    <loc>/special-interest-groups/sig-windows/api-tracking/</loc>
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/api_call_latency/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/api_call_latency/</loc>
   </url>
   
   <url>
@@ -390,7 +332,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/api_extensions_latency/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/api_extensions_latency/</loc>
   </url>
   
   <url>
@@ -442,7 +384,7 @@
   </url>
   
   <url>
-    <loc>/sig-architecture/backlog/</loc>
+    <loc>/special-interest-groups/sig-architecture/backlog/</loc>
   </url>
   
   <url>
@@ -451,6 +393,10 @@
   
   <url>
     <loc>/contributors/design-proposals/cluster-lifecycle/bootstrap-discovery/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-code-of-conduct/bootstrapping-process/</loc>
   </url>
   
   <url>
@@ -470,15 +416,15 @@
   </url>
   
   <url>
-    <loc>/sig-architecture/charter/</loc>
+    <loc>/special-interest-groups/sig-architecture/charter/</loc>
   </url>
   
   <url>
-    <loc>/sig-azure/charter/</loc>
+    <loc>/special-interest-groups/sig-azure/charter/</loc>
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/charter/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/charter/</loc>
   </url>
   
   <url>
@@ -538,10 +484,6 @@
   </url>
   
   <url>
-    <loc>/code-of-conduct/</loc>
-  </url>
-  
-  <url>
     <loc>/contributors/guide/coding-conventions/</loc>
   </url>
   
@@ -558,15 +500,11 @@
   </url>
   
   <url>
-    <loc>/communication/</loc>
-  </url>
-  
-  <url>
     <loc>/contributors/guide/community-expectations/</loc>
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/community-maintenance/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/community-maintenance/</loc>
   </url>
   
   <url>
@@ -583,6 +521,10 @@
   
   <url>
     <loc>/contributors/design-proposals/apps/configmap/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/devel/conformance-tests/</loc>
   </url>
   
   <url>
@@ -614,11 +556,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-storage/contributing/</loc>
+    <loc>/special-interest-groups/sig-storage/contributing/</loc>
   </url>
   
   <url>
@@ -626,7 +564,7 @@
   </url>
   
   <url>
-    <loc>/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</loc>
+    <loc>/special-interest-groups/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/</loc>
   </url>
   
   <url>
@@ -699,10 +637,6 @@
   
   <url>
     <loc>/contributors/design-proposals/instrumentation/custom-metrics-api/</loc>
-  </url>
-  
-  <url>
-    <loc>/generator/testdata/custom_content/</loc>
   </url>
   
   <url>
@@ -802,7 +736,7 @@
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/migrated-from-wiki/effective-reviewable/</loc>
   </url>
   
   <url>
@@ -835,10 +769,6 @@
   
   <url>
     <loc>/contributors/design-proposals/instrumentation/events-redesign/</loc>
-  </url>
-  
-  <url>
-    <loc>/generator/testdata/example/</loc>
   </url>
   
   <url>
@@ -934,7 +864,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/processes/formal-scalability-processes/</loc>
+    <loc>/special-interest-groups/sig-scalability/processes/formal-scalability-processes/</loc>
   </url>
   
   <url>
@@ -947,10 +877,6 @@
   
   <url>
     <loc>/contributors/devel/generating-clientset/</loc>
-  </url>
-  
-  <url>
-    <loc>/generator/</loc>
   </url>
   
   <url>
@@ -970,7 +896,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/goals/</loc>
+    <loc>/special-interest-groups/sig-scalability/goals/</loc>
   </url>
   
   <url>
@@ -1054,10 +980,6 @@
   </url>
   
   <url>
-    <loc>/icons/</loc>
-  </url>
-  
-  <url>
     <loc>/contributors/design-proposals/architecture/identifiers/</loc>
   </url>
   
@@ -1067,10 +989,6 @@
   
   <url>
     <loc>/contributors/design-proposals/auth/image-provenance/</loc>
-  </url>
-  
-  <url>
-    <loc>/incubator/</loc>
   </url>
   
   <url>
@@ -1102,7 +1020,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/blogs/k8s-services-scalability-issues/</loc>
+    <loc>/special-interest-groups/sig-scalability/blogs/k8s-services-scalability-issues/</loc>
   </url>
   
   <url>
@@ -1118,7 +1036,7 @@
   </url>
   
   <url>
-    <loc>/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</loc>
+    <loc>/special-interest-groups/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</loc>
   </url>
   
   <url>
@@ -1198,7 +1116,7 @@
   </url>
   
   <url>
-    <loc>/sig-aws/kubernetes-on-aws/</loc>
+    <loc>/special-interest-groups/sig-aws/kubernetes-on-aws/</loc>
   </url>
   
   <url>
@@ -1222,7 +1140,7 @@
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/markdown-link-style-guide/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/markdown-link-style-guide/</loc>
   </url>
   
   <url>
@@ -1266,23 +1184,23 @@
   </url>
   
   <url>
-    <loc>/sig-cli/migrated-from-wiki/</loc>
+    <loc>/special-interest-groups/sig-cli/migrated-from-wiki/</loc>
   </url>
   
   <url>
-    <loc>/sig-cluster-lifecycle/migrated-from-wiki/</loc>
+    <loc>/special-interest-groups/sig-cluster-lifecycle/migrated-from-wiki/</loc>
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/migrated-from-wiki/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/migrated-from-wiki/</loc>
   </url>
   
   <url>
-    <loc>/sig-docs/migrated-from-wiki/</loc>
+    <loc>/special-interest-groups/sig-docs/migrated-from-wiki/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/minutes/</loc>
+    <loc>/special-interest-groups/sig-apps/minutes/</loc>
   </url>
   
   <url>
@@ -1342,10 +1260,6 @@
   </url>
   
   <url>
-    <loc>/generator/testdata/no_custom_content/</loc>
-  </url>
-  
-  <url>
     <loc>/contributors/design-proposals/node/node-allocatable/</loc>
   </url>
   
@@ -1363,6 +1277,10 @@
   
   <url>
     <loc>/contributors/design-proposals/network/nodeport-ip-range/</loc>
+  </url>
+  
+  <url>
+    <loc>/contributors/guide/non-code-contributions/</loc>
   </url>
   
   <url>
@@ -1386,7 +1304,7 @@
   </url>
   
   <url>
-    <loc>/sig-cli/outreachy/</loc>
+    <loc>/special-interest-groups/sig-cli/outreachy/</loc>
   </url>
   
   <url>
@@ -1450,7 +1368,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/pod_startup_latency/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/pod_startup_latency/</loc>
   </url>
   
   <url>
@@ -1490,7 +1408,7 @@
   </url>
   
   <url>
-    <loc>/sig-contributor-experience/projects/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/projects/</loc>
   </url>
   
   <url>
@@ -1502,7 +1420,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/configs-and-limits/provider-configs/</loc>
+    <loc>/special-interest-groups/sig-scalability/configs-and-limits/provider-configs/</loc>
   </url>
   
   <url>
@@ -1570,7 +1488,7 @@
   </url>
   
   <url>
-    <loc>/sig-big-data/resources/</loc>
+    <loc>/special-interest-groups/sig-big-data/resources/</loc>
   </url>
   
   <url>
@@ -1578,15 +1496,15 @@
   </url>
   
   <url>
-    <loc>/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</loc>
+    <loc>/special-interest-groups/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/</loc>
   </url>
   
   <url>
-    <loc>/sig-docs/migrated-from-wiki/roadmap-docs/</loc>
+    <loc>/special-interest-groups/sig-docs/migrated-from-wiki/roadmap-docs/</loc>
   </url>
   
   <url>
-    <loc>/sig-cli/migrated-from-wiki/roadmap-kubectl/</loc>
+    <loc>/special-interest-groups/sig-cli/migrated-from-wiki/roadmap-kubectl/</loc>
   </url>
   
   <url>
@@ -1622,7 +1540,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/governance/scalability-regressions-case-studies/</loc>
+    <loc>/special-interest-groups/sig-scalability/governance/scalability-regressions-case-studies/</loc>
   </url>
   
   <url>
@@ -1730,91 +1648,63 @@
   </url>
   
   <url>
-    <loc>/sig-api-machinery/</loc>
+    <loc>/special-interest-groups/sig-api-machinery/</loc>
   </url>
   
   <url>
-    <loc>/keps/sig-apps/</loc>
+    <loc>/special-interest-groups/sig-apps/</loc>
   </url>
   
   <url>
-    <loc>/sig-apps/</loc>
+    <loc>/special-interest-groups/sig-architecture/</loc>
   </url>
   
   <url>
-    <loc>/sig-architecture/</loc>
+    <loc>/special-interest-groups/sig-auth/</loc>
   </url>
   
   <url>
-    <loc>/sig-auth/</loc>
+    <loc>/special-interest-groups/sig-autoscaling/</loc>
   </url>
   
   <url>
-    <loc>/sig-autoscaling/</loc>
+    <loc>/special-interest-groups/sig-aws/</loc>
   </url>
   
   <url>
-    <loc>/keps/sig-aws/</loc>
+    <loc>/special-interest-groups/sig-azure/</loc>
   </url>
   
   <url>
-    <loc>/sig-aws/</loc>
+    <loc>/special-interest-groups/sig-big-data/</loc>
   </url>
   
   <url>
-    <loc>/sig-azure/</loc>
+    <loc>/special-interest-groups/sig-cli/</loc>
   </url>
   
   <url>
-    <loc>/sig-big-data/</loc>
+    <loc>/special-interest-groups/sig-cloud-provider/</loc>
   </url>
   
   <url>
-    <loc>/committee-steering/governance/sig-charter-template/</loc>
+    <loc>/special-interest-groups/sig-cluster-lifecycle/</loc>
   </url>
   
   <url>
-    <loc>/sig-cli/</loc>
+    <loc>/special-interest-groups/sig-cluster-ops/</loc>
   </url>
   
   <url>
-    <loc>/sig-cloud-provider/</loc>
+    <loc>/special-interest-groups/sig-contributor-experience/</loc>
   </url>
   
   <url>
-    <loc>/keps/sig-cluster-lifecycle/</loc>
+    <loc>/special-interest-groups/sig-docs/</loc>
   </url>
   
   <url>
-    <loc>/sig-cluster-lifecycle/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-cluster-ops/</loc>
-  </url>
-  
-  <url>
-    <loc>/archive/sig-configuration/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-contributor-experience/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-creation-procedure/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-docs/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-gcp/</loc>
-  </url>
-  
-  <url>
-    <loc>/committee-steering/governance/sig-governance/</loc>
+    <loc>/special-interest-groups/sig-gcp/</loc>
   </url>
   
   <url>
@@ -1822,87 +1712,67 @@
   </url>
   
   <url>
-    <loc>/committee-steering/governance/sig-governance-requirements/</loc>
+    <loc>/special-interest-groups/sig-ibmcloud/</loc>
   </url>
   
   <url>
-    <loc>/sig-ibmcloud/</loc>
+    <loc>/special-interest-groups/sig-instrumentation/</loc>
   </url>
   
   <url>
-    <loc>/sig-instrumentation/</loc>
+    <loc>/special-interest-groups/sig-multicluster/</loc>
   </url>
   
   <url>
-    <loc>/sig-list/</loc>
+    <loc>/special-interest-groups/sig-network/</loc>
   </url>
   
   <url>
-    <loc>/sig-multicluster/</loc>
+    <loc>/special-interest-groups/sig-node/</loc>
   </url>
   
   <url>
-    <loc>/keps/sig-network/</loc>
+    <loc>/special-interest-groups/sig-openstack/</loc>
   </url>
   
   <url>
-    <loc>/sig-network/</loc>
+    <loc>/special-interest-groups/sig-pm/</loc>
   </url>
   
   <url>
-    <loc>/sig-node/</loc>
+    <loc>/special-interest-groups/sig-release/</loc>
   </url>
   
   <url>
-    <loc>/archive/sig-on-premise/</loc>
+    <loc>/special-interest-groups/sig-scalability/</loc>
   </url>
   
   <url>
-    <loc>/sig-openstack/</loc>
+    <loc>/special-interest-groups/sig-scheduling/</loc>
   </url>
   
   <url>
-    <loc>/sig-pm/</loc>
+    <loc>/special-interest-groups/sig-service-catalog/</loc>
   </url>
   
   <url>
-    <loc>/sig-release/</loc>
+    <loc>/special-interest-groups/sig-storage/</loc>
   </url>
   
   <url>
-    <loc>/archive/sig-rktnetes/</loc>
+    <loc>/special-interest-groups/sig-testing/</loc>
   </url>
   
   <url>
-    <loc>/sig-scalability/</loc>
+    <loc>/special-interest-groups/sig-ui/</loc>
   </url>
   
   <url>
-    <loc>/sig-scheduling/</loc>
+    <loc>/special-interest-groups/sig-vmware/</loc>
   </url>
   
   <url>
-    <loc>/sig-service-catalog/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-storage/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-testing/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-ui/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-vmware/</loc>
-  </url>
-  
-  <url>
-    <loc>/sig-windows/</loc>
+    <loc>/special-interest-groups/sig-windows/</loc>
   </url>
   
   <url>
@@ -1914,7 +1784,11 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/slos/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/slos/</loc>
+  </url>
+  
+  <url>
+    <loc>/special-interest-groups/</loc>
   </url>
   
   <url>
@@ -1946,6 +1820,10 @@
   </url>
   
   <url>
+    <loc>/github-management/subproject-responsibilites/</loc>
+  </url>
+  
+  <url>
     <loc>/contributors/design-proposals/network/support_traffic_shaping_for_kubelet_cni/</loc>
   </url>
   
@@ -1962,7 +1840,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/system_throughput/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/system_throughput/</loc>
   </url>
   
   <url>
@@ -1986,7 +1864,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/configs-and-limits/thresholds/</loc>
+    <loc>/special-interest-groups/sig-scalability/configs-and-limits/thresholds/</loc>
   </url>
   
   <url>
@@ -2034,7 +1912,7 @@
   </url>
   
   <url>
-    <loc>/sig-storage/volume-plugin-faq/</loc>
+    <loc>/special-interest-groups/sig-storage/volume-plugin-faq/</loc>
   </url>
   
   <url>
@@ -2066,7 +1944,7 @@
   </url>
   
   <url>
-    <loc>/sig-scalability/slos/watch_latency/</loc>
+    <loc>/special-interest-groups/sig-scalability/slos/watch_latency/</loc>
   </url>
   
   <url>
@@ -2074,47 +1952,51 @@
   </url>
   
   <url>
-    <loc>/wg-app-def/</loc>
+    <loc>/working-groups/wg-app-def/</loc>
   </url>
   
   <url>
-    <loc>/wg-apply/</loc>
+    <loc>/working-groups/wg-apply/</loc>
   </url>
   
   <url>
-    <loc>/wg-cluster-api/</loc>
+    <loc>/working-groups/wg-cluster-api/</loc>
   </url>
   
   <url>
-    <loc>/wg-container-identity/</loc>
+    <loc>/working-groups/wg-container-identity/</loc>
   </url>
   
   <url>
-    <loc>/wg-iot-edge/</loc>
+    <loc>/working-groups/wg-iot-edge/</loc>
   </url>
   
   <url>
-    <loc>/wg-kubeadm-adoption/</loc>
+    <loc>/working-groups/wg-kubeadm-adoption/</loc>
   </url>
   
   <url>
-    <loc>/wg-machine-learning/</loc>
+    <loc>/working-groups/wg-machine-learning/</loc>
   </url>
   
   <url>
-    <loc>/wg-multitenancy/</loc>
+    <loc>/working-groups/wg-multitenancy/</loc>
   </url>
   
   <url>
-    <loc>/wg-policy/</loc>
+    <loc>/working-groups/wg-policy/</loc>
   </url>
   
   <url>
-    <loc>/wg-resource-management/</loc>
+    <loc>/working-groups/wg-resource-management/</loc>
   </url>
   
   <url>
     <loc>/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/</loc>
+  </url>
+  
+  <url>
+    <loc>/working-groups/</loc>
   </url>
   
   <url>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-network on Kubernetes Community</title>
+    <link>/sigs-and-wgs/keps/sig-network/</link>
+    <description>Recent content in sig-network on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/sigs-and-wgs/keps/sig-network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0007-pod-ready&#43;&#43;</title>
+      <link>/sigs-and-wgs/keps/sig-network/0007-pod-ready&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/keps/sig-network/0007-pod-ready&#43;&#43;/</guid>
+      <description>kep-number: 1 title: Pod Ready++ authors: - &amp;ldquo;freehan@&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-node - sig-cli reviewers: - thockin@ - dchen1107@ approvers: - thockin@ - dchen1107@ editor: freehan@ creation-date: 2018-04-01 last-updated: 2018-04-01 status: provisional
+Pod Ready++ Table of Contents  Table of Contents Summary Motivation  Goals Non-Goals  Proposal  Implementation Details/Notes/Constraints Risks and Mitigations  Graduation Criteria Implementation History Alternatives  Summary This proposal aims to add extensibility to pod readiness.</description>
+    </item>
+    
+    <item>
+      <title>0010-20180314-coredns-GA-proposal</title>
+      <link>/sigs-and-wgs/keps/sig-network/0010-20180314-coredns-ga-proposal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/keps/sig-network/0010-20180314-coredns-ga-proposal/</guid>
+      <description>kep-number: 10 title: Graduate CoreDNS to GA authors: - &amp;ldquo;@johnbelamaric&amp;rdquo; - &amp;ldquo;@rajansandeep&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-cluster-lifecycle reviewers: - &amp;ldquo;@bowei&amp;rdquo; - &amp;ldquo;@thockin&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: &amp;ldquo;@rajansandeep&amp;rdquo; creation-date: 2018-03-21 last-updated: 2018-05-18 status: provisional
+see-also: https://github.com/kubernetes/community/pull/2167 Graduate CoreDNS to GA Table of Contents  Summary Motivation  Goals Non-Goals  Proposal  User Cases  Graduation Criteria Implementation History  Summary CoreDNS is sister CNCF project and is the successor to SkyDNS, on which kube-dns is based.</description>
+    </item>
+    
+    <item>
+      <title>0011-ipvs-proxier</title>
+      <link>/sigs-and-wgs/keps/sig-network/0011-ipvs-proxier/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/keps/sig-network/0011-ipvs-proxier/</guid>
+      <description>kep-number: TBD title: IPVS Load Balancing Mode in Kubernetes status: implemented authors: - &amp;ldquo;@rramkumar1&amp;rdquo; owning-sig: sig-network reviewers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo; editor: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@m1093782566&amp;rdquo;
+creation-date: 2018-03-21 IPVS Load Balancing Mode in Kubernetes Note: This is a retroactive KEP. Credit goes to @m1093782566, @haibinxie, and @quinton-hoole for all information &amp;amp; design in this KEP.
+Important References: https://github.com/kubernetes/community/pull/692/files
+Table of Contents  Summary Motivation  Goals Non-goals  Proposal  Kube-Proxy Parameter Changes Build Changes Deployment Changes Design Considerations IPVS service network topology Port remapping Falling back to iptables Supporting NodePort service Supporting ClusterIP service Supporting LoadBalancer service Session Affinity Cleaning up inactive rules Sync loop pseudo code  Graduation Criteria Implementation History Drawbacks Alternatives  Summary We are building a new implementation of kube proxy built on top of IPVS (IP Virtual Server).</description>
+    </item>
+    
+    <item>
+      <title>0012-20180518-coredns-default-proposal</title>
+      <link>/sigs-and-wgs/keps/sig-network/0012-20180518-coredns-default-proposal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sigs-and-wgs/keps/sig-network/0012-20180518-coredns-default-proposal/</guid>
+      <description>kep-number: 11 title: Switch CoreDNS to the default DNS authors: - &amp;ldquo;@johnbelamaric&amp;rdquo; - &amp;ldquo;@rajansandeep&amp;rdquo; owning-sig: sig-network participating-sigs: - sig-cluster-lifecycle reviewers: - &amp;ldquo;@bowei&amp;rdquo; - &amp;ldquo;@thockin&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; editor: &amp;ldquo;@rajansandeep&amp;rdquo; creation-date: 2018-05-18 last-updated: 2018-05-18
+status: provisional Switch CoreDNS to the default DNS Table of Contents  Summary Goals Proposal  User Cases  Graduation Criteria Implementation History  Summary CoreDNS is now well-established in Kubernetes as the DNS service, with CoreDNS starting as an alpha feature from Kubernetes v1.</description>
+    </item>
+    
+  </channel>
+</rss>

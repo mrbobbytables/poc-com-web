@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wg-cluster-api on Kubernetes Community</title>
+    <link>/working-groups/wg-cluster-api/</link>
+    <description>Recent content in wg-cluster-api on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/working-groups/wg-cluster-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

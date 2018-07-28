@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kubernetes Community</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.44" />
+
+<title>customresources-subresources :: Kubernetes Community</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+  <link href="/theme-original/variant-blue.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/sigs-and-wgs/contributors/design-proposals/api-machinery/customresources-subresources/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <a class="baselink" href="/">Kubernetes Community</a>
+  
+
+    </div>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        <section id="shortcuts">
+                <li class="" role=""><a href="/sig-list/"  rel="noopener">sig list</a></li>
+        </section>
+    <li data-nav-id="/sigs-and-wgs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/">sigs-and-wgs</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/committee-steering/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/committee-steering/">Committee-steerings</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/committee-steering/governance/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/committee-steering/governance/">governance</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/committee-steering/governance/faq/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/committee-steering/governance/faq/">
+            FAQ
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/committee-steering/governance/sig-charter-template/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/committee-steering/governance/sig-charter-template/">
+            sig-charter-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/committee-steering/governance/sig-governance/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/committee-steering/governance/sig-governance/">
+            sig-governance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/committee-steering/governance/sig-governance-requirements/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/committee-steering/governance/sig-governance-requirements/">
+            sig-governance-requirements
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/contributors/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/contributors/">Contributors</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/events/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/events/">Events</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0300-0345_codeorganization/">
+            0300-0345_CODEORGANIZATION
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0905-0930_state_of_the_kube/">
+            0905-0930_STATE_OF_THE_KUBE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/0940-1000_project_goals_roadmap/">
+            0940-1000_PROJECT_GOALS_ROADMAP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1015-1115_updates_governance_and_cncf/">
+            1015-1115_UPDATES_GOVERNANCE_AND_CNCF
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1145_1245_architectural_roadmap/">
+            1145_1245_ARCHITECTURAL_ROADMAP
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1345-1430_siggovernance/">
+            1345-1430_SIGGOVERNANCE
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1500-1545_community_ladder/">
+            1500-1545_COMMUNITY_LADDER
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/1600-1740_presentations_from_breakouts_and_call_to_actions/">
+            1600-1740_PRESENTATIONS_FROM_BREAKOUTS_AND_CALL_TO_ACTIONS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/events/2018/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/events/2018/">2018s</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/events/2018/05-contributor-summit/">05-contributor-summit</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/clientgo-notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/clientgo-notes/">
+            clientgo-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/crds-notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/crds-notes/">
+            crds-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/devtools-notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/devtools-notes/">
+            devtools-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/networking-notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/networking-notes/">
+            networking-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-notes/">
+            new-contributor-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-workshop/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/new-contributor-workshop/">
+            new-contributor-workshop
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2018/05-contributor-summit/steering-update/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2018/05-contributor-summit/steering-update/">
+            steering-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/contribsummitinformation/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/contribsummitinformation/">
+            ContribSummitInformation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/kubdevsummitvoting/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/kubdevsummitvoting/">
+            KubDevSummitVoting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/kubernetes_1st_bday/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/kubernetes_1st_bday/">
+            Kubernetes_1st_Bday
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/kubernetes_dev_summit/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/kubernetes_dev_summit/">
+            Kubernetes_Dev_Summit
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/announcement/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/announcement/">
+            announcement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/application_service_definition_notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/application_service_definition_notes/">
+            application_service_definition_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/breaking-up-the-monolith/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/breaking-up-the-monolith/">
+            breaking-up-the-monolith
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/cloud-native-design-refactoring-across-k8s/">
+            cloud-native-design-refactoring-across-k8s
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/cloud-provider/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/cloud-provider/">
+            cloud-provider
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/cluster_federation_notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/cluster_federation_notes/">
+            cluster_federation_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/cluster_lifecycle_notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/cluster_lifecycle_notes/">
+            cluster_lifecycle_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/community-meeting/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/community-meeting/">
+            community-meeting
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/container-identity/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/container-identity/">
+            container-identity
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/current-state-of-client-libraries/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/current-state-of-client-libraries/">
+            current-state-of-client-libraries
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/dashboard-ux-breakout/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/dashboard-ux-breakout/">
+            dashboard-ux-breakout
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/events/elections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/events/elections/">elections</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/events/elections/2017/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/events/elections/2017/">2017</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/results/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/results/">
+            RESULTS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/aaroncrickenberger_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/aaroncrickenberger_bio/">
+            aaroncrickenberger_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/aaronschlesinger_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/aaronschlesinger_bio/">
+            aaronschlesinger_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/adnanabdulhussein_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/adnanabdulhussein_bio/">
+            adnanabdulhussein_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/alexpollitt_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/alexpollitt_bio/">
+            alexpollitt_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/calebamiles_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/calebamiles_bio/">
+            calebamiles_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/derekcarr_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/derekcarr_bio/">
+            derekcarr_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/dougdavis_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/dougdavis_bio/">
+            dougdavis_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/errordeveloper_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/errordeveloper_bio/">
+            errordeveloper_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/idvoretskyi_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/idvoretskyi_bio/">
+            idvoretskyi_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/jaicesingerdumars_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/jaicesingerdumars_bio/">
+            jaicesingerdumars_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/kris-nova_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/kris-nova_bio/">
+            kris-nova_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/mattfarina_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/mattfarina_bio/">
+            mattfarina_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/michaelrubin_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/michaelrubin_bio/">
+            michaelrubin_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/michellenoorali_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/michellenoorali_bio/">
+            michellenoorali_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/pwittrock_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/pwittrock_bio/">
+            pwittrock_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/quintonhoole_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/quintonhoole_bio/">
+            quintonhoole_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/rhirschfeld_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/rhirschfeld_bio/">
+            rhirschfeld_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/sebastiengoasguen_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/sebastiengoasguen_bio/">
+            sebastiengoasguen_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/timothysc_bio/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/timothysc_bio/">
+            timothysc_bio
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/elections/2017/vote_for_justinsb/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/elections/2017/vote_for_justinsb/">
+            vote_for_justinsb
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/enabling-kubernetes-ecosystem/">
+            enabling-kubernetes-ecosystem
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/extending-kubernetes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/extending-kubernetes/">
+            extending-kubernetes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/feature-roadmap-2018/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/feature-roadmap-2018/">
+            feature-roadmap-2018
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/feature-workflow/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/feature-workflow/">
+            feature-workflow
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/fixit201606/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/fixit201606/">
+            fixit201606
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/kubernetes-client-libraries-open-space/">
+            kubernetes-client-libraries-open-space
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/office-hours/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/office-hours/">
+            office-hours
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/onboarding-new-developers-through-better-docs/">
+            onboarding-new-developers-through-better-docs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/role-of-sig-lead/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/role-of-sig-lead/">
+            role-of-sig-lead
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/scaling-new-contributors/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/scaling-new-contributors/">
+            scaling-new-contributors
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/scaling-up-and-scaling-down-and-addon-management/">
+            scaling-up-and-scaling-down-and-addon-management
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/readme/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/05-leadership-summit/session-notes/readme/">
+            session-notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/should-k8s-use-feature-branches/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/should-k8s-use-feature-branches/">
+            should-k8s-use-feature-branches
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2016/developer-summit-2016/statefulset_notes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2016/developer-summit-2016/statefulset_notes/">
+            statefulset_notes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/steering-committee-update/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/steering-committee-update/">
+            steering-committee-update
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/events/2017/12-contributor-summit/whats-up-with-sig-cluster-lifecycle/">
+            whats-up-with-sig-cluster-lifecycle
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/archive/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/archive/">archive</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/archive/sig-configuration/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/archive/sig-configuration/">sig-configuration</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/archive/sig-on-premise/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/archive/sig-on-premise/">sig-on-premise</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/archive/sig-rktnetes/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/archive/sig-rktnetes/">sig-rktnetes</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/committee-code-of-conduct/bootstrapping-process/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/committee-code-of-conduct/bootstrapping-process/">
+            bootstrapping-process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/code-of-conduct/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/code-of-conduct/">
+            code-of-conduct
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/communication/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/communication/">communication</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/communication/k8syoutubecollaboration/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/communication/k8syoutubecollaboration/">
+            K8sYoutubeCollaboration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/communication/moderation/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/communication/moderation/">
+            moderation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/communication/slack-guidelines/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/communication/slack-guidelines/">
+            slack-guidelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/communication/zoom-guidelines/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/communication/zoom-guidelines/">
+            zoom-guidelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/communication/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/communication/">
+            communication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/community-membership/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/community-membership/">
+            community-membership
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/github-management/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/github-management/">github-management</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/github-management/kubernetes-repositories/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/github-management/kubernetes-repositories/">
+            kubernetes-repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/github-management/org-owners-guide/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/github-management/org-owners-guide/">
+            org-owners-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/github-management/permissions/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/github-management/permissions/">
+            permissions
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/github-management/setting-up-cla-check/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/github-management/setting-up-cla-check/">
+            setting-up-cla-check
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/github-management/subproject-responsibilites/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/github-management/subproject-responsibilites/">
+            subproject-responsibilites
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/icons/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/icons/">icons</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/incubator/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/incubator/">
+            incubator
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/keps/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/keps/">keps</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/keps/0000-kep-template/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/0000-kep-template/">
+            0000-kep-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/0001-kubernetes-enhancement-proposal-process/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/0001-kubernetes-enhancement-proposal-process/">
+            0001-kubernetes-enhancement-proposal-process
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cloud-provider/0002-cloud-controller-manager/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cloud-provider/0002-cloud-controller-manager/">
+            0002-cloud-controller-manager
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/">
+            0003-testgrid-conformance-e2e
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cloud-provider/providers/0004-cloud-provider-template/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cloud-provider/providers/0004-cloud-provider-template/">
+            0004-cloud-provider-template
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-contributor-experience/0005-contributor-site/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-contributor-experience/0005-contributor-site/">
+            0005-contributor-site
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-api-machinery/0006-apply/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-api-machinery/0006-apply/">
+            0006-apply
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-contributor-experience/0007-20180403-community-forum/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-contributor-experience/0007-20180403-community-forum/">
+            0007-20180403-community-forum
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/">
+            0008-20180430-promote-sysctl-annotations-to-fields
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cli/0008-kustomize/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cli/0008-kustomize/">
+            0008-kustomize
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-node/0009-node-heartbeat/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-node/0009-node-heartbeat/">
+            0009-node-heartbeat
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-auth/0014-dynamic-audit-configuration/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-auth/0014-dynamic-audit-configuration/">
+            0014-dynamic-audit-configuration
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-api-machinery/0015-dry-run/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-api-machinery/0015-dry-run/">
+            0015-dry-run
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cloud-provider/providers/0017-cloud-provider-digitalocean/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cloud-provider/providers/0017-cloud-provider-digitalocean/">
+            0017-cloud-provider-digitalocean
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cloud-provider/providers/cloud-provider-baiducloud/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cloud-provider/providers/cloud-provider-baiducloud/">
+            cloud-provider-baiducloud
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/keps/sig-apps/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/keps/sig-apps/">sig-apps</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/keps/sig-aws/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/keps/sig-aws/">sig-aws</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/">sig-cluster-lifecycle</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/0003-cluster-api/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/0003-cluster-api/">
+            0003-cluster-api
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/">
+            0004-bootstrap-checkpointing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/">
+            0008-20180504-kubeadm-config-beta
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/">
+            0014-20180707-componentconfig-api-types-to-staging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/">
+            0015-kubeadm-join-master
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/keps/sig-network/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/keps/sig-network/">sig-network</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-network/0007-pod-ready&#43;&#43;/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-network/0007-pod-ready&#43;&#43;/">
+            0007-pod-ready&#43;&#43;
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-network/0010-20180314-coredns-ga-proposal/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-network/0010-20180314-coredns-ga-proposal/">
+            0010-20180314-coredns-GA-proposal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-network/0011-ipvs-proxier/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-network/0011-ipvs-proxier/">
+            0011-ipvs-proxier
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/keps/sig-network/0012-20180518-coredns-default-proposal/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/keps/sig-network/0012-20180518-coredns-default-proposal/">
+            0012-20180518-coredns-default-proposal
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/mentoring/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/mentoring/">mentoring</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/mentoring/google-summer-of-code/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/google-summer-of-code/">
+            google-summer-of-code
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/group-mentee-guide/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/group-mentee-guide/">
+            group-mentee-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/group-mentoring/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/group-mentoring/">
+            group-mentoring
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/meet-our-contributors/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/meet-our-contributors/">
+            meet-our-contributors
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/mentor-guide/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/mentor-guide/">
+            mentor-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/mentoring-events/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/mentoring-events/">
+            mentoring-events
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/mentoring/the1-on-1hour/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/mentoring/the1-on-1hour/">
+            the1-on-1hour
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-api-machinery/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-api-machinery/">sig-api-machinery</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-api-machinery/api-extensions-position-statement/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-api-machinery/api-extensions-position-statement/">
+            api-extensions-position-statement
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-apps/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-apps/">sig-apps</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/agenda/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/agenda/">
+            agenda
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-apps/minutes/">minutes</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-05-18/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-05-18/">
+            2016-05-18
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-05-25/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-05-25/">
+            2016-05-25
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-06-08/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-06-08/">
+            2016-06-08
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-06-15/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-06-15/">
+            2016-06-15
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-06-22/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-06-22/">
+            2016-06-22
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-06-29/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-06-29/">
+            2016-06-29
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-07-06/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-07-06/">
+            2016-07-06
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-07-13/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-07-13/">
+            2016-07-13
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-07-20/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-07-20/">
+            2016-07-20
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-07-27/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-07-27/">
+            2016-07-27
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-apps/minutes/2016-08-03/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-apps/minutes/2016-08-03/">
+            2016-08-03
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-architecture/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-architecture/">sig-architecture</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-architecture/backlog/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-architecture/backlog/">
+            backlog
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-architecture/charter/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-architecture/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-auth/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-auth/">sig-auth</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-autoscaling/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-autoscaling/">sig-autoscaling</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-aws/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-aws/">sig-aws</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-aws/2017_goals/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-aws/2017_goals/">
+            2017_goals
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-aws/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-aws/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-aws/kubernetes-on-aws/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-aws/kubernetes-on-aws/">
+            kubernetes-on-aws
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-azure/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-azure/">sig-azure</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-azure/0018-20180711-azure-availability-zones/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-azure/0018-20180711-azure-availability-zones/">
+            0018-20180711-azure-availability-zones
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-azure/charter/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-azure/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-big-data/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-big-data/">sig-big-data</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-big-data/resources/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-big-data/resources/">
+            resources
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cli/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cli/">sig-cli</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cli/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cli/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/migrated-from-wiki/contributor-guide-building-your-kubernetes-tool/">
+            contributor-guide-building-your-kubernetes-tool
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/migrated-from-wiki/roadmap-kubectl/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/migrated-from-wiki/roadmap-kubectl/">
+            roadmap-kubectl
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-cli/outreachy/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cli/outreachy/">
+            outreachy
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cloud-provider/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cloud-provider/">sig-cloud-provider</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cloud-provider/charter/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cloud-provider/charter/">
+            CHARTER
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cluster-lifecycle/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cluster-lifecycle/">sig-cluster-lifecycle</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cluster-lifecycle/postmortems/kubeadm-1.6/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cluster-lifecycle/postmortems/kubeadm-1.6/">
+            kubeadm-1.6
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cluster-lifecycle/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cluster-lifecycle/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-cluster-lifecycle/migrated-from-wiki/roadmap-cluster-deployment/">
+            roadmap-cluster-deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-cluster-ops/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-cluster-ops/">sig-cluster-ops</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-contributor-experience/">sig-contributor-experience</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/charter/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-contributor-experience/charter/">
+            charter
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/community-maintenance/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-contributor-experience/community-maintenance/">
+            community-maintenance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/markdown-link-style-guide/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-contributor-experience/markdown-link-style-guide/">
+            markdown-link-style-guide
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-contributor-experience/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/migrated-from-wiki/effective-reviewable/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-contributor-experience/migrated-from-wiki/effective-reviewable/">
+            effective-reviewable
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-contributor-experience/projects/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-contributor-experience/projects/">
+            projects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-creation-procedure/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-creation-procedure/">
+            sig-creation-procedure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-docs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-docs/">sig-docs</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/sig-docs/migrated-from-wiki/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-docs/migrated-from-wiki/">migrated-from-wiki</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-docs/migrated-from-wiki/roadmap-docs/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-docs/migrated-from-wiki/roadmap-docs/">
+            roadmap-docs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-gcp/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-gcp/">sig-gcp</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-governance/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-governance/">
+            sig-governance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-ibmcloud/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-ibmcloud/">sig-ibmcloud</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-instrumentation/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-instrumentation/">sig-instrumentation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-multicluster/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-multicluster/">sig-multicluster</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-multicluster/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-multicluster/contributing/">
+            CONTRIBUTING
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-multicluster/oncall/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-multicluster/oncall/">
+            ONCALL
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-network/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-network/">sig-network</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-node/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-node/">sig-node</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-openstack/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-openstack/">sig-openstack</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-pm/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-pm/">sig-pm</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-release/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-release/">sig-release</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-scalability/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-scalability/">sig-scalability</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/api_call_latency/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/api_call_latency/">
+            api_call_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/api_extensions_latency/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/api_extensions_latency/">
+            api_extensions_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/processes/formal-scalability-processes/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/processes/formal-scalability-processes/">
+            formal-scalability-processes
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/goals/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/goals/">
+            goals
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/blogs/k8s-services-scalability-issues/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/blogs/k8s-services-scalability-issues/">
+            k8s-services-scalability-issues
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/pod_startup_latency/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/pod_startup_latency/">
+            pod_startup_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/configs-and-limits/provider-configs/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/configs-and-limits/provider-configs/">
+            provider-configs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/governance/scalability-regressions-case-studies/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/governance/scalability-regressions-case-studies/">
+            scalability-regressions-case-studies
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/slos/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/slos/">
+            slos
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/system_throughput/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/system_throughput/">
+            system_throughput
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/configs-and-limits/thresholds/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/configs-and-limits/thresholds/">
+            thresholds
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-scalability/slos/watch_latency/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-scalability/slos/watch_latency/">
+            watch_latency
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-scheduling/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-scheduling/">sig-scheduling</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-service-catalog/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-service-catalog/">sig-service-catalog</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-storage/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-storage/">sig-storage</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/sigs-and-wgs/sig-storage/1.3-retrospective/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-storage/1.3-retrospective/">1.3-retrospective</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-storage/contributing/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-storage/contributing/">
+            contributing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/sigs-and-wgs/sig-storage/volume-plugin-faq/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-storage/volume-plugin-faq/">
+            volume-plugin-faq
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-testing/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-testing/">sig-testing</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-ui/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-ui/">sig-ui</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-vmware/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-vmware/">sig-vmware</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/sig-windows/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sigs-and-wgs/sig-windows/">sig-windows</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sigs-and-wgs/sig-windows/api-tracking/" class="dd-item">
+        <div>
+          <a href="/sigs-and-wgs/sig-windows/api-tracking/">
+            api-tracking
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-app-def/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-app-def/">wg-app-def</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-apply/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-apply/">wg-apply</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-cluster-api/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-cluster-api/">wg-cluster-api</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-container-identity/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-container-identity/">wg-container-identity</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-iot-edge/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-iot-edge/">wg-iot-edge</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-kubeadm-adoption/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-kubeadm-adoption/">wg-kubeadm-adoption</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-machine-learning/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-machine-learning/">wg-machine-learning</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-multitenancy/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-multitenancy/">wg-multitenancy</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-policy/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-policy/">wg-policy</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/sigs-and-wgs/wg-resource-management/" class="dd-item
+        ">
+      <div>
+      <a href="/sigs-and-wgs/wg-resource-management/">wg-resource-management</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <a href='/'>Kubernetes Community</a> > <a href='/sigs-and-wgs/'>sigs-and-wgs</a> > <a href='/sigs-and-wgs/contributors/'>Contributors</a> > <a href='/sigs-and-wgs/contributors/design-proposals/'>design-proposals</a> > customresources-subresources
+
+ 
+
+ 
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#subresources-for-customresources">Subresources for CustomResources</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#goals">Goals</a></li>
+<li><a href="#non-goals">Non-Goals</a></li>
+<li><a href="#proposed-extension-of-customresourcedefinition">Proposed Extension of CustomResourceDefinition</a>
+<ul>
+<li><a href="#api-types">API Types</a></li>
+<li><a href="#feature-gate">Feature Gate</a></li>
+<li><a href="#scale-type">Scale type</a></li>
+</ul></li>
+<li><a href="#semantics">Semantics</a>
+<ul>
+<li><a href="#validation-behavior">Validation Behavior</a>
+<ul>
+<li><a href="#status">Status</a></li>
+<li><a href="#scale">Scale</a></li>
+</ul></li>
+<li><a href="#status-behavior">Status Behavior</a></li>
+<li><a href="#scale-behavior">Scale Behavior</a>
+<ul>
+<li><a href="#status-replicas-behavior">Status Replicas Behavior</a></li>
+<li><a href="#selector-behavior">Selector Behavior</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#implementation-plan">Implementation Plan</a></li>
+<li><a href="#alternatives">Alternatives</a>
+<ul>
+<li><a href="#scope">Scope</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>customresources-subresources</h1>
+  
+
+
+
+    
+    
+    
+    
+
+<h1 id="subresources-for-customresources">Subresources for CustomResources</h1>
+
+<p>Authors: @nikhita, @sttts</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#goals">Goals</a></li>
+<li><a href="#non-goals">Non-Goals</a></li>
+<li><a href="#proposed-extension-of-customresourcedefinition">Proposed Extension of CustomResourceDefinition</a>
+
+<ol>
+<li><a href="#api-types">API Types</a></li>
+<li><a href="#feature-gate">Feature Gate</a></li>
+</ol></li>
+<li><a href="#semantics">Semantics</a>
+
+<ol>
+<li><a href="#validation-behavior">Validation Behavior</a>
+
+<ol>
+<li><a href="#status">Status</a></li>
+<li><a href="#scale">Scale</a></li>
+</ol></li>
+<li><a href="#status-behavior">Status Behavior</a></li>
+<li><a href="#scale-behavior">Scale Behavior</a>
+
+<ol>
+<li><a href="#status-replicas-behavior">Status Replicas Behavior</a></li>
+<li><a href="#selector-behavior">Selector Behavior</a></li>
+</ol></li>
+</ol></li>
+<li><a href="#implementation-plan">Implementation Plan</a></li>
+<li><a href="#alternatives">Alternatives</a>
+
+<ol>
+<li><a href="#scope">Scope</a></li>
+</ol></li>
+</ol>
+
+<h2 id="abstract">Abstract</h2>
+
+<p><a href="https://github.com/kubernetes/community/pull/524">CustomResourceDefinitions</a> (CRDs) were introduced in 1.7. The objects defined by CRDs are called CustomResources (CRs). Currently, we do not provide subresources for CRs.</p>
+
+<p>However, it is one of the <a href="https://github.com/kubernetes/kubernetes/issues/38113">most requested features</a> and this proposal seeks to add  <code>/status</code> and <code>/scale</code> subresources for CustomResources.</p>
+
+<h2 id="goals">Goals</h2>
+
+<ol>
+<li>Support status/spec split for CustomResources:
+
+<ol>
+<li>Status changes are ignored on the main resource endpoint.</li>
+<li>Support a <code>/status</code> subresource HTTP path for status changes.</li>
+<li><code>metadata.Generation</code> is increased only on spec changes.</li>
+</ol></li>
+<li>Support a <code>/scale</code> subresource for CustomResources.</li>
+<li>Maintain backward compatibility by allowing CRDs to opt-in to enable subresources.</li>
+<li>If a CustomResource is already structured using spec/status, allow it to easily transition to use the <code>/status</code> and <code>/scale</code> endpoint.</li>
+<li>Work seamlessly with <a href="https://github.com/kubernetes/community/pull/708">JSON Schema validation</a>.</li>
+</ol>
+
+<h2 id="non-goals">Non-Goals</h2>
+
+<ol>
+<li>Allow defining arbitrary subresources i.e. subresources except <code>/status</code> and <code>/scale</code>.</li>
+</ol>
+
+<h2 id="proposed-extension-of-customresourcedefinition">Proposed Extension of CustomResourceDefinition</h2>
+
+<h3 id="api-types">API Types</h3>
+
+<p>The addition of the following external types in <code>apiextensions.k8s.io/v1beta1</code> is proposed:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#00a8c8">type</span> <span style="color:#75af00">CustomResourceDefinitionSpec</span> <span style="color:#00a8c8">struct</span> <span style="color:#111">{</span>
+    <span style="color:#f92672">...</span>
+    <span style="color:#75715e">// SubResources describes the subresources for CustomResources
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// This field is alpha-level and should only be sent to servers that enable
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// subresources via the CurstomResourceSubResources feature gate.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// +optional
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">SubResources</span> <span style="color:#f92672">*</span><span style="color:#75af00">CustomResourceSubResources</span> <span style="color:#d88200">`json:&#34;subResources,omitempty&#34;`</span>
+<span style="color:#111">}</span>
+
+<span style="color:#75715e">// CustomResourceSubResources defines the status and scale subresources for CustomResources.
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">type</span> <span style="color:#75af00">CustomResourceSubResources</span> <span style="color:#00a8c8">struct</span> <span style="color:#111">{</span>
+    <span style="color:#75715e">// Status denotes the status subresource for CustomResources
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">Status</span> <span style="color:#f92672">*</span><span style="color:#75af00">CustomResourceSubResourceStatus</span> <span style="color:#d88200">`json:&#34;status,omitempty&#34;`</span>
+    <span style="color:#75715e">// Scale denotes the scale subresource for CustomResources
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">Scale</span>  <span style="color:#f92672">*</span><span style="color:#75af00">CustomResourceSubResourceScale</span>  <span style="color:#d88200">`json:&#34;scale,omitempty&#34;`</span>
+<span style="color:#111">}</span>
+
+<span style="color:#75715e">// CustomResourceSubResourceStatus defines how to serve the HTTP path &lt;CR Name&gt;/status.
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">type</span> <span style="color:#75af00">CustomResourceSubResourceStatus</span> <span style="color:#00a8c8">struct</span> <span style="color:#111">{</span>
+<span style="color:#111">}</span>
+
+<span style="color:#75715e">// CustomResourceSubResourceScale defines how to serve the HTTP path &lt;CR name&gt;/scale.
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">type</span> <span style="color:#75af00">CustomResourceSubResourceScale</span> <span style="color:#00a8c8">struct</span> <span style="color:#111">{</span>
+    <span style="color:#75715e">// required, e.g. “.spec.replicas”. Must be under `.spec`.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Only JSON paths without the array notation are allowed.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">SpecReplicasPath</span> <span style="color:#00a8c8">string</span> <span style="color:#d88200">`json:&#34;specReplicasPath&#34;`</span>
+    <span style="color:#75715e">// optional, e.g. “.status.replicas”. Must be under `.status`.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Only JSON paths without the array notation are allowed.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">StatusReplicasPath</span> <span style="color:#00a8c8">string</span> <span style="color:#d88200">`json:&#34;statusReplicasPath,omitempty&#34;`</span>
+    <span style="color:#75715e">// optional, e.g. “.spec.labelSelector”. Must be under `.spec`.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Only JSON paths without the array notation are allowed.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">LabelSelectorPath</span> <span style="color:#00a8c8">string</span> <span style="color:#d88200">`json:&#34;labelSelectorPath,omitempty&#34;`</span>
+    <span style="color:#75715e">// ScaleGroupVersion denotes the GroupVersion of the Scale
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// object sent as the payload for /scale. It allows transition
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// to future versions easily.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Today only autoscaling/v1 is allowed.
+</span><span style="color:#75715e"></span>    <span style="color:#75af00">ScaleGroupVersion</span> <span style="color:#75af00">schema</span><span style="color:#111">.</span><span style="color:#75af00">GroupVersion</span> <span style="color:#d88200">`json:&#34;groupVersion&#34;`</span>
+<span style="color:#111">}</span></code></pre></div>
+<h3 id="feature-gate">Feature Gate</h3>
+
+<p>The <code>SubResources</code> field in <code>CustomResourceDefinitionSpec</code> will be gated under the <code>CustomResourceSubResources</code> alpha feature gate.
+If the gate is not open, the value of the new field within <code>CustomResourceDefinitionSpec</code> is dropped on creation and updates of CRDs.</p>
+
+<h3 id="scale-type">Scale type</h3>
+
+<p>The <code>Scale</code> object is the payload sent over the wire for <code>/scale</code>. The <a href="https://github.com/kubernetes/kubernetes/pull/53743">polymorphic <code>Scale</code> type</a> i.e. <code>autoscaling/v1.Scale</code> is used for the <code>Scale</code> object.</p>
+
+<p>Since the GroupVersion of the <code>Scale</code> object is specified in <code>CustomResourceSubResourceScale</code>, transition to future versions (eg <code>autoscaling/v2.Scale</code>) can be done easily.</p>
+
+<p>Note: If <code>autoscaling/v1.Scale</code> is deprecated, then it would be deprecated here as well.</p>
+
+<h2 id="semantics">Semantics</h2>
+
+<h3 id="validation-behavior">Validation Behavior</h3>
+
+<h4 id="status">Status</h4>
+
+<p>The status endpoint of a CustomResource receives a full CR object. Changes outside of the <code>.status</code> subpath are ignored.
+For validation, the JSON Schema present in the CRD is validated only against the <code>.status</code> subpath.</p>
+
+<p>To validate only against the schema for the <code>.status</code> subpath, <code>oneOf</code> and <code>anyOf</code> constructs are not allowed within the root of the schema, but only under a properties sub-schema (with this restriction, we can project a schema to a sub-path). The following is forbidden in the CRD spec:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">validation<span style="color:#111">:</span>
+    openAPIV3Schema<span style="color:#111">:</span>
+        oneOf<span style="color:#111">:</span>
+            ...</code></pre></div>
+<p><strong>Note</strong>: The restriction for <code>oneOf</code> and <code>anyOf</code> allows us to write a projection function <code>ProjectJSONSchema(schema *JSONSchemaProps, path []string) (*JSONSchemaProps, error)</code> that can be used to apply a given schema for the whole object to only the sub-path <code>.status</code> or <code>.spec</code>.</p>
+
+<h4 id="scale">Scale</h4>
+
+<p>Moreover, if the scale subresource is enabled:</p>
+
+<p>On update, we copy the values from the <code>Scale</code> object into the specified paths in the CustomResource, if the path is set (<code>StatusReplicasPath</code> and <code>LabelSelectorPath</code> are optional).
+If <code>StatusReplicasPath</code> or <code>LabelSelectorPath</code> is not set, we validate that the value in <code>Scale</code> is also not specified and return an error otherwise.</p>
+
+<p>On <code>get</code> and on <code>update</code> (after copying the values into the CustomResource as described above), we verify that:</p>
+
+<ul>
+<li><p>The value at the specified JSON Path <code>SpecReplicasPath</code> (e.g. <code>.spec.replicas</code>) is a non-negative integer value and is not empty.</p></li>
+
+<li><p>The value at the optional JSON Path <code>StatusReplicasPath</code> (e.g. <code>.status.replicas</code>) is an integer value if it exists (i.e. this can be empty).</p></li>
+
+<li><p>The value at the optional JSON Path <code>LabelSelectorPath</code> (e.g. <code>.spec.labelSelector</code>) is a valid label selector if it exists (i.e. this can be empty).</p></li>
+</ul>
+
+<p><strong>Note</strong>: The values at the JSON Paths specified by <code>SpecReplicasPath</code>, <code>LabelSelectorPath</code> and <code>StatusReplicasPath</code> are also validated with the same rules when the whole object or, in case the <code>/status</code> subresource is enabled, the <code>.status</code> sub-object is updated.</p>
+
+<h3 id="status-behavior">Status Behavior</h3>
+
+<p>If the <code>/status</code> subresource is enabled, the following behaviors change:</p>
+
+<ul>
+<li><p>The main resource endpoint will ignore all changes in the status subpath.
+(note: it will <strong>not</strong> reject requests which try to change the status, following the existing semantics of other resources).</p></li>
+
+<li><p>The <code>.metadata.generation</code> field is updated if and only if the value at the <code>.spec</code> subpath changes.
+Additionally, if the spec does not change, <code>.metadata.generation</code> is not updated.</p></li>
+
+<li><p>The <code>/status</code> subresource receives a full resource object, but only considers the value at the <code>.status</code> subpath for the update.
+The value at the <code>.metadata</code> subpath is <strong>not</strong> considered for update as decided in <a href="https://github.com/kubernetes/kubernetes/issues/45539">https://github.com/kubernetes/kubernetes/issues/45539</a>.</p></li>
+</ul>
+
+<p>Both the status and the spec (and everything else if there is anything) of the object share the same key in the storage layer, i.e. the value at  <code>.metadata.resourceVersion</code> is increased for any kind of change. There is no split of status and spec in the storage layer.</p>
+
+<p>The <code>/status</code> endpoint supports both <code>get</code> and <code>update</code> verbs.</p>
+
+<h3 id="scale-behavior">Scale Behavior</h3>
+
+<p>The number of CustomResources can be easily scaled up or down depending on the replicas field present in the <code>.spec</code> subpath.</p>
+
+<p>Only <code>ScaleSpec.Replicas</code> can be written. All other values are read-only and changes will be ignored. i.e. upon updating the scale subresource, two fields are modified:</p>
+
+<ol>
+<li><p>The replicas field is copied back from the <code>Scale</code> object to the main resource as specified by <code>SpecReplicasPath</code> in the CRD, e.g.  <code>.spec.replicas = scale.Spec.Replicas</code>.</p></li>
+
+<li><p>The resource version is copied back from the <code>Scale</code> object to the main resource before writing to the storage: <code>.metadata.resourceVersion = scale.ResourceVersion</code>.
+In other words, the scale and the CustomResource share the resource version used for optimistic concurrency.
+Updates with outdated resource versions are rejected with a conflict error, read requests will return the resource version of the CustomResource.</p></li>
+</ol>
+
+<p>The <code>/scale</code> endpoint supports both <code>get</code> and <code>update</code> verbs.</p>
+
+<h4 id="status-replicas-behavior">Status Replicas Behavior</h4>
+
+<p>As only the <code>scale.Spec.Replicas</code> field is to be written to by the CR user, the user-provided controller (not any generic CRD controller) counts its children and then updates the controlled object by writing to the <code>/status</code> subresource, i.e. the <code>scale.Status.Replicas</code> field is read-only.</p>
+
+<h4 id="selector-behavior">Selector Behavior</h4>
+
+<p><code>CustomResourceSubResourceScale.LabelSelectorPath</code> is the label selector over CustomResources that should match the replicas count.
+The value in the <code>Scale</code> object is one-to-one the value from the CustomResource if the label selector is non-empty.
+Intentionally we do not default it to another value from the CustomResource (e.g. <code>.spec.template.metadata.labels</code>) as this turned out to cause trouble (e.g. in <code>kubectl apply</code>) and it is generally seen as a wrong approach with existing resources.</p>
+
+<h2 id="implementation-plan">Implementation Plan</h2>
+
+<p>The <code>/scale</code> and <code>/status</code> subresources are mostly distinct. It is proposed to do the implementation in two phases (the order does not matter much):</p>
+
+<ol>
+<li><code>/status</code> subresource</li>
+<li><code>/scale</code> subresource</li>
+</ol>
+
+<h2 id="alternatives">Alternatives</h2>
+
+<h3 id="scope">Scope</h3>
+
+<p>In this proposal we opted for an opinionated concept of subresources i.e. we restrict the subresource spec to the two very specific subresources: <code>/status</code> and <code>/scale</code>.
+We do not aim for a more generic subresource concept. In Kubernetes there are a number of other subresources like <code>/log</code>, <code>/exec</code>, <code>/bind</code>. But their semantics is much more special than <code>/status</code> and <code>/scale</code>.
+Hence, we decided to leave those other subresources to the domain of User provided API Server (UAS) instead of inventing a more complex subresource concept for CustomResourceDefinitions.</p>
+
+<p><strong>Note</strong>: The types do not make the addition of other subresources impossible in the future.</p>
+
+<p>We also restrict the JSON path for the status and the spec within the CustomResource.
+We could make them definable by the user and the proposed types actually allow us to open this up in the future.
+For the time being we decided to be opinionated as all status and spec subobjects in existing types live under <code>.status</code> and <code>.spec</code>. Keeping this pattern imposes consistency on user provided CustomResources as well.</p>
+
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+</div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-cluster-lifecycle on Kubernetes Community</title>
+    <link>/special-interest-groups/sig-cluster-lifecycle/</link>
+    <description>Recent content in sig-cluster-lifecycle on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/special-interest-groups/sig-cluster-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>kubeadm-1.6</title>
+      <link>/special-interest-groups/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-cluster-lifecycle/postmortems/kubeadm-1.6/</guid>
+      <description>Kubernetes Postmortem: kubeadm 1.6.0 release Incident Date: 2017-03-28
+Owners: Jacob Beacham (@pipejakob)
+Collaborators: Joe Beda (@jbeda), Mike Danese (@mikedanese), Robert Bailey (@roberthbailey)
+Status: [draft | pending feedback | final]
+Summary: kubeadm 1.6.0 consistently hangs while trying to initialize new clusters. A fix required creating the 1.6.1 patch release six days after 1.6.0.
+Impact: Initialization of a new 1.6.0 master using kubeadm.
+Root Causes: kubelet’s behavior was changed to report NotReady instead of Ready when CNI was unconfigured (#43474), which caused kubeadm to hang indefinitely on initialization while waiting for the master node to become Ready (and then schedule a dummy deployment) in order to validate the control plane’s health, which was intended to happen before a CNI provider gets added.</description>
+    </item>
+    
+  </channel>
+</rss>

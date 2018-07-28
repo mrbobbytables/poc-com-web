@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sig-contributor-experience on Kubernetes Community</title>
+    <link>/special-interest-groups/sig-contributor-experience/</link>
+    <description>Recent content in sig-contributor-experience on Kubernetes Community</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/special-interest-groups/sig-contributor-experience/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>charter</title>
+      <link>/special-interest-groups/sig-contributor-experience/charter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-contributor-experience/charter/</guid>
+      <description>Contributor Experience Special Interest Group Charter Chairs:  Elsie Phillips (@Phillels) Paris Pittman (@parispittman)  Technical Leads (TL):  Garrett Rodrigues (@grodrigues3) Christoph Blecker (@cblecker)  Subprojects and OWNERs Can be found on our [README]()
+Processes and Responsibilities  Chairs run weekly meetings in accordance with SIG governance procedures unless TLs need to fill in Chairs and TLs run quarterly planning meetings where we decide goals for the next release, to be published in the SIG’s [README]()</description>
+    </item>
+    
+    <item>
+      <title>community-maintenance</title>
+      <link>/special-interest-groups/sig-contributor-experience/community-maintenance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-contributor-experience/community-maintenance/</guid>
+      <description>Community Maintenance This document outlines maintenance tasks that SIG Contributor Experience should be doing on a regular basis. Copy this list into a new Github issue, for example &amp;ldquo;Community Maintenance Tasks for 2Q 2018&amp;rdquo;. Then people can volunteer to audit different parts of the project at once. These tasks should be done at a minimum of twice a year, but ideally once a quarter.
+If any of these tasks can be automated, then do so, however most of these require a human to make a judgement decision.</description>
+    </item>
+    
+    <item>
+      <title>markdown-link-style-guide</title>
+      <link>/special-interest-groups/sig-contributor-experience/markdown-link-style-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-contributor-experience/markdown-link-style-guide/</guid>
+      <description>Markdown Link Style Guide Markdown provides for a number of different ways to link between documents. There are advantages and disadvantages of each method.
+ If you are linking between documents in the same folder, the easiest way to do it is use a relative link.
+See this other document [here](document-2).  If you are linking to a file in the same repo, but not in the same directory, it&amp;rsquo;s usually best to use an absolute link from the root of the repo.</description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>/special-interest-groups/sig-contributor-experience/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/special-interest-groups/sig-contributor-experience/projects/</guid>
+      <description>Projects and Goals note - this is a temporary file until we can figure out a better project management solution.
+This is a list of the projects and goals currently underway with Contributor Experience. Please submit a PR if you are adding your project to this list. To introduce a new project, attend a weekly meeting or drop a note to us on the mailing list - details can be found on our [README]().</description>
+    </item>
+    
+  </channel>
+</rss>
