@@ -42,6 +42,16 @@ Table of Contents</description>
     </item>
     
     <item>
+      <title>0014-20180707-componentconfig-api-types-to-staging</title>
+      <link>/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/</guid>
+      <description>kep-number: 17 title: Moving ComponentConfig API types to staging repos status: provisional authors: - &amp;ldquo;@luxas&amp;rdquo; - &amp;ldquo;@sttts&amp;rdquo; owning-sig: sig-cluster-lifecycle participating-sigs: - sig-api-machinery - sig-node - sig-network - sig-scheduling - sig-cloud-provider reviewers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@liggitt&amp;rdquo; - &amp;ldquo;@wojtek-t&amp;rdquo; - &amp;ldquo;@stewart-yu&amp;rdquo; - &amp;ldquo;@dixudx&amp;rdquo; approvers: - &amp;ldquo;@thockin&amp;rdquo; - &amp;ldquo;@jbeda&amp;rdquo; - &amp;ldquo;@deads2k&amp;rdquo; editor: name: &amp;ldquo;@luxas&amp;rdquo; creation-date: 2018-07-07
+last-updated: 2018-07-07 Moving ComponentConfig API types to staging repos How we can start supporting reading versioned configuration for all our components after a code move for ComponentConfig to staging</description>
+    </item>
+    
+    <item>
       <title>0015-kubeadm-join-master</title>
       <link>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -11,6 +11,90 @@
   </url>
   
   <url>
+    <loc>/keps/sig-cloud-provider/0002-cloud-controller-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0003-cluster-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-contributor-experience/0005-contributor-site/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-api-machinery/0006-apply/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-contributor-experience/0007-20180403-community-forum/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0007-pod-ready&#43;&#43;/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cli/0008-kustomize/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0009-node-heartbeat/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0010-20180314-coredns-ga-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0011-ipvs-proxier/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0012-20180518-coredns-default-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-auth/0014-dynamic-audit-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-api-machinery/0015-dry-run/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/0017-cloud-provider-digitalocean/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</loc>
   </url>
   
@@ -449,6 +533,10 @@
   
   <url>
     <loc>/events/2017/12-contributor-summit/cloud-provider/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/cloud-provider-baiducloud/</loc>
   </url>
   
   <url>
@@ -1652,6 +1740,10 @@
   </url>
   
   <url>
+    <loc>/keps/sig-apps/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-apps/</loc>
   </url>
   
@@ -1668,6 +1760,10 @@
   </url>
   
   <url>
+    <loc>/keps/sig-aws/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-aws/</loc>
   </url>
   
@@ -1680,6 +1776,10 @@
   </url>
   
   <url>
+    <loc>/committee-steering/governance/sig-charter-template/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-cli/</loc>
   </url>
   
@@ -1688,11 +1788,19 @@
   </url>
   
   <url>
+    <loc>/keps/sig-cluster-lifecycle/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-cluster-lifecycle/</loc>
   </url>
   
   <url>
     <loc>/special-interest-groups/sig-cluster-ops/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-configuration/</loc>
   </url>
   
   <url>
@@ -1708,7 +1816,15 @@
   </url>
   
   <url>
+    <loc>/committee-steering/governance/sig-governance/</loc>
+  </url>
+  
+  <url>
     <loc>/sig-governance/</loc>
+  </url>
+  
+  <url>
+    <loc>/committee-steering/governance/sig-governance-requirements/</loc>
   </url>
   
   <url>
@@ -1724,11 +1840,19 @@
   </url>
   
   <url>
+    <loc>/keps/sig-network/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-network/</loc>
   </url>
   
   <url>
     <loc>/special-interest-groups/sig-node/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-on-premise/</loc>
   </url>
   
   <url>
@@ -1741,6 +1865,10 @@
   
   <url>
     <loc>/special-interest-groups/sig-release/</loc>
+  </url>
+  
+  <url>
+    <loc>/archive/sig-rktnetes/</loc>
   </url>
   
   <url>
