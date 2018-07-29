@@ -3,99 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/keps/0000-kep-template/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/0001-kubernetes-enhancement-proposal-process/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/0002-cloud-controller-manager/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0003-cluster-api/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-contributor-experience/0005-contributor-site/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-api-machinery/0006-apply/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-contributor-experience/0007-20180403-community-forum/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0007-pod-ready&#43;&#43;/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cli/0008-kustomize/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-node/0009-node-heartbeat/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0010-20180314-coredns-ga-proposal/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0011-ipvs-proxier/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-network/0012-20180518-coredns-default-proposal/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-auth/0014-dynamic-audit-configuration/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-api-machinery/0015-dry-run/</loc>
-  </url>
-  
-  <url>
     <loc>/keps/sig-cluster-lifecycle/0015-kubeadm-join-master/</loc>
-  </url>
-  
-  <url>
-    <loc>/keps/sig-cloud-provider/providers/0017-cloud-provider-digitalocean/</loc>
-  </url>
-  
-  <url>
-    <loc>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</loc>
   </url>
   
   <url>
@@ -196,6 +104,18 @@
   </url>
   
   <url>
+    <loc>/keps/sig-contributor-experience/0007-20180403-community-forum/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-api-machinery/0006-apply/</loc>
+  </url>
+  
+  <url>
+    <loc>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</loc>
+  </url>
+  
+  <url>
     <loc>/special-interest-groups/sig-cloud-provider/charter/</loc>
   </url>
   
@@ -221,6 +141,18 @@
   </url>
   
   <url>
+    <loc>/keps/sig-cloud-provider/0002-cloud-controller-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/0017-cloud-provider-digitalocean/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/providers/0004-cloud-provider-template/</loc>
+  </url>
+  
+  <url>
     <loc>/contributors/design-proposals/cluster-lifecycle/</loc>
     <priority>0</priority>
   </url>
@@ -240,12 +172,28 @@
   </url>
   
   <url>
+    <loc>/keps/sig-contributor-experience/0005-contributor-site/</loc>
+  </url>
+  
+  <url>
     <loc>/contributors/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/contributors/design-proposals/design_proposal_template/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-api-machinery/0015-dry-run/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-auth/0014-dynamic-audit-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0009-node-heartbeat/</loc>
   </url>
   
   <url>
@@ -258,11 +206,39 @@
   </url>
   
   <url>
+    <loc>/keps/sig-network/0010-20180314-coredns-ga-proposal/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0011-ipvs-proxier/</loc>
+  </url>
+  
+  <url>
     <loc>/communication/k8syoutubecollaboration/</loc>
   </url>
   
   <url>
     <loc>/events/2016/developer-summit-2016/kubdevsummitvoting/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0008-20180504-kubeadm-config-beta/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0004-bootstrap-checkpointing/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0003-cluster-api/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/0001-kubernetes-enhancement-proposal-process/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/readme/</loc>
   </url>
   
   <url>
@@ -274,6 +250,23 @@
   </url>
   
   <url>
+    <loc>/keps/sig-cli/0008-kustomize/</loc>
+  </url>
+  
+  <url>
+    <loc>/mentoring/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cluster-lifecycle/0014-20180707-componentconfig-api-types-to-staging/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/0000-kep-template/</loc>
+  </url>
+  
+  <url>
     <loc>/contributors/design-proposals/apps/obsolete_templates/</loc>
   </url>
   
@@ -282,7 +275,23 @@
   </url>
   
   <url>
+    <loc>/keps/sig-network/0007-pod-ready&#43;&#43;/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-node/0008-20180430-promote-sysctl-annotations-to-fields/</loc>
+  </url>
+  
+  <url>
     <loc>/events/elections/2017/results/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-cloud-provider/0003-testgrid-conformance-e2e/</loc>
+  </url>
+  
+  <url>
+    <loc>/keps/sig-network/0012-20180518-coredns-default-proposal/</loc>
   </url>
   
   <url>
@@ -1236,10 +1245,6 @@
   
   <url>
     <loc>/mentoring/mentor-guide/</loc>
-  </url>
-  
-  <url>
-    <loc>/mentoring/</loc>
   </url>
   
   <url>

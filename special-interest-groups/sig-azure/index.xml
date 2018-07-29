@@ -11,13 +11,13 @@
     
     
     <item>
-      <title>0018-20180711-azure-availability-zones</title>
+      <title>Azure Availability Zones</title>
       <link>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/special-interest-groups/sig-azure/0018-20180711-azure-availability-zones/</guid>
-      <description>kep-number: 18 title: Azure Availability Zones authors: - &amp;ldquo;@feiskyer&amp;rdquo; owning-sig: sig-azure participating-sigs: - sig-azure - sig-storage reviewers: - name: &amp;ldquo;@khenidak&amp;rdquo; - name: &amp;ldquo;@colemickens&amp;rdquo; approvers: - name: &amp;ldquo;@brendanburns&amp;rdquo; editor: TBD creation-date: 2018-07-11 last-updated: 2018-07-11
-status: provisional Azure Availability Zones Table of Contents  Azure Availability Zones  Summary Scopes and Non-scopes Scopes Non-scopes AZ label format Cloud provider options Node registration Get by instance metadata Get by Go SDK LoadBalancer and PublicIP AzureDisk PVLabeler PersistentVolumeLabel StorageClass Appendix   Summary This proposal aims to add Azure Availability Zones (AZ) support to Kubernetes.</description>
+      <description>Azure Availability Zones Table of Contents  Azure Availability Zones  Summary Scopes and Non-scopes Scopes Non-scopes AZ label format Cloud provider options Node registration Get by instance metadata Get by Go SDK LoadBalancer and PublicIP AzureDisk PVLabeler PersistentVolumeLabel StorageClass Appendix   Summary This proposal aims to add Azure Availability Zones (AZ) support to Kubernetes.
+Scopes and Non-scopes Scopes The proposal includes required changes to support availability zones for various functions in Azure cloud provider and AzureDisk volumes:</description>
     </item>
     
     <item>
