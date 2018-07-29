@@ -200,10 +200,6 @@
   </url>
   
   <url>
-    <loc>/cla/</loc>
-  </url>
-  
-  <url>
     <loc>/special-interest-groups/sig-apps/contributing/</loc>
   </url>
   
@@ -267,11 +263,6 @@
   
   <url>
     <loc>/events/2016/developer-summit-2016/kubdevsummitvoting/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -641,6 +632,10 @@
   
   <url>
     <loc>/contributors/design-proposals/storage/containerized-mounter-pod/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
   </url>
   
   <url>

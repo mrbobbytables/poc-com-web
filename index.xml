@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes Community</title>
+    <title>content on Kubernetes Community</title>
     <link>/</link>
-    <description>Recent content on Kubernetes Community</description>
+    <description>Recent content in content on Kubernetes Community</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -453,19 +453,6 @@ Networking in AWS  We hope to offer a knowledge base for networking in Kubernete
       <guid>/special-interest-groups/sig-cloud-provider/charter/</guid>
       <description>SIG Cloud Provider Charter Mission The Cloud Provider SIG ensures that the Kubernetes ecosystem is evolving in a way that is neutral to all (public and private) cloud providers. It will be responsible for establishing standards and requirements that must be met by all providers to ensure optimal integration with Kubernetes.
 Subprojects &amp;amp; Areas of Focus  Maintaining parts of the Kubernetes project that allows Kubernetes to integrate with the underlying provider.</description>
-    </item>
-    
-    <item>
-      <title>CLA</title>
-      <link>/cla/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cla/</guid>
-      <description>The Contributor License Agreement The Cloud Native Computing Foundation defines the legal status of the contributed code in a Contributor License Agreement (CLA).
-Only original source code from CLA signatories can be accepted into kubernetes.
-This policy does not apply to third_party and vendor.
-What am I agreeing to? There are two versions of the CLA:
- One for individual contributors submitting contributions on their own behalf. One for corporations to sign for contributions submitted by their employees.</description>
     </item>
     
     <item>
